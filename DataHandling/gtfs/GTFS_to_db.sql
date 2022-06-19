@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS dublin_bus;
+
 USE dublin_bus;
 
 DROP TABLE IF EXISTS agency;
