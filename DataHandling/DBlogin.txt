@@ -1,0 +1,5 @@
+admin
+Team12BusDB
+dublinbusdb.cyopwh1abtzq.us-east-1.rds.amazonaws.com
+3306
+dublin_bus
