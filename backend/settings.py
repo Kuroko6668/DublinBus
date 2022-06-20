@@ -39,13 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'DublinBusApp'
-    'corsheaders'
+    'DublinBusApp',
+    'corsheaders',
     'rest_framework'
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware'
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -80,18 +80,18 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # },
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    },
 
-    'default' : {
+    'mySQl' : {
         'ENGINE' : "django.db.backends.mysql",
         'NAME' : os.environ["NAME"],
         'USER': os.environ["USERNAME"],
         'PASSWORD' : os.environ["PASSWORD"],
         'HOST' : os.environ["URL"],
-        'PORT' : os.environ["PORT"],
+        'PORT' : os.environ["PORT"]
        
 
 
