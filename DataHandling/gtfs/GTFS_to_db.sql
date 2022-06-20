@@ -1,110 +1,142 @@
-CREATE DATABASE IF NOT EXISTS dublin_bus;
+CREATE DATABASE IF NOT EXISTS `dublin_bus`;
 
 USE dublin_bus;
 
-DROP TABLE IF EXISTS agency;
-
-CREATE TABLE `agency` (
-    agency_id int(11) PRIMARY KEY,
-    agency_name VARCHAR(255),
-    agency_url VARCHAR(255),
-    agency_timezone VARCHAR(50)
-);
-
 DROP TABLE IF EXISTS calendar;
 
-CREATE TABLE `calendar` (
-    service_id INT(11),
-	monday TINYINT(1),
-	tuesday TINYINT(1),
-	wednesday TINYINT(1),
-	thursday TINYINT(1),
-	friday TINYINT(1),
-	saturday TINYINT(1),
-	sunday TINYINT(1),
-	start_date VARCHAR(8),	
-	end_date VARCHAR(8),
-	KEY `service_id` (service_id)
+CREATE TABLE `calendar`
+(
+  `service_id` varchar(20), -- PRIMARY KEY,
+  `monday` int,
+  `tuesday` int,
+  `wednesday` int,
+  `thursday` int,
+  `friday` int,
+  `saturday` int,
+  `sunday` int,
+  `start_date` varchar(20),
+  `end_date` varchar(20)
 );
+
+LOAD DATA LOCAL INFILE '/Users/35383/Documents/GTFSAPItest/GTFSR/GTFSdata/calendar.txt' 
+INTO TABLE dublin_bus.calendar
+FIELDS TERMINATED BY ','  
+ENCLOSED BY '"'  
+LINES TERMINATED BY '\r\n' 
+IGNORE 1 LINES;
+
+
 
 DROP TABLE IF EXISTS calendar_dates;
 
-CREATE TABLE `calendar_dates` (
-    service_id INT(11),
-    `date` VARCHAR(8),
-    exception_type INT(2),
-    KEY `service_id` (service_id),
-    KEY `exception_type` (exception_type)    
+CREATE TABLE `calendar_dates`
+(
+  `service_id` varchar(10),
+  `date` varchar(10),
+  `exception_type` int
+  -- CONSTRAINT pk_calendar_dates PRIMARY KEY(`service_id`, `date`)
 );
+
+LOAD DATA LOCAL INFILE '/Users/35383/Documents/GTFSAPItest/GTFSR/GTFSdata/calendar_dates.txt' 
+INTO TABLE dublin_bus.calendar_dates
+FIELDS TERMINATED BY ','  
+ENCLOSED BY '"'  
+LINES TERMINATED BY '\r\n' 
+IGNORE 1 LINES;
 
 DROP TABLE IF EXISTS routes;
 
-CREATE TABLE `routes` (
-    route_id INT(11) PRIMARY KEY,
-	agency_id INT(11),
-	route_short_name VARCHAR(50),
-	route_long_name VARCHAR(255),
-	route_type INT(2),
-	KEY `agency_id` (agency_id),
-	KEY `route_type` (route_type)
+CREATE TABLE `routes`
+(
+  `route_id` varchar(30), -- PRIMARY KEY,
+  `agency_id` varchar(10),
+  `route_short_name` varchar(10),
+  `route_long_name` varchar(255),
+  `route_type` int
 );
 
+LOAD DATA LOCAL INFILE '/Users/35383/Documents/GTFSAPItest/GTFSR/GTFSdata/routes.txt' 
+INTO TABLE dublin_bus.routes
+FIELDS TERMINATED BY ','  
+ENCLOSED BY '"'  
+LINES TERMINATED BY '\r\n' 
+IGNORE 1 LINES;
+
+DROP TABLE IF EXISTS shapes;
+
+CREATE TABLE `shapes`
+(
+  `shape_id` varchar(30),
+  `shape_pt_lat` double,
+  `shape_pt_lon` double,
+  `shape_pt_sequence` smallint,
+  `shape_dist_traveled` double
+  -- CONSTRAINT pk_shapes PRIMARY KEY(`shape_id`, `shape_pt_sequence`)
+);
+
+
+LOAD DATA LOCAL INFILE '/Users/35383/Documents/GTFSAPItest/GTFSR/GTFSdata/shapes.txt' 
+INTO TABLE dublin_bus.shapes
+FIELDS TERMINATED BY ','  
+ENCLOSED BY '"'  
+LINES TERMINATED BY '\r\n' 
+IGNORE 1 LINES;
 DROP TABLE IF EXISTS stop_times;
 
-CREATE TABLE `stop_times` (
-    trip_id INT(11),
-	arrival_time VARCHAR(8),
-	departure_time VARCHAR(8),
-	stop_id INT(11),
-	stop_sequence INT(11),
-	pickup_type INT(2),
-	drop_off_type INT(2),
-	KEY `trip_id` (trip_id),
-	KEY `stop_id` (stop_id),
-	KEY `stop_sequence` (stop_sequence),
-	KEY `pickup_type` (pickup_type),
-	KEY `drop_off_type` (drop_off_type)
+CREATE TABLE `stop_times`
+(
+  `trip_id` varchar(60),
+  `arrival_time` time,
+  `departure_time` time,
+  `stop_id` varchar(30),
+  `stop_sequence` smallint,
+  `stop_headsign` varchar(255),
+  `pickup_type` int,
+  `drop_off_type` int,
+  `shape_dist_traveled` double
+  -- CONSTRAINT pk_stop_times PRIMARY KEY(`trip_id`, `arrival_time`, `stop_id`)
 );
+
+LOAD DATA LOCAL INFILE '/Users/35383/Documents/GTFSAPItest/GTFSR/GTFSdata/stop_times.csv' 
+INTO TABLE dublin_bus.stop_times
+FIELDS TERMINATED BY ','  
+ENCLOSED BY '"'  
+LINES TERMINATED BY '\r\n' 
+IGNORE 1 LINES;
 
 DROP TABLE IF EXISTS stops;
 
-CREATE TABLE `stops` (
-    stop_id INT(11) PRIMARY KEY,
-	stop_name VARCHAR(255),
-	stop_desc VARCHAR(255),
-	stop_lat DECIMAL(8,6),
-	stop_lon DECIMAL(8,6),
-	zone_id INT(11),
-	KEY `zone_id` (zone_id),
-	KEY `stop_lat` (stop_lat),
-	KEY `stop_lon` (stop_lon)
+CREATE TABLE `stops`
+(
+  `stop_id` varchar(30),
+  `stop_name` varchar(255),
+  `stop_lat` double,
+  `stop_long` double
+  -- CONSTRAINT pk_stops PRIMARY KEY(`stop_id`, `stop_name`)
 );
+
+LOAD DATA LOCAL INFILE '/Users/35383/Documents/GTFSAPItest/GTFSR/GTFSdata/stops.txt' 
+INTO TABLE dublin_bus.stops
+FIELDS TERMINATED BY ','  
+ENCLOSED BY '"'  
+LINES TERMINATED BY '\r\n' 
+IGNORE 1 LINES;
 
 DROP TABLE IF EXISTS trips;
 
-CREATE TABLE `trips` (
-    route_id INT(11),
-	service_id INT(11),
-	trip_id INT(11) PRIMARY KEY,
-	trip_headsign VARCHAR(255),
-	direction_id TINYINT(1),
-	block_id INT(11),
-	KEY `route_id` (route_id),
-	KEY `service_id` (service_id),
-	KEY `direction_id` (direction_id),
-	KEY `block_id` (block_id)
+CREATE TABLE `trips`
+(
+  `route_id` varchar(30),
+  `service_id` varchar(30),
+  `trip_id` varchar(60), -- PRIMARY KEY,
+  `shape_id` varchar(30),
+  `trip_headsign` varchar(255),
+  `direction_id` int
 );
 
-LOAD DATA INFILE 'agency.txt' INTO TABLE dublin_bus.agency FIELDS TERMINATED BY ',' IGNORE 1 LINES;
-
-LOAD DATA INFILE 'calendar.txt' INTO TABLE dublin_bus.calendar FIELDS TERMINATED BY ',' IGNORE 1 LINES;
-
-LOAD DATA INFILE 'calendar_dates.txt' INTO TABLE dublin_bus.calendar_dates FIELDS TERMINATED BY ',' IGNORE 1 LINES;
-
-LOAD DATA INFILE 'routes.txt' INTO TABLE dublin_bus.routes FIELDS TERMINATED BY ',' IGNORE 1 LINES;
-
-LOAD DATA INFILE 'stop_times.txt' INTO TABLE dublin_bus.stop_times FIELDS TERMINATED BY ',' IGNORE 1 LINES;
-
-LOAD DATA INFILE 'stops.txt' INTO TABLE dublin_bus.stops FIELDS TERMINATED BY ',' IGNORE 1 LINES;
-
-LOAD DATA INFILE 'trips.txt' INTO TABLE dublin_bus.trips FIELDS TERMINATED BY ',' IGNORE 1 LINES;
+LOAD DATA LOCAL INFILE '/Users/35383/Documents/GTFSAPItest/GTFSR/GTFSdata/trips.txt' 
+INTO TABLE dublin_bus.trips
+FIELDS TERMINATED BY ','  
+ENCLOSED BY '"'  
+LINES TERMINATED BY '\r\n' 
+IGNORE 1 LINES;
