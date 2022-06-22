@@ -15,11 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework import routers                 
+from rest_framework import routers 
+from gtfsAPI import views               
 
+router = routers.DefaultRouter()                   
+router.register(r'stops', views.StopsView, 'Stops')
+
+
+# router.register(r"shapes",views.ShapesView, 'Shapes')
 
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
+    path('api/', include(router.urls)) 
+
 ]
