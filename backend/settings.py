@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'rest_framework'
+    'rest_framework',
+    'gtfsAPI'
+    
 ]
 
 MIDDLEWARE = [
@@ -84,10 +86,10 @@ DATABASES = {
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # },
 
-    'mySQl' : {
+    'default' : {
         'ENGINE' : "django.db.backends.mysql",
         'NAME' : os.environ["NAME"],
-        'USER': os.environ["USERNAME"],
+        'USER': os.environ["USER"],
         'PASSWORD' : os.environ["PASSWORD"],
         'HOST' : os.environ["URL"],
         'PORT' : os.environ["PORT"]
