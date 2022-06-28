@@ -6,9 +6,11 @@ import './style.css';
 
 function NavBar(){
 
-    return  <><AppBar position="fixed">
-    <Toolbar>{/* content */}</Toolbar>
-  </AppBar></>;
+    return <>
+      <AppBar>
+        <Toolbar>{/* content */}</Toolbar>
+      </AppBar>
+    </>;
 }
 
 export default NavBar;

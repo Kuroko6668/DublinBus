@@ -1,12 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './Components/NavBar';
+import Map from './Components/Map'
+import {StopsProvider} from './Providers/StopsContext'
+import {GeolocationProvider} from './Providers/GeolocationContext'
 
 function App() {
   return (
     <div className="App">
-      <NavBar/>
-      <header className="App-header">
+      {/* <NavBar/> */}
+      <StopsProvider>
+        <GeolocationProvider>
+          <Map/>
+        </GeolocationProvider>  
+      </StopsProvider>
+
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -20,7 +29,7 @@ function App() {
 
         </a>
       
-      </header>
+      </header> */}
 
     </div>
   );
