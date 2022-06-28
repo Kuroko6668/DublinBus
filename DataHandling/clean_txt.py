@@ -1,5 +1,5 @@
 from datetime import datetime
-
+from time import time
 from dateutil import parser
 import logging
 
@@ -23,6 +23,7 @@ def clean_txt_file(file,newFile):
 
         for position,value in enumerate(row):
             
+            #strip surrounding whitespace
             value = value.strip()
 
             #DAYFOSERVIE or LASTUDATE positions
@@ -41,13 +42,22 @@ def clean_txt_file(file,newFile):
             newRow = sep.join(row)
         f.write(newRow)
 
-leavtimesRawTxt = open("C:/Users/35383/Documents/UCDBusData/chunk1.txt", "r")
-tripsRawTxt = open("C:/Users/35383/Documents/UCDBusData/chunk1.txt", "r")
-tripsNewFile = "trips.csv"
-leavtimesNewFile = "leavetimes.csv"
+leavtimesRawTxt = open("~/data/rt_leavetimes_DB_2018.txt", "r")
+tripsRawTxt = open("~/data/rt_trips_DB_2018.txt", "r")
+tripsNewFile = "~/data/trips_2018.csv"
+leavtimesNewFile = "~/data/leavetimes_2018.csv"
 
+startL = time.time()
 clean_txt_file(leavtimesRawTxt,leavtimesNewFile)
+runtimeL = time.time() - startL
+logging.warning("runtime of leavetimes file: " + runtimeL)
+
+startT = time.time()
 clean_txt_file(tripsRawTxt,tripsNewFile)
+runtimeT = time.time() - startT
+logging.warning("runtime of trips file: " + runtimeT)
+
+
 
 
         
