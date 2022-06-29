@@ -1,17 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './Components/NavBar';
+import Planner from './Components/Planner/Index';
 import Map from './Components/Map'
 import {StopsProvider} from './Providers/StopsContext'
 import {GeolocationProvider} from './Providers/GeolocationContext'
-
+import MarkerUserPosition from './Components/MarkerUserPosition';
+import NearMe from './Components/NearMe';
 function App() {
   return (
     <div className="App">
       {/* <NavBar/> */}
       <StopsProvider>
         <GeolocationProvider>
-          <Map/>
+          <Map>
+            <MarkerUserPosition/>
+            <Planner/>
+            <NearMe/>
+          </Map>
         </GeolocationProvider>  
       </StopsProvider>
 
