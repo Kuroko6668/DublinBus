@@ -4,14 +4,11 @@ import { useStops } from "../../../../Providers/StopsContext";
 import { GoogleMap, useJsApiLoader, Marker} from '@react-google-maps/api';
 import DisplayStops from "../../../DisplayStops";
 
-const NearMeStops = ({ position }) => {
+const NearMeStops = ({ position, distance, resultsDisplayed}) => {
     // State to handle the near stops
     const [nearStops, setNearStops] = useState([]);
     // State for the pagination in the results
     const [page, setPage] = useState(1);
-    // State that the user decides on the settings popover
-    const [distance, setDistance] = useState(3);
-    const [resultsDisplayed, setResultsDisplayed] = useState(20);
     // Stops to be displayed on the page. They are filtered by the search bar 
     const [visibleStops, setVisibleStops] = useState([]);
  

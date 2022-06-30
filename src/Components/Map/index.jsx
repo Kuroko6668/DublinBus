@@ -60,13 +60,9 @@ function Map(props) {
   useStops();
   useGeolocation();
 
-  const originRef = useRef('')
-  const destinationRef = useRef('')
-  const stopsObj = useStops()
   const userLocationObj = useGeolocation()
   const {position} = userLocationObj;
-  const stopsList = stopsObj.data
-  const directions = useRef()
+
   // console.log(stopsList,userLocationObj);
   const onLoadMap = React.useCallback(function callback(map) {
     map.set('styles',customStyled)
@@ -79,10 +75,6 @@ function Map(props) {
   }, [])
 
   
-
-
-
-
   if (!isLoaded) return <div style={{ height: "90vh" }}>Waiting...</div>;
 
   return (

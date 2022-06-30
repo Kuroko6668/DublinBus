@@ -13,8 +13,7 @@ const DisplayStops = ({stops}) => {
 
 
     return (<>
-        {console.log(stops)}
-        {stops.slice(0,5).map((stop)=>(
+        {stops.map((stop)=>(
         <Marker
             key={stop.stop_id}
             position={{lat:stop.stop_lat,lng:stop.stop_long}}
