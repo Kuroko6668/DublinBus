@@ -1,11 +1,18 @@
 import * as React from 'react';
+import Typography from '@mui/material/Typography';
+
+import NavBar from '../NavBar';
+import './style.css';
 
 
 const UserStatsPage=()=>{
 
     return(
-        <div>
-            Hey this is the user Stats Page.
+        <div class="page">
+            <NavBar/>
+            <Typography variant="h4" component="h3" class="heading">
+USER STATISTICS
+</Typography>
         </div>
     )
 }
