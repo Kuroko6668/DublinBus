@@ -6,6 +6,8 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from "react-router-dom";
+
 import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
@@ -13,13 +15,12 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['Bus Chart', 'Report', 'Extra'];
-const settings = ['Profile', 'Account', 'Logout'];
+const pages = [{label:'User Statistics',link:'/userStatsPage'},{label:'Reports',link:''}];
+const settings = [{label:'Profile',link:'/userProfile'}, {label:'Account',link:'/account'}, {label:'Logout',link:'/Logout'}];
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -88,8 +89,8 @@ const NavBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.label} component={Link} to={page.link}>
+                  <Typography textAlign="center">{page.label}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -116,13 +117,16 @@ const NavBar = () => {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={page.label}
+                component={Link}
+                to={page.link}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page.label}
               </Button>
-            ))}
+          
+            )   
+            )}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
@@ -148,8 +152,9 @@ const NavBar = () => {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <MenuItem key={setting.label} component={Link} to={setting.link
+                }>
+                  <Typography textAlign="center">{setting.label}</Typography>
                 </MenuItem>
               ))}
             </Menu>
