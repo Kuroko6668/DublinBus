@@ -7,7 +7,7 @@ import 'nprogress/nprogress.css'
 const instance = axios.create({
   timeout: 20000,//配置超时时间
 });
-instance.defaults.baseURL = 'http://127.0.0.1:8000/api'
+instance.defaults.baseURL = 'http://127.0.0.1:8000'
 
 instance.interceptors.request.use((config)=>{
   NProgress.start()

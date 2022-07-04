@@ -6,6 +6,7 @@ import {StopsProvider} from './Providers/StopsContext'
 import {GeolocationProvider} from './Providers/GeolocationContext'
 import MarkerUserPosition from './Components/MarkerUserPosition';
 import NearMe from './Components/NearMe';
+import SearchRoute from './Components/SearchRoute';
 function App() {
   return (
     <div className="App">
@@ -14,8 +15,9 @@ function App() {
         <GeolocationProvider>
           <Map>
             <MarkerUserPosition/>
-            {/* <Planner/> */}
-            <NearMe/>
+            {/* <Planner/>
+            <NearMe/> */}
+            <SearchRoute/>
           </Map>
         </GeolocationProvider>  
       </StopsProvider>

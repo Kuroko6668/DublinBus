@@ -1,6 +1,7 @@
 import myAxios from './myAxios';
 
-export const reqAllStops = () => myAxios.get('/stops')
+export const reqAllStops = () => myAxios.get('/api/stops')
+export const reqRouteById = (routeName) => myAxios.get(`/route/`+routeName)
 // export const reqLogin = (username, password) => (myAxios.post('/login',{username,password}))
 // export const reqCategoryList = () => myAxios.get('/manage/category/list')
 // export const reqWeather = ()=>{

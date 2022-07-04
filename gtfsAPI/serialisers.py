@@ -1,14 +1,14 @@
 from rest_framework import serializers
-from .models import Stops
+from .models import Stops,Route
 
 class StopsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Stops
         fields = ('stop_id' ,'stop_name', 'stop_lat', 'stop_long')
 
-# class ShapesSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Shapes
-#         fields = ('shape_id' ,'shape_pt_lat', 'shape_pt_lon', 'shape_pt_sequence','shape_dist_traveled')
+class RouteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Route
+        fields = ('stop_id' ,'route_short_name', 'direction_id', 'stop_sequence', 'trip_headsign')
 
 
