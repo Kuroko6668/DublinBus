@@ -11,7 +11,7 @@ import SearchRoute from './Components/SearchRoute';
 function App() {
   return (
     <div className="App">
-      {/* <NavBar/> */}
+      <NavBar/>
       <StopsProvider>
         <GeolocationProvider>
           <Map>
