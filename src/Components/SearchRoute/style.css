@@ -1,7 +1,7 @@
 #route {
     position: absolute;
     z-index: 40;
-    width: 200px;
+    width: 300px;
     height: 100%;
     box-shadow: 4px 0 4px -4px rgb(0 0 0 / 20%);
     display: flex;

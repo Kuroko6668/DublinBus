@@ -14,8 +14,8 @@ import {
 
 // CSS Styles for the container
 const containerStyle = {
-  width: '800px',
-  height: '400px',
+  width: '100%',
+  height: '650px',
 };
 // Map Styles for the container
 const customStyled = [

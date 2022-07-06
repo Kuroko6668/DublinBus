@@ -19,6 +19,7 @@ function App() {
             <NearMe/> */}
             <SearchRoute/>
           </Map>
+          
         </GeolocationProvider>  
       </StopsProvider>
 
