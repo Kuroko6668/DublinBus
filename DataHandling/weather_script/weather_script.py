@@ -28,6 +28,7 @@ sql2 = """
 engine.execute(sql2)
 # sql script to create current weather table
 sql_create_cur_weather_table = """
+    DROP TABLE IF EXISTS cur_weather;
     CREATE TABLE IF NOT EXISTS cur_weather(
         time VARCHAR(256),
         sunrise_time VARCHAR(256),
@@ -45,6 +46,7 @@ sql_create_cur_weather_table = """
 """
 # sql script to create hourly table
 sql_create_hourly_predict_weather_table = """
+    DROP TABLE IF EXISTS hourly_weather;
     CREATE TABLE IF NOT EXISTS hourly_weather(
         time VARCHAR(256),
         weather_id VARCHAR(256),
@@ -60,6 +62,7 @@ sql_create_hourly_predict_weather_table = """
 """
 # sql script to create daily table
 sql_create_daily_predict_weather_table = """
+    DROP TABLE IF EXISTS daily_weather;
     CREATE TABLE IF NOT EXISTS daily_weather(
         time VARCHAR(256),
         sunrise_time VARCHAR(256),

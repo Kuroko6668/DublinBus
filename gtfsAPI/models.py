@@ -23,3 +23,16 @@ class Stops(models.Model):
 #     class Meta:
 #         managed = False
 #         db_table = 'shapes'
+
+class Route(models.Model):
+    stop_id = models.CharField(primary_key=True, max_length=30, blank=True, null=False)
+    route_short_name = models.CharField(max_length=255, blank=True, null=True)
+    direction_id = models.IntegerField(blank=True, null=True)
+    stop_sequence = models.IntegerField(blank=True, null=True)
+    trip_headsign = models.CharField(max_length=255, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'route_stops'
+
+

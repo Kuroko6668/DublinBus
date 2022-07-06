@@ -1,4 +1,4 @@
-URL = "dublinbusdb.cyopwh1abtzq.us-east-1.rds.amazonaws.com"
+URL = "dub-bus-db.cyopwh1abtzq.us-east-1.rds.amazonaws.com"
 PORT = "3306"
 USER = "admin"
 PASSWORD = "Team12BusDB"

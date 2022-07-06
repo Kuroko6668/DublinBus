@@ -1,13 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
 
 import NavBar from './Components/NavBar';
-
+import Planner from './Components/Planner/Index';
+import Map from './Components/Map'
+import {StopsProvider} from './Providers/StopsContext'
+import {GeolocationProvider} from './Providers/GeolocationContext'
+import MarkerUserPosition from './Components/MarkerUserPosition';
+import NearMe from './Components/NearMe';
+import SearchRoute from './Components/SearchRoute';
 function App() {
   return (
     <div className="App">
-      <NavBar/>
-      <header className="App-header">
+      {/* <NavBar/> */}
+      <StopsProvider>
+        <GeolocationProvider>
+          <Map>
+            <MarkerUserPosition/>
+            {/* <Planner/>
+            <NearMe/> */}
+            <SearchRoute/>
+          </Map>
+          
+        </GeolocationProvider>  
+      </StopsProvider>
+
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -21,7 +38,7 @@ function App() {
 
         </a>
       
-      </header>
+      </header> */}
 
     </div>
   );
