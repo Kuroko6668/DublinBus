@@ -1,4 +1,5 @@
 import './App.css';
+
 import NavBar from './Components/NavBar';
 import Planner from './Components/Planner/Index';
 import Map from './Components/Map'
