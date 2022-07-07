@@ -1,4 +1,4 @@
 **/node_modules/
 !/.gitignore
 **/__pycache__/
-
+/clean_weather_csv.log
