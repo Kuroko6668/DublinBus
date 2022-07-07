@@ -22,6 +22,9 @@ from gtfsAPI import views
 
 router = routers.DefaultRouter()                   
 router.register(r'stops', views.StopsView, 'Stops')
+router.register(r'stopTimes', views.StopTimesView, 'StopTimes')
+
+
 
 
 # router.register(r"shapes",views.ShapesView, 'Shapes')
