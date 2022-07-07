@@ -27,7 +27,7 @@ stop_id = '8250DB002041'
 
 
 
-def check_trip_for_update(tripId,stop_id):
+def check_trip_for_update(trip_id,stop_id):
 
     updateIndex = 0
 
@@ -45,6 +45,11 @@ def check_trip_for_update(tripId,stop_id):
         print("Trip has been cancelled")
 
         print(entities[updateIndex]['TripUpdate']["Trip"])
+        update = {
+            'trip_status':'canceled'
+        }
+
+        return json.dumps(update)
 
 
     else:
@@ -56,7 +61,16 @@ def check_trip_for_update(tripId,stop_id):
             if stops['StopId'] == stop_id:
                 if stops['Arrival']['Delay'] != 0:
                     print("The arrival delay for that trip is " + str(stops['Arrival']['Delay']))
+                    
+                    update = {
+                        'trip_status': 'delayed',
+                        'delay': stops['Arrival']['Delay']
+                    }
+                   
+                    return json.dumps(update)
+
                 print(stop_id)
+
     
 
 
