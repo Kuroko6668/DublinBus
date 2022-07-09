@@ -16,8 +16,8 @@ function App() {
         <GeolocationProvider>
           <Map>
             <MarkerUserPosition/>
-            {/* <Planner/>
-            <NearMe/> */}
+            {/* <Planner/> */}
+            {/* <NearMe/> */}
             <SearchRoute/>
           </Map>
           

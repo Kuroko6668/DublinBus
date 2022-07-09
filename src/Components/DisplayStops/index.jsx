@@ -17,6 +17,7 @@ const DisplayStops = ({stops}) => {
         {stops.map((stop)=>(
         <MyMarker
             key={stop.stop_id}
+            id={stop.stop_id}
             position={{lat:stop.stop_lat,lng:stop.stop_long}}
             icon={iconStop}
             title={stop.stop_name}

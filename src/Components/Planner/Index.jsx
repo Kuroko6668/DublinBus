@@ -14,7 +14,7 @@ import {
 import { ClassNames } from '@emotion/react';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-
+import moment from "moment";
 
 const Planner = ()=>{
     const map = useGoogleMap();
@@ -28,8 +28,12 @@ const Planner = ()=>{
     const [time, setValue] = React.useState(new Date());
 
     const handleTimeChange = (newValue) => {
+      var date = moment(newValue).format('L');
+      var hour = moment(newValue).format('HH:mm:ss');
       setValue(newValue);
-      console.log(time)
+      console.log(time,"time")
+      console.log(date,"date");
+      console.log(hour,"hour");
     };
     async function calculateRoute (){
         if(originRef.current.value === '' || destinationRef.current.value === ''){
