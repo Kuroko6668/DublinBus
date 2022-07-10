@@ -27,17 +27,23 @@ class RegisterView(generics.CreateAPIView):
 
 @api_view(['GET'])
 def getRoutes(request):
+    print(request.user)
+
+
     routes = [
-        '/api/token/',
-        '/api/register/',
-        '/api/token/refresh/'
+        '/userManagement/token/',
+        '/userManagement/register/',
+        '/userManagement/token/refresh/'
     ]
     return Response(routes)
 
 
 @api_view(['GET', 'POST'])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 def testEndPoint(request):
+    if(request.user.is_anonymous):
+        
+        print(request.user)
     if request.method == 'GET':
         data = f"Congratulation {request.user}, your API just responded to GET request"
         return Response({'response': data}, status=status.HTTP_200_OK)

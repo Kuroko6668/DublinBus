@@ -8,23 +8,45 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from "react-router-dom";
 
+
+
+
 import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
+import Button from '@mui/material/Button'; 
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { useContext } from "react";
+import AuthContext from "../../context/AuthContext";
+
+
 
 const pages = [{label:'User Statistics',link:'/userStatsPage'},{label:'Reports',link:''}];
-const settings = [{label:'Profile',link:'/userProfile'}, {label:'Account',link:'/account'}, {label:'Logout',link:'/Logout'}];
+const settings = [{label:'Profile',link:'/HomePage'}, {label:'SignUp',link:'/SignUp'}, {label:'SignIn',link:'/SignIn'}, {labe:"ProtectedPage",link:'/ProtectedPage'}];
+
+
+
+
 
 const NavBar = () => {
+
+  // const { user, logoutUser } = useContext(AuthContext);
+
+
+  //Mike
+  // const { user } = useContext(AuthContext);
+
+  // const { user, logoutUser } = useContext(AuthContext);
+
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
   const handleOpenUserMenu = (event) => {
+    
     setAnchorElUser(event.currentTarget);
   };
 
@@ -41,6 +63,7 @@ const NavBar = () => {
       <Container maxWidth="200px">
         <Toolbar disableGutters>
           <DirectionsBusIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+
           <Typography
             variant="h6"
             noWrap

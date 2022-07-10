@@ -8,10 +8,13 @@ import {GeolocationProvider} from './Providers/GeolocationContext'
 import MarkerUserPosition from './Components/MarkerUserPosition';
 import NearMe from './Components/NearMe';
 import SearchRoute from './Components/SearchRoute';
+
+
 function App() {
   return (
     <div className="App">
       <NavBar/>
+
       <StopsProvider>
         <GeolocationProvider>
           <Map>
@@ -39,7 +42,6 @@ function App() {
         </a>
       
       </header> */}
-
     </div>
   );
 }

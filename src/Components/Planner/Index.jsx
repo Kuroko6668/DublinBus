@@ -14,6 +14,12 @@ import {
 import { ClassNames } from '@emotion/react';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { useContext } from "react";
+import AuthContext from "../../context/AuthContext.js";
+// C:/Users/35383/Documents/BusRepo/DublinBusRepo/src/context/AuthContext.js
+
+
+
 
 
 const Planner = ()=>{
@@ -27,11 +33,19 @@ const Planner = ()=>{
     const directions = useRef()
     const [time, setValue] = React.useState(new Date());
 
+    const { user } = useContext(AuthContext);
+
+
+
     const handleTimeChange = (newValue) => {
       setValue(newValue);
       console.log(time)
     };
     async function calculateRoute (){
+
+        
+        console.log("Clicked XXXX")
+        console.log(user)
         if(originRef.current.value === '' || destinationRef.current.value === ''){
           return 
         }
