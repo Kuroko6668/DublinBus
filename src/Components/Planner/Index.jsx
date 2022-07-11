@@ -14,14 +14,17 @@ import {
 import { ClassNames } from '@emotion/react';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import SearchRoute from '../SearchRoute';
 
 
-const Planner = ()=>{
+function Planner({back}){
+    
     const map = useGoogleMap();
     const { position } = useGeolocation();
     const [directionResponse, setDirectionResponse] = useState((null))
     const [distance,setDistance] = useState('')
     const [duration,setDuration] = useState('')
+    const [showNextPage,setShowNextPage]=useState(false);
     const originRef = useRef('')
     const destinationRef = useRef('')
     const directions = useRef()
@@ -54,6 +57,7 @@ const Planner = ()=>{
         setDistance(results.routes[0].legs[0].distance.text)
         setDuration(results.routes[0].legs[0].duration.text)
         console.log(results.routes);
+        setShowNextPage(true);
     }
     const showdirectionResponse = ()=>{
         console.log(directionResponse);
@@ -87,16 +91,7 @@ const Planner = ()=>{
           />
         </Autocomplete>
 
-        <Button 
-          sx={{ mt:1 }}
-          style={{textTransform: 'none'}}
-          type="submin"
-          variant='contained'
-          onClick={calculateRoute}
-          size='small'
-        >
-          Caculate Route
-        </Button>
+     
 
           <Button 
             style={{textTransform: 'none'}}
@@ -125,6 +120,29 @@ const Planner = ()=>{
             onChange={handleTimeChange}
             renderInput={(params) => <TextField {...params} />}
             />
+               <Button 
+          sx={{ mt:1 }}
+          style={{textTransform: 'none'}}
+          type="submin"
+          variant='contained'
+          onClick={calculateRoute}
+          size='small'
+        >
+          Caculate Route
+        </Button>
+        <Button 
+          sx={{ mt:1 }}
+          style={{textTransform: 'none'}}
+          type="submin"
+          variant='contained'
+          onClick={()=>back(false)}
+          size='small'
+        >
+         Back
+        </Button>
+        {showNextPage&&<SearchRoute></SearchRoute>
+
+        }
          </LocalizationProvider>
          {directionResponse&&<DirectionsRenderer directions={directionResponse}></DirectionsRenderer>}
   </div>

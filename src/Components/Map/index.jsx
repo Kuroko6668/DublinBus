@@ -16,6 +16,7 @@ import {
 const containerStyle = {
   width: '100%',
   height: '650px',
+  position:'relative'
 };
 // Map Styles for the container
 const customStyled = [
