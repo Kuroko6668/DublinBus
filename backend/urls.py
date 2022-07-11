@@ -36,6 +36,6 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('', include('gtfsAPI.urls')),
     path('',include('gtfsrProcessing.urls')),
-    path('userManagement/', include("userManagement.urls"))
+    path('userManagement/', include("userManagement.urls")),
 
 ]

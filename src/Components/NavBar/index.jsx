@@ -22,14 +22,31 @@ import AuthContext from "../../context/AuthContext";
 
 
 
-const pages = [{label:'User Statistics',link:'/userStatsPage'},{label:'Reports',link:''}];
+
 const settings = [{label:'Profile',link:'/HomePage'}, {label:'SignUp',link:'/SignUp'}, {label:'SignIn',link:'/SignIn'}, {labe:"ProtectedPage",link:'/ProtectedPage'}];
+
+
+const pages = [{label:'User Statistics',link:'/userStatsPage'},{label:'Reports',link:''}];
+
+
+
+
+
 
 
 
 
 
 const NavBar = () => {
+
+  const { user } = useContext(AuthContext);
+  if(user){
+    console.log("logged in")
+  }
+  else{
+    console.log("logged oz")
+  }
+
 
   // const { user, logoutUser } = useContext(AuthContext);
 

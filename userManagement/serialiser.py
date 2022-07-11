@@ -4,6 +4,9 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from .models import user_data
+
+# from userManagement.models import user_data
 
 
 #https://sushil-kamble.medium.com/django-rest-framework-react-authentication-workflow-2022-part-1-a21f22b3f358
@@ -16,6 +19,7 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         # Add custom claims
         token['username'] = user.username
         token['email'] = user.email
+        # token['id'] = user.id
         
         return token
 
@@ -44,3 +48,8 @@ class RegisterSerializer(serializers.ModelSerializer):
         user.save()
 
         return user
+
+class user_dataSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = user_data
+        fields = ('user_id' ,'favourite_stop_1', 'favourite_stop_2', 'favourite_stop_3')
