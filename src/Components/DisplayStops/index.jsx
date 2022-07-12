@@ -8,6 +8,7 @@ import MyMarker from './MyMarker';
 
 
 
+
 // This component returns a div and displays a marker for each stop in the array
 // This div are wrapped by an accordion
 const DisplayStops = ({stops}) => {

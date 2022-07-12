@@ -84,7 +84,7 @@ function TablePaginationActions(props) {
 
 
     const {arrivals} = props
-    
+    console.log(arrivals);
     const rows = arrivals
     const [page, setPage] = React.useState(0);
     const rowsPerPage = 4
@@ -128,13 +128,13 @@ function TablePaginationActions(props) {
                 ).map((row) => (
                     <TableRow key={Math.random().toString()}>
                     <TableCell style={{ width: 30 }} align="center">
-                        {row.route_short_name}
+                        {row.line}
                     </TableCell>
                     <TableCell style={{ width: 30 }} align="center">
                         {row.trip_headsign.split(' - ')[1]}
                     </TableCell>
                     <TableCell style={{ width: 30 }} align="center">
-                        {row.due_in_mins + ' mins'}
+                        {row.due_in_min + ' mins'}
                     </TableCell>
                     </TableRow>
                 ))}

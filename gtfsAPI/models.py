@@ -36,3 +36,79 @@ class Route(models.Model):
         db_table = 'route_stops'
 
 
+# class Routes(models.Model):
+#     route_id = models.CharField(max_length=30, primary_key=True)
+#     agency_id = models.CharField(max_length=10)
+#     route_short_name = models.CharField(max_length=10)
+#     route_long_name = models.CharField(max_length=255)
+#     route_type = models.IntegerField()
+
+#     class Meta:
+#         managed = False
+#         db_table = 'routes'
+
+# class Trip(models.Model):
+#     trip_id = models.CharField(max_length=60, primary_key=True)
+#     shape_id = models.CharField(max_length=30)
+#     trip_headsign = models.CharField(max_length=255)
+#     direction_id = models.IntegerField()
+#     service_id = models.CharField(max_length=30)
+#     route_id = models.CharField(max_length=30)
+
+#     class Meta:
+#         managed = False
+#         db_table = 'trips'
+
+# class StopTime(models.Model):
+#     arrival_time = models.TimeField(primary_key=True)
+#     departure_time = models.TimeField()
+#     stop_id = models.CharField(max_length=30)
+#     stop_sequence = models.IntegerField()
+#     stop_headsign = models.CharField(max_length=255)
+#     pickup_type = models.IntegerField()
+#     drop_off_type = models.IntegerField()
+#     shape_dist_traveled = models.FloatField()
+#     trip_id = models.CharField(max_length=60)
+    
+#     class Meta:
+#         managed = False
+#         db_table = 'stop_times'
+
+
+class Routes(models.Model):
+    route_id = models.CharField(max_length=30, primary_key=True)
+    agency_id = models.CharField(max_length=10)
+    route_short_name = models.CharField(max_length=10)
+    route_long_name = models.CharField(max_length=255)
+    route_type = models.IntegerField()
+
+    class Meta:
+        managed = False
+        db_table = 'routes'
+
+class Trip(models.Model):
+    trip_id = models.CharField(max_length=60, primary_key=True)
+    shape_id = models.CharField(max_length=30)
+    trip_headsign = models.CharField(max_length=255)
+    direction_id = models.IntegerField()
+    service_id = models.CharField(max_length=30)
+    route = models.ForeignKey(Routes, on_delete=models.CASCADE, db_constraint=False)
+
+    class Meta:
+        managed = False
+        db_table = 'trips'
+
+class StopTime(models.Model):
+    arrival_time = models.TimeField(primary_key=True)
+    departure_time = models.TimeField()
+    stop = models.ForeignKey(Stops, on_delete=models.CASCADE, db_constraint=False)
+    stop_sequence = models.IntegerField()
+    stop_headsign = models.CharField(max_length=255)
+    pickup_type = models.IntegerField()
+    drop_off_type = models.IntegerField()
+    shape_dist_traveled = models.FloatField()
+    trip = models.ForeignKey(Trip, on_delete=models.CASCADE, db_constraint=False)
+    
+    class Meta:
+        managed = False
+        db_table = 'stop_times'

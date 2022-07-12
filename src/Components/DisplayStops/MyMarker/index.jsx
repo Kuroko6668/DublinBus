@@ -2,18 +2,25 @@ import { InfoWindow, Marker, useGoogleMap } from "@react-google-maps/api";
 import { useState } from "react";
 import {Typography, Button, Modal, Box} from '@mui/material';
 import ArrivalsTable from "./arrivalsTable";
+import { reqStopById } from "../../../ajax";
 import './style.css'
 
 // Cutomizable small component that creates a marker and centers the view at that position
 const MyMarker = ({ id, position, options, ...restProps }) => {
   // State to control the infowindow
   const [infoWindow, setInfoWindow] = useState(false);
+  const [nextArrivals, setnextArrivals] = useState([])
   // Hook to access the map reference
   const mapRef = useGoogleMap();
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
+  var response = []
+  const handleOpen = async() => {
+    response = await reqStopById(id)
+    setnextArrivals(response.data.arrivals)
+    setOpen(true)
+    console.log(nextArrivals);
+  };
   const handleClose = () => setOpen(false);
-
   return (
     <Marker
       key={id}
@@ -29,7 +36,7 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
       >
         <div className="infowindow">
           {restProps.title}
-          <Button onClick={handleOpen}>More</Button>
+          <Button onClick={()=>{handleOpen()}}>More</Button>
         </div>
       </InfoWindow>}
       <Modal
@@ -43,7 +50,7 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
           {restProps.title}
           </Typography>
           <div id="modal-modal-description" sx={{ mt: 2 }}>
-            <ArrivalsTable arrivals={placeholder}/>
+            <ArrivalsTable arrivals={nextArrivals}/>
           </div>
         </Box>
       </Modal>
