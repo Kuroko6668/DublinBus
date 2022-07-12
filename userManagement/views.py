@@ -62,7 +62,7 @@ def testEndPoint(request):
 
     if request.method == 'GET':
         data = f"Congratulation {request.user}, your API just responded to GET request"
-        return Response({'response': data}, status=status.HTTP_200_OK)
+        return Response({'response': result}, status=status.HTTP_200_OK)
     elif request.method == 'POST':
         text = request.POST.get('text')
         data = f'Congratulation your API just responded to POST request with text: {text}'
@@ -73,3 +73,32 @@ def testEndPoint(request):
 class user_dataView(viewsets.ModelViewSet):  
     serializer_class = user_dataSerializer   
     queryset = user_data.objects.all() 
+
+
+# from rest_framework import status
+# from rest_framework.decorators import api_view
+# from rest_framework.response import Response
+# #
+
+
+# @api_view(['GET', 'POST'])
+# def handle_user_data_request(request):
+#     """
+#     List all code snippets, or create a new snippet.
+
+
+#     """
+
+#     user_name = request._auth.payload['user_id']
+
+#     if request.method == 'GET':
+#         snippets = Snippet.objects.all()
+#         serializer = SnippetSerializer(snippets, many=True)
+#         return Response(serializer.data)
+
+#     elif request.method == 'POST':
+#         serializer = SnippetSerializer(data=request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data, status=status.HTTP_201_CREATED)
+#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

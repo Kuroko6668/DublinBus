@@ -11,6 +11,7 @@ function ProtectedPage() {
       try {
         const response = await api.get("/test/");
         setRes(response.data.response);
+        console.log(response)
       } catch {
         setRes("Something went wrong");
       }
@@ -22,7 +23,7 @@ function ProtectedPage() {
   return (
     <div>
       <h1>Projected Page</h1>
-      <p>{res}</p>
+      {/* <p>{res}</p> */}
     </div>
   );
 }

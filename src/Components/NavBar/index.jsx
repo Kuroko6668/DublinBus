@@ -19,6 +19,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
+import Logout from '../../views/Logout';
 
 
 
@@ -197,6 +198,7 @@ const NavBar = () => {
                   <Typography textAlign="center">{setting.label}</Typography>
                 </MenuItem>
               ))}
+              <Logout/>
             </Menu>
           </Box>
         </Toolbar>
