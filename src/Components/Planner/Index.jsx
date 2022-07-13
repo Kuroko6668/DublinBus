@@ -14,7 +14,6 @@ import {
 import { ClassNames } from '@emotion/react';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import SearchRoute from '../SearchRoute';
 
 
 function Planner({back}){
@@ -24,7 +23,6 @@ function Planner({back}){
     const [directionResponse, setDirectionResponse] = useState((null))
     const [distance,setDistance] = useState('')
     const [duration,setDuration] = useState('')
-    const [showNextPage,setShowNextPage]=useState(false);
     const originRef = useRef('')
     const destinationRef = useRef('')
     const directions = useRef()
@@ -56,8 +54,7 @@ function Planner({back}){
         setDirectionResponse(results)
         setDistance(results.routes[0].legs[0].distance.text)
         setDuration(results.routes[0].legs[0].duration.text)
-        console.log(results.routes);
-        setShowNextPage(true);
+
     }
     const showdirectionResponse = ()=>{
         console.log(directionResponse);
@@ -140,9 +137,7 @@ function Planner({back}){
         >
          Back
         </Button>
-        {showNextPage&&<SearchRoute></SearchRoute>
 
-        }
          </LocalizationProvider>
          {directionResponse&&<DirectionsRenderer directions={directionResponse}></DirectionsRenderer>}
   </div>
