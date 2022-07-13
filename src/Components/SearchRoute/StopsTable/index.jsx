@@ -83,7 +83,7 @@ function TablePaginationActions(props) {
   const StopsTable = (props)=>{
     function handleDoubleClick(position) {
       // Zoom the view
-        mapRef.setZoom(15);
+        mapRef.setZoom(17);
     
       // Pans the view to the marker
       mapRef.panTo(position);
@@ -125,7 +125,7 @@ function TablePaginationActions(props) {
                   key={'asdffdsa'}
                   align={'center'}
                 >
-                  {"Detail"}
+                  {"Position"}
                 </TableCell>
             </TableRow>
           </TableHead>
@@ -142,7 +142,7 @@ function TablePaginationActions(props) {
                         {row.stop_sequence}
                     </TableCell>
                     <TableCell style={{ width: 30 }} align="right">
-                        <Button onClick={()=>{handleDoubleClick({lat:row.stop_lat,lng:row.stop_long})}}>more</Button>
+                        <Button onClick={()=>{handleDoubleClick({lat:row.stop_lat,lng:row.stop_long})}}>Show</Button>
                     </TableCell>
                     </TableRow>
                 ))}

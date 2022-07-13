@@ -8,8 +8,7 @@ import {GeolocationProvider} from './Providers/GeolocationContext'
 import MarkerUserPosition from './Components/MarkerUserPosition';
 import NearMe from './Components/NearMe';
 import SearchRoute from './Components/SearchRoute';
-
-
+import SideBar from './Components/SideBar';
 function App() {
   return (
     <div className="App">
@@ -19,8 +18,9 @@ function App() {
         <GeolocationProvider>
           <Map>
             <MarkerUserPosition/>
-            <Planner/>
-           { /* <NearMe/> */}
+            <SideBar/>
+            {/* <Planner/> */}
+            {/* <NearMe/> */}
             {/* <SearchRoute/> */}
           </Map>
           
