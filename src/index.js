@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter,Route,Routes } from "react-router-dom";
 import UserStatsPage from './Components/UserStatsPage';
-import UserProfilePage from './Components/UserProfile';
-import LoginPage from './views/LoginPage'
-import HomePage from './views/HomePage'
-import SignIn from './views/SignIn';
+// import UserProfilePage from './Components/UserProfile';
+// import LoginPage from './manageUser/LoginPage'
+import HomePage from './manageUser/HomePage'
+import SignIn from './manageUser/SignIn';
 // import Register from './views/Register'
-import SignUp from './views/SignUp';
+import SignUp from './manageUser/SignUp';
 import { AuthProvider } from "./context/AuthContext";
 
 
@@ -15,7 +15,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Planner from './Components/Planner/Index';
-import ProtectedPage from './views/ProtectedPage';
+import ProtectedPage from './manageUser/ProtectedPage';
 // import SignIn from './views/SignIn';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -37,7 +37,7 @@ root.render(
       <Route path="SignUp" element={<SignUp />} />
 
       <Route path="HomePage" element={<HomePage />} />
-      <Route path="Signin" element={<SignIn />} />
+      <Route path="SignIn" element={<SignIn />} />
 
 
       </Route>

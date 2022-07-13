@@ -17,9 +17,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button'; 
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import { useContext } from "react";
-import AuthContext from "../../context/AuthContext";
-import Logout from '../../views/Logout';
+import Logout from '../../manageUser/Logout';
 
 
 
@@ -40,13 +38,7 @@ const pages = [{label:'User Statistics',link:'/userStatsPage'},{label:'Reports',
 
 const NavBar = () => {
 
-  const { user } = useContext(AuthContext);
-  if(user){
-    console.log("logged in")
-  }
-  else{
-    console.log("logged oz")
-  }
+ 
 
 
   // const { user, logoutUser } = useContext(AuthContext);
