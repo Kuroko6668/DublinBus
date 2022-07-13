@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from datetime import datetime, timedelta, timezone
 import requests
+import math
 from gtfsAPI.models import  Stops,Route,StopTime,Routes,Trip
 from .serialisers import  StopsSerializer,RouteSerializer
 from django.http import JsonResponse, Http404, HttpResponseBadRequest, HttpResponse
@@ -46,7 +47,7 @@ def stop_detail(request, stop_id):
         'arrivals': []
     }
 
-    stop_time_details = StopTime.objects.filter(
+    stop_time_next_hour = StopTime.objects.filter(
         stop_id=stop_id,
         # Get all arrival times in the next hour
         arrival_time__gte=current_time.time(),
@@ -55,14 +56,12 @@ def stop_detail(request, stop_id):
     # # result['arrivals'] = list(stop_time_details)
     realtime_updates = request_realtime_nta_data()
 
-    for stop_time in stop_time_details:
+    for stop_time in stop_time_next_hour:
 
         # Only get details for trips that operate on the current day
         if stop_time.trip.service_id  == str(service_id):
 
-            delay = get_realtime_dublin_bus_delay(realtime_updates,
-                                                    stop_time.trip.trip_id,
-                                                    stop_time.stop_sequence)
+            delay = get_bus_delay(realtime_updates,stop_time.trip.trip_id,stop_time.stop_sequence)
 
             result['arrivals'].append({
                 'route_id': stop_time.trip.route.route_id,
@@ -75,7 +74,7 @@ def stop_detail(request, stop_id):
                 'scheduled_departure_time': stop_time.departure_time,
                 'stop_sequence': stop_time.stop_sequence,
                 'delay_sec': delay,
-                'due_in_min': get_due_in_time(current_time, stop_time.arrival_time, delay)
+                'due_in_min': get_due_in_mins(current_time, stop_time.arrival_time, delay)
             })
 
     result['arrivals'] = sorted(result['arrivals'],
@@ -88,9 +87,6 @@ def stop_detail(request, stop_id):
 
 
 def request_realtime_nta_data():
-    """
-    Make a request to the NTA realtime API
-    """
 
     headers = {
         # Request headers
@@ -105,7 +101,7 @@ def request_realtime_nta_data():
     return realtime_response.json()['Entity']
 
 
-def get_due_in_time(current_time, scheduled_arrival_time, delay):
+def get_due_in_mins(current_time, scheduled_arrival_time, delay):
 
     scheduled_arrival_datetime_str = current_time.strftime(
         "%d/%m/%y ") + str(scheduled_arrival_time)
@@ -120,10 +116,10 @@ def get_due_in_time(current_time, scheduled_arrival_time, delay):
 
     # add delay to due time
     time_delta_seconds = time_delta.total_seconds() + delay
-    return round(time_delta_seconds / 60)
+    return math.ceil(time_delta_seconds / 60)
 
 
-def get_realtime_dublin_bus_delay(realtime_updates, trip_id, stop_sequence):
+def get_bus_delay(realtime_updates, trip_id, stop_sequence):
 
     # Get stop time updates for this trip or else return None
     trip_updates = next(filter(lambda trip: trip['Id'] == trip_id, realtime_updates), None)
@@ -134,15 +130,14 @@ def get_realtime_dublin_bus_delay(realtime_updates, trip_id, stop_sequence):
 
         if stop_time_updates:
 
-            # Sort updates in reverse order by stop_sequence
+
             stop_time_updates = sorted(
                 stop_time_updates,
                 key=lambda update: update['StopSequence'],
                 reverse=True
             )
 
-            # Only get delay if stop_sequence of latest update is lower than the
-            # stop_sequence of the requested stop
+
             if stop_time_updates[0]['StopSequence'] < stop_sequence:
                 return stop_time_updates[0]['Departure']['Delay']
 

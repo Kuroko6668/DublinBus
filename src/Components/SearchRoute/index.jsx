@@ -21,6 +21,7 @@ const SearchRoute = ()=>{
 
   
     const getRoute = async ()=>{
+        setVisiableRoute([])
         if(routeRef.current.value === ''){
             return 
         }
@@ -61,7 +62,7 @@ const SearchRoute = ()=>{
 
     const handleChangeDirection = ()=>{
 
-
+        setVisiableRoute([])
         const res = []
         var detail = ''
         var index = 1
@@ -75,6 +76,7 @@ const SearchRoute = ()=>{
         }
         console.log(res);
         console.log(detail);
+        
         setDirection(1^direction)
         setVisiableRoute(res)
         setDirectionDetail(detail)

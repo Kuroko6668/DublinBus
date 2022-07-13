@@ -79,43 +79,7 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
 
 export default MyMarker;
 
-const placeholder = [{
-  route_short_name: "39a",
-  trip_headsign:" Shanard Road (Shanard Avenue) - Shaw Street",
-  due_in_mins:6,
-  delay_in_sec:300,
-},{
-  route_short_name: "39a",
-  trip_headsign:" Shanard Road (Shanard Avenue) - Shaw Street",
-  due_in_mins:14,
-  delay_in_sec:300,
-},{
-  route_short_name: "39a",
-  trip_headsign:" Shanard Road (Shanard Avenue) - Shaw Street",
-  due_in_mins:16,
-  delay_in_sec:300,
-},{
-  route_short_name: "39a",
-  trip_headsign:" Shanard Road (Shanard Avenue) - Shaw Street",
-  due_in_mins:20,
-  delay_in_sec:300,
-},{
-  route_short_name: "39a",
-  trip_headsign:" Shanard Road (Shanard Avenue) - Shaw Street",
-  due_in_mins:24,
-  delay_in_sec:300,
-},{
-  route_short_name: "39a",
-  trip_headsign:" Shanard Road (Shanard Avenue) - Shaw Street",
-  due_in_mins:27,
-  delay_in_sec:300,
-},{
-  route_short_name: "39a",
-  trip_headsign:" Shanard Road (Shanard Avenue) - Shaw Street",
-  due_in_mins:30,
-  delay_in_sec:300,
-}
-]
+
 
 const style = {
   position: 'absolute',
