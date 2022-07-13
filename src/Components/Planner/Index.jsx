@@ -16,7 +16,8 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 
 
-const Planner = ()=>{
+function Planner({back}){
+    
     const map = useGoogleMap();
     const { position } = useGeolocation();
     const [directionResponse, setDirectionResponse] = useState((null))
@@ -53,7 +54,7 @@ const Planner = ()=>{
         setDirectionResponse(results)
         setDistance(results.routes[0].legs[0].distance.text)
         setDuration(results.routes[0].legs[0].duration.text)
-        console.log(results.routes);
+
     }
     const showdirectionResponse = ()=>{
         console.log(directionResponse);
@@ -87,16 +88,7 @@ const Planner = ()=>{
           />
         </Autocomplete>
 
-        <Button 
-          sx={{ mt:1 }}
-          style={{textTransform: 'none'}}
-          type="submin"
-          variant='contained'
-          onClick={calculateRoute}
-          size='small'
-        >
-          Caculate Route
-        </Button>
+     
 
           <Button 
             style={{textTransform: 'none'}}
@@ -125,6 +117,27 @@ const Planner = ()=>{
             onChange={handleTimeChange}
             renderInput={(params) => <TextField {...params} />}
             />
+               <Button 
+          sx={{ mt:1 }}
+          style={{textTransform: 'none'}}
+          type="submin"
+          variant='contained'
+          onClick={calculateRoute}
+          size='small'
+        >
+          Caculate Route
+        </Button>
+        <Button 
+          sx={{ mt:1 }}
+          style={{textTransform: 'none'}}
+          type="submin"
+          variant='contained'
+          onClick={()=>back(false)}
+          size='small'
+        >
+         Back
+        </Button>
+
          </LocalizationProvider>
          {directionResponse&&<DirectionsRenderer directions={directionResponse}></DirectionsRenderer>}
   </div>

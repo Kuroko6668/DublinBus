@@ -1,5 +1,5 @@
 import React,{Component, useRef, useState} from 'react'
-import {Button, Input, Typography, Card, CardActions, CardContent, Box, Autocomplete, TextField} from '@mui/material';
+import {Button, Input, Typography, Card, CardActions, CardContent, Box, Autocomplete, TextField, backdropClasses} from '@mui/material';
 import { reqRouteById } from '../../ajax';
 import DisplayStops from '../DisplayStops/index'
 import { useStops } from '../../Providers/StopsContext';
@@ -8,7 +8,7 @@ import StopsTable from './StopsTable';
 
 
 
-const SearchRoute = ()=>{
+function SearchRoute({back}){
   //输入函数体
     const [value, setValue] = React.useState(routesName[0]);
     const [inputValue, setInputValue] = React.useState('');
@@ -158,6 +158,7 @@ const SearchRoute = ()=>{
         >
           Change Direction
         </Button>
+
         {visiableroute&&<DisplayStops stops={visiableroute}/>}
         {directionDetail&&
             <Typography sx={{ fontSize: 14 }} gutterBottom>
@@ -165,6 +166,15 @@ const SearchRoute = ()=>{
             </Typography>
         }
         {visiableroute&&<StopsTable stops={visiableroute}/>}
+        <Button 
+          sx={{ mt:1 }}
+          style={{textTransform: 'none'}}
+          variant='contained'
+          onClick={()=>{back(false)}}
+          size='small'
+        >
+          Back
+        </Button>
 
 
     </div>
