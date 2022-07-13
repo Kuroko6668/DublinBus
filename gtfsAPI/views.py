@@ -4,7 +4,7 @@ from datetime import datetime, timedelta, timezone
 import requests
 import math
 from gtfsAPI.models import  Stops,Route,StopTime,Routes,Trip
-from .serialisers import  StopsSerializer,RouteSerializer
+from .serialisers import  StopsSerializer,RouteSerializer, StopTimesSerializer
 from django.http import JsonResponse, Http404, HttpResponseBadRequest, HttpResponse
 # Create your views here.
 
@@ -12,9 +12,9 @@ class StopsView(viewsets.ModelViewSet):
     serializer_class = StopsSerializer   
     queryset = Stops.objects.all() 
 
-class StopTimesView(viewsets.ModelViewSet):
-    serializer_class = StopTimesSerializer
-    queryset = StopTimes.objects.all() 
+# class StopTimesView(viewsets.ModelViewSet):
+#     serializer_class = StopTimesSerializer
+#     queryset = StopTimes.objects.all() 
 
 
 # def trips_by_stop(request,stop_id):
