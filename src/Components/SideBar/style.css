@@ -1,0 +1,13 @@
+#sideBar {
+  position: absolute;
+  z-index: 40;
+  width: 300px;
+  height: 100%;
+  background-color: aliceblue;
+  padding: 10px;
+}
+
+.sideButtons {
+  color: blue;
+  padding: 10px;
+}
