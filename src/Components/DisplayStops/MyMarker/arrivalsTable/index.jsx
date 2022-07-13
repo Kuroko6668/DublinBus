@@ -80,23 +80,15 @@ function TablePaginationActions(props) {
     rowsPerPage: PropTypes.number.isRequired,
   };
 
-  const StopsTable = (props)=>{
-    function handleDoubleClick(position) {
-      // Zoom the view
-        mapRef.setZoom(17);
-    
-      // Pans the view to the marker
-      mapRef.panTo(position);
-    }
+  const ArrivalsTable = (props)=>{
 
-    const mapRef = useGoogleMap();
-    //输入函数体
-    const {stops} = props
-    console.log(stops);
-    const rows = stops
+
+    const {arrivals} = props
+    console.log(arrivals);
+    const rows = arrivals
     const [page, setPage] = React.useState(0);
     const rowsPerPage = 4
-  
+    console.log(rows);
     // Avoid a layout jump when reaching the last page with empty rows.
     const emptyRows =
       page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
@@ -119,13 +111,13 @@ function TablePaginationActions(props) {
                   key={'asdfsadfdsa'}
                   align={'center'}
                 >
-                  {"Sequence"}
+                  {"Destination"}
                 </TableCell>
                 <TableCell
                   key={'asdffdsa'}
                   align={'center'}
                 >
-                  {"Position"}
+                  {"Time"}
                 </TableCell>
             </TableRow>
           </TableHead>
@@ -135,14 +127,14 @@ function TablePaginationActions(props) {
                     : rows
                 ).map((row) => (
                     <TableRow key={Math.random().toString()}>
-                    <TableCell style={{ width: 100 }} align="center">
-                        {row.stop_name}
+                    <TableCell style={{ width: 30 }} align="center">
+                        {row.line}
                     </TableCell>
                     <TableCell style={{ width: 30 }} align="center">
-                        {row.stop_sequence}
+                        {row.trip_headsign.split(' - ')[1]}
                     </TableCell>
-                    <TableCell style={{ width: 30 }} align="right">
-                        <Button onClick={()=>{handleDoubleClick({lat:row.stop_lat,lng:row.stop_long})}}>Show</Button>
+                    <TableCell style={{ width: 30 }} align="center">
+                        {row.due_in_min + ' mins'}
                     </TableCell>
                     </TableRow>
                 ))}
@@ -173,6 +165,6 @@ function TablePaginationActions(props) {
                 </TableRow>
                 </TableFooter>
             </Table>
-      </Card>
+            </Card>
   }
-export default StopsTable;
+export default ArrivalsTable;

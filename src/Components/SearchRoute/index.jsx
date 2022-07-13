@@ -22,6 +22,7 @@ function SearchRoute({back}){
 
   
     const getRoute = async ()=>{
+        setVisiableRoute([])
         if(routeRef.current.value === ''){
             return 
         }
@@ -58,20 +59,11 @@ function SearchRoute({back}){
         setVisiableRoute(res)
         setDirectionDetail(detail)
 
-        // const res = route_stops.filter((obj)=>{
-        //     if(obj.direction_id === direction){
-        //         return obj.stopObj
-        //     }else{
-        //         return false
-        //     }
-        // })
-        // console.log(res);
-        // setVisiableRoute(res)
     }
 
     const handleChangeDirection = ()=>{
 
-
+        setVisiableRoute([])
         const res = []
         var detail = ''
         var index = 1
@@ -85,39 +77,13 @@ function SearchRoute({back}){
         }
         console.log(res);
         console.log(detail);
+        
         setDirection(1^direction)
         setVisiableRoute(res)
         setDirectionDetail(detail)
- 
-        // console.log(direction);
-        // const res = []
-        // for(var i = 0; i < routes.length; i++){
-        //     if(routes[i].direction_id === 1^direction){
-        //         res.unshift(routes[i].stopObj)
-        //     }
-        // }
-        // console.log(res);
-        // setVisiableRoute(res)
 
-
-        // const res = routes.filter((obj)=>{
-        //     if(obj.direction_id === direction){
-        //         return obj.stopObj
-        //     }else{
-        //         return false
-        //     }
-        // })
-        // console.log(res);
-        // setVisiableRoute(res)
     }
     return <div id='route'>
-        {/* <Input 
-            label={"Route name"}
-            size="middle"
-            style={{width:"10rem"}}
-            placeholder={"Route name, eg:39a"}
-            inputRef = {routeRef}
-        /> */}
         <Autocomplete
         getOptionLabel={(option) => option.value}
         renderOption={(props, option) => {
@@ -182,8 +148,8 @@ function SearchRoute({back}){
 export default SearchRoute
 
 
-const routesName = [
-    '1','11','116','118','120','122','123','13',
+var routesName = [
+    '1','11','116','120','122','123','13',
     '130','14','140','142','15','15d','150',
     '155','151','15a','15b','16','16d','26','27',
     '27a','27b','27x','32x','33','33d','33e','33x',
@@ -194,7 +160,7 @@ const routesName = [
     '69x','7','7a','70','77a','77x','79','79a','7b','7d',
     '83','83a','84','84a','84x','9','H1','H2','H3','C1','C2','C3',
     'C4','C5','C6','P29','L53','L54','L58','L59','X25','X26','X27','X28',
-    'X30','X31','X32','N4','1','11','116','118','120','122','123','13','130',
+    'X30','X31','X32','N4','1','11','116','120','122','123','13','130',
     '14','140','142','145','15','150','151','155','15a',
     '15b','15d','16','16d',
     '26','27','27a','27b','27x','32x','33','33d','33e','33x','37','38','38a','38b','38d','39','39a',
@@ -203,6 +169,10 @@ const routesName = [
     'C5','C6','P29','L53','L54','L58','L59','X25','X26','X27',
     'X28','X30','X31','X32','N4'
 ]
+function unique (arr) {
+  return Array.from(new Set(arr))
+}
+routesName = unique(routesName)
 let res = []
 for(var i = 0; i < routesName.length; i ++){
     var obj = new Object(true)

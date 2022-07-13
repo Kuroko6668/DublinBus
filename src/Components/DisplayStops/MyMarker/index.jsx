@@ -1,16 +1,26 @@
 import { InfoWindow, Marker, useGoogleMap } from "@react-google-maps/api";
 import { useState } from "react";
+import {Typography, Button, Modal, Box} from '@mui/material';
+import ArrivalsTable from "./arrivalsTable";
+import { reqStopById } from "../../../ajax";
 import './style.css'
 
 // Cutomizable small component that creates a marker and centers the view at that position
 const MyMarker = ({ id, position, options, ...restProps }) => {
   // State to control the infowindow
   const [infoWindow, setInfoWindow] = useState(false);
-
+  const [nextArrivals, setnextArrivals] = useState([])
   // Hook to access the map reference
   const mapRef = useGoogleMap();
-
-
+  const [open, setOpen] = useState(false);
+  var response = []
+  const handleOpen = async() => {
+    response = await reqStopById(id)
+    setnextArrivals(response.data.arrivals)
+    setOpen(true)
+    console.log(nextArrivals);
+  };
+  const handleClose = () => setOpen(false);
   return (
     <Marker
       key={id}
@@ -25,9 +35,25 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
         onCloseClick={() => setInfoWindow(false)}
       >
         <div className="infowindow">
-          <p>{restProps.title}</p>
+          {restProps.title}
+          <Button onClick={()=>{handleOpen()}}>More</Button>
         </div>
       </InfoWindow>}
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+          {restProps.title}
+          </Typography>
+          <div id="modal-modal-description" sx={{ mt: 2 }}>
+            <ArrivalsTable arrivals={nextArrivals}/>
+          </div>
+        </Box>
+      </Modal>
 
     </Marker>
   );
@@ -52,3 +78,16 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
 };
 
 export default MyMarker;
+
+
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  boxShadow: 24,
+  p: 4,
+};

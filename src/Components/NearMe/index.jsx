@@ -2,6 +2,7 @@ import { useState} from "react";
 import NearMeStops from './subcomponent/NearMeStops'
 import { useGeolocation } from "../../Providers/GeolocationContext";
 import { useGoogleMap } from "@react-google-maps/api";
+import NearMeSearchBar from "./subcomponent/NearMeSearchBar";
 import { Slider, Box,Button} from "@material-ui/core";
 import './style.css'
 
@@ -12,7 +13,8 @@ function NearMe({back}) {
    const [distance, setDistance] = useState(3);
    const [page, setPage] = useState(1);
    const [resultsDisplayed, setResultsDisplayed] = useState(20);
-
+   const mapRef = useGoogleMap()
+   mapRef.setZoom(14);
     // function that sets the distance state with the new value
     const handleRange = (event,distance)=>{
     //输入函数体
@@ -34,7 +36,7 @@ function NearMe({back}) {
         <Slider 
             value={distance} 
             valueLabelDisplay={'on'}
-            step
+            step={1}
             max={10} 
             min={1} 
             aria-label="Default"
@@ -46,12 +48,13 @@ function NearMe({back}) {
         <Slider 
             value={resultsDisplayed} 
             valueLabelDisplay={'on'}
-            step
+            step={1}
             max={100} 
             min={1} 
             aria-label="Default"
             onChange={handleResultsDisplayed}
         />
+        <NearMeSearchBar/>
         </div>
          {position && <NearMeStops position={position} distance={distance} resultsDisplayed={resultsDisplayed} valueLabelDisplay="auto"/>}
          <Button 
