@@ -28,6 +28,9 @@ function Planner({back}){
     const directions = useRef()
     const [time, setValue] = React.useState(new Date());
 
+
+
+
     const handleTimeChange = (newValue) => {
       var date = moment(newValue).format('L');
       var hour = moment(newValue).format('HH:mm:ss');
@@ -37,6 +40,8 @@ function Planner({back}){
       console.log(hour,"hour");
     };
     async function calculateRoute (){
+
+       
         if(originRef.current.value === '' || destinationRef.current.value === ''){
           return 
         }

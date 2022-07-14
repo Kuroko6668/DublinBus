@@ -35,13 +35,20 @@ class Route(models.Model):
         managed = False
         db_table = 'route_stops'
 
+class StopTimes(models.Model):
+    trip_id = models.CharField(primary_key=True,max_length=60, blank=True, null=False)
+    arrival_time = models.TimeField(blank=True, null=True)
+    departure_time = models.TimeField(blank=True, null=True)
+    stop_id = models.CharField(max_length=30, blank=True, null=True)
+    stop_sequence = models.SmallIntegerField(blank=True, null=True)
+    stop_headsign = models.CharField(max_length=255, blank=True, null=True)
+    pickup_type = models.IntegerField(blank=True, null=True)
+    drop_off_type = models.IntegerField(blank=True, null=True)
+    shape_dist_traveled = models.FloatField(blank=True, null=True)
 
-# class Routes(models.Model):
-#     route_id = models.CharField(max_length=30, primary_key=True)
-#     agency_id = models.CharField(max_length=10)
-#     route_short_name = models.CharField(max_length=10)
-#     route_long_name = models.CharField(max_length=255)
-#     route_type = models.IntegerField()
+    class Meta:
+        managed = False
+        db_table = 'stop_times'
 
 #     class Meta:
 #         managed = False

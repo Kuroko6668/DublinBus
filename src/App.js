@@ -13,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
+
       <StopsProvider>
         <GeolocationProvider>
           <Map>
@@ -41,7 +42,6 @@ function App() {
         </a>
       
       </header> */}
-
     </div>
   );
 }
