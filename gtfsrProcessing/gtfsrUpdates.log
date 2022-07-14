@@ -2,3 +2,33 @@ INFO:root:API request successful. Timestamp of API response object = 1657810845
 INFO:root:Json file updated correctly. 1657810845  response written to json correctly
 INFO:root:API get request @2022-07-14 16:13:07 successful. Timestamp of API response object = 1657811575
 INFO:root:Json file updated correctly. 1657811575  response written to json correctly
+WARNING:root:API get request error @ time: 2022-07-14 18:20:03. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-14 18:20:14. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-14 18:21:00 successful. Timestamp of API response object = 1657819251
+INFO:root:Json file updated correctly. 1657819251  response written to json correctly
+INFO:root:API get request @2022-07-14 18:21:34 successful. Timestamp of API response object = 1657819284
+INFO:root:Json file updated correctly. 1657819284  response written to json correctly
+INFO:root:API get request @2022-07-14 18:22:37 successful. Timestamp of API response object = 1657819350
+INFO:root:Json file updated correctly. 1657819350  response written to json correctly
+INFO:root:API get request @2022-07-14 18:23:40 successful. Timestamp of API response object = 1657819407
+INFO:root:Json file updated correctly. 1657819407  response written to json correctly
+INFO:root:API get request @2022-07-14 18:24:42 successful. Timestamp of API response object = 1657819475
+INFO:root:Json file updated correctly. 1657819475  response written to json correctly
+INFO:root:API get request @2022-07-14 18:25:44 successful. Timestamp of API response object = 1657819541
+INFO:root:Json file updated correctly. 1657819541  response written to json correctly
+INFO:root:API get request @2022-07-14 23:01:09 successful. Timestamp of API response object = 1657836069
+INFO:root:Json file updated correctly. 1657836069  response written to json correctly
+INFO:root:API get request @2022-07-14 23:01:20 successful. Timestamp of API response object = 1657836079
+INFO:root:Json file updated correctly. 1657836079  response written to json correctly
+INFO:root:API get request @2022-07-14 23:05:34 successful. Timestamp of API response object = 1657836324
+INFO:root:Json file updated correctly. 1657836324  response written to json correctly
+INFO:root:API get request @2022-07-14 23:06:25 successful. Timestamp of API response object = 1657836375
+INFO:root:Json file updated correctly. 1657836375  response written to json correctly
+INFO:root:API get request @2022-07-14 23:08:12 successful. Timestamp of API response object = 1657836487
+INFO:root:Json file updated correctly. 1657836487  response written to json correctly
+INFO:root:API get request @2022-07-14 23:08:31 successful. Timestamp of API response object = 1657836508
+INFO:root:Json file updated correctly. 1657836508  response written to json correctly
+WARNING:root:API get request error @ time: 2022-07-14 23:09:01. Error = HTTP Error 429: Too Many Requests
+WARNING:root:Error updating existing json.X response error: name 'response' is not defined
+INFO:root:API get request @2022-07-14 23:09:47 successful. Timestamp of API response object = 1657836579
+INFO:root:Json file updated correctly. 1657836579  response written to json correctly

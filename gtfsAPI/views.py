@@ -6,6 +6,9 @@ import math
 from gtfsAPI.models import  Stops,Route,StopTime,Routes,Trip
 from .serialisers import  StopsSerializer,RouteSerializer, StopTimesSerializer
 from django.http import JsonResponse, Http404, HttpResponseBadRequest, HttpResponse
+import time
+import json
+from gtfsrProcessing import check_for_update
 # Create your views here.
 
 class StopsView(viewsets.ModelViewSet):  
@@ -49,6 +52,7 @@ def stops_by_route_name(request, route_name):
 
 
 def stop_detail(request, stop_id):
+    start = time.time()
     current_time = datetime.now(timezone(timedelta(hours=1)))
     service_id = 2
     if(current_time.weekday() == 5):
@@ -76,9 +80,24 @@ def stop_detail(request, stop_id):
         arrival_time__lte=(current_time + timedelta(hours=1)).time(),
     )
     # # result['arrivals'] = list(stop_time_details)
-    realtime_updates = request_realtime_nta_data()
+    # realtime_updates = request_realtime_nta_data()
+    with open("gtfsrProcessing/gtfsrFeed.json","r") as f:
+        realtime_updates = json.load(f)
+    start_2 = time.time()
+    realtime_updates = realtime_updates['Entity']
+    
+    
+    start_3 = time.time()
+    for stop_time in stop_time_next_hour:
+       
+        check_for_update.check_trip_for_update(stop_time.trip.trip_id,stop_id)
+    print("different func" + str(time.time() - start_3))
+
 
     for stop_time in stop_time_next_hour:
+
+
+
 
         # Only get details for trips that operate on the current day
         if stop_time.trip.service_id  == str(service_id):
@@ -101,6 +120,11 @@ def stop_detail(request, stop_id):
 
     result['arrivals'] = sorted(result['arrivals'],
                                 key=lambda arrival: arrival['scheduled_arrival_time'])
+
+    totalTime = time.time() - start
+    totalTime_2 = time.time() - start_2
+    print(totalTime)
+    print(totalTime_2)
     return JsonResponse(result)
 
 

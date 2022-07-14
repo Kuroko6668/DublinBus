@@ -29,7 +29,7 @@ stop_id = '8470B551411'
 
 def check_trip_for_update(trip_id,stop_id):
 
-    with open('gtfsrFeed.json', 'r') as openfile:
+    with open('gtfsrProcessing/gtfsrFeed.json', 'r') as openfile:
   
     
         json_object = json.load(openfile)
@@ -40,7 +40,9 @@ def check_trip_for_update(trip_id,stop_id):
 
     for index, entity in enumerate(entities):
         #print(entity['TripUpdate']['Trip']['TripId'])
-        if entity["TripUpdate"]["Trip"]['TripId'] == trip_id:
+        # if entity["TripUpdate"]["Trip"]['TripId'] == trip_id:
+        if entity['Id'] == trip_id:
+
             print("found")
             print(index)
             #print(entity["TripUpdate"])
