@@ -3,31 +3,38 @@
 # from a file
   
   
-from html import entities
+# from html import entities
 import json
-from turtle import up
+# from turtle import up
   
-# Opening JSON file
-with open('personal.json', 'r') as openfile:
-  
-    # Reading from json file
-    json_object = json.load(openfile)
 
-entities = json_object['Entity']
-#print(entities)
-print("----------------------------------")
+# with open('gtf.json', 'r') as openfile:
+  
+    
+#     json_object = json.load(openfile)
+
+# entities = json_object['Entity']
+# #print(entities)
+# print("----------------------------------")
 
 #testEnt = json_object["Entity"]["TripUpdate"]["Trip"]#['StopTimeUpdate']
 #print(testEnt)
 
 
-trip_id = '2264.2.60-46A-b12-1.264.I'
-stop_id = '8250DB002041'
+trip_id = '3967385.23.10-64-e19-1.167.I'
+stop_id = '8470B551411'
 
 
 
 
 def check_trip_for_update(trip_id,stop_id):
+
+    with open('gtfsrFeed.json', 'r') as openfile:
+  
+    
+        json_object = json.load(openfile)
+
+    entities = json_object['Entity']
 
     updateIndex = 0
 
@@ -70,6 +77,8 @@ def check_trip_for_update(trip_id,stop_id):
                     return json.dumps(update)
 
                 print(stop_id)
+
+check_trip_for_update(trip_id,stop_id)
 
     
 
