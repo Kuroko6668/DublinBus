@@ -11,7 +11,7 @@ import os
 logging.basicConfig(filename = "gtfsrProcessing/gtfsrUpdates.log", level=logging.DEBUG)
 
 #predefine timestamp variable in case response fails
-response_timestamp = "X"
+response_timestamp = "Fail"
 
 # while True:
 
@@ -59,19 +59,34 @@ except Exception as  e:
 
 with open('gtfsrProcessing/gtfsrFeed.json', 'r') as json_file:
     
-        id_dict = {}
+        restructured_dict = {}
 
         obj = json.load(json_file)
-        for index,object in enumerate(obj['Entity']):
+        for object in obj['Entity']:
 
-            # object_key = object['Id']
+            #Add trip id as key
+            restructured_dict[object['Id']] = object
             
-            # object_key = object
-            
-            # id_dict.update(object_key)
-            id_dict[object['Id']] = object
 
-print(id_dict['3972717.23.10-401-e19-1.1475.I'])
+            for key,update in restructured_dict[object['Id']]['TripUpdate'].items():
+            
+                if key == 'StopTimeUpdate':
+
+                    #for readability
+                    StopTimeUpdate_list = restructured_dict[object['Id']]['TripUpdate']['StopTimeUpdate']
+                    
+                    #Convert StopTimeUpdate object to dict and add StopId as key for each value(object)
+                    
+                    restructured_dict[object['Id']]['TripUpdate']['StopTimeUpdate'] = {x['StopId']: x for x in StopTimeUpdate_list}
+                    
+
+
+
+with open('gtfsrProcessing/gtfsrDict_test.json','w') as updateDict:
+    updateDict.seek(0)
+    updateDict.truncate()
+    json.dump(restructured_dict,updateDict, indent=4)
+
             
             
 

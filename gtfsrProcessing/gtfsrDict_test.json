@@ -1,0 +1,3840 @@
+{
+    "3983698.25.10-23-e19-1.56.O": {
+        "Id": "3983698.25.10-23-e19-1.56.O",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "3983698.25.10-23-e19-1.56.O",
+                "RouteId": "10-23-e19-1",
+                "StartTime": "20:00:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8220B1350001": {
+                    "StopSequence": 1,
+                    "StopId": "8220B1350001",
+                    "Departure": {
+                        "Delay": 600
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8240B111941": {
+                    "StopSequence": 3,
+                    "StopId": "8240B111941",
+                    "Arrival": {
+                        "Delay": 540
+                    },
+                    "Departure": {
+                        "Delay": 780
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8230B134461": {
+                    "StopSequence": 4,
+                    "StopId": "8230B134461",
+                    "Arrival": {
+                        "Delay": 720
+                    },
+                    "Departure": {
+                        "Delay": 900
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8330B1357601": {
+                    "StopSequence": 6,
+                    "StopId": "8330B1357601",
+                    "Arrival": {
+                        "Delay": 720
+                    },
+                    "Departure": {
+                        "Delay": 780
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8330B1312701": {
+                    "StopSequence": 8,
+                    "StopId": "8330B1312701",
+                    "Arrival": {
+                        "Delay": 660
+                    },
+                    "Departure": {
+                        "Delay": 660
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8290B131141": {
+                    "StopSequence": 10,
+                    "StopId": "8290B131141",
+                    "Arrival": {
+                        "Delay": 540
+                    },
+                    "Departure": {
+                        "Delay": 540
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8290B141591": {
+                    "StopSequence": 11,
+                    "StopId": "8290B141591",
+                    "Arrival": {
+                        "Delay": 780
+                    },
+                    "Departure": {
+                        "Delay": 780
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8290B135801": {
+                    "StopSequence": 12,
+                    "StopId": "8290B135801",
+                    "Arrival": {
+                        "Delay": 900
+                    },
+                    "Departure": {
+                        "Delay": 900
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8290B152201": {
+                    "StopSequence": 13,
+                    "StopId": "8290B152201",
+                    "Arrival": {
+                        "Delay": 780
+                    },
+                    "Departure": {
+                        "Delay": 780
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8480B5561701": {
+                    "StopSequence": 14,
+                    "StopId": "8480B5561701",
+                    "Arrival": {
+                        "Delay": 720
+                    },
+                    "Departure": {
+                        "Delay": 720
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8480B556261": {
+                    "StopSequence": 15,
+                    "StopId": "8480B556261",
+                    "Arrival": {
+                        "Delay": 720
+                    },
+                    "Departure": {
+                        "Delay": 780
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8500B5557901": {
+                    "StopSequence": 16,
+                    "StopId": "8500B5557901",
+                    "Arrival": {
+                        "Delay": 720
+                    },
+                    "Departure": {
+                        "Delay": 720
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8510B5550801": {
+                    "StopSequence": 17,
+                    "StopId": "8510B5550801",
+                    "Arrival": {
+                        "Delay": 480
+                    },
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8510B5248601": {
+                    "StopSequence": 18,
+                    "StopId": "8510B5248601",
+                    "Arrival": {
+                        "Delay": 1020
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "3984232.25.10-101-e19-1.220.O": {
+        "Id": "3984232.25.10-101-e19-1.220.O",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "3984232.25.10-101-e19-1.220.O",
+                "RouteId": "10-101-e19-1",
+                "StartTime": "22:30:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8220B134961": {
+                    "StopSequence": 1,
+                    "StopId": "8220B134961",
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001174": {
+                    "StopSequence": 2,
+                    "StopId": "8220DB001174",
+                    "Arrival": {
+                        "Delay": 900
+                    },
+                    "Departure": {
+                        "Delay": 900
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000017": {
+                    "StopSequence": 3,
+                    "StopId": "8220DB000017",
+                    "Arrival": {
+                        "Delay": 960
+                    },
+                    "Departure": {
+                        "Delay": 960
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8240DB001623": {
+                    "StopSequence": 6,
+                    "StopId": "8240DB001623",
+                    "Arrival": {
+                        "Delay": 1020
+                    },
+                    "Departure": {
+                        "Delay": 1020
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8240DB003676": {
+                    "StopSequence": 8,
+                    "StopId": "8240DB003676",
+                    "Arrival": {
+                        "Delay": 1200
+                    },
+                    "Departure": {
+                        "Delay": 1200
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8240DB003755": {
+                    "StopSequence": 12,
+                    "StopId": "8240DB003755",
+                    "Arrival": {
+                        "Delay": 1260
+                    },
+                    "Departure": {
+                        "Delay": 1260
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8240B1002101": {
+                    "StopSequence": 13,
+                    "StopId": "8240B1002101",
+                    "Arrival": {
+                        "Delay": 1320
+                    },
+                    "Departure": {
+                        "Delay": 1320
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8240B1002201": {
+                    "StopSequence": 14,
+                    "StopId": "8240B1002201",
+                    "Arrival": {
+                        "Delay": 1380
+                    },
+                    "Departure": {
+                        "Delay": 1380
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8240B1002401": {
+                    "StopSequence": 16,
+                    "StopId": "8240B1002401",
+                    "Arrival": {
+                        "Delay": 1440
+                    },
+                    "Departure": {
+                        "Delay": 1440
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8240B1003101": {
+                    "StopSequence": 25,
+                    "StopId": "8240B1003101",
+                    "Arrival": {
+                        "Delay": 1620
+                    },
+                    "Departure": {
+                        "Delay": 1620
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8310B1003201": {
+                    "StopSequence": 27,
+                    "StopId": "8310B1003201",
+                    "Arrival": {
+                        "Delay": 1680
+                    },
+                    "Departure": {
+                        "Delay": 1680
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "7436.3.60-13-d12-1.24.I": {
+        "Id": "7436.3.60-13-d12-1.24.I",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "7436.3.60-13-d12-1.24.I",
+                "RouteId": "60-13-d12-1",
+                "StartTime": "22:30:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8230DB007229": {
+                    "StopSequence": 1,
+                    "StopId": "8230DB007229",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8230DB002146": {
+                    "StopSequence": 5,
+                    "StopId": "8230DB002146",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8230DB002148": {
+                    "StopSequence": 7,
+                    "StopId": "8230DB002148",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8230DB002154": {
+                    "StopSequence": 13,
+                    "StopId": "8230DB002154",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8230DB002159": {
+                    "StopSequence": 20,
+                    "StopId": "8230DB002159",
+                    "Arrival": {
+                        "Delay": 300
+                    },
+                    "Departure": {
+                        "Delay": 300
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8230DB001980": {
+                    "StopSequence": 30,
+                    "StopId": "8230DB001980",
+                    "Arrival": {
+                        "Delay": 360
+                    },
+                    "Departure": {
+                        "Delay": 360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001985": {
+                    "StopSequence": 35,
+                    "StopId": "8220DB001985",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001994": {
+                    "StopSequence": 43,
+                    "StopId": "8220DB001994",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001995": {
+                    "StopSequence": 44,
+                    "StopId": "8220DB001995",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001996": {
+                    "StopSequence": 45,
+                    "StopId": "8220DB001996",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001998": {
+                    "StopSequence": 47,
+                    "StopId": "8220DB001998",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001359": {
+                    "StopSequence": 51,
+                    "StopId": "8220DB001359",
+                    "Arrival": {
+                        "Delay": 540
+                    },
+                    "Departure": {
+                        "Delay": 600
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000281": {
+                    "StopSequence": 53,
+                    "StopId": "8220DB000281",
+                    "Arrival": {
+                        "Delay": 660
+                    },
+                    "Departure": {
+                        "Delay": 660
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000007": {
+                    "StopSequence": 54,
+                    "StopId": "8220DB000007",
+                    "Arrival": {
+                        "Delay": 720
+                    },
+                    "Departure": {
+                        "Delay": 720
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000085": {
+                    "StopSequence": 62,
+                    "StopId": "8220DB000085",
+                    "Arrival": {
+                        "Delay": 840
+                    },
+                    "Departure": {
+                        "Delay": 840
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000027": {
+                    "StopSequence": 67,
+                    "StopId": "8220DB000027",
+                    "Arrival": {
+                        "Delay": 900
+                    },
+                    "Departure": {
+                        "Delay": 900
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000094": {
+                    "StopSequence": 75,
+                    "StopId": "8220DB000094",
+                    "Arrival": {
+                        "Delay": 840
+                    },
+                    "Departure": {
+                        "Delay": 840
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000102": {
+                    "StopSequence": 76,
+                    "StopId": "8220DB000102",
+                    "Arrival": {
+                        "Delay": 900
+                    },
+                    "Departure": {
+                        "Delay": 900
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "10892.3.60-40-d12-1.216.O": {
+        "Id": "10892.3.60-40-d12-1.216.O",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "10892.3.60-40-d12-1.216.O",
+                "RouteId": "60-40-d12-1",
+                "StartTime": "22:30:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8240DB007132": {
+                    "StopSequence": 1,
+                    "StopId": "8240DB007132",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001558": {
+                    "StopSequence": 2,
+                    "StopId": "8220DB001558",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002957": {
+                    "StopSequence": 3,
+                    "StopId": "8220DB002957",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB004938": {
+                    "StopSequence": 5,
+                    "StopId": "8220DB004938",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001606": {
+                    "StopSequence": 17,
+                    "StopId": "8220DB001606",
+                    "Arrival": {
+                        "Delay": 240
+                    },
+                    "Departure": {
+                        "Delay": 240
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001537": {
+                    "StopSequence": 27,
+                    "StopId": "8220DB001537",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000840": {
+                    "StopSequence": 31,
+                    "StopId": "8220DB000840",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000841": {
+                    "StopSequence": 32,
+                    "StopId": "8220DB000841",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000261": {
+                    "StopSequence": 36,
+                    "StopId": "8220DB000261",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000270": {
+                    "StopSequence": 37,
+                    "StopId": "8220DB000270",
+                    "Arrival": {
+                        "Delay": -120
+                    },
+                    "Departure": {
+                        "Delay": -120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB004521": {
+                    "StopSequence": 39,
+                    "StopId": "8220DB004521",
+                    "Arrival": {
+                        "Delay": -60
+                    },
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001935": {
+                    "StopSequence": 40,
+                    "StopId": "8220DB001935",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001937": {
+                    "StopSequence": 41,
+                    "StopId": "8220DB001937",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001945": {
+                    "StopSequence": 49,
+                    "StopId": "8220DB001945",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001946": {
+                    "StopSequence": 50,
+                    "StopId": "8220DB001946",
+                    "Arrival": {
+                        "Delay": 240
+                    },
+                    "Departure": {
+                        "Delay": 240
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002642": {
+                    "StopSequence": 52,
+                    "StopId": "8220DB002642",
+                    "Arrival": {
+                        "Delay": 300
+                    },
+                    "Departure": {
+                        "Delay": 300
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002644": {
+                    "StopSequence": 54,
+                    "StopId": "8220DB002644",
+                    "Arrival": {
+                        "Delay": 240
+                    },
+                    "Departure": {
+                        "Delay": 240
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002709": {
+                    "StopSequence": 55,
+                    "StopId": "8220DB002709",
+                    "Arrival": {
+                        "Delay": 300
+                    },
+                    "Departure": {
+                        "Delay": 300
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002710": {
+                    "StopSequence": 56,
+                    "StopId": "8220DB002710",
+                    "Arrival": {
+                        "Delay": 360
+                    },
+                    "Departure": {
+                        "Delay": 360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002672": {
+                    "StopSequence": 62,
+                    "StopId": "8220DB002672",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8230DB002673": {
+                    "StopSequence": 63,
+                    "StopId": "8230DB002673",
+                    "Arrival": {
+                        "Delay": 360
+                    },
+                    "Departure": {
+                        "Delay": 360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8230DB002129": {
+                    "StopSequence": 73,
+                    "StopId": "8230DB002129",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8230DB004797": {
+                    "StopSequence": 74,
+                    "StopId": "8230DB004797",
+                    "Arrival": {
+                        "Delay": 360
+                    },
+                    "Departure": {
+                        "Delay": 360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8230DB007473": {
+                    "StopSequence": 75,
+                    "StopId": "8230DB007473",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8230DB004691": {
+                    "StopSequence": 77,
+                    "StopId": "8230DB004691",
+                    "Arrival": {
+                        "Delay": 480
+                    },
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8230DB004690": {
+                    "StopSequence": 80,
+                    "StopId": "8230DB004690",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "9319.3.60-155-d12-1.94.I": {
+        "Id": "9319.3.60-155-d12-1.94.I",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "9319.3.60-155-d12-1.94.I",
+                "RouteId": "60-155-d12-1",
+                "StartTime": "22:40:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8350DB004168": {
+                    "StopSequence": 1,
+                    "StopId": "8350DB004168",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8350DB004153": {
+                    "StopSequence": 3,
+                    "StopId": "8350DB004153",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8250DB004202": {
+                    "StopSequence": 7,
+                    "StopId": "8250DB004202",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8250DB003141": {
+                    "StopSequence": 14,
+                    "StopId": "8250DB003141",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8250DB003146": {
+                    "StopSequence": 19,
+                    "StopId": "8250DB003146",
+                    "Arrival": {
+                        "Delay": 240
+                    },
+                    "Departure": {
+                        "Delay": 240
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8250DB002996": {
+                    "StopSequence": 24,
+                    "StopId": "8250DB002996",
+                    "Arrival": {
+                        "Delay": 300
+                    },
+                    "Departure": {
+                        "Delay": 300
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8250DB002062": {
+                    "StopSequence": 28,
+                    "StopId": "8250DB002062",
+                    "Arrival": {
+                        "Delay": 360
+                    },
+                    "Departure": {
+                        "Delay": 360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8250DB002068": {
+                    "StopSequence": 35,
+                    "StopId": "8250DB002068",
+                    "Arrival": {
+                        "Delay": 480
+                    },
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000770": {
+                    "StopSequence": 41,
+                    "StopId": "8220DB000770",
+                    "Arrival": {
+                        "Delay": 540
+                    },
+                    "Departure": {
+                        "Delay": 540
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000776": {
+                    "StopSequence": 47,
+                    "StopId": "8220DB000776",
+                    "Arrival": {
+                        "Delay": 480
+                    },
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000906": {
+                    "StopSequence": 49,
+                    "StopId": "8220DB000906",
+                    "Arrival": {
+                        "Delay": 540
+                    },
+                    "Departure": {
+                        "Delay": 540
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000319": {
+                    "StopSequence": 55,
+                    "StopId": "8220DB000319",
+                    "Arrival": {
+                        "Delay": 600
+                    },
+                    "Departure": {
+                        "Delay": 600
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000006": {
+                    "StopSequence": 57,
+                    "StopId": "8220DB000006",
+                    "Arrival": {
+                        "Delay": 660
+                    },
+                    "Departure": {
+                        "Delay": 660
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000197": {
+                    "StopSequence": 61,
+                    "StopId": "8220DB000197",
+                    "Arrival": {
+                        "Delay": 600
+                    },
+                    "Departure": {
+                        "Delay": 600
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000198": {
+                    "StopSequence": 62,
+                    "StopId": "8220DB000198",
+                    "Arrival": {
+                        "Delay": 540
+                    },
+                    "Departure": {
+                        "Delay": 540
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000199": {
+                    "StopSequence": 63,
+                    "StopId": "8220DB000199",
+                    "Arrival": {
+                        "Delay": 600
+                    },
+                    "Departure": {
+                        "Delay": 600
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "3987642.25.10-220-e19-1.613.O": {
+        "Id": "3987642.25.10-220-e19-1.613.O",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "3987642.25.10-220-e19-1.613.O",
+                "RouteId": "10-220-e19-1",
+                "StartTime": "22:40:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8380B246671": {
+                    "StopSequence": 1,
+                    "StopId": "8380B246671",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B246681": {
+                    "StopSequence": 2,
+                    "StopId": "8380B246681",
+                    "Arrival": {
+                        "Delay": 4320
+                    },
+                    "Departure": {
+                        "Delay": 4320
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8370B2420501": {
+                    "StopSequence": 36,
+                    "StopId": "8370B2420501",
+                    "Arrival": {
+                        "Delay": 4320
+                    },
+                    "Departure": {
+                        "Delay": 4140
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8370B2412501": {
+                    "StopSequence": 42,
+                    "StopId": "8370B2412501",
+                    "Arrival": {
+                        "Delay": 4080
+                    },
+                    "Departure": {
+                        "Delay": 4080
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8370B2412701": {
+                    "StopSequence": 44,
+                    "StopId": "8370B2412701",
+                    "Arrival": {
+                        "Delay": 4020
+                    },
+                    "Departure": {
+                        "Delay": 4020
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8370B2412801": {
+                    "StopSequence": 45,
+                    "StopId": "8370B2412801",
+                    "Arrival": {
+                        "Delay": 3960
+                    },
+                    "Departure": {
+                        "Delay": 3960
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8370B2319401": {
+                    "StopSequence": 46,
+                    "StopId": "8370B2319401",
+                    "Arrival": {
+                        "Delay": 3900
+                    },
+                    "Departure": {
+                        "Delay": 3900
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B244971": {
+                    "StopSequence": 47,
+                    "StopId": "8380B244971",
+                    "Arrival": {
+                        "Delay": 3780
+                    },
+                    "Departure": {
+                        "Delay": 3780
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B246981": {
+                    "StopSequence": 48,
+                    "StopId": "8380B246981",
+                    "Arrival": {
+                        "Delay": 3780
+                    },
+                    "Departure": {
+                        "Delay": 3780
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B245321": {
+                    "StopSequence": 49,
+                    "StopId": "8380B245321",
+                    "Arrival": {
+                        "Delay": 3720
+                    },
+                    "Departure": {
+                        "Delay": 3720
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B245821": {
+                    "StopSequence": 51,
+                    "StopId": "8380B245821",
+                    "Arrival": {
+                        "Delay": 3540
+                    },
+                    "Departure": {
+                        "Delay": 3540
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B2339601": {
+                    "StopSequence": 52,
+                    "StopId": "8380B2339601",
+                    "Arrival": {
+                        "Delay": 3360
+                    },
+                    "Departure": {
+                        "Delay": 3360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B244981": {
+                    "StopSequence": 53,
+                    "StopId": "8380B244981",
+                    "Arrival": {
+                        "Delay": 3300
+                    },
+                    "Departure": {
+                        "Delay": 3300
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B245011": {
+                    "StopSequence": 54,
+                    "StopId": "8380B245011",
+                    "Arrival": {
+                        "Delay": 3240
+                    },
+                    "Departure": {
+                        "Delay": 3240
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B245031": {
+                    "StopSequence": 56,
+                    "StopId": "8380B245031",
+                    "Arrival": {
+                        "Delay": 3180
+                    },
+                    "Departure": {
+                        "Delay": 3180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B2326601": {
+                    "StopSequence": 58,
+                    "StopId": "8380B2326601",
+                    "Arrival": {
+                        "Delay": 3120
+                    },
+                    "Departure": {
+                        "Delay": 3120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B245041": {
+                    "StopSequence": 59,
+                    "StopId": "8380B245041",
+                    "Arrival": {
+                        "Delay": 3060
+                    },
+                    "Departure": {
+                        "Delay": 3060
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B245061": {
+                    "StopSequence": 61,
+                    "StopId": "8380B245061",
+                    "Arrival": {
+                        "Delay": 3000
+                    },
+                    "Departure": {
+                        "Delay": 3000
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B2328101": {
+                    "StopSequence": 63,
+                    "StopId": "8380B2328101",
+                    "Arrival": {
+                        "Delay": 2940
+                    },
+                    "Departure": {
+                        "Delay": 2940
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B245871": {
+                    "StopSequence": 64,
+                    "StopId": "8380B245871",
+                    "Arrival": {
+                        "Delay": 2880
+                    },
+                    "Departure": {
+                        "Delay": 2880
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B2346701": {
+                    "StopSequence": 66,
+                    "StopId": "8380B2346701",
+                    "Arrival": {
+                        "Delay": 2700
+                    },
+                    "Departure": {
+                        "Delay": 2700
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B247241": {
+                    "StopSequence": 67,
+                    "StopId": "8380B247241",
+                    "Arrival": {
+                        "Delay": 2400
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "10815.3.60-40-d12-1.219.I": {
+        "Id": "10815.3.60-40-d12-1.219.I",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "10815.3.60-40-d12-1.219.I",
+                "RouteId": "60-40-d12-1",
+                "StartTime": "22:40:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8230DB004795": {
+                    "StopSequence": 1,
+                    "StopId": "8230DB004795",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8230DB004688": {
+                    "StopSequence": 2,
+                    "StopId": "8230DB004688",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002689": {
+                    "StopSequence": 21,
+                    "StopId": "8220DB002689",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002697": {
+                    "StopSequence": 23,
+                    "StopId": "8220DB002697",
+                    "Arrival": {
+                        "Delay": -60
+                    },
+                    "Departure": {
+                        "Delay": -60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002713": {
+                    "StopSequence": 24,
+                    "StopId": "8220DB002713",
+                    "Arrival": {
+                        "Delay": -120
+                    },
+                    "Departure": {
+                        "Delay": -120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002714": {
+                    "StopSequence": 25,
+                    "StopId": "8220DB002714",
+                    "Arrival": {
+                        "Delay": -60
+                    },
+                    "Departure": {
+                        "Delay": -60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002716": {
+                    "StopSequence": 27,
+                    "StopId": "8220DB002716",
+                    "Arrival": {
+                        "Delay": -120
+                    },
+                    "Departure": {
+                        "Delay": -120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002718": {
+                    "StopSequence": 28,
+                    "StopId": "8220DB002718",
+                    "Arrival": {
+                        "Delay": -60
+                    },
+                    "Departure": {
+                        "Delay": -60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001990": {
+                    "StopSequence": 31,
+                    "StopId": "8220DB001990",
+                    "Arrival": {
+                        "Delay": -120
+                    },
+                    "Departure": {
+                        "Delay": -120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001992": {
+                    "StopSequence": 32,
+                    "StopId": "8220DB001992",
+                    "Arrival": {
+                        "Delay": -60
+                    },
+                    "Departure": {
+                        "Delay": -60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001994": {
+                    "StopSequence": 34,
+                    "StopId": "8220DB001994",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001998": {
+                    "StopSequence": 38,
+                    "StopId": "8220DB001998",
+                    "Arrival": {
+                        "Delay": -60
+                    },
+                    "Departure": {
+                        "Delay": -60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001999": {
+                    "StopSequence": 39,
+                    "StopId": "8220DB001999",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002001": {
+                    "StopSequence": 40,
+                    "StopId": "8220DB002001",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002002": {
+                    "StopSequence": 41,
+                    "StopId": "8220DB002002",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001358": {
+                    "StopSequence": 42,
+                    "StopId": "8220DB001358",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000319": {
+                    "StopSequence": 43,
+                    "StopId": "8220DB000319",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000279": {
+                    "StopSequence": 44,
+                    "StopId": "8220DB000279",
+                    "Arrival": {
+                        "Delay": -60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000011": {
+                    "StopSequence": 46,
+                    "StopId": "8220DB000011",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001592": {
+                    "StopSequence": 59,
+                    "StopId": "8220DB001592",
+                    "Arrival": {
+                        "Delay": -60
+                    },
+                    "Departure": {
+                        "Delay": -60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001519": {
+                    "StopSequence": 72,
+                    "StopId": "8220DB001519",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB007661": {
+                    "StopSequence": 74,
+                    "StopId": "8220DB007661",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB004546": {
+                    "StopSequence": 76,
+                    "StopId": "8220DB004546",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001280": {
+                    "StopSequence": 82,
+                    "StopId": "8220DB001280",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "10204.3.60-16-d12-1.160.O": {
+        "Id": "10204.3.60-16-d12-1.160.O",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "10204.3.60-16-d12-1.160.O",
+                "RouteId": "60-16-d12-1",
+                "StartTime": "22:45:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8240DB007347": {
+                    "StopSequence": 1,
+                    "StopId": "8240DB007347",
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8240DB003669": {
+                    "StopSequence": 2,
+                    "StopId": "8240DB003669",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000045": {
+                    "StopSequence": 28,
+                    "StopId": "8220DB000045",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 240
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000047": {
+                    "StopSequence": 30,
+                    "StopId": "8220DB000047",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000270": {
+                    "StopSequence": 36,
+                    "StopId": "8220DB000270",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 720
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000336": {
+                    "StopSequence": 37,
+                    "StopId": "8220DB000336",
+                    "Arrival": {
+                        "Delay": 720
+                    },
+                    "Departure": {
+                        "Delay": 780
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001279": {
+                    "StopSequence": 38,
+                    "StopId": "8220DB001279",
+                    "Arrival": {
+                        "Delay": 720
+                    },
+                    "Departure": {
+                        "Delay": 720
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001282": {
+                    "StopSequence": 39,
+                    "StopId": "8220DB001282",
+                    "Arrival": {
+                        "Delay": 780
+                    },
+                    "Departure": {
+                        "Delay": 780
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB004456": {
+                    "StopSequence": 40,
+                    "StopId": "8220DB004456",
+                    "Arrival": {
+                        "Delay": 720
+                    },
+                    "Departure": {
+                        "Delay": 720
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "11659.3.60-14-d12-1.153.O": {
+        "Id": "11659.3.60-14-d12-1.153.O",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "11659.3.60-14-d12-1.153.O",
+                "RouteId": "60-14-d12-1",
+                "StartTime": "22:50:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8220DB000248": {
+                    "StopSequence": 1,
+                    "StopId": "8220DB000248",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000249": {
+                    "StopSequence": 2,
+                    "StopId": "8220DB000249",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001195": {
+                    "StopSequence": 15,
+                    "StopId": "8220DB001195",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000666": {
+                    "StopSequence": 18,
+                    "StopId": "8220DB000666",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000615": {
+                    "StopSequence": 22,
+                    "StopId": "8220DB000615",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000301": {
+                    "StopSequence": 29,
+                    "StopId": "8220DB000301",
+                    "Arrival": {
+                        "Delay": -60
+                    },
+                    "Departure": {
+                        "Delay": 900
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB007581": {
+                    "StopSequence": 31,
+                    "StopId": "8220DB007581",
+                    "Arrival": {
+                        "Delay": 900
+                    },
+                    "Departure": {
+                        "Delay": 960
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB007579": {
+                    "StopSequence": 33,
+                    "StopId": "8220DB007579",
+                    "Arrival": {
+                        "Delay": 1080
+                    },
+                    "Departure": {
+                        "Delay": 1080
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001016": {
+                    "StopSequence": 35,
+                    "StopId": "8220DB001016",
+                    "Arrival": {
+                        "Delay": 1140
+                    },
+                    "Departure": {
+                        "Delay": 1140
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001017": {
+                    "StopSequence": 36,
+                    "StopId": "8220DB001017",
+                    "Arrival": {
+                        "Delay": 1200
+                    },
+                    "Departure": {
+                        "Delay": 1200
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "3989353.25.10-360-e19-1.1370.O": {
+        "Id": "3989353.25.10-360-e19-1.1370.O",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "3989353.25.10-360-e19-1.1370.O",
+                "RouteId": "10-360-e19-1",
+                "StartTime": "23:00:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8440B3550501": {
+                    "StopSequence": 1,
+                    "StopId": "8440B3550501",
+                    "Departure": {
+                        "Delay": 1080
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8440B352011": {
+                    "StopSequence": 2,
+                    "StopId": "8440B352011",
+                    "Arrival": {
+                        "Delay": 1140
+                    },
+                    "Departure": {
+                        "Delay": 1140
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8440B352041": {
+                    "StopSequence": 3,
+                    "StopId": "8440B352041",
+                    "Arrival": {
+                        "Delay": 1020
+                    },
+                    "Departure": {
+                        "Delay": 1020
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8440B352051": {
+                    "StopSequence": 4,
+                    "StopId": "8440B352051",
+                    "Arrival": {
+                        "Delay": 960
+                    },
+                    "Departure": {
+                        "Delay": 960
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8440B352061": {
+                    "StopSequence": 5,
+                    "StopId": "8440B352061",
+                    "Arrival": {
+                        "Delay": 900
+                    },
+                    "Departure": {
+                        "Delay": 900
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8440B352081": {
+                    "StopSequence": 6,
+                    "StopId": "8440B352081",
+                    "Arrival": {
+                        "Delay": 780
+                    },
+                    "Departure": {
+                        "Delay": 780
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8440B353021": {
+                    "StopSequence": 7,
+                    "StopId": "8440B353021",
+                    "Arrival": {
+                        "Delay": 720
+                    },
+                    "Departure": {
+                        "Delay": 720
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8450B3312601": {
+                    "StopSequence": 8,
+                    "StopId": "8450B3312601",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8450B3310801": {
+                    "StopSequence": 9,
+                    "StopId": "8450B3310801",
+                    "Arrival": {
+                        "Delay": 360
+                    },
+                    "Departure": {
+                        "Delay": 360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8450B3308501": {
+                    "StopSequence": 10,
+                    "StopId": "8450B3308501",
+                    "Arrival": {
+                        "Delay": 240
+                    },
+                    "Departure": {
+                        "Delay": 240
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8450B353031": {
+                    "StopSequence": 11,
+                    "StopId": "8450B353031",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8450B331461": {
+                    "StopSequence": 12,
+                    "StopId": "8450B331461",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8450B353061": {
+                    "StopSequence": 13,
+                    "StopId": "8450B353061",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8450B353071": {
+                    "StopSequence": 14,
+                    "StopId": "8450B353071",
+                    "Arrival": {
+                        "Delay": 1620
+                    },
+                    "Departure": {
+                        "Delay": 1620
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8450B353091": {
+                    "StopSequence": 16,
+                    "StopId": "8450B353091",
+                    "Arrival": {
+                        "Delay": 1560
+                    },
+                    "Departure": {
+                        "Delay": 1560
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8450B353121": {
+                    "StopSequence": 20,
+                    "StopId": "8450B353121",
+                    "Arrival": {
+                        "Delay": 1620
+                    },
+                    "Departure": {
+                        "Delay": 1620
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8450B353131": {
+                    "StopSequence": 21,
+                    "StopId": "8450B353131",
+                    "Arrival": {
+                        "Delay": 1680
+                    },
+                    "Departure": {
+                        "Delay": 1680
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "8608.3.60-4-d12-1.3.O": {
+        "Id": "8608.3.60-4-d12-1.3.O",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "8608.3.60-4-d12-1.3.O",
+                "RouteId": "60-4-d12-1",
+                "StartTime": "23:00:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8240DB000324": {
+                    "StopSequence": 1,
+                    "StopId": "8240DB000324",
+                    "Departure": {
+                        "Delay": 180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB007113": {
+                    "StopSequence": 7,
+                    "StopId": "8220DB007113",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "3985962.25.10-728-e19-1.2071.I": {
+        "Id": "3985962.25.10-728-e19-1.2071.I",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "3985962.25.10-728-e19-1.2071.I",
+                "RouteId": "10-728-e19-1",
+                "StartTime": "23:00:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8310B1093301": {
+                    "StopSequence": 1,
+                    "StopId": "8310B1093301",
+                    "Departure": {
+                        "Delay": 2640
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "8988.3.60-11-d12-1.15.O": {
+        "Id": "8988.3.60-11-d12-1.15.O",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "8988.3.60-11-d12-1.15.O",
+                "RouteId": "60-11-d12-1",
+                "StartTime": "23:05:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8220DB006122": {
+                    "StopSequence": 1,
+                    "StopId": "8220DB006122",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000043": {
+                    "StopSequence": 10,
+                    "StopId": "8220DB000043",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000051": {
+                    "StopSequence": 18,
+                    "StopId": "8220DB000051",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000261": {
+                    "StopSequence": 20,
+                    "StopId": "8220DB000261",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 300
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000271": {
+                    "StopSequence": 21,
+                    "StopId": "8220DB000271",
+                    "Arrival": {
+                        "Delay": 360
+                    },
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "3989723.25.10-404-e19-1.1495.O": {
+        "Id": "3989723.25.10-404-e19-1.1495.O",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "3989723.25.10-404-e19-1.1495.O",
+                "RouteId": "10-404-e19-1",
+                "StartTime": "23:10:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8470B556161": {
+                    "StopSequence": 1,
+                    "StopId": "8470B556161",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8470B5260101": {
+                    "StopSequence": 2,
+                    "StopId": "8470B5260101",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8460B8884201": {
+                    "StopSequence": 3,
+                    "StopId": "8460B8884201",
+                    "Arrival": {
+                        "Delay": -60
+                    },
+                    "Departure": {
+                        "Delay": -60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8460B5243701": {
+                    "StopSequence": 15,
+                    "StopId": "8460B5243701",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8460B5230201": {
+                    "StopSequence": 16,
+                    "StopId": "8460B5230201",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8460B5244401": {
+                    "StopSequence": 24,
+                    "StopId": "8460B5244401",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8460B5244901": {
+                    "StopSequence": 30,
+                    "StopId": "8460B5244901",
+                    "Arrival": {
+                        "Delay": 240
+                    },
+                    "Departure": {
+                        "Delay": 240
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "3989743.25.10-404-e19-1.1491.I": {
+        "Id": "3989743.25.10-404-e19-1.1491.I",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "3989743.25.10-404-e19-1.1491.I",
+                "RouteId": "10-404-e19-1",
+                "StartTime": "23:10:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8460B5255401": {
+                    "StopSequence": 1,
+                    "StopId": "8460B5255401",
+                    "Departure": {
+                        "Delay": 1560
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8460B5256101": {
+                    "StopSequence": 7,
+                    "StopId": "8460B5256101",
+                    "Arrival": {
+                        "Delay": 1620
+                    },
+                    "Departure": {
+                        "Delay": 1620
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8460B5256301": {
+                    "StopSequence": 9,
+                    "StopId": "8460B5256301",
+                    "Arrival": {
+                        "Delay": 1680
+                    },
+                    "Departure": {
+                        "Delay": 1920
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8460B5225601": {
+                    "StopSequence": 11,
+                    "StopId": "8460B5225601",
+                    "Arrival": {
+                        "Delay": 2040
+                    },
+                    "Departure": {
+                        "Delay": 2040
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8460B5231801": {
+                    "StopSequence": 12,
+                    "StopId": "8460B5231801",
+                    "Arrival": {
+                        "Delay": 2160
+                    },
+                    "Departure": {
+                        "Delay": 2160
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8460B5226101": {
+                    "StopSequence": 14,
+                    "StopId": "8460B5226101",
+                    "Arrival": {
+                        "Delay": 2160
+                    },
+                    "Departure": {
+                        "Delay": 1860
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "3987574.25.10-216-e19-1.592.I": {
+        "Id": "3987574.25.10-216-e19-1.592.I",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "3987574.25.10-216-e19-1.592.I",
+                "RouteId": "10-216-e19-1",
+                "StartTime": "23:10:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8370B244151": {
+                    "StopSequence": 1,
+                    "StopId": "8370B244151",
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8370B2427201": {
+                    "StopSequence": 7,
+                    "StopId": "8370B2427201",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8370B2427501": {
+                    "StopSequence": 12,
+                    "StopId": "8370B2427501",
+                    "Arrival": {
+                        "Delay": 300
+                    },
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8370B2420501": {
+                    "StopSequence": 13,
+                    "StopId": "8370B2420501",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8370B2508401": {
+                    "StopSequence": 14,
+                    "StopId": "8370B2508401",
+                    "Arrival": {
+                        "Delay": 360
+                    },
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8370B2412701": {
+                    "StopSequence": 21,
+                    "StopId": "8370B2412701",
+                    "Arrival": {
+                        "Delay": 360
+                    },
+                    "Departure": {
+                        "Delay": 360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8370B2412801": {
+                    "StopSequence": 22,
+                    "StopId": "8370B2412801",
+                    "Arrival": {
+                        "Delay": 300
+                    },
+                    "Departure": {
+                        "Delay": 300
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8370B2413001": {
+                    "StopSequence": 23,
+                    "StopId": "8370B2413001",
+                    "Arrival": {
+                        "Delay": 360
+                    },
+                    "Departure": {
+                        "Delay": 360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B245991": {
+                    "StopSequence": 27,
+                    "StopId": "8380B245991",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B246981": {
+                    "StopSequence": 28,
+                    "StopId": "8380B246981",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B245321": {
+                    "StopSequence": 29,
+                    "StopId": "8380B245321",
+                    "Arrival": {
+                        "Delay": 540
+                    },
+                    "Departure": {
+                        "Delay": 540
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "10663.3.60-123-d12-1.74.I": {
+        "Id": "10663.3.60-123-d12-1.74.I",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "10663.3.60-123-d12-1.74.I",
+                "RouteId": "60-123-d12-1",
+                "StartTime": "23:10:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8220DB001491": {
+                    "StopSequence": 1,
+                    "StopId": "8220DB001491",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000509": {
+                    "StopSequence": 12,
+                    "StopId": "8220DB000509",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000513": {
+                    "StopSequence": 15,
+                    "StopId": "8220DB000513",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000272": {
+                    "StopSequence": 17,
+                    "StopId": "8220DB000272",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 300
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000335": {
+                    "StopSequence": 18,
+                    "StopId": "8220DB000335",
+                    "Arrival": {
+                        "Delay": 300
+                    },
+                    "Departure": {
+                        "Delay": 360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001278": {
+                    "StopSequence": 19,
+                    "StopId": "8220DB001278",
+                    "Arrival": {
+                        "Delay": 480
+                    },
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001939": {
+                    "StopSequence": 24,
+                    "StopId": "8220DB001939",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001940": {
+                    "StopSequence": 25,
+                    "StopId": "8220DB001940",
+                    "Arrival": {
+                        "Delay": 360
+                    },
+                    "Departure": {
+                        "Delay": 360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB004516": {
+                    "StopSequence": 27,
+                    "StopId": "8220DB004516",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001454": {
+                    "StopSequence": 31,
+                    "StopId": "8220DB001454",
+                    "Arrival": {
+                        "Delay": 360
+                    },
+                    "Departure": {
+                        "Delay": 360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001460": {
+                    "StopSequence": 38,
+                    "StopId": "8220DB001460",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB006094": {
+                    "StopSequence": 42,
+                    "StopId": "8220DB006094",
+                    "Arrival": {
+                        "Delay": 360
+                    },
+                    "Departure": {
+                        "Delay": 360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "8507.11346.2-952-ga2-1.347.O": {
+        "Id": "8507.11346.2-952-ga2-1.347.O",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "8507.11346.2-952-ga2-1.347.O",
+                "RouteId": "2-952-ga2-1",
+                "StartTime": "23:15:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Canceled"
+            }
+        }
+    },
+    "9589.3.60-42-d12-1.249.O": {
+        "Id": "9589.3.60-42-d12-1.249.O",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "9589.3.60-42-d12-1.249.O",
+                "RouteId": "60-42-d12-1",
+                "StartTime": "23:15:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8220DB001184": {
+                    "StopSequence": 1,
+                    "StopId": "8220DB001184",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "12268.3.60-H3-d12-1.355.I": {
+        "Id": "12268.3.60-H3-d12-1.355.I",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "12268.3.60-H3-d12-1.355.I",
+                "RouteId": "60-H3-d12-1",
+                "StartTime": "23:19:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8240DB000707": {
+                    "StopSequence": 1,
+                    "StopId": "8240DB000707",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8240DB000583": {
+                    "StopSequence": 16,
+                    "StopId": "8240DB000583",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8240DB000585": {
+                    "StopSequence": 18,
+                    "StopId": "8240DB000585",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000592": {
+                    "StopSequence": 25,
+                    "StopId": "8220DB000592",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000600": {
+                    "StopSequence": 33,
+                    "StopId": "8220DB000600",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000607": {
+                    "StopSequence": 40,
+                    "StopId": "8220DB000607",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000608": {
+                    "StopSequence": 41,
+                    "StopId": "8220DB000608",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000612": {
+                    "StopSequence": 45,
+                    "StopId": "8220DB000612",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000619": {
+                    "StopSequence": 52,
+                    "StopId": "8220DB000619",
+                    "Arrival": {
+                        "Delay": 240
+                    },
+                    "Departure": {
+                        "Delay": 240
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB007569": {
+                    "StopSequence": 55,
+                    "StopId": "8220DB007569",
+                    "Arrival": {
+                        "Delay": 300
+                    },
+                    "Departure": {
+                        "Delay": 300
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "11145.3.60-40D-d12-1.226.I": {
+        "Id": "11145.3.60-40D-d12-1.226.I",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "11145.3.60-40D-d12-1.226.I",
+                "RouteId": "60-40D-d12-1",
+                "StartTime": "23:20:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8240DB007073": {
+                    "StopSequence": 1,
+                    "StopId": "8240DB007073",
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8240DB007098": {
+                    "StopSequence": 3,
+                    "StopId": "8240DB007098",
+                    "Arrival": {
+                        "Delay": 300
+                    },
+                    "Departure": {
+                        "Delay": 300
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB004542": {
+                    "StopSequence": 27,
+                    "StopId": "8220DB004542",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001534": {
+                    "StopSequence": 31,
+                    "StopId": "8220DB001534",
+                    "Arrival": {
+                        "Delay": 360
+                    },
+                    "Departure": {
+                        "Delay": 360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000186": {
+                    "StopSequence": 35,
+                    "StopId": "8220DB000186",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB004725": {
+                    "StopSequence": 43,
+                    "StopId": "8220DB004725",
+                    "Arrival": {
+                        "Delay": 360
+                    },
+                    "Departure": {
+                        "Delay": 360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "11681.3.60-14-d12-1.155.I": {
+        "Id": "11681.3.60-14-d12-1.155.I",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "11681.3.60-14-d12-1.155.I",
+                "RouteId": "60-14-d12-1",
+                "StartTime": "23:20:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8250DB002825": {
+                    "StopSequence": 1,
+                    "StopId": "8250DB002825",
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8250DB004707": {
+                    "StopSequence": 17,
+                    "StopId": "8250DB004707",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8250DB004708": {
+                    "StopSequence": 18,
+                    "StopId": "8250DB004708",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8250DB001052": {
+                    "StopSequence": 21,
+                    "StopId": "8250DB001052",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8250DB001054": {
+                    "StopSequence": 23,
+                    "StopId": "8250DB001054",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001167": {
+                    "StopSequence": 34,
+                    "StopId": "8220DB001167",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001069": {
+                    "StopSequence": 38,
+                    "StopId": "8220DB001069",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001071": {
+                    "StopSequence": 40,
+                    "StopId": "8220DB001071",
+                    "Arrival": {
+                        "Delay": 240
+                    },
+                    "Departure": {
+                        "Delay": 240
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB007578": {
+                    "StopSequence": 47,
+                    "StopId": "8220DB007578",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000297": {
+                    "StopSequence": 49,
+                    "StopId": "8220DB000297",
+                    "Arrival": {
+                        "Delay": 240
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "3988561.25.10-401-e19-1.1476.I": {
+        "Id": "3988561.25.10-401-e19-1.1476.I",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "3988561.25.10-401-e19-1.1476.I",
+                "RouteId": "10-401-e19-1",
+                "StartTime": "23:20:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8460B522301": {
+                    "StopSequence": 1,
+                    "StopId": "8460B522301",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8460B5222201": {
+                    "StopSequence": 7,
+                    "StopId": "8460B5222201",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8460B5222301": {
+                    "StopSequence": 8,
+                    "StopId": "8460B5222301",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8460B5304201": {
+                    "StopSequence": 34,
+                    "StopId": "8460B5304201",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8460B5203201": {
+                    "StopSequence": 35,
+                    "StopId": "8460B5203201",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "11159.3.60-40-d12-1.220.I": {
+        "Id": "11159.3.60-40-d12-1.220.I",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "11159.3.60-40-d12-1.220.I",
+                "RouteId": "60-40-d12-1",
+                "StartTime": "23:20:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8230DB004795": {
+                    "StopSequence": 1,
+                    "StopId": "8230DB004795",
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8230DB004688": {
+                    "StopSequence": 2,
+                    "StopId": "8230DB004688",
+                    "Arrival": {
+                        "Delay": 540
+                    },
+                    "Departure": {
+                        "Delay": 540
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8230DB004410": {
+                    "StopSequence": 4,
+                    "StopId": "8230DB004410",
+                    "Arrival": {
+                        "Delay": 480
+                    },
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8230DB002679": {
+                    "StopSequence": 6,
+                    "StopId": "8230DB002679",
+                    "Arrival": {
+                        "Delay": 540
+                    },
+                    "Departure": {
+                        "Delay": 540
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8230DB002686": {
+                    "StopSequence": 15,
+                    "StopId": "8230DB002686",
+                    "Arrival": {
+                        "Delay": 480
+                    },
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8230DB004799": {
+                    "StopSequence": 17,
+                    "StopId": "8230DB004799",
+                    "Arrival": {
+                        "Delay": 540
+                    },
+                    "Departure": {
+                        "Delay": 540
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002689": {
+                    "StopSequence": 21,
+                    "StopId": "8220DB002689",
+                    "Arrival": {
+                        "Delay": 480
+                    },
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002697": {
+                    "StopSequence": 23,
+                    "StopId": "8220DB002697",
+                    "Arrival": {
+                        "Delay": 540
+                    },
+                    "Departure": {
+                        "Delay": 540
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002713": {
+                    "StopSequence": 24,
+                    "StopId": "8220DB002713",
+                    "Arrival": {
+                        "Delay": 480
+                    },
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002714": {
+                    "StopSequence": 25,
+                    "StopId": "8220DB002714",
+                    "Arrival": {
+                        "Delay": 540
+                    },
+                    "Departure": {
+                        "Delay": 540
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002718": {
+                    "StopSequence": 28,
+                    "StopId": "8220DB002718",
+                    "Arrival": {
+                        "Delay": 480
+                    },
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001990": {
+                    "StopSequence": 31,
+                    "StopId": "8220DB001990",
+                    "Arrival": {
+                        "Delay": 540
+                    },
+                    "Departure": {
+                        "Delay": 540
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001992": {
+                    "StopSequence": 32,
+                    "StopId": "8220DB001992",
+                    "Arrival": {
+                        "Delay": 480
+                    },
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001993": {
+                    "StopSequence": 33,
+                    "StopId": "8220DB001993",
+                    "Arrival": {
+                        "Delay": 420
+                    },
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001998": {
+                    "StopSequence": 38,
+                    "StopId": "8220DB001998",
+                    "Arrival": {
+                        "Delay": 360
+                    },
+                    "Departure": {
+                        "Delay": 360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "3987878.25.10-223-e19-1.639.O": {
+        "Id": "3987878.25.10-223-e19-1.639.O",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "3987878.25.10-223-e19-1.639.O",
+                "RouteId": "10-223-e19-1",
+                "StartTime": "23:20:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8370B2420501": {
+                    "StopSequence": 1,
+                    "StopId": "8370B2420501",
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8370B2412201": {
+                    "StopSequence": 3,
+                    "StopId": "8370B2412201",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8370B2359701": {
+                    "StopSequence": 6,
+                    "StopId": "8370B2359701",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B2349101": {
+                    "StopSequence": 24,
+                    "StopId": "8380B2349101",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B245411": {
+                    "StopSequence": 28,
+                    "StopId": "8380B245411",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B2347001": {
+                    "StopSequence": 35,
+                    "StopId": "8380B2347001",
+                    "Arrival": {
+                        "Delay": 240
+                    },
+                    "Departure": {
+                        "Delay": 240
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B2339401": {
+                    "StopSequence": 36,
+                    "StopId": "8380B2339401",
+                    "Arrival": {
+                        "Delay": 300
+                    },
+                    "Departure": {
+                        "Delay": 300
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B2304001": {
+                    "StopSequence": 38,
+                    "StopId": "8380B2304001",
+                    "Arrival": {
+                        "Delay": 360
+                    },
+                    "Departure": {
+                        "Delay": 360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "11804.3.60-26-d12-1.166.O": {
+        "Id": "11804.3.60-26-d12-1.166.O",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "11804.3.60-26-d12-1.166.O",
+                "RouteId": "60-26-d12-1",
+                "StartTime": "23:25:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8220DB007391": {
+                    "StopSequence": 1,
+                    "StopId": "8220DB007391",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000494": {
+                    "StopSequence": 3,
+                    "StopId": "8220DB000494",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 600
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000495": {
+                    "StopSequence": 4,
+                    "StopId": "8220DB000495",
+                    "Arrival": {
+                        "Delay": 480
+                    },
+                    "Departure": {
+                        "Delay": 600
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000400": {
+                    "StopSequence": 5,
+                    "StopId": "8220DB000400",
+                    "Arrival": {
+                        "Delay": 540
+                    },
+                    "Departure": {
+                        "Delay": 540
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000346": {
+                    "StopSequence": 6,
+                    "StopId": "8220DB000346",
+                    "Arrival": {
+                        "Delay": 480
+                    },
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000317": {
+                    "StopSequence": 7,
+                    "StopId": "8220DB000317",
+                    "Arrival": {
+                        "Delay": 540
+                    },
+                    "Departure": {
+                        "Delay": 540
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001449": {
+                    "StopSequence": 12,
+                    "StopId": "8220DB001449",
+                    "Arrival": {
+                        "Delay": 600
+                    },
+                    "Departure": {
+                        "Delay": 600
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "7560.3.60-84-d12-1.320.I": {
+        "Id": "7560.3.60-84-d12-1.320.I",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "7560.3.60-84-d12-1.320.I",
+                "RouteId": "60-84-d12-1",
+                "StartTime": "23:30:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8350DB004260": {
+                    "StopSequence": 1,
+                    "StopId": "8350DB004260",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8350DB004151": {
+                    "StopSequence": 46,
+                    "StopId": "8350DB004151",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "10493.3.60-123-d12-1.73.O": {
+        "Id": "10493.3.60-123-d12-1.73.O",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "10493.3.60-123-d12-1.73.O",
+                "RouteId": "60-123-d12-1",
+                "StartTime": "23:30:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8220DB006057": {
+                    "StopSequence": 1,
+                    "StopId": "8220DB006057",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001423": {
+                    "StopSequence": 5,
+                    "StopId": "8220DB001423",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB004399": {
+                    "StopSequence": 10,
+                    "StopId": "8220DB004399",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001377": {
+                    "StopSequence": 18,
+                    "StopId": "8220DB001377",
+                    "Arrival": {
+                        "Delay": 240
+                    },
+                    "Departure": {
+                        "Delay": 240
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001996": {
+                    "StopSequence": 23,
+                    "StopId": "8220DB001996",
+                    "Arrival": {
+                        "Delay": 300
+                    },
+                    "Departure": {
+                        "Delay": 360
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002001": {
+                    "StopSequence": 26,
+                    "StopId": "8220DB002001",
+                    "Arrival": {
+                        "Delay": 480
+                    },
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001359": {
+                    "StopSequence": 28,
+                    "StopId": "8220DB001359",
+                    "Arrival": {
+                        "Delay": 540
+                    },
+                    "Departure": {
+                        "Delay": 540
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000274": {
+                    "StopSequence": 29,
+                    "StopId": "8220DB000274",
+                    "Arrival": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "9501.3.60-79A-d12-1.303.O": {
+        "Id": "9501.3.60-79A-d12-1.303.O",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "9501.3.60-79A-d12-1.303.O",
+                "RouteId": "60-79A-d12-1",
+                "StartTime": "23:30:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8220DB000326": {
+                    "StopSequence": 1,
+                    "StopId": "8220DB000326",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001443": {
+                    "StopSequence": 2,
+                    "StopId": "8220DB001443",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001445": {
+                    "StopSequence": 4,
+                    "StopId": "8220DB001445",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002721": {
+                    "StopSequence": 8,
+                    "StopId": "8220DB002721",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB002657": {
+                    "StopSequence": 22,
+                    "StopId": "8220DB002657",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "9687.3.60-40E-d12-1.230.O": {
+        "Id": "9687.3.60-40E-d12-1.230.O",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "9687.3.60-40E-d12-1.230.O",
+                "RouteId": "60-40E-d12-1",
+                "StartTime": "23:30:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8220DB007672": {
+                    "StopSequence": 1,
+                    "StopId": "8220DB007672",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000072": {
+                    "StopSequence": 5,
+                    "StopId": "8220DB000072",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB007009": {
+                    "StopSequence": 8,
+                    "StopId": "8220DB007009",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB001577": {
+                    "StopSequence": 15,
+                    "StopId": "8220DB001577",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8240DB007559": {
+                    "StopSequence": 23,
+                    "StopId": "8240DB007559",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8240DB007866": {
+                    "StopSequence": 24,
+                    "StopId": "8240DB007866",
+                    "Arrival": {
+                        "Delay": 120
+                    },
+                    "Departure": {
+                        "Delay": 120
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8240DB007107": {
+                    "StopSequence": 25,
+                    "StopId": "8240DB007107",
+                    "Arrival": {
+                        "Delay": 240
+                    },
+                    "Departure": {
+                        "Delay": 240
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8240DB007102": {
+                    "StopSequence": 26,
+                    "StopId": "8240DB007102",
+                    "Arrival": {
+                        "Delay": 300
+                    },
+                    "Departure": {
+                        "Delay": 300
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "9034.3.60-11-d12-1.17.I": {
+        "Id": "9034.3.60-11-d12-1.17.I",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "9034.3.60-11-d12-1.17.I",
+                "RouteId": "60-11-d12-1",
+                "StartTime": "23:30:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8250DB000449": {
+                    "StopSequence": 1,
+                    "StopId": "8250DB000449",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8250DB003026": {
+                    "StopSequence": 14,
+                    "StopId": "8250DB003026",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8250DB000875": {
+                    "StopSequence": 20,
+                    "StopId": "8250DB000875",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000884": {
+                    "StopSequence": 28,
+                    "StopId": "8220DB000884",
+                    "Arrival": {
+                        "Delay": -60
+                    },
+                    "Departure": {
+                        "Delay": -60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000903": {
+                    "StopSequence": 32,
+                    "StopId": "8220DB000903",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000909": {
+                    "StopSequence": 37,
+                    "StopId": "8220DB000909",
+                    "Arrival": {
+                        "Delay": -60
+                    },
+                    "Departure": {
+                        "Delay": -60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000793": {
+                    "StopSequence": 39,
+                    "StopId": "8220DB000793",
+                    "Arrival": {
+                        "Delay": 0
+                    },
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8220DB000278": {
+                    "StopSequence": 43,
+                    "StopId": "8220DB000278",
+                    "Arrival": {
+                        "Time": 1658012292
+                    },
+                    "Departure": {
+                        "Time": 1658012292
+                    },
+                    "ScheduleRelationship": "Skipped"
+                },
+                "8220DB007615": {
+                    "StopSequence": 44,
+                    "StopId": "8220DB007615",
+                    "Arrival": {
+                        "Time": 1658012364
+                    },
+                    "ScheduleRelationship": "Skipped"
+                }
+            }
+        }
+    },
+    "3986685.25.10-215-e19-1.576.I": {
+        "Id": "3986685.25.10-215-e19-1.576.I",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "3986685.25.10-215-e19-1.576.I",
+                "RouteId": "10-215-e19-1",
+                "StartTime": "23:30:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8380B213421": {
+                    "StopSequence": 1,
+                    "StopId": "8380B213421",
+                    "Departure": {
+                        "Delay": 420
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8380B213501": {
+                    "StopSequence": 9,
+                    "StopId": "8380B213501",
+                    "Arrival": {
+                        "Delay": 480
+                    },
+                    "Departure": {
+                        "Delay": 480
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "12867.3.60-1-d12-1.2.I": {
+        "Id": "12867.3.60-1-d12-1.2.I",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "12867.3.60-1-d12-1.2.I",
+                "RouteId": "60-1-d12-1",
+                "StartTime": "23:30:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8220DB000400": {
+                    "StopSequence": 1,
+                    "StopId": "8220DB000400",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "3989354.25.10-360-e19-1.1369.I": {
+        "Id": "3989354.25.10-360-e19-1.1369.I",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "3989354.25.10-360-e19-1.1369.I",
+                "RouteId": "10-360-e19-1",
+                "StartTime": "23:35:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8450B3314401": {
+                    "StopSequence": 1,
+                    "StopId": "8450B3314401",
+                    "Departure": {
+                        "Delay": 1560
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    },
+    "3989901.25.10-407-e19-1.1515.I": {
+        "Id": "3989901.25.10-407-e19-1.1515.I",
+        "IsDeleted": false,
+        "TripUpdate": {
+            "Trip": {
+                "TripId": "3989901.25.10-407-e19-1.1515.I",
+                "RouteId": "10-407-e19-1",
+                "StartTime": "23:45:00",
+                "StartDate": "20220716",
+                "ScheduleRelationship": "Scheduled"
+            },
+            "StopTimeUpdate": {
+                "8460B5238601": {
+                    "StopSequence": 1,
+                    "StopId": "8460B5238601",
+                    "Departure": {
+                        "Delay": 0
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8460B526091": {
+                    "StopSequence": 10,
+                    "StopId": "8460B526091",
+                    "Arrival": {
+                        "Delay": 60
+                    },
+                    "Departure": {
+                        "Delay": 60
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                },
+                "8460B5240901": {
+                    "StopSequence": 12,
+                    "StopId": "8460B5240901",
+                    "Arrival": {
+                        "Delay": 180
+                    },
+                    "Departure": {
+                        "Delay": 180
+                    },
+                    "ScheduleRelationship": "Scheduled"
+                }
+            }
+        }
+    }
+}

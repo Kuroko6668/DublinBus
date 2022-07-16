@@ -32,3 +32,13 @@ WARNING:root:API get request error @ time: 2022-07-14 23:09:01. Error = HTTP Err
 WARNING:root:Error updating existing json.X response error: name 'response' is not defined
 INFO:root:API get request @2022-07-14 23:09:47 successful. Timestamp of API response object = 1657836579
 INFO:root:Json file updated correctly. 1657836579  response written to json correctly
+INFO:root:API get request @2022-07-15 10:20:24 successful. Timestamp of API response object = 1657876817
+INFO:root:Json file updated correctly. 1657876817  response written to json correctly
+INFO:root:API get request @2022-07-15 10:23:16 successful. Timestamp of API response object = 1657876988
+INFO:root:Json file updated correctly. 1657876988  response written to json correctly
+INFO:root:API get request @2022-07-15 10:25:00 successful. Timestamp of API response object = 1657877098
+INFO:root:Json file updated correctly. 1657877098  response written to json correctly
+INFO:root:API get request @2022-07-15 12:14:27 successful. Timestamp of API response object = 1657883655
+INFO:root:Json file updated correctly. 1657883655  response written to json correctly
+INFO:root:API get request @2022-07-16 23:58:39 successful. Timestamp of API response object = 1658012316
+INFO:root:Json file updated correctly. 1658012316  response written to json correctly
