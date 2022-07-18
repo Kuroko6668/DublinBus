@@ -61,7 +61,7 @@ def stop_detail(request, stop_id):
 
 
     current_time = datetime.now(timezone(timedelta(hours=1)))
-    service_id = 5
+    service_id = 2
     if(current_time.weekday() == 5):
         service_id = 1
     if(current_time.weekday() == 6):
@@ -92,9 +92,11 @@ def stop_detail(request, stop_id):
         # trip__service_id=str(service_id),
         # Get all arrival times in the next hour
         arrival_time__gte=current_time.time(),
-        arrival_time__lte=(current_time + timedelta(hours=15)).time(),
+        arrival_time__lte=(current_time + timedelta(hours=1)).time(),
     ).select_related("trip")
+    
 
+    # print(stop_time_next_hour.query)
     
    
 
@@ -114,44 +116,48 @@ def stop_detail(request, stop_id):
 
     # middle_time = time.time()
     
-   # using gtfsrProcessing json object
-    with open("gtfsrProcessing/gtfsrFeed.json","r") as f:
-        realtime_updates = json.load(f)
+   #using gtfsrProcessing json object
+    # with open("gtfsrProcessing/gtfsrFeed.json","r") as f:
+    #     realtime_updates = json.load(f)
 
 
     # result['arrivals'] = list(stop_time_details)
 
     # realtime_updates = request_realtime_nta_data()
 
-    realtime_updates = realtime_updates['Entity']
+    # realtime_updates = realtime_updates['Entity']
+
+    
 
 
 
-    for stop_time in stop_time_next_hour:
+    for stop_time in stop_time_next_hour.iterator():
 
         # Only get details for trips that operate on the current day
-        if stop_time.trip.service_id  == str(service_id):
-            print(stop_time.trip.trip_id)
+        #if stop_time.trip.service_id  == str(service_id):
+        print(stop_time.trip.trip_id)
 
-            delay = get_bus_delay(realtime_updates,stop_time.trip.trip_id,stop_time.stop_sequence)
-            #delay = check_for_update.check_trip_for_update(gtfsDict,stop_time.trip.trip_id,stop_id)
+        #delay = get_bus_delay(realtime_updates,stop_time.trip.trip_id,stop_time.stop_sequence)
+        delay = check_for_update.check_trip_for_update(gtfsDict,stop_time.trip.trip_id,stop_id)
 
-            result['arrivals'].append({
-                'route_id': stop_time.trip.route.route_id,
-                'trip_id': stop_time.trip.trip_id,
-                'direction': stop_time.trip.direction_id,
-                'trip_headsign':stop_time.trip.trip_headsign,
-                'line': stop_time.trip.route.route_short_name,
-                'service_id': stop_time.trip.service_id,
-                'scheduled_arrival_time': stop_time.arrival_time,
-                'scheduled_departure_time': stop_time.departure_time,
-                'stop_sequence': stop_time.stop_sequence,
-                'delay_sec': delay,
-                'due_in_min': get_due_in_mins(current_time, stop_time.arrival_time, delay)
-            })
+        result['arrivals'].append({
+            'route_id': stop_time.trip.route.route_id,
+            'trip_id': stop_time.trip.trip_id,
+            'direction': stop_time.trip.direction_id,
+            'trip_headsign':stop_time.trip.trip_headsign,
+            'line': stop_time.trip.route.route_short_name,
+            'service_id': stop_time.trip.service_id,
+            'scheduled_arrival_time': stop_time.arrival_time,
+            'scheduled_departure_time': stop_time.departure_time,
+            'stop_sequence': stop_time.stop_sequence,
+            'delay_sec': delay,
+            'due_in_min': get_due_in_mins(current_time, stop_time.arrival_time, delay)
+        })
 
     result['arrivals'] = sorted(result['arrivals'],
                                 key=lambda arrival: arrival['scheduled_arrival_time'])
+
+    print(result)
 
     
     logging.info("TEST: " + str(time.time() - start_time))
