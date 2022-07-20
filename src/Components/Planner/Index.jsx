@@ -44,7 +44,7 @@ function Planner({back}){
           }
         }
       }
-      return 
+      return false
     }
 
 
@@ -96,18 +96,34 @@ function Planner({back}){
           if(temp.travel_mode === 'TRANSIT'){
             transits.push({
               arrival_stop:temp.transit.arrival_stop.name,
+              arrival_time:temp.transit.arrival_time.value,
               departure_stop:temp.transit.departure_stop.name,
+              departure_time:temp.transit.departure_time.value,
               short_name:temp.transit.line.short_name,
               time: time.valueOf()
             })
           }
         }
-        var response = await reqPrediction(stopNameToId(transits[0].arrival_stop),stopNameToId(transits[0].departure_stop),time.valueOf(),transits[0].short_name)
         console.log(transits,'transits');
         console.log(walks,'walks');
-        alert(response.data[0].trip_id)
-        console.log(stopNameToId(transits[0].arrival_stop),'arrival_stop')
-        console.log(stopNameToId(transits[0].departure_stop),'departure_stop');
+        var temp = []
+        for(var i = 0; i < transits.length; i++){
+          
+          console.log(stopNameToId(transits[i].arrival_stop),stopNameToId(transits[i].departure_stop),transits[i].departure_time.valueOf(),transits[i].short_name)
+          var response = await reqPrediction(stopNameToId(transits[i].arrival_stop),stopNameToId(transits[i].departure_stop),transits[i].departure_time.valueOf(),transits[i].short_name)
+          let {status,data} = response
+          if ( status === 200){
+            temp.push(data[0].trip_id)
+            console.log(temp,'temp');
+          }else{
+            alert(status)
+          }
+        }
+        alert(temp)
+        // console.log(response);
+
+        
+       
     }
     function clearRoute(){
         setDirectionResponse(null)

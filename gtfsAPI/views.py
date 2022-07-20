@@ -121,7 +121,7 @@ def get_prediction(request,arrival_stop_id,departure_stop_id,timestamp,short_nam
     if dt_obj <= current_date or \
             dt_obj >= current_date + timedelta(days=7):
             return HttpResponseBadRequest("Requested date must be within the next 7 days")
-    chosen_route_id = Routes.objects.filter(route_short_name=short_name).first().route_id
+    chosen_route_id = Routes.objects.filter(route_short_name=short_name).values_list("route_id", flat=True)
     chosen_route_direction = Route.objects.filter(Q(stop_id=departure_stop_id) | Q(stop_id=arrival_stop_id), route_short_name=short_name).first().direction_id
 
     # print(chosen_route_id,'chosen_route_id')
@@ -129,7 +129,7 @@ def get_prediction(request,arrival_stop_id,departure_stop_id,timestamp,short_nam
 
 
     trip_ids = list(Trip.objects.filter(
-            route=chosen_route_id,
+            route__in=chosen_route_id,
             direction_id=chosen_route_direction,
             # Get the service IDs that are valid for the date
             service_id=service_id
@@ -138,17 +138,22 @@ def get_prediction(request,arrival_stop_id,departure_stop_id,timestamp,short_nam
     # chosen_trip = list(
     #     filter(lambda trip: trip['trip_id'] == trip_ids[0]['trip_id'], trip_ids)
     # )
-    # print(trip_ids,'chosen_trip')
+    print(trip_ids,'chosen_trip')
     departure_stop_time_details = StopTime.objects.filter(
         stop_id=departure_stop_id,
         # Get all arrival times in the next hour
         arrival_time__gte=dt_obj.time(),
-        arrival_time__lte=(dt_obj + timedelta(hours=1)).time(),
+        arrival_time__lte=('23:59:59'),
         trip_id__in=trip_ids
     )
-    res = [{
-        'trip_id':departure_stop_time_details.first().trip_id,
-    }]
+    if(len(departure_stop_time_details)):
+        res = [{
+            'trip_id':departure_stop_time_details.first().trip_id,
+        }]
+    else:
+        res = [{
+            'trip_id':trip_ids[0],
+        }]
     # print('******************************************')
     # print(dt_obj,current_date)
     # print(stop_time_details.first().trip_id)
