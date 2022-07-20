@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 from datetime import datetime, timedelta, timezone
+from dateutil import tz
 import requests
-import math
+import math,time
+from django.db.models import Q
 from gtfsAPI.models import  Stops,Route,StopTime,Routes,Trip
 from .serialisers import  StopsSerializer,RouteSerializer, StopTimesSerializer
 from django.http import JsonResponse, Http404, HttpResponseBadRequest, HttpResponse
@@ -165,17 +167,77 @@ def stop_detail(request, stop_id):
 
     return JsonResponse(result)
 
+def get_prediction(request,arrival_stop_id,departure_stop_id,timestamp,short_name):
 
+    dt_obj = datetime.fromtimestamp(int(timestamp)/1000,timezone(timedelta(hours=1)))
 def gtfsr_consumer():
 
+    parsed_datetime = dt_obj.strftime('%Y-%m-%d %H:%M:%S')
+    current_date = datetime.now(timezone(timedelta(hours=1)))
+    # get service id 
+    service_id = 2
+    if(dt_obj.weekday() == 5):
+        service_id = 1
+    if(dt_obj.weekday() == 6):
+        service_id = 3
+    # we want prediction datetime later than current time and within next 7 days
+    # if dt_obj <= current_date or \
+    #         dt_obj >= current_date + timedelta(days=7):
+    #         return 
+            # return HttpResponseBadRequest("Requested date must be within the next 7 days")
+    chosen_route_id = Routes.objects.filter(route_short_name=short_name).values_list("route_id", flat=True)
+    chosen_route_direction = Route.objects.filter(Q(stop_id=departure_stop_id) | Q(stop_id=arrival_stop_id), route_short_name=short_name).first().direction_id
    
     gtfsrDict = pipeline.get_message()
     # with open("gtfsrProcessing/gtfsrDict_test.json","r") as f:
     #     realtime_updates = json.load(f)
     
 
+    # print(chosen_route_id,'chosen_route_id')
+    # print(chosen_route_direction,'chosen_route_direction')
     return gtfsrDict
          
+
+
+    trip_ids = list(Trip.objects.filter(
+            route__in=chosen_route_id,
+            direction_id=chosen_route_direction,
+            # Get the service IDs that are valid for the date
+            service_id=service_id,
+
+        ).values_list("trip_id", flat=True))
+        # ).values_list(
+        #     'trip_id', 'stoptime', 'stoptime__stop_id',
+        #     'stoptime__stop_sequence', 
+        #     'stoptime__arrival_time', 'stoptime__departure_time'
+        # ))
+    
+    # chosen_trip = list(
+    #     trip_ids
+    # )
+    # print(chosen_trip,'chosen_trip')
+    departure_stop_time_details = StopTime.objects.filter(
+        stop_id=departure_stop_id,
+        # Get all arrival times in the next hour
+        arrival_time__gte=dt_obj.time(),
+        arrival_time__lte='23:59:59',
+        trip_id__in=trip_ids
+    )
+    if(len(departure_stop_time_details)):
+        res = [{
+            'trip_id':departure_stop_time_details.first().trip_id,
+            'departure_time':departure_stop_time_details.first().arrival_time
+        }]
+    else:
+        res = [{
+            'trip_id':'no bus route at the momonet',
+        }]
+    # print('******************************************')
+    # print(dt_obj,current_date)
+    # print(stop_time_details.first().trip_id)
+    # print('******************************************')
+    return JsonResponse(res,safe=False)
+
 
 
 
