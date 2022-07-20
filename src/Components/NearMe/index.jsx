@@ -59,7 +59,7 @@ function NearMe({back}) {
          {position && <NearMeStops position={position} distance={distance} resultsDisplayed={resultsDisplayed} valueLabelDisplay="auto"/>}
          <Button 
           sx={{ mt:1 }}
-          style={{textTransform: 'none'}}
+          style={{textTransform: 'none',padding:'3px'}}
           variant='contained'
           onClick={()=>back(false)}
           size='small'
