@@ -44,6 +44,6 @@ const SideBar = () => {
      {/* <Weather message={"This is a nice weather"}></Weather> */}
       </div>
    );
-};ß
+};
 
 export default SideBar;
