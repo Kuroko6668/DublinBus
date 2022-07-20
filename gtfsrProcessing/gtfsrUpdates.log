@@ -1331,3 +1331,50 @@ Traceback (most recent call last):
   File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
     super().__init__(*args, **kwargs2)
 django.db.utils.OperationalError: (2005, "Unknown server host 'dub-bus-db.cyopwh1abtzq.us-east-1.rds.amazonaws.com' (11001)")
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+WARNING:root:API get request error @ time: 2022-07-20 15:38:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:39:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:40:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:41:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:42:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:43:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:45:00. Error = <urlopen error [Errno 8] nodename nor servname provided, or not known>
+WARNING:root:API get request error @ time: 2022-07-20 15:46:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:47:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:48:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:49:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:50:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:51:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:52:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:53:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:54:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:55:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:56:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:57:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:58:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 15:59:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:00:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:01:01. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:02:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:03:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:04:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:05:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:06:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:07:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:08:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:09:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:10:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:19:19. Error = <urlopen error [Errno 8] nodename nor servname provided, or not known>
+WARNING:root:API get request error @ time: 2022-07-20 16:20:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:21:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:22:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:23:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:24:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:25:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:26:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:27:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:28:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:29:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:30:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:31:00. Error = <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)>
+WARNING:root:API get request error @ time: 2022-07-20 16:43:38. Error = <urlopen error [Errno 8] nodename nor servname provided, or not known>
