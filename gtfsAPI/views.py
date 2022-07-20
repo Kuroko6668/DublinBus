@@ -11,8 +11,8 @@ import json
 from gtfsrProcessing import check_for_update
 import os
 import logging
+from gtfsrProcessing.apps import pipeline
 logging.basicConfig(filename = "gtfsrProcessing/gtfsrSearchRuntimes.log", level=logging.DEBUG)
-
 # Create your views here.
 
 class StopsView(viewsets.ModelViewSet):  
@@ -100,7 +100,8 @@ def stop_detail(request, stop_id):
     
    
 
-    gtfsDict = read_in_dict()
+    gtfsDict = gtfsr_consumer()
+    # gtfsDict = gtfsr_feed_pipeline.Pipeline.get_message()
 
 
     
@@ -165,15 +166,15 @@ def stop_detail(request, stop_id):
     return JsonResponse(result)
 
 
-def read_in_dict():
-    if os.path.exists("gtfsrProcessing/gtfsrDict_test.json"):
+def gtfsr_consumer():
 
-        with open('gtfsrProcessing/gtfsrDict_test.json', 'r') as openFeed:
-  
+   
+    gtfsrDict = pipeline.get_message()
+    # with open("gtfsrProcessing/gtfsrDict_test.json","r") as f:
+    #     realtime_updates = json.load(f)
     
-            gtfsrDict = json.load(openFeed)
 
-        return gtfsrDict
+    return gtfsrDict
          
 
 

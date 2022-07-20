@@ -29,6 +29,7 @@ def check_trip_for_update(realtime_updates,trip_id,stop_id):
 
         if trip_obj['TripUpdate'] == 'Canceled':
             print(str(trip_id) + "canceled")
+            
         
         stop_time_update_obj = trip_obj['TripUpdate']['StopTimeUpdate']
 
@@ -50,30 +51,7 @@ def check_trip_for_update(realtime_updates,trip_id,stop_id):
 # check_trip_for_update(gtfsrDict, '17935.11355.2-238-ga2-1.205.I','8240DB001545' )     
    
 
-def get_bus_delay(realtime_updates, trip_id, stop_sequence):
-    print("GET BUS DELAY")
 
-    # Get stop time updates for this trip or else return None
-    trip_updates = next(filter(lambda trip: trip['Id'] == trip_id, realtime_updates), None)
-
-    if trip_updates:
-
-        stop_time_updates = trip_updates['TripUpdate'].get('StopTimeUpdate')
-
-        if stop_time_updates:
-
-
-            stop_time_updates = sorted(
-                stop_time_updates,
-                key=lambda update: update['StopSequence'],
-                reverse=True
-            )
-
-
-            if stop_time_updates[0]['StopSequence'] < stop_sequence:
-                return stop_time_updates[0]['Departure']['Delay']
-
-    return 0
 
     
 

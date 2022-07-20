@@ -305,3 +305,55 @@ INFO:root:TEST: 5.557384252548218
 INFO:root:TEST: 5.612821102142334
 INFO:root:TEST: 5.206416845321655
 INFO:root:TEST: 5.469347953796387
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\gtfsr_feed_pipeline.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\gtfsr_feed_pipeline.py changed, reloading.
+ERROR:django.request:Internal Server Error: /stop/8220DB000853/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 103, in stop_detail
+    gtfsDict = gtfsr_consumer()
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 171, in gtfsr_consumer
+    gtfsrDict = gtfsr_feed_pipeline.pipeline.get_message()
+AttributeError: module 'gtfsrProcessing.gtfsr_feed_pipeline' has no attribute 'pipeline'
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\gtfsr_feed_pipeline.py changed, reloading.
+ERROR:django.request:Internal Server Error: /stop/8220DB000853/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 103, in stop_detail
+    gtfsDict = gtfsr_consumer()
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 171, in gtfsr_consumer
+    gtfsrDict = gtfsr_feed_pipeline.pipeline.get_message()
+AttributeError: module 'gtfsrProcessing.gtfsr_feed_pipeline' has no attribute 'pipeline'
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\gtfsr_feed_pipeline.py changed, reloading.
+ERROR:django.request:Internal Server Error: /stop/8220DB000853/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 103, in stop_detail
+    gtfsDict = gtfsr_consumer()
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 171, in gtfsr_consumer
+    gtfsrDict = gtfsr_feed_pipeline.pipeline.get_message()
+AttributeError: module 'gtfsrProcessing.gtfsr_feed_pipeline' has no attribute 'pipeline'
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /stop/8220DB000853/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 103, in stop_detail
+    gtfsDict = gtfsr_consumer()
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 171, in gtfsr_consumer
+    gtfsr_pipeline = gtfsr_feed_pipeline.pipeline
+AttributeError: module 'gtfsrProcessing.gtfsr_feed_pipeline' has no attribute 'pipeline'
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\get_feed.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.

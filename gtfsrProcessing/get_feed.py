@@ -3,10 +3,12 @@
 from html import entities
 import urllib.request, json
 import logging
+from time import time,sleep
 import time
 from dotenv import load_dotenv
 load_dotenv()
 import os
+# import gtfsr_feed_pipeline
 
 logging.basicConfig(filename = "gtfsrProcessing/gtfsrUpdates.log", level=logging.DEBUG)
 
@@ -16,45 +18,59 @@ response_timestamp = "Fail"
 # while True:
 
 
-try:
-    url = "https://api.nationaltransport.ie/gtfsr/v1?format=json"
+def get_GTFSR(pipeline):
+    pipeline = pipeline
+    while True:
 
-    hdr ={
-    # Request headers
-    'Cache-Control': 'no-cache',
-    'x-api-key': os.environ['GTFSRKEY'],
-    }
+        try:
+            time.sleep(60 - time.time() % 60)
+            url = "https://api.nationaltransport.ie/gtfsr/v1?format=json"
 
-    req = urllib.request.Request(url, headers=hdr)
+            hdr ={
+            # Request headers
+            'Cache-Control': 'no-cache',
+            'x-api-key': os.environ['GTFSRKEY'],
+            }
 
-    req.get_method = lambda: 'GET'
-    response = urllib.request.urlopen(req)
+            req = urllib.request.Request(url, headers=hdr)
 
-    #read response and convert to dict
-    response = response.read()
-    response = json.loads(response)
+            req.get_method = lambda: 'GET'
+            response = urllib.request.urlopen(req)
+
+            #read response and convert to dict
+            response = response.read()
+            response = json.loads(response)
+            
+            #get timestamp of response from response object
+            response_timestamp = response['Header']['Timestamp']
+
+            logging.info("API get request @" + str(time.strftime('%Y-%m-%d %H:%M:%S')) + " successful. Timestamp of API response object = " + str(response_timestamp) )
+            gtfsr_producer(response,pipeline)
+            
+
+
+        
+
+
+        except Exception as e:
+            logging.warning("API get request error @ time: " + str(time.strftime('%Y-%m-%d %H:%M:%S')) + ". Error = " + str(e) )
+            time.sleep(30 - time.time() % 60)
     
-    #get timestamp of response from response object
-    response_timestamp = response['Header']['Timestamp']
-
-    succesful_response = True
-    logging.info("API get request @" + str(time.strftime('%Y-%m-%d %H:%M:%S')) + " successful. Timestamp of API response object = " + str(response_timestamp) )
-
-
     
+        
 
 
-except Exception as e:
-    logging.warning("API get request error @ time: " + str(time.strftime('%Y-%m-%d %H:%M:%S')) + ". Error = " + str(e) )
 
-if succesful_response:
+
+def gtfsr_producer(response,pipeline):
+
 
 
     #define new dictonary to add modifications of original object to
     restructured_dict = {}
 
     for object in response['Entity']:
-        print(object)
+        
 
         #Add trip id as key
         restructured_dict[object['Id']] = object
@@ -71,15 +87,26 @@ if succesful_response:
                 
                 restructured_dict[object['Id']]['TripUpdate']['StopTimeUpdate'] = {x['StopId']: x for x in StopTimeUpdate_list}
 
-    try:
-        with open('gtfsrProcessing/gtfsrDict_test.json','w') as updateDict:
-            
-            
-            json.dump(restructured_dict,updateDict, indent=4)
-            logging.info("Json file updated correctly. " + str(response_timestamp) + "  response written to json correctly" )
+        
+    pipeline.set_message(restructured_dict)
 
-    except Exception as e:
-        logging.warning("Error updating existing json." + str(response_timestamp) + " response error: " + str(e))
+
+
+
+
+    #try:
+
+        # with open('gtfsrProcessing/gtfsrDict_test.json','w') as updateDict:
+            
+            
+        #     json.dump(restructured_dict,updateDict, indent=4)
+
+
+            
+        #logging.info("Json file updated correctly. " + str(response_timestamp) + "  response written to json correctly" )
+
+    # except Exception as e:
+    #     logging.warning("Error updating existing json." + str(response_timestamp) + " response error: " + str(e))
 
 
 
