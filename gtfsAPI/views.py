@@ -102,7 +102,6 @@ def stop_detail(request, stop_id):
     
    
 
-    gtfsDict = gtfsr_consumer()
     # gtfsDict = gtfsr_feed_pipeline.Pipeline.get_message()
 
 
@@ -131,7 +130,7 @@ def stop_detail(request, stop_id):
     # realtime_updates = realtime_updates['Entity']
 
     
-
+    gtfsDict = gtfs_consumer()
 
 
     for stop_time in stop_time_next_hour.iterator():
@@ -170,7 +169,6 @@ def stop_detail(request, stop_id):
 def get_prediction(request,arrival_stop_id,departure_stop_id,timestamp,short_name):
 
     dt_obj = datetime.fromtimestamp(int(timestamp)/1000,timezone(timedelta(hours=1)))
-def gtfsr_consumer():
 
     parsed_datetime = dt_obj.strftime('%Y-%m-%d %H:%M:%S')
     current_date = datetime.now(timezone(timedelta(hours=1)))
@@ -188,14 +186,15 @@ def gtfsr_consumer():
     chosen_route_id = Routes.objects.filter(route_short_name=short_name).values_list("route_id", flat=True)
     chosen_route_direction = Route.objects.filter(Q(stop_id=departure_stop_id) | Q(stop_id=arrival_stop_id), route_short_name=short_name).first().direction_id
    
-    gtfsrDict = pipeline.get_message()
     # with open("gtfsrProcessing/gtfsrDict_test.json","r") as f:
     #     realtime_updates = json.load(f)
     
 
     # print(chosen_route_id,'chosen_route_id')
     # print(chosen_route_direction,'chosen_route_direction')
-    return gtfsrDict
+
+
+
          
 
 
@@ -238,7 +237,9 @@ def gtfsr_consumer():
     # print('******************************************')
     return JsonResponse(res,safe=False)
 
+def gtfs_consumer():
 
+    return pipeline.get_message()
 
 
 def request_realtime_nta_data():

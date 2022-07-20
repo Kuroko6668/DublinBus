@@ -1173,3 +1173,161 @@ INFO:root:API get request @2022-07-20 14:20:02 successful. Timestamp of API resp
 INFO:root:API get request @2022-07-20 14:21:02 successful. Timestamp of API response object = 1658323260
 INFO:root:API get request @2022-07-20 14:22:02 successful. Timestamp of API response object = 1658323315
 INFO:root:API get request @2022-07-20 14:23:02 successful. Timestamp of API response object = 1658323379
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-20 14:39:05 successful. Timestamp of API response object = 1658324332
+INFO:root:API get request @2022-07-20 14:39:05 successful. Timestamp of API response object = 1658324332
+INFO:root:TEST: 4.230770587921143
+WARNING:root:API get request error @ time: 2022-07-20 14:40:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-20 14:40:00. Error = HTTP Error 429: Too Many Requests
+ERROR:django.request:Internal Server Error: /prediction/8250DB003033/8250DB000767/1658325010030/17/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 187, in get_prediction
+    chosen_route_direction = Route.objects.filter(Q(stop_id=departure_stop_id) | Q(stop_id=arrival_stop_id), route_short_name=short_name).first().direction_id
+AttributeError: 'NoneType' object has no attribute 'direction_id'
+INFO:root:API get request @2022-07-20 14:41:05 successful. Timestamp of API response object = 1658324460
+INFO:root:API get request @2022-07-20 14:41:05 successful. Timestamp of API response object = 1658324460
+WARNING:root:API get request error @ time: 2022-07-20 14:42:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-20 14:42:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-20 14:43:11 successful. Timestamp of API response object = 1658324579
+INFO:root:API get request @2022-07-20 14:43:12 successful. Timestamp of API response object = 1658324579
+WARNING:root:API get request error @ time: 2022-07-20 15:21:40. Error = <urlopen error [Errno 11001] getaddrinfo failed>
+WARNING:root:API get request error @ time: 2022-07-20 15:21:40. Error = <urlopen error [Errno 11001] getaddrinfo failed>
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+WARNING:root:API get request error @ time: 2022-07-20 15:25:30. Error = IncompleteRead(1966080 bytes read, 1580766 more expected)
+WARNING:root:API get request error @ time: 2022-07-20 15:25:30. Error = IncompleteRead(1712128 bytes read, 1834718 more expected)
+ERROR:django.request:Internal Server Error: /stop/8220DB000191/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\mysql\base.py", line 244, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (2005, "Unknown server host 'dub-bus-db.cyopwh1abtzq.us-east-1.rds.amazonaws.com' (11001)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 73, in stop_detail
+    stop_details = Stops.objects.get(stop_id=stop_id)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 243, in ensure_connection
+    with self.wrap_database_errors:
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\mysql\base.py", line 244, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+django.db.utils.OperationalError: (2005, "Unknown server host 'dub-bus-db.cyopwh1abtzq.us-east-1.rds.amazonaws.com' (11001)")
+ERROR:django.request:Internal Server Error: /stop/8220DB000006/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\mysql\base.py", line 244, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (2005, "Unknown server host 'dub-bus-db.cyopwh1abtzq.us-east-1.rds.amazonaws.com' (11001)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 73, in stop_detail
+    stop_details = Stops.objects.get(stop_id=stop_id)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 243, in ensure_connection
+    with self.wrap_database_errors:
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\mysql\base.py", line 244, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+django.db.utils.OperationalError: (2005, "Unknown server host 'dub-bus-db.cyopwh1abtzq.us-east-1.rds.amazonaws.com' (11001)")
