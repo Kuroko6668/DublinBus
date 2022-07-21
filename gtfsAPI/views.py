@@ -5,8 +5,9 @@ from dateutil import tz
 import requests
 import math,time
 from django.db.models import Q
-from gtfsAPI.models import  Stops,Route,StopTime,Routes,Trip
-from .serialisers import  StopsSerializer,RouteSerializer, StopTimesSerializer
+
+from gtfsAPI.models import  Stops,Route,StopTime,Routes,Trip,DailyWeather,CurrentWeather
+from .serialisers import  StopsSerializer,DailyWeatherSerializer,CurrentWeatherSerializer
 from django.http import JsonResponse, Http404, HttpResponseBadRequest, HttpResponse
 import time
 import json
@@ -185,17 +186,6 @@ def get_prediction(request,arrival_stop_id,departure_stop_id,timestamp,short_nam
             # return HttpResponseBadRequest("Requested date must be within the next 7 days")
     chosen_route_id = Routes.objects.filter(route_short_name=short_name).values_list("route_id", flat=True)
     chosen_route_direction = Route.objects.filter(Q(stop_id=departure_stop_id) | Q(stop_id=arrival_stop_id), route_short_name=short_name).first().direction_id
-   
-    # with open("gtfsrProcessing/gtfsrDict_test.json","r") as f:
-    #     realtime_updates = json.load(f)
-    
-
-    # print(chosen_route_id,'chosen_route_id')
-    # print(chosen_route_direction,'chosen_route_direction')
-
-
-
-         
 
 
     trip_ids = list(Trip.objects.filter(
@@ -205,16 +195,7 @@ def get_prediction(request,arrival_stop_id,departure_stop_id,timestamp,short_nam
             service_id=service_id,
 
         ).values_list("trip_id", flat=True))
-        # ).values_list(
-        #     'trip_id', 'stoptime', 'stoptime__stop_id',
-        #     'stoptime__stop_sequence', 
-        #     'stoptime__arrival_time', 'stoptime__departure_time'
-        # ))
-    
-    # chosen_trip = list(
-    #     trip_ids
-    # )
-    # print(chosen_trip,'chosen_trip')
+
     departure_stop_time_details = StopTime.objects.filter(
         stop_id=departure_stop_id,
         # Get all arrival times in the next hour
@@ -236,6 +217,25 @@ def get_prediction(request,arrival_stop_id,departure_stop_id,timestamp,short_nam
     # print(stop_time_details.first().trip_id)
     # print('******************************************')
     return JsonResponse(res,safe=False)
+
+
+def get_cur_weather(request):
+    res = list(CurrentWeather.objects.all().values('time' ,'sunrise_time', 'sunset_time', 'weather_id', 'weather_description',
+        'temperture','humidity','uvi','clouds','wind_speed','visibility','pressure'))
+    return JsonResponse(res,safe=False)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def gtfs_consumer():
 
