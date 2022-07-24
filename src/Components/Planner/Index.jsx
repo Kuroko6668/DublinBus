@@ -265,7 +265,7 @@ function Planner({back}){
             onClick={clearRoute}
           >clear</Button>
 
-          <Button 
+          {/* <Button 
             style={{textTransform: 'none'}}
             size='small'
             sx={{ mt:1}}
@@ -276,7 +276,7 @@ function Planner({back}){
             sx={{ m:1}}
             size='small'
             onClick={showPanel}
-          >Get Trip_Id</Button>
+          >Get Trip_Id</Button> */}
 
         <LocalizationProvider dateAdapter={AdapterDateFns} sx={{ margin:1 }}>
           <DateTimePicker
@@ -308,7 +308,7 @@ function Planner({back}){
 
          </LocalizationProvider>
          {
-          panel&&
+          panel&&journey_time&&
           <DisplayRoutes panel={panel} journeyTime={journey_time}/>
          }
         

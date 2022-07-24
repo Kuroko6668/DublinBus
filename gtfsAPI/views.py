@@ -13,6 +13,10 @@ import time
 import json
 from gtfsrProcessing import check_for_update
 import os
+import joblib 
+import pandas as pd
+import sklearn
+import category_encoders
 import logging
 from gtfsrProcessing.apps import pipeline
 logging.basicConfig(filename = "gtfsrProcessing/gtfsrSearchRuntimes.log", level=logging.DEBUG)
@@ -167,12 +171,13 @@ def stop_detail(request, stop_id):
 
     return JsonResponse(result)
 
-def get_prediction(request,arrival_stop_id,departure_stop_id,timestamp,short_name):
+def get_prediction(request,arrival_stop_id,departure_stop_id,timestamp,short_name,direction_id = 0):
 
     dt_obj = datetime.fromtimestamp(int(timestamp)/1000,timezone(timedelta(hours=1)))
 
     parsed_datetime = dt_obj.strftime('%Y-%m-%d %H:%M:%S')
     current_date = datetime.now(timezone(timedelta(hours=1)))
+    print(parsed_datetime)
     # get service id 
     service_id = 2
     if(dt_obj.weekday() == 5):
@@ -185,33 +190,88 @@ def get_prediction(request,arrival_stop_id,departure_stop_id,timestamp,short_nam
     #         return 
             # return HttpResponseBadRequest("Requested date must be within the next 7 days")
     chosen_route_id = Routes.objects.filter(route_short_name=short_name).values_list("route_id", flat=True)
-    chosen_route_direction = Route.objects.filter(Q(stop_id=departure_stop_id) | Q(stop_id=arrival_stop_id), route_short_name=short_name).first().direction_id
-
+    departure_stop_sequence_list = list(Route.objects.filter(stop_id=departure_stop_id, route_short_name=short_name).values_list("stop_sequence", "direction_id"))
+    arrival_stop_sequence_list = list(Route.objects.filter(stop_id=arrival_stop_id, route_short_name=short_name).values_list("stop_sequence", "direction_id"))
+    print(arrival_stop_sequence_list,'$$$$arrival_stop_sequence_list$$$$')
+    print(departure_stop_sequence_list,'$$$$$departure_stop_sequence_list$$$')
+    chosen_direction_id = arrival_stop_sequence_list[0][1]
+    for departure_stop_sequence in enumerate(departure_stop_sequence_list):
+        for arrival_stop_sequence in enumerate(arrival_stop_sequence_list):
+            if(departure_stop_sequence[1] == arrival_stop_sequence[1] and departure_stop_sequence[1]<arrival_stop_sequence[1]):
+                chosen_direction_id = departure_stop_sequence[1]
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+    # for item in len(departure_stop_sequence):
+    #     if(item[0])
 
     trip_ids = list(Trip.objects.filter(
             route__in=chosen_route_id,
-            direction_id=chosen_route_direction,
+            direction_id=chosen_direction_id,
             # Get the service IDs that are valid for the date
             service_id=service_id,
 
         ).values_list("trip_id", flat=True))
 
-    departure_stop_time_details = StopTime.objects.filter(
+    departure_stop = StopTime.objects.filter(
         stop_id=departure_stop_id,
         # Get all arrival times in the next hour
         arrival_time__gte=dt_obj.time(),
         arrival_time__lte='23:59:59',
         trip_id__in=trip_ids
+    ).first()
+
+    trip_stops = StopTime.objects.filter(
+        trip_id=departure_stop.trip_id
     )
-    if(len(departure_stop_time_details)):
-        res = [{
-            'trip_id':departure_stop_time_details.first().trip_id,
-            'departure_time':departure_stop_time_details.first().arrival_time
-        }]
-    else:
-        res = [{
-            'trip_id':'no bus route at the momonet',
-        }]
+    arrival_stop = trip_stops.filter(
+        stop_id=arrival_stop_id,
+    ).first()
+    trip_first_stop = trip_stops.filter(
+        stop_sequence=1,
+    ).first()
+    trip_last_stop = trip_stops.filter(
+        stop_sequence=len(trip_stops),
+    ).first()
+
+    # lineid = short_name,
+    # arrival_time_T = time_obj_to_seconds(trip_last_stop.arrival_time)
+    # departure_time_T = time_obj_to_seconds(trip_first_stop.arrival_time)
+    # planned_arr_L = time_obj_to_seconds(departure_stop.arrival_time)
+    # stop_id = departure_stop_id
+    # day = dt_obj.weekday()
+    # temp = 5.96
+    # humidity = 75
+    # wind_speed = 9.26
+    # hour = dt_obj.hour
+    # nathols = 0
+    
+    # input_df = pd.DataFrame(columns = [
+    #     'lineid','arrival_time_T','departure_time_T','planned_arr_L','stop_id','day','temp','humidity','wind_speed','hour','nathols' 
+    #     ]
+    # )
+    
+    # departure_stop_predict_input = [lineid,arrival_time_T,departure_time_T,planned_arr_L,stop_id,day,temp,humidity,wind_speed,hour,nathols]
+    # print(departure_stop_predict_input)
+    # input_df.loc[len(input_df)] = departure_stop_predict_input
+    # cur_dir = os.path.dirname(__file__)
+    # loaded_model = joblib.load(open(os.path.join(cur_dir,'linreg_Aug_2.joblib'),'rb'))
+    # loaded_fit = joblib.load(open(os.path.join(cur_dir,'linreg_Aug_2_fit.joblib'),'rb'))
+
+    # fitted_df = loaded_fit.transform(input_df)
+    # print(loaded_model.predict(fitted_df))
+
+    departure_stop_time = call_model_predict(short_name,trip_last_stop,trip_first_stop,departure_stop,departure_stop_id,dt_obj)
+    arrival_stop_time = call_model_predict(short_name,trip_last_stop,trip_first_stop,arrival_stop,arrival_stop_id,dt_obj)
+    print(arrival_stop_time,'arrival_stop_time')
+    print(departure_stop_time,'departure_stop_time')
+    # if(len(departure_stop_time_details)):
+    #     res = [{
+    #         'trip_id':departure_stop_time_details.first().trip_id,
+    #         'departure_time':departure_stop_time_details.first().arrival_time
+    #     }]
+    # else:
+    res = [{
+        'trip_time':arrival_stop_time[0]-departure_stop_time[0],
+    }]
     # print('******************************************')
     # print(dt_obj,current_date)
     # print(stop_time_details.first().trip_id)
@@ -302,3 +362,35 @@ def get_bus_delay(realtime_updates, trip_id, stop_sequence):
 
 
 
+def time_obj_to_seconds(obj):
+    seconds = (obj.hour*60*60) + (obj.minute*60) + obj.second
+    minutes = seconds/60
+    return minutes
+
+def call_model_predict(short_name,trip_last_stop,trip_first_stop,stop,stop_id,dt_obj):
+        lineid = short_name,
+        arrival_time_T = time_obj_to_seconds(trip_last_stop.arrival_time)
+        departure_time_T = time_obj_to_seconds(trip_first_stop.arrival_time)
+        planned_arr_L = time_obj_to_seconds(stop.arrival_time)
+        stop_id = stop_id
+        day = dt_obj.weekday()
+        temp = 5.96
+        humidity = 75
+        wind_speed = 9.26
+        hour = dt_obj.hour
+        nathols = 0
+        
+        input_df = pd.DataFrame(columns = [
+            'lineid','arrival_time_T','departure_time_T','planned_arr_L','stop_id','day','temp','humidity','wind_speed','hour','nathols' 
+            ]
+        )
+        
+        departure_stop_predict_input = [lineid,arrival_time_T,departure_time_T,planned_arr_L,stop_id,day,temp,humidity,wind_speed,hour,nathols]
+        print(departure_stop_predict_input)
+        input_df.loc[len(input_df)] = departure_stop_predict_input
+        cur_dir = os.path.dirname(__file__)
+        loaded_model = joblib.load(open(os.path.join(cur_dir,'linreg_Aug_2.joblib'),'rb'))
+        loaded_fit = joblib.load(open(os.path.join(cur_dir,'linreg_Aug_2_fit.joblib'),'rb'))
+
+        fitted_df = loaded_fit.transform(input_df)
+        return loaded_model.predict(fitted_df)
