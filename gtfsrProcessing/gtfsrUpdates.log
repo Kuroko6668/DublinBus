@@ -4096,3 +4096,347 @@ INFO:root:API get request @2022-07-24 13:34:06 successful. Timestamp of API resp
 INFO:root:API get request @2022-07-24 13:34:06 successful. Timestamp of API response object = 1658669643
 WARNING:root:API get request error @ time: 2022-07-24 13:35:00. Error = HTTP Error 429: Too Many Requests
 WARNING:root:API get request error @ time: 2022-07-24 13:35:00. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+WARNING:root:API get request error @ time: 2022-07-24 13:43:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 13:43:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 13:44:05 successful. Timestamp of API response object = 1658670241
+INFO:root:API get request @2022-07-24 13:44:07 successful. Timestamp of API response object = 1658670241
+WARNING:root:API get request error @ time: 2022-07-24 13:45:01. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 13:45:01. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 13:46:06 successful. Timestamp of API response object = 1658670359
+INFO:root:API get request @2022-07-24 13:46:12 successful. Timestamp of API response object = 1658670359
+WARNING:root:API get request error @ time: 2022-07-24 13:47:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 13:47:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 13:48:11 successful. Timestamp of API response object = 1658670485
+INFO:root:API get request @2022-07-24 13:48:11 successful. Timestamp of API response object = 1658670485
+WARNING:root:API get request error @ time: 2022-07-24 13:49:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 13:49:00. Error = HTTP Error 429: Too Many Requests
+ERROR:django.request:Internal Server Error: /prediction/8220DB000317/8250DB000768/1658687098000/46A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 197, in get_prediction
+    chosen_direction_id = arrival_stop_sequence_list[0][1]
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /prediction/8220DB000317/8250DB000768/1658687098000/46A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 197, in get_prediction
+    chosen_direction_id = arrival_stop_sequence_list[0][1]
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /prediction/8220DB007588/false/1658684820000/39A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+ERROR:django.request:Internal Server Error: /prediction/8220DB000320/false/1658685461000/46A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+ERROR:django.request:Internal Server Error: /prediction/8220DB000793/false/1658684820000/39A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+ERROR:django.request:Internal Server Error: /prediction/8220DB000320/false/1658685461000/46A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+ERROR:django.request:Internal Server Error: /prediction/8220DB000320/false/1658685461000/46A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+ERROR:django.request:Internal Server Error: /prediction/8220DB000320/false/1658685461000/46A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+ERROR:django.request:Internal Server Error: /prediction/8220DB000320/false/1658684861000/46A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+ERROR:django.request:Internal Server Error: /prediction/8220DB000320/false/1658685461000/46A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+ERROR:django.request:Internal Server Error: /prediction/8220DB000320/false/1658684861000/46A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+ERROR:django.request:Internal Server Error: /prediction/8220DB000320/false/1658685461000/46A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+ERROR:django.request:Internal Server Error: /prediction/8220DB000320/false/1658685461000/46A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+ERROR:django.request:Internal Server Error: /prediction/8220DB000320/false/1658685461000/46A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+ERROR:django.request:Internal Server Error: /prediction/8220DB007588/false/1658684820000/39A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+ERROR:django.request:Internal Server Error: /prediction/8220DB007588/false/1658684820000/39A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+ERROR:django.request:Internal Server Error: /prediction/8220DB000320/false/1658685461000/46A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+ERROR:django.request:Internal Server Error: /prediction/8220DB000320/false/1658685461000/46A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+ERROR:django.request:Internal Server Error: /prediction/8220DB000320/false/1658685461000/46A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+ERROR:django.request:Internal Server Error: /prediction/8220DB000320/false/1658685461000/46A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+ERROR:django.request:Internal Server Error: /prediction/8220DB000675/8240DB000564/1658691684000/H3/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+INFO:root:API get request @2022-07-24 18:50:04 successful. Timestamp of API response object = 1658688594
+INFO:root:API get request @2022-07-24 18:50:05 successful. Timestamp of API response object = 1658688594
+ERROR:django.request:Internal Server Error: /prediction/8220DB000675/8240DB000564/1658691684000/H3/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 223, in get_prediction
+    trip_id=departure_stop.trip_id
+AttributeError: 'NoneType' object has no attribute 'trip_id'
+WARNING:root:API get request error @ time: 2022-07-24 18:51:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 18:51:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 18:52:06 successful. Timestamp of API response object = 1658688718
+INFO:root:API get request @2022-07-24 18:52:09 successful. Timestamp of API response object = 1658688718
+WARNING:root:API get request error @ time: 2022-07-24 18:53:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 18:53:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 18:54:10 successful. Timestamp of API response object = 1658688842
+INFO:root:API get request @2022-07-24 18:54:11 successful. Timestamp of API response object = 1658688831
+INFO:root:API get request @2022-07-24 19:08:54 successful. Timestamp of API response object = 1658689713
+INFO:root:API get request @2022-07-24 19:08:55 successful. Timestamp of API response object = 1658689731
+WARNING:root:API get request error @ time: 2022-07-24 19:09:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 19:09:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 19:16:03 successful. Timestamp of API response object = 1658690154
+INFO:root:API get request @2022-07-24 19:16:05 successful. Timestamp of API response object = 1658690154
+WARNING:root:API get request error @ time: 2022-07-24 19:17:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 19:17:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 19:29:12 successful. Timestamp of API response object = 1658690946
+INFO:root:API get request @2022-07-24 19:29:14 successful. Timestamp of API response object = 1658690946
+WARNING:root:API get request error @ time: 2022-07-24 19:30:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 19:30:00. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-24 19:31:03 successful. Timestamp of API response object = 1658691051
+INFO:root:API get request @2022-07-24 19:31:03 successful. Timestamp of API response object = 1658691051
+WARNING:root:API get request error @ time: 2022-07-24 19:32:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 19:32:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 19:33:03 successful. Timestamp of API response object = 1658691176
+INFO:root:API get request @2022-07-24 19:33:03 successful. Timestamp of API response object = 1658691176
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+ERROR:django.request:Internal Server Error: /prediction/8250DB000767/8220DB000758/1658690295000/39A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+WARNING:root:API get request error @ time: 2022-07-24 19:34:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 19:34:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 19:35:03 successful. Timestamp of API response object = 1658691293
+INFO:root:API get request @2022-07-24 19:35:03 successful. Timestamp of API response object = 1658691293
+INFO:django.utils.autoreload:/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+ERROR:django.request:Internal Server Error: /prediction/8250DB000767/8220DB000758/1658690295000/39A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 207, in get_prediction
+    direction_id=chosen_direction_id,
+NameError: name 'chosen_direction_id' is not defined
+WARNING:root:API get request error @ time: 2022-07-24 19:36:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 19:36:00. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+ERROR:django.request:Internal Server Error: /prediction/8250DB000767/8220DB000758/1658690295000/39A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 206, in get_prediction
+    direction_id=chosen_direction_id,
+NameError: name 'chosen_direction_id' is not defined
+INFO:root:API get request @2022-07-24 19:37:01 successful. Timestamp of API response object = 1658691410
+INFO:root:API get request @2022-07-24 19:37:01 successful. Timestamp of API response object = 1658691410
+ERROR:django.request:Internal Server Error: /prediction/8250DB000767/8220DB000758/1658690295000/39A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 206, in get_prediction
+    direction_id=chosen_direction_id,
+NameError: name 'chosen_direction_id' is not defined
+INFO:django.utils.autoreload:/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+ERROR:django.request:Internal Server Error: /prediction/8250DB000767/8220DB000758/1658690295000/39A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 206, in get_prediction
+    direction_id=chosen_direction_id,
+NameError: name 'chosen_direction_id' is not defined
+WARNING:root:API get request error @ time: 2022-07-24 19:38:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 19:38:00. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-24 19:39:03 successful. Timestamp of API response object = 1658691536
+INFO:root:API get request @2022-07-24 19:39:03 successful. Timestamp of API response object = 1658691536
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+WARNING:root:API get request error @ time: 2022-07-24 19:40:00. Error = HTTP Error 429: Too Many Requests
+ERROR:django.request:Internal Server Error: /prediction/8250DB003033/8250DB002868/1658690220000/17/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+INFO:root:API get request @2022-07-24 19:41:01 successful. Timestamp of API response object = 1658691651
+INFO:root:API get request @2022-07-24 19:41:08 successful. Timestamp of API response object = 1658691651
+WARNING:root:API get request error @ time: 2022-07-24 19:42:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 19:42:01. Error = HTTP Error 429: Too Many Requests
+ERROR:django.request:Internal Server Error: /prediction/8220DB000281/8250DB002841/1658688909000/44/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+INFO:root:API get request @2022-07-24 19:43:02 successful. Timestamp of API response object = 1658691777
+INFO:root:API get request @2022-07-24 19:43:03 successful. Timestamp of API response object = 1658691777
+WARNING:root:API get request error @ time: 2022-07-24 19:44:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 19:44:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 19:45:02 successful. Timestamp of API response object = 1658691893
+INFO:root:API get request @2022-07-24 19:45:03 successful. Timestamp of API response object = 1658691893
+WARNING:root:API get request error @ time: 2022-07-24 19:46:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 19:46:00. Error = HTTP Error 429: Too Many Requests
