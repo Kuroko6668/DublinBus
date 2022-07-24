@@ -38,24 +38,32 @@ function Planner({back}){
     /* eslint-enable */
     // console.log(stops);
     // get stop id by stop name
-    const stopNameToId = (name)=>{
+    const stopNameToId = (name,lat,lng)=>{
       var num = name.split(', ')
-      for(var i = 0; i < stops.length; i++){
-        var stop_number = stops[i].stop_name.split(', ')
-
-        for(var j = 0; j < num.length; j ++){
-          if(stop_number[0] === num[j] || stop_number[1] === num[j] ){
+      if(num.length === 2){
+        for(var i = 0; i < stops.length; i++){
+          var stop_number = stops[i].stop_name.split(', ')
+          if(stop_number[1] === num[1] ){
             return stops[i]['stop_id']
           }
-          // if(num.length === 2){
-          //   if(num[1] === stop_number[1]){
-          //     return stops[i]['stop_id']
-          //   }else{
-          //     if(num[0] === stop_number[0]){
-          //       return stops[i]['stop_id']
-          //     }
-          //   }
-          // }
+        }
+      }
+      return stoplocationToId(lat,lng)
+    }
+    const stoplocationToId = (lat,lng)=>{
+      lat = lat * 1000
+      lng = lng * 1000
+      console.log(Math.abs(lat - 53309.4181940068),Math.abs(lng - -6218.77482979347),'google');
+      for(var i = 0; i < stops.length; i++){
+        var stop_lat = stops[i].stop_lat
+        var stop_lng = stops[i].stop_long
+        
+        stop_lat = stop_lat * 1000
+        stop_lng = stop_lng * 1000
+        // console.log(stop_lat,stop_lng,'^^^^^^^');
+        if(Math.abs(lat - stop_lat)<1 && Math.abs(lng - stop_lng)<1 ){
+          console.log('*********');
+          return stops[i]['stop_id']
         }
       }
       return false
@@ -68,12 +76,7 @@ function Planner({back}){
         var flag = true
         for(var j = 0; j < temp.length; j ++){
           if(temp[j].travel_mode === 'TRANSIT'){
-            if(!stopNameToId(temp[j].transit.arrival_stop.name)){
-              console.log(123);
-              flag = false
-              break
-            }
-            if(!stopNameToId(temp[j].transit.departure_stop.name)){
+            if(!routesName.indexOf(temp[j].transit.line.short_name.toLowerCase())){
               console.log(123);
               flag = false
               break
@@ -185,12 +188,11 @@ function Planner({back}){
               duration: temp.duration.value,
               distance: temp.distance.value,
               arrival_stop:temp.transit.arrival_stop.name,
-              arrival_stop_id:stopNameToId(temp.transit.arrival_stop.name),
+              arrival_stop_id:stopNameToId(temp.transit.arrival_stop.name,temp.transit.arrival_stop.location.lat(),temp.transit.arrival_stop.location.lng()),
               arrival_time:temp.transit.arrival_time.value,
-              
               arrival_time_text:temp.transit.arrival_time.text,
               departure_stop:temp.transit.departure_stop.name,
-              departure_stop_id:stopNameToId(temp.transit.departure_stop.name),
+              departure_stop_id:stopNameToId(temp.transit.departure_stop.name,temp.transit.departure_stop.location.lat(),temp.transit.departure_stop.location.lng()),
               departure_time:temp.transit.departure_time.value,
               departure_text:temp.transit.departure_time.text,
               short_name:temp.transit.line.short_name,
