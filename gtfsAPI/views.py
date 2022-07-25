@@ -194,10 +194,21 @@ def get_prediction(request,arrival_stop_id,departure_stop_id,timestamp,short_nam
     arrival_stop_sequence_list = list(Route.objects.filter(stop_id=arrival_stop_id, route_short_name=short_name).values_list("stop_sequence", "direction_id"))
     print(arrival_stop_sequence_list,'$$$$arrival_stop_sequence_list$$$$')
     print(departure_stop_sequence_list,'$$$$$departure_stop_sequence_list$$$')
+    if(not(len(departure_stop_sequence_list) and len(arrival_stop_sequence_list))):
+        res = [{
+            'trip_time':0
+        }]
+        return JsonResponse(res,safe=False)
+    chosen_direction_id = 999
     for departure_stop_sequence in enumerate(departure_stop_sequence_list):
         for arrival_stop_sequence in enumerate(arrival_stop_sequence_list):
             if(departure_stop_sequence[1][1] == arrival_stop_sequence[1][1] and departure_stop_sequence[1][0]<arrival_stop_sequence[1][0]):
                 chosen_direction_id = departure_stop_sequence[1][1]
+    if(chosen_direction_id == 999):
+        res = [{
+            'trip_time':0
+        }]
+        return JsonResponse(res,safe=False)
     print(chosen_direction_id,'chosen_direction_id$$$$')
     # for item in len(departure_stop_sequence):
     #     if(item[0])

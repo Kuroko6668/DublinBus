@@ -4440,3 +4440,686 @@ INFO:root:API get request @2022-07-24 19:45:02 successful. Timestamp of API resp
 INFO:root:API get request @2022-07-24 19:45:03 successful. Timestamp of API response object = 1658691893
 WARNING:root:API get request error @ time: 2022-07-24 19:46:00. Error = HTTP Error 429: Too Many Requests
 WARNING:root:API get request error @ time: 2022-07-24 19:46:00. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-24 19:49:03 successful. Timestamp of API response object = 1658692136
+INFO:root:API get request @2022-07-24 19:49:03 successful. Timestamp of API response object = 1658692136
+WARNING:root:API get request error @ time: 2022-07-24 19:50:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 19:50:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 19:51:04 successful. Timestamp of API response object = 1658692250
+INFO:root:API get request @2022-07-24 19:51:05 successful. Timestamp of API response object = 1658692250
+WARNING:root:API get request error @ time: 2022-07-24 19:52:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 19:52:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 20:06:53 successful. Timestamp of API response object = 1658693207
+INFO:root:API get request @2022-07-24 20:06:53 successful. Timestamp of API response object = 1658693207
+WARNING:root:API get request error @ time: 2022-07-24 20:07:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 20:07:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 20:20:46. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 20:20:46. Error = HTTP Error 429: Too Many Requests
+WARNING:django.request:Not Found: /GET /prediction/8250DB003033/8250DB000767/1658694660000/17
+WARNING:django.request:Not Found: /GET /prediction/8250DB003033/8250DB000767/1658694660000/17
+ERROR:django.request:Internal Server Error: /prediction/8250DB003033/8250DB000767/1658694660000/17/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+ERROR:django.request:Internal Server Error: /prediction/8250DB007716/8250DB000767/1658678700000/175/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+ERROR:django.request:Internal Server Error: /prediction/8250DB007716/8250DB000767/1658678700000/175/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+ERROR:django.request:Internal Server Error: /prediction/8250DB007716/8250DB000767/1658678700000/175/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+ERROR:django.request:Internal Server Error: /prediction/8250DB007716/8250DB000767/1658678700000/175/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+ERROR:django.request:Internal Server Error: /prediction/8250DB007716/8250DB000767/1658678700000/175/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+ERROR:django.request:Internal Server Error: /prediction/8250DB007716/8250DB000767/1658678700000/175/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+ERROR:django.request:Internal Server Error: /prediction/8250DB007716/8250DB000767/1658678700000/175/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+ERROR:django.request:Internal Server Error: /prediction/8350DB004150/8220DB000273/1658677925000/145/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+ERROR:django.request:Internal Server Error: /prediction/8350DB004150/8220DB000273/1658677925000/145/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+WARNING:root:API get request error @ time: 2022-07-24 20:56:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 20:56:01 successful. Timestamp of API response object = 1658696151
+ERROR:django.request:Internal Server Error: /prediction/8350DB004150/8220DB000273/1658677925000/145/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+INFO:root:API get request @2022-07-24 20:57:04 successful. Timestamp of API response object = 1658696214
+INFO:root:API get request @2022-07-24 20:57:05 successful. Timestamp of API response object = 1658696214
+WARNING:root:API get request error @ time: 2022-07-24 20:58:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 20:58:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 20:59:02 successful. Timestamp of API response object = 1658696339
+INFO:root:API get request @2022-07-24 20:59:03 successful. Timestamp of API response object = 1658696339
+ERROR:django.request:Internal Server Error: /prediction/8350DB004150/8220DB000273/1658677925000/145/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+WARNING:root:API get request error @ time: 2022-07-24 21:00:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:00:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:01:01 successful. Timestamp of API response object = 1658696454
+INFO:root:API get request @2022-07-24 21:01:07 successful. Timestamp of API response object = 1658696454
+ERROR:django.request:Internal Server Error: /prediction/8350DB004150/8220DB000273/1658677925000/145/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+ERROR:django.request:Internal Server Error: /prediction/8350DB004150/8220DB000273/1658677925000/145/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+WARNING:root:API get request error @ time: 2022-07-24 21:02:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:02:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:03:02 successful. Timestamp of API response object = 1658696570
+INFO:root:API get request @2022-07-24 21:03:06 successful. Timestamp of API response object = 1658696580
+WARNING:root:API get request error @ time: 2022-07-24 21:04:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:04:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:05:02 successful. Timestamp of API response object = 1658696697
+INFO:root:API get request @2022-07-24 21:05:03 successful. Timestamp of API response object = 1658696697
+ERROR:django.request:Internal Server Error: /prediction/8250DB007716/8250DB000767/1658678700000/175/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+ERROR:django.request:Internal Server Error: /prediction/8250DB007716/8250DB000767/1658678700000/175/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 201, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+WARNING:root:API get request error @ time: 2022-07-24 21:06:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:06:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:07:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:07:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:08:01. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:08:01. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:09:05 successful. Timestamp of API response object = 1658696934
+INFO:root:API get request @2022-07-24 21:09:06 successful. Timestamp of API response object = 1658696934
+WARNING:root:API get request error @ time: 2022-07-24 21:10:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:10:02. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-24 21:11:01 successful. Timestamp of API response object = 1658697054
+INFO:root:API get request @2022-07-24 21:11:01 successful. Timestamp of API response object = 1658697054
+WARNING:root:API get request error @ time: 2022-07-24 21:12:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:12:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:13:07. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:13:07. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:14:03. Error = <urlopen error [Errno 8] nodename nor servname provided, or not known>
+WARNING:root:API get request error @ time: 2022-07-24 21:14:03. Error = <urlopen error [Errno 8] nodename nor servname provided, or not known>
+INFO:root:API get request @2022-07-24 21:15:02 successful. Timestamp of API response object = 1658697291
+INFO:root:API get request @2022-07-24 21:15:02 successful. Timestamp of API response object = 1658697291
+INFO:root:API get request @2022-07-24 21:16:02 successful. Timestamp of API response object = 1658697352
+INFO:root:API get request @2022-07-24 21:16:03 successful. Timestamp of API response object = 1658697352
+INFO:root:API get request @2022-07-24 21:17:06 successful. Timestamp of API response object = 1658697415
+INFO:root:API get request @2022-07-24 21:17:07 successful. Timestamp of API response object = 1658697415
+WARNING:root:API get request error @ time: 2022-07-24 21:18:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:18:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:19:02 successful. Timestamp of API response object = 1658697538
+INFO:root:API get request @2022-07-24 21:19:02 successful. Timestamp of API response object = 1658697538
+WARNING:root:API get request error @ time: 2022-07-24 21:20:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:20:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:21:06 successful. Timestamp of API response object = 1658697661
+INFO:root:API get request @2022-07-24 21:21:07 successful. Timestamp of API response object = 1658697661
+WARNING:root:API get request error @ time: 2022-07-24 21:22:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:22:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:23:10 successful. Timestamp of API response object = 1658697779
+INFO:root:API get request @2022-07-24 21:23:10 successful. Timestamp of API response object = 1658697779
+WARNING:root:API get request error @ time: 2022-07-24 21:24:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:24:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:25:01 successful. Timestamp of API response object = 1658697898
+INFO:root:API get request @2022-07-24 21:25:01 successful. Timestamp of API response object = 1658697898
+WARNING:root:API get request error @ time: 2022-07-24 21:26:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:26:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:27:02 successful. Timestamp of API response object = 1658698019
+INFO:root:API get request @2022-07-24 21:27:02 successful. Timestamp of API response object = 1658698019
+WARNING:root:API get request error @ time: 2022-07-24 21:28:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:28:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:29:08. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:29:08. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:30:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:30:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:31:01. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:31:02. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:32:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:32:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:33:04 successful. Timestamp of API response object = 1658698374
+INFO:root:API get request @2022-07-24 21:33:04 successful. Timestamp of API response object = 1658698374
+WARNING:root:API get request error @ time: 2022-07-24 21:34:01. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:34:01. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:35:04 successful. Timestamp of API response object = 1658698491
+INFO:root:API get request @2022-07-24 21:35:04 successful. Timestamp of API response object = 1658698491
+INFO:root:API get request @2022-07-24 21:36:21 successful. Timestamp of API response object = 1658698570
+INFO:root:API get request @2022-07-24 21:36:21 successful. Timestamp of API response object = 1658698570
+WARNING:root:API get request error @ time: 2022-07-24 21:37:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:37:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:38:04 successful. Timestamp of API response object = 1658698679
+ERROR:django.request:Internal Server Error: /prediction/8220DB004455/8250DB000768/1658699327000/47/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 236, in get_prediction
+    stop_sequence=len(trip_stops),
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/query.py", line 302, in __len__
+    self._fetch_all()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/cursors.py", line 321, in _query
+    self._post_get_result()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/cursors.py", line 355, in _post_get_result
+    self._rows = self._fetch_row(0)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/cursors.py", line 328, in _fetch_row
+    return self._result.fetch_row(size, self._fetch_type)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 178, in typecast_time
+    return datetime.time(
+ValueError: hour must be in 0..23
+INFO:root:API get request @2022-07-24 21:38:06 successful. Timestamp of API response object = 1658698679
+WARNING:root:API get request error @ time: 2022-07-24 21:39:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:39:00. Error = HTTP Error 429: Too Many Requests
+ERROR:django.request:Internal Server Error: /prediction/8220DB004455/8250DB000768/1658699327000/47/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 236, in get_prediction
+    stop_sequence=len(trip_stops),
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/query.py", line 302, in __len__
+    self._fetch_all()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/cursors.py", line 321, in _query
+    self._post_get_result()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/cursors.py", line 355, in _post_get_result
+    self._rows = self._fetch_row(0)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/cursors.py", line 328, in _fetch_row
+    return self._result.fetch_row(size, self._fetch_type)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 178, in typecast_time
+    return datetime.time(
+ValueError: hour must be in 0..23
+INFO:root:API get request @2022-07-24 21:40:06 successful. Timestamp of API response object = 1658698792
+INFO:root:API get request @2022-07-24 21:40:06 successful. Timestamp of API response object = 1658698792
+WARNING:root:API get request error @ time: 2022-07-24 21:41:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:41:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:42:04 successful. Timestamp of API response object = 1658698921
+INFO:root:API get request @2022-07-24 21:42:04 successful. Timestamp of API response object = 1658698921
+WARNING:root:API get request error @ time: 2022-07-24 21:43:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:43:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:44:01 successful. Timestamp of API response object = 1658699037
+INFO:root:API get request @2022-07-24 21:44:02 successful. Timestamp of API response object = 1658699037
+WARNING:root:API get request error @ time: 2022-07-24 21:45:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:45:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:46:02 successful. Timestamp of API response object = 1658699157
+INFO:root:API get request @2022-07-24 21:46:02 successful. Timestamp of API response object = 1658699157
+WARNING:root:API get request error @ time: 2022-07-24 21:47:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:47:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:48:04 successful. Timestamp of API response object = 1658699277
+INFO:root:API get request @2022-07-24 21:48:04 successful. Timestamp of API response object = 1658699277
+WARNING:root:API get request error @ time: 2022-07-24 21:49:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:49:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:50:03 successful. Timestamp of API response object = 1658699395
+INFO:root:API get request @2022-07-24 21:50:06 successful. Timestamp of API response object = 1658699395
+WARNING:root:API get request error @ time: 2022-07-24 21:51:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:51:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:52:05 successful. Timestamp of API response object = 1658699513
+INFO:root:API get request @2022-07-24 21:52:06 successful. Timestamp of API response object = 1658699513
+WARNING:root:API get request error @ time: 2022-07-24 21:53:01. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:53:01. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:54:00 successful. Timestamp of API response object = 1658699632
+INFO:root:API get request @2022-07-24 21:54:01 successful. Timestamp of API response object = 1658699632
+INFO:root:API get request @2022-07-24 21:55:16 successful. Timestamp of API response object = 1658699714
+INFO:root:API get request @2022-07-24 21:55:16 successful. Timestamp of API response object = 1658699714
+WARNING:root:API get request error @ time: 2022-07-24 21:56:02. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:56:02. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 21:57:01 successful. Timestamp of API response object = 1658699816
+INFO:root:API get request @2022-07-24 21:57:01 successful. Timestamp of API response object = 1658699816
+INFO:root:API get request @2022-07-24 21:58:08 successful. Timestamp of API response object = 1658699887
+INFO:root:API get request @2022-07-24 21:58:08 successful. Timestamp of API response object = 1658699887
+WARNING:root:API get request error @ time: 2022-07-24 21:59:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 21:59:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 22:00:03 successful. Timestamp of API response object = 1658699999
+INFO:root:API get request @2022-07-24 22:00:04 successful. Timestamp of API response object = 1658699999
+INFO:root:API get request @2022-07-24 22:01:03 successful. Timestamp of API response object = 1658700061
+INFO:root:API get request @2022-07-24 22:01:04 successful. Timestamp of API response object = 1658700061
+INFO:root:API get request @2022-07-24 22:02:18 successful. Timestamp of API response object = 1658700133
+INFO:root:API get request @2022-07-24 22:02:18 successful. Timestamp of API response object = 1658700133
+WARNING:root:API get request error @ time: 2022-07-24 22:03:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:03:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 22:04:00 successful. Timestamp of API response object = 1658700235
+INFO:root:API get request @2022-07-24 22:04:01 successful. Timestamp of API response object = 1658700235
+INFO:root:API get request @2022-07-24 22:05:05 successful. Timestamp of API response object = 1658700296
+INFO:root:API get request @2022-07-24 22:05:05 successful. Timestamp of API response object = 1658700296
+WARNING:root:API get request error @ time: 2022-07-24 22:06:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:06:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 22:07:01 successful. Timestamp of API response object = 1658700418
+INFO:root:API get request @2022-07-24 22:07:01 successful. Timestamp of API response object = 1658700418
+WARNING:root:API get request error @ time: 2022-07-24 22:08:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:08:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 22:09:01 successful. Timestamp of API response object = 1658700531
+INFO:root:API get request @2022-07-24 22:09:02 successful. Timestamp of API response object = 1658700531
+ERROR:django.request:Internal Server Error: /prediction/8250DB003033/8220DB000405/1658702225000/7A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 236, in get_prediction
+    stop_sequence=len(trip_stops),
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/query.py", line 302, in __len__
+    self._fetch_all()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/cursors.py", line 321, in _query
+    self._post_get_result()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/cursors.py", line 355, in _post_get_result
+    self._rows = self._fetch_row(0)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/cursors.py", line 328, in _fetch_row
+    return self._result.fetch_row(size, self._fetch_type)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 178, in typecast_time
+    return datetime.time(
+ValueError: hour must be in 0..23
+WARNING:root:API get request error @ time: 2022-07-24 22:10:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 22:10:04 successful. Timestamp of API response object = 1658700602
+ERROR:django.request:Internal Server Error: /prediction/8250DB003033/8220DB000405/1658702225000/7A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 236, in get_prediction
+    stop_sequence=len(trip_stops),
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/query.py", line 302, in __len__
+    self._fetch_all()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/cursors.py", line 321, in _query
+    self._post_get_result()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/cursors.py", line 355, in _post_get_result
+    self._rows = self._fetch_row(0)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/cursors.py", line 328, in _fetch_row
+    return self._result.fetch_row(size, self._fetch_type)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/utils.py", line 178, in typecast_time
+    return datetime.time(
+ValueError: hour must be in 0..23
+INFO:root:API get request @2022-07-24 22:11:00 successful. Timestamp of API response object = 1658700652
+INFO:root:API get request @2022-07-24 22:11:01 successful. Timestamp of API response object = 1658700652
+WARNING:root:API get request error @ time: 2022-07-24 22:12:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:12:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 22:13:04 successful. Timestamp of API response object = 1658700774
+INFO:root:API get request @2022-07-24 22:13:04 successful. Timestamp of API response object = 1658700774
+WARNING:root:API get request error @ time: 2022-07-24 22:14:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:14:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 22:15:00 successful. Timestamp of API response object = 1658700897
+INFO:root:API get request @2022-07-24 22:15:00 successful. Timestamp of API response object = 1658700897
+WARNING:root:API get request error @ time: 2022-07-24 22:16:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:16:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 22:17:01 successful. Timestamp of API response object = 1658701018
+INFO:root:API get request @2022-07-24 22:17:01 successful. Timestamp of API response object = 1658701018
+WARNING:root:API get request error @ time: 2022-07-24 22:18:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:18:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 22:19:00 successful. Timestamp of API response object = 1658701140
+INFO:root:API get request @2022-07-24 22:19:01 successful. Timestamp of API response object = 1658701140
+WARNING:root:API get request error @ time: 2022-07-24 22:20:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:20:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 22:21:01 successful. Timestamp of API response object = 1658701251
+INFO:root:API get request @2022-07-24 22:21:03 successful. Timestamp of API response object = 1658701251
+WARNING:root:API get request error @ time: 2022-07-24 22:22:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:22:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 22:23:01 successful. Timestamp of API response object = 1658701373
+INFO:root:API get request @2022-07-24 22:23:02 successful. Timestamp of API response object = 1658701373
+WARNING:root:API get request error @ time: 2022-07-24 22:24:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:24:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 22:25:02 successful. Timestamp of API response object = 1658701495
+INFO:root:API get request @2022-07-24 22:25:02 successful. Timestamp of API response object = 1658701495
+WARNING:root:API get request error @ time: 2022-07-24 22:26:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:26:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:27:01. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:27:01. Error = HTTP Error 429: Too Many Requests
+ERROR:django.request:Internal Server Error: /prediction/8250DB000768/8350DB004171/1658574664000/145/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 206, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+INFO:root:API get request @2022-07-24 22:28:02 successful. Timestamp of API response object = 1658701677
+INFO:root:API get request @2022-07-24 22:28:02 successful. Timestamp of API response object = 1658701677
+WARNING:root:API get request error @ time: 2022-07-24 22:29:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:29:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 22:30:00 successful. Timestamp of API response object = 1658701798
+INFO:root:API get request @2022-07-24 22:30:01 successful. Timestamp of API response object = 1658701798
+WARNING:root:API get request error @ time: 2022-07-24 22:31:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:31:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 22:32:01 successful. Timestamp of API response object = 1658701919
+INFO:root:API get request @2022-07-24 22:32:01 successful. Timestamp of API response object = 1658701919
+WARNING:root:API get request error @ time: 2022-07-24 22:33:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:33:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 22:34:00 successful. Timestamp of API response object = 1658702030
+INFO:root:API get request @2022-07-24 22:34:00 successful. Timestamp of API response object = 1658702030
+WARNING:root:API get request error @ time: 2022-07-24 22:35:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:35:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:36:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 22:36:04 successful. Timestamp of API response object = 1658702152
+INFO:root:API get request @2022-07-24 22:37:02 successful. Timestamp of API response object = 1658702216
+INFO:root:API get request @2022-07-24 22:37:02 successful. Timestamp of API response object = 1658702216
+WARNING:root:API get request error @ time: 2022-07-24 22:38:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-24 22:38:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-24 22:39:01 successful. Timestamp of API response object = 1658702338
+INFO:root:API get request @2022-07-24 22:39:01 successful. Timestamp of API response object = 1658702338
+WARNING:root:API get request error @ time: 2022-07-24 22:40:46. Error = <urlopen error [Errno 8] nodename nor servname provided, or not known>
+WARNING:root:API get request error @ time: 2022-07-24 22:40:46. Error = <urlopen error [Errno 8] nodename nor servname provided, or not known>
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-25 19:44:03 successful. Timestamp of API response object = 1658778231
+INFO:root:API get request @2022-07-25 19:44:06 successful. Timestamp of API response object = 1658778231
+WARNING:root:API get request error @ time: 2022-07-25 19:45:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 19:45:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 19:46:03 successful. Timestamp of API response object = 1658778351
+INFO:root:API get request @2022-07-25 19:46:12 successful. Timestamp of API response object = 1658778351
+WARNING:root:API get request error @ time: 2022-07-25 19:47:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 19:47:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 19:48:06 successful. Timestamp of API response object = 1658778477
+INFO:root:API get request @2022-07-25 19:48:08 successful. Timestamp of API response object = 1658778477
+WARNING:root:API get request error @ time: 2022-07-25 19:49:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 19:49:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 19:50:04 successful. Timestamp of API response object = 1658778591
+INFO:root:API get request @2022-07-25 19:50:07 successful. Timestamp of API response object = 1658778591
+WARNING:root:API get request error @ time: 2022-07-25 19:51:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 19:51:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 19:52:01 successful. Timestamp of API response object = 1658778717
+INFO:root:API get request @2022-07-25 19:52:02 successful. Timestamp of API response object = 1658778717
+WARNING:root:API get request error @ time: 2022-07-25 19:53:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 19:53:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 19:54:04 successful. Timestamp of API response object = 1658778833
+INFO:root:API get request @2022-07-25 19:54:05 successful. Timestamp of API response object = 1658778833
+WARNING:root:API get request error @ time: 2022-07-25 19:55:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 19:55:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 19:56:05 successful. Timestamp of API response object = 1658778960
+INFO:root:API get request @2022-07-25 19:56:06 successful. Timestamp of API response object = 1658778960
+WARNING:root:API get request error @ time: 2022-07-25 19:57:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 19:57:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 19:58:04 successful. Timestamp of API response object = 1658779074
+INFO:root:API get request @2022-07-25 19:58:04 successful. Timestamp of API response object = 1658779074
+WARNING:root:API get request error @ time: 2022-07-25 19:59:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 19:59:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:00:03 successful. Timestamp of API response object = 1658779201
+INFO:root:API get request @2022-07-25 20:00:05 successful. Timestamp of API response object = 1658779201
+WARNING:root:API get request error @ time: 2022-07-25 20:01:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:01:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:02:03 successful. Timestamp of API response object = 1658779317
+INFO:root:API get request @2022-07-25 20:02:05 successful. Timestamp of API response object = 1658779317
+WARNING:root:API get request error @ time: 2022-07-25 20:03:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:03:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:04:05 successful. Timestamp of API response object = 1658779429
+INFO:root:API get request @2022-07-25 20:04:05 successful. Timestamp of API response object = 1658779429
+WARNING:root:API get request error @ time: 2022-07-25 20:05:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:05:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:06:03 successful. Timestamp of API response object = 1658779556
+INFO:root:API get request @2022-07-25 20:06:04 successful. Timestamp of API response object = 1658779556
+WARNING:root:API get request error @ time: 2022-07-25 20:07:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:07:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:08:07 successful. Timestamp of API response object = 1658779672
+INFO:root:API get request @2022-07-25 20:08:07 successful. Timestamp of API response object = 1658779672
+WARNING:root:API get request error @ time: 2022-07-25 20:09:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:09:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:10:06 successful. Timestamp of API response object = 1658779797
+INFO:root:API get request @2022-07-25 20:10:07 successful. Timestamp of API response object = 1658779797
+WARNING:root:API get request error @ time: 2022-07-25 20:11:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:11:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:12:03 successful. Timestamp of API response object = 1658779910
+INFO:root:API get request @2022-07-25 20:12:04 successful. Timestamp of API response object = 1658779910
+WARNING:root:API get request error @ time: 2022-07-25 20:13:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:13:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:14:06 successful. Timestamp of API response object = 1658780037
+INFO:root:API get request @2022-07-25 20:14:17 successful. Timestamp of API response object = 1658780037
+WARNING:root:API get request error @ time: 2022-07-25 20:15:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:15:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:16:04 successful. Timestamp of API response object = 1658780150
+INFO:root:API get request @2022-07-25 20:16:08 successful. Timestamp of API response object = 1658780161
+WARNING:root:API get request error @ time: 2022-07-25 20:17:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:17:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:18:08 successful. Timestamp of API response object = 1658780276
+INFO:root:API get request @2022-07-25 20:18:10 successful. Timestamp of API response object = 1658780276
+WARNING:root:API get request error @ time: 2022-07-25 20:19:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:19:00. Error = HTTP Error 429: Too Many Requests
+ERROR:django.request:Internal Server Error: /prediction/8220DB001667/8220DB000313/1658780929000/37/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py", line 206, in get_prediction
+    print(chosen_direction_id,'chosen_direction_id$$$$')
+UnboundLocalError: local variable 'chosen_direction_id' referenced before assignment
+INFO:root:API get request @2022-07-25 20:20:05 successful. Timestamp of API response object = 1658780397
+INFO:root:API get request @2022-07-25 20:20:07 successful. Timestamp of API response object = 1658780397
+WARNING:root:API get request error @ time: 2022-07-25 20:21:01. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:21:01. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-25 20:22:08 successful. Timestamp of API response object = 1658780522
+INFO:root:API get request @2022-07-25 20:22:08 successful. Timestamp of API response object = 1658780510
+WARNING:root:API get request error @ time: 2022-07-25 20:23:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:23:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:24:07 successful. Timestamp of API response object = 1658780632
+INFO:root:API get request @2022-07-25 20:24:07 successful. Timestamp of API response object = 1658780632
+WARNING:root:API get request error @ time: 2022-07-25 20:25:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:25:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:26:04 successful. Timestamp of API response object = 1658780757
+INFO:root:API get request @2022-07-25 20:26:05 successful. Timestamp of API response object = 1658780757
+WARNING:root:API get request error @ time: 2022-07-25 20:27:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:27:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:28:03 successful. Timestamp of API response object = 1658780872
+INFO:root:API get request @2022-07-25 20:28:06 successful. Timestamp of API response object = 1658780872
+WARNING:root:API get request error @ time: 2022-07-25 20:29:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:29:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:30:03 successful. Timestamp of API response object = 1658780990
+INFO:root:API get request @2022-07-25 20:30:06 successful. Timestamp of API response object = 1658780990
+WARNING:root:API get request error @ time: 2022-07-25 20:31:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:31:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:32:01 successful. Timestamp of API response object = 1658781117
+INFO:root:API get request @2022-07-25 20:32:01 successful. Timestamp of API response object = 1658781117
+WARNING:root:API get request error @ time: 2022-07-25 20:33:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:33:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:34:02 successful. Timestamp of API response object = 1658781233
+INFO:root:API get request @2022-07-25 20:34:02 successful. Timestamp of API response object = 1658781233
+WARNING:root:API get request error @ time: 2022-07-25 20:35:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:35:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:36:04 successful. Timestamp of API response object = 1658781358
+INFO:root:API get request @2022-07-25 20:36:04 successful. Timestamp of API response object = 1658781358
+WARNING:root:API get request error @ time: 2022-07-25 20:37:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:37:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:38:04 successful. Timestamp of API response object = 1658781476
+INFO:root:API get request @2022-07-25 20:38:05 successful. Timestamp of API response object = 1658781476
+WARNING:root:API get request error @ time: 2022-07-25 20:39:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:39:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:40:03 successful. Timestamp of API response object = 1658781590
+INFO:root:API get request @2022-07-25 20:40:03 successful. Timestamp of API response object = 1658781590
+INFO:root:API get request @2022-07-25 20:41:49 successful. Timestamp of API response object = 1658781706
+INFO:root:API get request @2022-07-25 20:41:49 successful. Timestamp of API response object = 1658781706
+WARNING:root:API get request error @ time: 2022-07-25 20:42:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:42:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:54:02 successful. Timestamp of API response object = 1658782440
+INFO:root:API get request @2022-07-25 20:54:03 successful. Timestamp of API response object = 1658782440
+WARNING:root:API get request error @ time: 2022-07-25 20:55:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:55:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:56:01 successful. Timestamp of API response object = 1658782555
+INFO:root:API get request @2022-07-25 20:56:01 successful. Timestamp of API response object = 1658782555
+WARNING:root:API get request error @ time: 2022-07-25 20:57:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:57:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 20:58:02 successful. Timestamp of API response object = 1658782671
+INFO:root:API get request @2022-07-25 20:58:02 successful. Timestamp of API response object = 1658782671
+WARNING:root:API get request error @ time: 2022-07-25 20:59:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 20:59:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 21:00:02 successful. Timestamp of API response object = 1658782799
+INFO:root:API get request @2022-07-25 21:00:03 successful. Timestamp of API response object = 1658782799
+INFO:django.utils.autoreload:/Users/wangshengbin/work/bus/DublinBusRepo/gtfsAPI/models.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+WARNING:root:API get request error @ time: 2022-07-25 21:01:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-25 21:01:02. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-25 21:02:02 successful. Timestamp of API response object = 1658782914
+INFO:root:API get request @2022-07-25 21:02:02 successful. Timestamp of API response object = 1658782914

@@ -31,8 +31,8 @@ function Planner({back}){
     const directions = useRef()
     const [time, setValue] = React.useState(new Date());
     const {data:stops} = useStops()
-    const [panel, setPanel] = useState([])
-    const [journey_time, setJourneyTime] = useState()
+    const [panel, setPanel] = useState(null)
+    const [journey_time, setJourneyTime] = useState([])
     /* eslint-disable */
     const directionsDisplay = new google.maps.DirectionsRenderer()
     /* eslint-enable */
@@ -53,7 +53,7 @@ function Planner({back}){
     const stoplocationToId = (lat,lng)=>{
       lat = lat * 1000
       lng = lng * 1000
-      console.log(Math.abs(lat - 53309.4181940068),Math.abs(lng - -6218.77482979347),'google');
+    
       for(var i = 0; i < stops.length; i++){
         var stop_lat = stops[i].stop_lat
         var stop_lng = stops[i].stop_long
@@ -61,7 +61,7 @@ function Planner({back}){
         stop_lat = stop_lat * 1000
         stop_lng = stop_lng * 1000
         // console.log(stop_lat,stop_lng,'^^^^^^^');
-        if(Math.abs(lat - stop_lat)<1 && Math.abs(lng - stop_lng)<1 ){
+        if(Math.abs(lat - stop_lat)< 1 && Math.abs(lng - stop_lng)< 1 ){
           console.log('*********');
           return stops[i]['stop_id']
         }
@@ -69,6 +69,7 @@ function Planner({back}){
       return false
     }
     const getbestroute = (res)=>{
+      console.log(res,13232445);
       //输入函数体
       for (let i = 0; i < res.routes.length; i++) {
         var temp = res.routes[i].legs[0].steps;
@@ -76,7 +77,8 @@ function Planner({back}){
         var flag = true
         for(var j = 0; j < temp.length; j ++){
           if(temp[j].travel_mode === 'TRANSIT'){
-            if(!routesName.indexOf(temp[j].transit.line.short_name.toLowerCase())){
+            console.log(routesName.indexOf(temp[j].transit.line.short_name.toLowerCase()));
+            if(routesName.indexOf(temp[j].transit.line.short_name.toLowerCase()) === -1){
               console.log(123);
               flag = false
               break
@@ -130,13 +132,16 @@ function Planner({back}){
     };
     async function calculateRoute (){
 
-        
+      
         if(originRef.current.value === '' || destinationRef.current.value === ''){
           return 
         }
+        setPanel(null)
+        setJourneyTime([])
         /* eslint-disable */
         const directionsService = new google.maps.DirectionsService()
         setDirectionResponse(null)
+        
         let results = await directionsService.route({
           origin:originRef.current.value,
           destination:destinationRef.current.value,
@@ -150,24 +155,20 @@ function Planner({back}){
           },
         })
         var RecommadationRoute = getbestroute(results)
+        setPanel(null)
+        setJourneyTime([])
         if(RecommadationRoute){
           setDirectionResponse(RecommadationRoute)
           console.log(RecommadationRoute,'RecommadationRoute');
-          
-          
           showPanel(RecommadationRoute)  
-          let prediction_journey_time = await getPrediction(panel)
-          console.log(prediction_journey_time,'prediction_journey_time');
-          setJourneyTime(prediction_journey_time)
         }else{
           console.log('no bus route');
           alert('no bus route')
         }
         /* eslint-enable */
-        
     }
     // get trip id by user input
-    const showPanel = (RecommadationRoute)=>{
+    const showPanel = async(RecommadationRoute)=>{
         // get the first recommadation route
         // console.log(RecommadationRoute);
         var temp_panel = []
@@ -183,26 +184,39 @@ function Planner({back}){
             })
           }
           if(temp.travel_mode === 'TRANSIT'){
-            temp_panel.push({
+            var bus_trip = {
               travel_mode:temp.travel_mode,
               duration: temp.duration.value,
               distance: temp.distance.value,
               arrival_stop:temp.transit.arrival_stop.name,
+              arrival_stop_lat:temp.transit.arrival_stop.location.lat(),
+              arrival_stop_lng:temp.transit.arrival_stop.location.lng(),
               arrival_stop_id:stopNameToId(temp.transit.arrival_stop.name,temp.transit.arrival_stop.location.lat(),temp.transit.arrival_stop.location.lng()),
               arrival_time:temp.transit.arrival_time.value,
               arrival_time_text:temp.transit.arrival_time.text,
               departure_stop:temp.transit.departure_stop.name,
               departure_stop_id:stopNameToId(temp.transit.departure_stop.name,temp.transit.departure_stop.location.lat(),temp.transit.departure_stop.location.lng()),
+              departure_stop_lat:temp.transit.departure_stop.location.lat(),
+              departure_stop_lng:temp.transit.departure_stop.location.lng(),
               departure_time:temp.transit.departure_time.value,
               departure_text:temp.transit.departure_time.text,
               short_name:temp.transit.line.short_name,
               long_name:temp.transit.line.name,
               num_stops:temp.transit.num_stops,
-              
-            })
+            }
+            console.log(bus_trip.arrival_stop_id,bus_trip.departure_stop_id,bus_trip.departure_time.valueOf(),bus_trip.short_name);
+            var response = await reqPrediction(bus_trip.arrival_stop_id,bus_trip.departure_stop_id,bus_trip.departure_time.valueOf(),bus_trip.short_name)
+            let {status,data} = response
+            console.log(data[0],'response');
+            if(data[0].trip_time === 0){
+              bus_trip.prediction_journey_time = Math.ceil(bus_trip.duration/60)
+            }else{
+              bus_trip.prediction_journey_time = data[0].trip_time
+            }
+            
+            temp_panel.push(bus_trip)
           }
         }
-
         setPanel(temp_panel)
         console.log(panel,'panel');
     }
@@ -218,24 +232,6 @@ function Planner({back}){
         setDuration('')
         originRef.current.value = '' 
         destinationRef.current.value = ''
-    }
-
-    const getPrediction = async(steps)=>{
-      //输入函数体
-      console.log(steps,'@@@');
-      for(var i = 0; i < steps.length; i++){
-        if(steps[i].travel_mode === 'TRANSIT'){
-          console.log(steps[i].arrival_stop_id,steps[i].departure_stop_id,steps[i].departure_time,steps[i].short_name)
-          var response = await reqPrediction(steps[i].arrival_stop_id,steps[i].departure_stop_id,steps[i].departure_time.valueOf(),steps[i].short_name)
-          let {status,data} = response
-          if ( status === 200){
-            console.log(data);
-            return data
-          }else{
-            console.log('!!!!!!!!!!!!!!!!!!error');
-          }
-        }
-      }
     }
     
   return <div id="planner">
@@ -310,8 +306,8 @@ function Planner({back}){
 
          </LocalizationProvider>
          {
-          panel&&journey_time&&
-          <DisplayRoutes panel={panel} journeyTime={journey_time}/>
+          panel&&
+          <DisplayRoutes panel={panel}/>
          }
         
   </div>

@@ -6,8 +6,9 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function DisplayRoutes(props) {
-    const {panel,journeyTime} = props
+    const {panel} = props
     console.log(props);
+    var cnt = 0
   return (
     <div>
         {panel.map((step)=>{return step.travel_mode==="WALKING"?(
@@ -30,7 +31,7 @@ export default function DisplayRoutes(props) {
                  About {step.distance} m away
               </Typography>
             </AccordionDetails>
-          </Accordion>        
+          </Accordion>      
         ):(<Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -53,7 +54,7 @@ export default function DisplayRoutes(props) {
                {"The journey will take "+Math.ceil(step.duration/60)+" mins"}
             </Typography>
             <Typography>
-               {"Our prediction journey time is "+Math.ceil(journeyTime[0].trip_time)+" mins"}
+               {"Our prediction journey time is "+Math.ceil(step.prediction_journey_time)+" mins"}
             </Typography>
           </AccordionDetails>
         </Accordion>  )
