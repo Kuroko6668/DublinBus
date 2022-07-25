@@ -1,14 +1,20 @@
-import * as React from 'react';
+
+import React,{Component, useRef, useState} from 'react'
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import DisplayStops from '../../../DisplayStops';
+import { useStops } from '../../../../Providers/StopsContext';
+
 
 export default function DisplayRoutes(props) {
     const {panel} = props
     console.log(props);
     var cnt = 0
+    const {data:stops}  = useStops();
+
   return (
     <div>
         {panel.map((step)=>{return step.travel_mode==="WALKING"?(
@@ -32,7 +38,9 @@ export default function DisplayRoutes(props) {
               </Typography>
             </AccordionDetails>
           </Accordion>      
-        ):(<Accordion>
+        ):(
+        <>
+        <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
@@ -57,7 +65,10 @@ export default function DisplayRoutes(props) {
                {"Our prediction journey time is "+Math.ceil(step.prediction_journey_time)+" mins"}
             </Typography>
           </AccordionDetails>
-        </Accordion>  )
+        </Accordion>  
+        <DisplayStops stops={step.trip_stops}/>    
+        </>
+        )
       })}
       
     </div>

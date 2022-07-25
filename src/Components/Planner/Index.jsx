@@ -18,21 +18,20 @@ import moment from "moment";
 import DisplayRoutes from './subcomponent/DisplayRoutes';
 import ja from 'date-fns/esm/locale/ja';
 import { set } from 'store/dist/store.modern.min';
-
+import { reqRouteById } from '../../ajax';
 function Planner({back}){
-    const routePolyline = React.useRef();
-    const planner_map = useGoogleMap();
+    const map_Ref = useGoogleMap();
     const { position } = useGeolocation();
     const [directionResponse, setDirectionResponse] = useState((null))
     const [display,setDisplay] = useState(false)
-    const [duration,setDuration] = useState('')
+    const [visiableroute,setVisiableRoute] = useState([])
     const originRef = useRef('')
     const destinationRef = useRef('')
-    const directions = useRef()
+
     const [time, setValue] = React.useState(new Date());
     const {data:stops} = useStops()
     const [panel, setPanel] = useState(null)
-    const [journey_time, setJourneyTime] = useState([])
+
     /* eslint-disable */
     const directionsDisplay = new google.maps.DirectionsRenderer()
     /* eslint-enable */
@@ -91,39 +90,33 @@ function Planner({back}){
       }
       return
     }
-    const getTransit = (RecommadationRoute)=>{
-      var transits = []
-      for(var i = 0; i < RecommadationRoute.length; i++){     
-        var temp = RecommadationRoute[i]
-        if(temp.travel_mode === 'TRANSIT'){
-          transits.push({
-            duration: temp.duration.value,
-            arrival_stop:temp.transit.arrival_stop.name,
-            arrival_time:temp.transit.arrival_time.value,
-            departure_stop:temp.transit.departure_stop.name,
-            departure_time:temp.transit.departure_time.value,
-            short_name:temp.transit.line.short_name,
-          })
-        }
+    const getRoute = async (route_name,route_long_name,max_lat,max_lng,min_lat,min_lng)=>{
+
+      let {data:route_stops} = await reqRouteById(route_name)
+      route_stops.map((obj)=>{
+          for(var i = 0; i < stops.length; i++){
+              if(stops[i].stop_id === obj.stop_id){
+                  obj.stopObj = stops[i]
+              } 
+          }
+      })
+      
+      console.log(route_stops,'route_stops');
+      var res = []
+      for(var i = 0; i < route_stops.length; i++){
+          if(route_stops[i].trip_headsign === route_long_name &&
+            route_stops[i].stopObj.stop_lat < max_lat + 0.001 &&
+            route_stops[i].stopObj.stop_lat > min_lat - 0.001 &&
+            route_stops[i].stopObj.stop_long < max_lng + 0.001 &&
+            route_stops[i].stopObj.stop_long > min_lng - 0.001){      
+              res.push(route_stops[i].stopObj)
+          }
       }
-      console.log(transits,'transits');
-      return transits
+      console.log(res,'visiableroute');
+      return res
     }
-    const getWalking = (RecommadationRoute)=>{
-      var walks = []
-      for(var i = 0; i < RecommadationRoute.length; i++){     
-        var temp = RecommadationRoute[i]
-        if(temp.travel_mode === 'WALKING'){
-          walks.push({
-            distance: temp.distance.value,
-            duration: temp.duration.value,
-            instructions: temp.instructions,
-          })
-        }
-      }
-      console.log(walks,'waljs');
-      return walks
-    }
+
+
     // for time picker
     const handleTimeChange = (newValue) => {
       var date = moment(newValue).format('L');
@@ -137,7 +130,8 @@ function Planner({back}){
           return 
         }
         setPanel(null)
-        setJourneyTime([])
+
+        console.log(visiableroute);
         /* eslint-disable */
         const directionsService = new google.maps.DirectionsService()
         setDirectionResponse(null)
@@ -155,10 +149,9 @@ function Planner({back}){
           },
         })
         var RecommadationRoute = getbestroute(results)
-        setPanel(null)
-        setJourneyTime([])
         if(RecommadationRoute){
           setDirectionResponse(RecommadationRoute)
+          directionsDisplay.setDirections({routes:[]})
           console.log(RecommadationRoute,'RecommadationRoute');
           showPanel(RecommadationRoute)  
         }else{
@@ -166,6 +159,7 @@ function Planner({back}){
           alert('no bus route')
         }
         /* eslint-enable */
+
     }
     // get trip id by user input
     const showPanel = async(RecommadationRoute)=>{
@@ -203,7 +197,12 @@ function Planner({back}){
               short_name:temp.transit.line.short_name,
               long_name:temp.transit.line.name,
               num_stops:temp.transit.num_stops,
+              trip_stops:null
             }
+            var max_lat = Math.max(bus_trip.arrival_stop_lat,bus_trip.departure_stop_lat)
+            var min_lat = Math.min(bus_trip.arrival_stop_lat,bus_trip.departure_stop_lat)
+            var max_lng = Math.max(bus_trip.arrival_stop_lng,bus_trip.departure_stop_lng)
+            var min_lng = Math.min(bus_trip.arrival_stop_lng,bus_trip.departure_stop_lng)
             console.log(bus_trip.arrival_stop_id,bus_trip.departure_stop_id,bus_trip.departure_time.valueOf(),bus_trip.short_name);
             var response = await reqPrediction(bus_trip.arrival_stop_id,bus_trip.departure_stop_id,bus_trip.departure_time.valueOf(),bus_trip.short_name)
             let {status,data} = response
@@ -215,6 +214,9 @@ function Planner({back}){
             }
             
             temp_panel.push(bus_trip)
+            console.log(bus_trip.short_name,bus_trip.long_name,max_lat,max_lng,min_lat,min_lng);
+            var route_stops = await getRoute(bus_trip.short_name,bus_trip.long_name,max_lat,max_lng,min_lat,min_lng)
+            bus_trip.trip_stops = route_stops
           }
         }
         setPanel(temp_panel)
@@ -229,7 +231,6 @@ function Planner({back}){
         directionsDisplay.setPanel(null)
         // setDirectionResponse(null)
         setDisplay(false)
-        setDuration('')
         originRef.current.value = '' 
         destinationRef.current.value = ''
     }
@@ -307,7 +308,7 @@ function Planner({back}){
          </LocalizationProvider>
          {
           panel&&
-          <DisplayRoutes panel={panel}/>
+          <DisplayRoutes panel={panel} route={visiableroute}/>
          }
         
   </div>
@@ -336,5 +337,5 @@ const routesName = [
   '39x','4','40','40b','40d','40e','41','41b','41c','41d','41x','42','43','44','44b','46a','46e','47','49','51d','52','53','54a','56a','6','61','65','65b','68','68a','69','69x','7','70','77a','77x',
   '79','79a','7a','7b','7d','83','83a','84','84a','84x','9','H1','H2','H3','C1','C2','C3','C4',
   'C5','C6','P29','L53','L54','L58','L59','X25','X26','X27',
-  'X28','X30','X31','X32','N4'
+  'X28','X30','X31','X32','N4',
 ]
