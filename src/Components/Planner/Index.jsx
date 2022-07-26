@@ -10,8 +10,11 @@ import TextField from '@mui/material/TextField';
 import { 
   Autocomplete, 
   useGoogleMap, 
+  Marker
 } from '@react-google-maps/api';
 import { ClassNames } from '@emotion/react';
+import endpoint from '../../assets/flag.png'
+import startpoint from '../../assets/pin.png'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import moment from "moment";
@@ -25,9 +28,10 @@ function Planner({back}){
     const [directionResponse, setDirectionResponse] = useState((null))
     const [display,setDisplay] = useState(false)
     const [visiableroute,setVisiableRoute] = useState([])
+    const [startPoint, setstartPoint] = useState(null)
+    const [endPoint, setendPoint] = useState(null)
     const originRef = useRef('')
     const destinationRef = useRef('')
-
     const [time, setValue] = React.useState(new Date());
     const {data:stops} = useStops()
     const [panel, setPanel] = useState(null)
@@ -90,7 +94,7 @@ function Planner({back}){
       }
       return
     }
-    const getRoute = async (route_name,route_long_name,max_lat,max_lng,min_lat,min_lng)=>{
+    const getRoute = async (route_name,direction_id,max_lat,max_lng,min_lat,min_lng)=>{
 
       let {data:route_stops} = await reqRouteById(route_name)
       route_stops.map((obj)=>{
@@ -104,7 +108,7 @@ function Planner({back}){
       console.log(route_stops,'route_stops');
       var res = []
       for(var i = 0; i < route_stops.length; i++){
-          if(route_stops[i].trip_headsign === route_long_name &&
+          if(route_stops[i].direction_id === direction_id &&
             route_stops[i].stopObj.stop_lat < max_lat + 0.001 &&
             route_stops[i].stopObj.stop_lat > min_lat - 0.001 &&
             route_stops[i].stopObj.stop_long < max_lng + 0.001 &&
@@ -135,7 +139,8 @@ function Planner({back}){
         /* eslint-disable */
         const directionsService = new google.maps.DirectionsService()
         setDirectionResponse(null)
-        
+        setstartPoint(null)
+        setstartPoint(null)
         let results = await directionsService.route({
           origin:originRef.current.value,
           destination:destinationRef.current.value,
@@ -153,7 +158,10 @@ function Planner({back}){
           setDirectionResponse(RecommadationRoute)
           directionsDisplay.setDirections({routes:[]})
           console.log(RecommadationRoute,'RecommadationRoute');
-          showPanel(RecommadationRoute)  
+          showPanel(RecommadationRoute)
+          setstartPoint({lat:RecommadationRoute[0].start_point.lat(), lng:RecommadationRoute[0].start_point.lng()})
+          console.log(RecommadationRoute[RecommadationRoute.length-1].end_point.lat(), RecommadationRoute[RecommadationRoute.length-1].end_point.lng());
+          setendPoint({lat:RecommadationRoute[RecommadationRoute.length-1].end_point.lat(), lng:RecommadationRoute[RecommadationRoute.length-1].end_point.lng()})
         }else{
           console.log('no bus route');
           alert('no bus route')
@@ -196,6 +204,7 @@ function Planner({back}){
               departure_text:temp.transit.departure_time.text,
               short_name:temp.transit.line.short_name,
               long_name:temp.transit.line.name,
+              direction_id:0,
               num_stops:temp.transit.num_stops,
               trip_stops:null
             }
@@ -212,10 +221,14 @@ function Planner({back}){
             }else{
               bus_trip.prediction_journey_time = data[0].trip_time
             }
+
+            if(data[0].direction_id >= 0){
+              bus_trip.direction_id = data[0].direction_id 
+            }
             
             temp_panel.push(bus_trip)
-            console.log(bus_trip.short_name,bus_trip.long_name,max_lat,max_lng,min_lat,min_lng);
-            var route_stops = await getRoute(bus_trip.short_name,bus_trip.long_name,max_lat,max_lng,min_lat,min_lng)
+            console.log(bus_trip.short_name,bus_trip.direction_id,max_lat,max_lng,min_lat,min_lng);
+            var route_stops = await getRoute(bus_trip.short_name,bus_trip.direction_id,max_lat,max_lng,min_lat,min_lng)
             bus_trip.trip_stops = route_stops
           }
         }
@@ -310,7 +323,22 @@ function Planner({back}){
           panel&&
           <DisplayRoutes panel={panel} route={visiableroute}/>
          }
-        
+          {startPoint&&
+                <Marker
+                  key={Math.random().toString()}
+                  position={startPoint}
+                  label="A"
+
+                />
+          }
+          {endPoint&&
+                <Marker
+                  key={Math.random().toString()}
+                  position={endPoint}
+                  // icon={endpoint}
+                  label="B"
+                />
+          }
   </div>
 }
 

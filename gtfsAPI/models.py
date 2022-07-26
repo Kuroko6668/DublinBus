@@ -106,8 +106,8 @@ class Trip(models.Model):
         db_table = 'trips'
 
 class StopTime(models.Model):
-    arrival_time = models.TimeField(primary_key=True)
-    departure_time = models.TimeField()
+    arrival_time = models.CharField(primary_key=True, max_length=255)
+    departure_time = models.CharField(max_length=255)
     stop = models.ForeignKey(Stops, on_delete=models.CASCADE, db_constraint=False)
     stop_sequence = models.IntegerField()
     stop_headsign = models.CharField(max_length=255)
