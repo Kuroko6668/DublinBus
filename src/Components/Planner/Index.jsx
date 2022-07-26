@@ -80,6 +80,11 @@ function Planner({back}){
         var flag = true
         for(var j = 0; j < temp.length; j ++){
           if(temp[j].travel_mode === 'TRANSIT'){
+            if(!temp[j].transit.line.short_name){
+              console.log(123);
+              flag = false
+              break
+            }
             console.log(routesName.indexOf(temp[j].transit.line.short_name.toLowerCase()));
             if(routesName.indexOf(temp[j].transit.line.short_name.toLowerCase()) === -1){
               console.log(123);

@@ -5785,3 +5785,15 @@ INFO:root:API get request @2022-07-26 14:55:05 successful. Timestamp of API resp
 INFO:root:API get request @2022-07-26 14:56:06 successful. Timestamp of API response object = 1658847357
 INFO:root:API get request @2022-07-26 14:57:02 successful. Timestamp of API response object = 1658847411
 INFO:root:TEST: 3.9394421577453613
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-26 15:39:05 successful. Timestamp of API response object = 1658849932
+INFO:root:API get request @2022-07-26 15:39:07 successful. Timestamp of API response object = 1658849932
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+WARNING:root:API get request error @ time: 2022-07-26 15:44:08. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-26 15:44:08. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-26 15:45:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-26 15:45:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-26 15:46:04 successful. Timestamp of API response object = 1658850349
+INFO:root:API get request @2022-07-26 15:46:05 successful. Timestamp of API response object = 1658850349
+WARNING:root:API get request error @ time: 2022-07-26 15:47:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-26 15:47:00. Error = HTTP Error 429: Too Many Requests
