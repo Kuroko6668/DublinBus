@@ -32,7 +32,7 @@ function Planner({back}){
     const [endPoint, setendPoint] = useState(null)
     const originRef = useRef('')
     const destinationRef = useRef('')
-    const [time, setValue] = React.useState(new Date());
+    const [time, setValue] = useState(new Date());
     const {data:stops} = useStops()
     const [panel, setPanel] = useState(null)
 
@@ -239,11 +239,10 @@ function Planner({back}){
     function clearRoute(){
         setDirectionResponse(null)
         setPanel(null)
-        directionsDisplay.setDirections({routes:[]})
-        directionsDisplay.setMap(null)
-        directionsDisplay.setPanel(null)
-        // setDirectionResponse(null)
-        setDisplay(false)
+        setstartPoint(null)
+        setendPoint(null)
+        setValue(new Date())
+        setVisiableRoute([])
         originRef.current.value = '' 
         destinationRef.current.value = ''
     }
