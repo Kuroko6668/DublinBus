@@ -16,6 +16,7 @@ import { ClassNames } from '@emotion/react';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import moment from "moment";
+import ErrorMessage from '../ErrorMessage';
 import { parseJSON } from 'date-fns';
 
 function Planner({back}){
@@ -29,6 +30,7 @@ function Planner({back}){
     const destinationRef = useRef('')
     const directions = useRef()
     const [time, setValue] = React.useState(new Date());
+    const [error,setError]=useState(false);
     const {data:stops} = useStops()
     console.log(stops);
     // get stop id by stop name
@@ -62,23 +64,30 @@ function Planner({back}){
           return 
         }
         /* eslint-disable */
-        const directionsService = new google.maps.DirectionsService()
-        let results = await directionsService.route({
-          origin:originRef.current.value,
-          destination:destinationRef.current.value,
-          travelMode:google.maps.TravelMode.TRANSIT,
-          provideRouteAlternatives: true,
-          region:'ie',
-          transitOptions: {
-            departureTime: time,
-            modes: ['BUS'],
-            routingPreference: 'FEWER_TRANSFERS'
-          },
-        })
-        /* eslint-enable */
-        setDirectionResponse(results)
-        setDistance(results.routes[0].legs[0].distance.text)
-        setDuration(results.routes[0].legs[0].duration.text)
+        try{ 
+          const directionsService = new google.maps.DirectionsService()
+          let results = await directionsService.route({
+            origin:originRef.current.value,
+            destination:destinationRef.current.value,
+            travelMode:google.maps.TravelMode.TRANSIT,
+            provideRouteAlternatives: true,
+            region:'ie',
+            transitOptions: {
+              departureTime: time,
+              modes: ['BUS'],
+              routingPreference: 'FEWER_TRANSFERS'
+            },
+          })
+          /* eslint-enable */
+          setError(false);
+            setDirectionResponse(results)
+            setDistance(results.routes[0].legs[0].distance.text)
+            setDuration(results.routes[0].legs[0].duration.text)
+          }
+       catch{
+          setError(true);
+        }
+      
 
     }
     // get trip id by user input
@@ -153,10 +162,12 @@ function Planner({back}){
     // clear user input
     function clearRoute(){
         setDirectionResponse(null)
+        setError(false);
         setDistance('')
         setDuration('')
         originRef.current.value = '' 
         destinationRef.current.value = ''
+        back(false)
     }
     
   return <div id="planner">
@@ -179,7 +190,7 @@ function Planner({back}){
           />
         </Autocomplete>
 
-     
+   {error&& <ErrorMessage message={"Invalid input. Please enter a valid stop"}></ErrorMessage>}
 
           <Button 
             style={{textTransform: 'none'}}
@@ -188,7 +199,7 @@ function Planner({back}){
             onClick={clearRoute}
           >clear</Button>
 
-          <Button 
+          {/* <Button 
             style={{textTransform: 'none'}}
             size='small'
             sx={{ mt:1}}
@@ -199,7 +210,7 @@ function Planner({back}){
             sx={{ m:1}}
             size='small'
             onClick={showdirectionResponse}
-          >Get Trip_Id</Button>
+          >APIresponse</Button> */}
 
         <LocalizationProvider dateAdapter={AdapterDateFns} sx={{ margin:1 }}>
           <DateTimePicker
@@ -223,7 +234,7 @@ function Planner({back}){
           style={{textTransform: 'none'}}
           type="submin"
           variant='contained'
-          onClick={()=>back(false)}
+          onClick={()=>clearRoute()}
           size='small'
         >
          Back

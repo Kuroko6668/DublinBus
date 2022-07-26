@@ -15,8 +15,10 @@ import {
 // CSS Styles for the container
 const containerStyle = {
   width: '100%',
-  height: '650px',
-  position:'relative'
+  height: '800px',
+  position:'relative !important',
+  display: 'flex',
+  flexDirection: 'column'
 };
 // Map Styles for the container
 const customStyled = [
@@ -81,7 +83,7 @@ function Map(props) {
   return (
     <>
       <GoogleMap
-          mapContainerStyle={containerStyle}
+      mapContainerStyle={containerStyle}
           center={position}
           zoom={11}
           onLoad={onLoadMap}
