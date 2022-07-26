@@ -1,0 +1,1333 @@
+INFO:root:API request successful. Timestamp of API response object = 1657810845
+INFO:root:Json file updated correctly. 1657810845  response written to json correctly
+INFO:root:API get request @2022-07-14 16:13:07 successful. Timestamp of API response object = 1657811575
+INFO:root:Json file updated correctly. 1657811575  response written to json correctly
+WARNING:root:API get request error @ time: 2022-07-14 18:20:03. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-14 18:20:14. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-14 18:21:00 successful. Timestamp of API response object = 1657819251
+INFO:root:Json file updated correctly. 1657819251  response written to json correctly
+INFO:root:API get request @2022-07-14 18:21:34 successful. Timestamp of API response object = 1657819284
+INFO:root:Json file updated correctly. 1657819284  response written to json correctly
+INFO:root:API get request @2022-07-14 18:22:37 successful. Timestamp of API response object = 1657819350
+INFO:root:Json file updated correctly. 1657819350  response written to json correctly
+INFO:root:API get request @2022-07-14 18:23:40 successful. Timestamp of API response object = 1657819407
+INFO:root:Json file updated correctly. 1657819407  response written to json correctly
+INFO:root:API get request @2022-07-14 18:24:42 successful. Timestamp of API response object = 1657819475
+INFO:root:Json file updated correctly. 1657819475  response written to json correctly
+INFO:root:API get request @2022-07-14 18:25:44 successful. Timestamp of API response object = 1657819541
+INFO:root:Json file updated correctly. 1657819541  response written to json correctly
+INFO:root:API get request @2022-07-14 23:01:09 successful. Timestamp of API response object = 1657836069
+INFO:root:Json file updated correctly. 1657836069  response written to json correctly
+INFO:root:API get request @2022-07-14 23:01:20 successful. Timestamp of API response object = 1657836079
+INFO:root:Json file updated correctly. 1657836079  response written to json correctly
+INFO:root:API get request @2022-07-14 23:05:34 successful. Timestamp of API response object = 1657836324
+INFO:root:Json file updated correctly. 1657836324  response written to json correctly
+INFO:root:API get request @2022-07-14 23:06:25 successful. Timestamp of API response object = 1657836375
+INFO:root:Json file updated correctly. 1657836375  response written to json correctly
+INFO:root:API get request @2022-07-14 23:08:12 successful. Timestamp of API response object = 1657836487
+INFO:root:Json file updated correctly. 1657836487  response written to json correctly
+INFO:root:API get request @2022-07-14 23:08:31 successful. Timestamp of API response object = 1657836508
+INFO:root:Json file updated correctly. 1657836508  response written to json correctly
+WARNING:root:API get request error @ time: 2022-07-14 23:09:01. Error = HTTP Error 429: Too Many Requests
+WARNING:root:Error updating existing json.X response error: name 'response' is not defined
+INFO:root:API get request @2022-07-14 23:09:47 successful. Timestamp of API response object = 1657836579
+INFO:root:Json file updated correctly. 1657836579  response written to json correctly
+INFO:root:API get request @2022-07-15 10:20:24 successful. Timestamp of API response object = 1657876817
+INFO:root:Json file updated correctly. 1657876817  response written to json correctly
+INFO:root:API get request @2022-07-15 10:23:16 successful. Timestamp of API response object = 1657876988
+INFO:root:Json file updated correctly. 1657876988  response written to json correctly
+INFO:root:API get request @2022-07-15 10:25:00 successful. Timestamp of API response object = 1657877098
+INFO:root:Json file updated correctly. 1657877098  response written to json correctly
+INFO:root:API get request @2022-07-15 12:14:27 successful. Timestamp of API response object = 1657883655
+INFO:root:Json file updated correctly. 1657883655  response written to json correctly
+INFO:root:API get request @2022-07-16 23:58:39 successful. Timestamp of API response object = 1658012316
+INFO:root:Json file updated correctly. 1658012316  response written to json correctly
+INFO:root:API get request @2022-07-18 16:17:56 successful. Timestamp of API response object = 1658157469
+INFO:root:API get request @2022-07-18 16:18:25 successful. Timestamp of API response object = 1658157485
+WARNING:root:API get request error @ time: 2022-07-18 16:18:40. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-18 16:30:23 successful. Timestamp of API response object = 1658158216
+WARNING:root:API get request error @ time: 2022-07-18 16:30:23. Error = 'Id'
+INFO:root:API get request @2022-07-18 16:31:34 successful. Timestamp of API response object = 1658158291
+WARNING:root:API get request error @ time: 2022-07-18 16:31:34. Error = 'Id'
+INFO:root:Json file updated correctly. 1658158291  response written to json correctly
+INFO:root:API get request @2022-07-18 16:32:47 successful. Timestamp of API response object = 1658158360
+WARNING:root:API get request error @ time: 2022-07-18 16:32:47. Error = 'Id'
+INFO:root:Json file updated correctly. 1658158360  response written to json correctly
+INFO:root:API get request @2022-07-18 16:33:28 successful. Timestamp of API response object = 1658158403
+WARNING:root:API get request error @ time: 2022-07-18 16:33:28. Error = 'Id'
+INFO:root:Json file updated correctly. 1658158403  response written to json correctly
+INFO:root:API get request @2022-07-18 16:36:03 successful. Timestamp of API response object = 1658158556
+WARNING:root:API get request error @ time: 2022-07-18 16:37:39. Error = HTTP Error 500: Internal Server Error
+WARNING:root:API get request error @ time: 2022-07-18 16:37:54. Error = HTTP Error 500: Internal Server Error
+WARNING:root:API get request error @ time: 2022-07-18 16:38:11. Error = HTTP Error 503: Service Unavailable
+WARNING:root:API get request error @ time: 2022-07-18 16:43:11. Error = HTTP Error 503: Service Unavailable
+INFO:root:API get request @2022-07-18 16:45:13 successful. Timestamp of API response object = 1658159107
+INFO:root:API get request @2022-07-18 16:45:54 successful. Timestamp of API response object = 1658159150
+INFO:root:API get request @2022-07-18 16:46:32 successful. Timestamp of API response object = 1658159183
+INFO:root:Json file updated correctly. 1658159183  response written to json correctly
+INFO:root:API get request @2022-07-18 17:16:47 successful. Timestamp of API response object = 1658161001
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:Json file updated correctly. 1658161001  response written to json correctly
+INFO:root:API get request @2022-07-18 17:17:50 successful. Timestamp of API response object = 1658161059
+INFO:root:Json file updated correctly. 1658161059  response written to json correctly
+INFO:root:API get request @2022-07-18 17:19:25 successful. Timestamp of API response object = 1658161153
+INFO:root:Json file updated correctly. 1658161153  response written to json correctly
+INFO:root:API get request @2022-07-18 17:20:32 successful. Timestamp of API response object = 1658161218
+INFO:root:Json file updated correctly. 1658161218  response written to json correctly
+INFO:root:API get request @2022-07-19 11:15:44 successful. Timestamp of API response object = 1658225738
+WARNING:root:API get request error @ time: 2022-07-19 11:15:44. Error = name 'gtfsr_producer' is not defined
+INFO:root:API get request @2022-07-19 11:17:12 successful. Timestamp of API response object = 1658225820
+INFO:root:API get request @2022-07-19 11:18:20 successful. Timestamp of API response object = 1658225894
+WARNING:root:API get request error @ time: 2022-07-19 11:18:21. Error = module 'gtfsr_feed_pipeline' has no attribute 'pipeline'
+INFO:root:API get request @2022-07-19 12:04:54 successful. Timestamp of API response object = 1658228678
+INFO:root:API get request @2022-07-19 12:15:45 successful. Timestamp of API response object = 1658229328
+INFO:root:API get request @2022-07-19 12:15:50 successful. Timestamp of API response object = 1658229344
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\get_feed.py changed, reloading.
+WARNING:root:API get request error @ time: 2022-07-19 12:16:11. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 12:19:37 successful. Timestamp of API response object = 1658229570
+INFO:root:API get request @2022-07-19 12:19:44 successful. Timestamp of API response object = 1658229570
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 12:24:01 successful. Timestamp of API response object = 1658229836
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\get_feed.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 12:27:17 successful. Timestamp of API response object = 1658230028
+INFO:root:API get request @2022-07-19 12:28:21 successful. Timestamp of API response object = 1658230093
+INFO:root:API get request @2022-07-19 12:29:24 successful. Timestamp of API response object = 1658230158
+INFO:root:API get request @2022-07-19 12:30:30 successful. Timestamp of API response object = 1658230223
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\gtfsr_feed_pipeline.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 12:30:40 successful. Timestamp of API response object = 1658230234
+INFO:root:API get request @2022-07-19 12:31:43 successful. Timestamp of API response object = 1658230298
+INFO:root:API get request @2022-07-19 12:32:47 successful. Timestamp of API response object = 1658230364
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 12:44:19 successful. Timestamp of API response object = 1658231055
+INFO:root:API get request @2022-07-19 12:48:16 successful. Timestamp of API response object = 1658231287
+WARNING:root:API get request error @ time: 2022-07-19 12:48:16. Error = release unlocked lock
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 12:48:16 successful. Timestamp of API response object = 1658231287
+INFO:root:API get request @2022-07-19 12:48:17 successful. Timestamp of API response object = 1658231287
+WARNING:root:API get request error @ time: 2022-07-19 12:48:17. Error = release unlocked lock
+WARNING:root:API get request error @ time: 2022-07-19 12:48:17. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:17. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:17. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:18. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:18. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:18. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:18. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:18. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:18. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:18. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:18. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:18. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:19. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:19. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:19. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:19. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:19. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:19. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:20. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:20. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:20. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:20. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:20. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:20. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:20. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:20. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:20. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:20. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:21. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:21. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:21. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:21. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:21. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:21. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:21. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:21. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:22. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:22. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:22. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:22. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:22. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:22. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:22. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:22. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:23. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:23. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:23. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:23. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:23. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:23. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:23. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:23. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:24. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:24. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:24. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:24. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:24. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:24. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:25. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:25. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:25. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:25. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:25. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:25. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:25. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:25. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:26. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:26. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:26. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:26. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:26. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:26. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:26. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:26. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:27. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:27. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:27. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:27. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:27. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:27. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:27. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:27. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:28. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:28. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:28. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:28. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:28. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:28. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:28. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:28. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:28. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:29. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:29. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:29. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:29. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:29. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:29. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:29. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:29. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:30. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:30. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:30. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:30. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:30. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:30. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:30. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:30. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:31. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:31. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:31. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:31. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:31. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:31. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:31. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:31. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:32. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:32. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:32. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:32. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:32. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:33. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:33. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:33. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:33. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:33. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:33. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:33. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:33. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:33. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:34. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:34. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:34. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:34. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:34. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:34. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:34. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:34. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:35. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:35. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:35. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:35. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:35. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:35. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:35. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:36. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:36. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:36. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:36. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:36. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:36. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:36. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:37. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:37. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:37. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:37. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:37. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:37. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:37. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:37. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:38. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:38. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:38. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:38. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:38. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:38. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:38. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:38. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:39. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:39. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:39. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:39. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:39. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:39. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:39. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:39. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:40. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:40. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:40. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:40. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:40. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:40. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:40. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:40. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:41. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:41. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:41. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:41. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:41. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:41. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:41. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:41. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:42. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:42. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:42. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:42. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:42. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:42. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:42. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:42. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:43. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:43. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:43. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:43. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:43. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:43. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:43. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:43. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:44. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:44. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:44. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:44. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:44. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:44. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:44. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:44. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:45. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:45. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:45. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:45. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:45. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:45. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:45. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:45. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:45. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:46. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:46. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:46. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:46. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:46. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:46. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:46. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:46. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:47. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:47. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:47. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:47. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:47. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:47. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:47. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:47. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:48. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:48. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:48. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:48. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:48. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:48. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:48. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:48. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:49. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:49. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:49. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:49. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:49. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:49. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:49. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:49. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:50. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:50. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:50. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:50. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:50. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:50. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:50. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:50. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:50. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:51. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:51. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:51. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:51. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:51. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:51. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:51. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:51. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:52. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:52. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:52. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:52. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:52. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:52. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:52. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:52. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:53. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:53. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:53. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:53. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:53. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:53. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:53. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:54. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:54. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:54. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:54. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:54. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:54. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:54. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:54. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:54. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:55. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:55. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:55. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:55. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:55. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:55. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:55. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:55. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:56. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:56. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:56. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:56. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:56. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:56. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:56. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:56. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:57. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:57. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:57. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:57. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:57. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:57. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:57. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:57. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:58. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:58. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:58. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:58. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:58. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:58. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:58. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:58. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:59. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:59. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:59. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:59. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:59. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:59. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:48:59. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:01. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:01. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:01. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:01. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:01. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:01. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:01. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:02. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:02. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:02. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:02. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:02. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:02. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:02. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:02. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:02. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:03. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:03. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:03. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:03. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:03. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:03. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:03. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:03. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:04. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:04. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:04. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:04. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:04. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:04. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:04. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:05. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:05. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:05. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:05. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:05. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:05. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:05. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:05. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:05. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:06. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:06. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:06. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:06. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:06. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:06. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:06. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:07. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:07. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:07. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:07. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:07. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:07. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:07. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:07. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:08. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:08. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:08. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:08. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:08. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:08. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:08. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:08. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:09. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:09. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:09. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:09. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:09. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:09. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:09. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:09. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:10. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:10. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:10. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:10. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:10. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:10. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:11. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:11. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:11. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:11. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:11. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:11. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:11. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:11. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:12. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:12. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:12. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:12. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:12. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:12. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:13. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:13. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:13. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:13. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:13. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:14. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:14. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:14. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:14. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:14. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:14. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:14. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:15. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:15. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:15. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:15. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:15. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:15. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:15. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:15. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:16. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:16. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:16. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:16. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:16. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:16. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 12:49:16. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-19 12:49:17 successful. Timestamp of API response object = 1658231354
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 12:50:43 successful. Timestamp of API response object = 1658231441
+WARNING:root:API get request error @ time: 2022-07-19 12:50:43. Error = release unlocked lock
+INFO:root:API get request @2022-07-19 12:50:44 successful. Timestamp of API response object = 1658231441
+WARNING:root:API get request error @ time: 2022-07-19 12:50:44. Error = release unlocked lock
+INFO:root:API get request @2022-07-19 12:51:44 successful. Timestamp of API response object = 1658231497
+INFO:root:API get request @2022-07-19 12:51:45 successful. Timestamp of API response object = 1658231497
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\gtfsr_feed_pipeline.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+WARNING:root:API get request error @ time: 2022-07-19 12:52:31. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 12:57:15 successful. Timestamp of API response object = 1658231830
+INFO:root:API get request @2022-07-19 12:57:16 successful. Timestamp of API response object = 1658231830
+WARNING:root:API get request error @ time: 2022-07-19 12:58:14. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 12:58:18 successful. Timestamp of API response object = 1658231890
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 12:59:17 successful. Timestamp of API response object = 1658231945
+INFO:root:API get request @2022-07-19 12:59:17 successful. Timestamp of API response object = 1658231945
+WARNING:root:API get request error @ time: 2022-07-19 12:59:38. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+WARNING:root:API get request error @ time: 2022-07-19 12:59:40. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-19 13:01:12 successful. Timestamp of API response object = 1658232061
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 13:01:16 successful. Timestamp of API response object = 1658232061
+INFO:root:API get request @2022-07-19 14:39:13 successful. Timestamp of API response object = 1658237935
+INFO:root:API get request @2022-07-19 14:44:03 successful. Timestamp of API response object = 1658238239
+INFO:root:API get request @2022-07-19 14:45:02 successful. Timestamp of API response object = 1658238293
+INFO:root:API get request @2022-07-19 14:46:04 successful. Timestamp of API response object = 1658238357
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 14:47:50 successful. Timestamp of API response object = 1658238456
+INFO:root:API get request @2022-07-19 14:48:46 successful. Timestamp of API response object = 1658238520
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py changed, reloading.
+INFO:root:API get request @2022-07-19 14:50:00 successful. Timestamp of API response object = 1658238596
+INFO:root:API get request @2022-07-19 14:52:25 successful. Timestamp of API response object = 1658238739
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 14:52:26 successful. Timestamp of API response object = 1658238739
+INFO:root:TEST: 8.755951642990112
+INFO:root:TEST: 12.087517738342285
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 14:56:56 successful. Timestamp of API response object = 1658239009
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 14:57:47 successful. Timestamp of API response object = 1658239054
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 14:59:27 successful. Timestamp of API response object = 1658239155
+ERROR:django.request:Internal Server Error: /stop/8220DB000756/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 103, in stop_detail
+    gtfsDict = gtfsr_consumer()
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 171, in gtfsr_consumer
+    gtfsr_pipeline = apps.pipeline
+AttributeError: module 'gtfsrProcessing.apps' has no attribute 'pipeline'
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 15:01:25 successful. Timestamp of API response object = 1658239274
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 15:05:40 successful. Timestamp of API response object = 1658239530
+ERROR:django.request:Internal Server Error: /stop/8220DB000756/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 103, in stop_detail
+    gtfsDict = gtfsr_consumer()
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 171, in gtfsr_consumer
+    gtfsr_pipeline = apps.pipeline
+NameError: name 'apps' is not defined
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 15:06:41 successful. Timestamp of API response object = 1658239594
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 15:07:26 successful. Timestamp of API response object = 1658239639
+INFO:root:TEST: 12.482740879058838
+INFO:root:TEST: 11.583823204040527
+INFO:root:TEST: 13.473704099655151
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\__init__.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 15:13:46 successful. Timestamp of API response object = 1658240016
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\gtfsr_feed_pipeline.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 15:15:53 successful. Timestamp of API response object = 1658240148
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 15:27:42 successful. Timestamp of API response object = 1658240851
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\get_feed.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\get_feed.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\get_feed.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\get_feed.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\get_feed.py changed, reloading.
+INFO:root:API get request @2022-07-19 15:44:27 successful. Timestamp of API response object = 1658241859
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 15:56:18 successful. Timestamp of API response object = 1658242571
+INFO:root:API get request @2022-07-19 15:56:19 successful. Timestamp of API response object = 1658242571
+INFO:root:API get request @2022-07-19 15:56:19 successful. Timestamp of API response object = 1658242571
+WARNING:root:API get request error @ time: 2022-07-19 15:56:19. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-19 15:56:19 successful. Timestamp of API response object = 1658242571
+WARNING:root:API get request error @ time: 2022-07-19 15:56:20. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:21. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:22. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:23. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:24. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:25. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:26. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:27. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:28. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:29. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:30. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:31. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:32. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:33. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:34. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:35. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:36. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:37. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:38. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:39. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 15:56:40. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 15:59:11 successful. Timestamp of API response object = 1658242748
+INFO:root:API get request @2022-07-19 15:59:12 successful. Timestamp of API response object = 1658242748
+INFO:root:TEST: 9.588154554367065
+WARNING:root:API get request error @ time: 2022-07-19 16:00:09. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 16:00:10. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-19 16:01:10 successful. Timestamp of API response object = 1658242859
+INFO:root:API get request @2022-07-19 16:01:11 successful. Timestamp of API response object = 1658242869
+WARNING:root:API get request error @ time: 2022-07-19 16:02:10. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 16:02:10. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-19 16:03:11 successful. Timestamp of API response object = 1658242979
+INFO:root:API get request @2022-07-19 16:03:13 successful. Timestamp of API response object = 1658242990
+WARNING:root:API get request error @ time: 2022-07-19 16:04:09. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 16:04:10. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-19 16:05:11 successful. Timestamp of API response object = 1658243098
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 16:09:35 successful. Timestamp of API response object = 1658243365
+INFO:root:API get request @2022-07-19 16:09:36 successful. Timestamp of API response object = 1658243365
+WARNING:root:API get request error @ time: 2022-07-19 16:10:33. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 16:10:34. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-19 16:11:35 successful. Timestamp of API response object = 1658243484
+INFO:root:API get request @2022-07-19 16:11:35 successful. Timestamp of API response object = 1658243484
+WARNING:root:API get request error @ time: 2022-07-19 16:12:33. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 16:13:59 successful. Timestamp of API response object = 1658243637
+INFO:root:API get request @2022-07-19 16:14:00 successful. Timestamp of API response object = 1658243637
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 16:24:41 successful. Timestamp of API response object = 1658244276
+INFO:root:TEST: 8.986185312271118
+INFO:root:API get request @2022-07-19 16:25:41 successful. Timestamp of API response object = 1658244330
+INFO:root:TEST: 6.879906415939331
+INFO:root:TEST: 6.387906312942505
+INFO:root:TEST: 6.257690668106079
+INFO:root:API get request @2022-07-19 16:26:41 successful. Timestamp of API response object = 1658244395
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\gtfsr_feed_pipeline.py changed, reloading.
+INFO:root:API get request @2022-07-19 16:27:42 successful. Timestamp of API response object = 1658244449
+INFO:root:TEST: 6.491443395614624
+INFO:root:TEST: 6.648860216140747
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+ERROR:django.request:Internal Server Error: /stop/8220DB000904/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 142, in stop_detail
+    delay = check_for_update.check_trip_for_update(gtfsDict,stop_time.trip.trip_id,stop_id)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\check_for_update.py", line 26, in check_trip_for_update
+    if trip_id in realtime_updates:
+TypeError: argument of type 'int' is not iterable
+INFO:root:API get request @2022-07-19 16:30:02 successful. Timestamp of API response object = 1658244591
+INFO:root:API get request @2022-07-19 16:30:03 successful. Timestamp of API response object = 1658244602
+ERROR:django.request:Internal Server Error: /stop/8220DB000904/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 142, in stop_detail
+    delay = check_for_update.check_trip_for_update(gtfsDict,stop_time.trip.trip_id,stop_id)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\check_for_update.py", line 26, in check_trip_for_update
+    if trip_id in realtime_updates:
+TypeError: argument of type 'int' is not iterable
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\gtfsr_feed_pipeline.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 16:32:11 successful. Timestamp of API response object = 1658244714
+INFO:root:API get request @2022-07-19 16:32:11 successful. Timestamp of API response object = 1658244714
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-19 17:22:44 successful. Timestamp of API response object = 1658247760
+INFO:root:API get request @2022-07-19 17:22:44 successful. Timestamp of API response object = 1658247760
+WARNING:root:API get request error @ time: 2022-07-19 17:23:37. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-19 17:23:37. Error = HTTP Error 429: Too Many Requests
+INFO:root:TEST: 6.536314487457275
+INFO:root:API get request @2022-07-19 17:24:41 successful. Timestamp of API response object = 1658247880
+INFO:root:API get request @2022-07-19 17:24:41 successful. Timestamp of API response object = 1658247865
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+ERROR:django.request:Internal Server Error: /stop/8220DB000002/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 142, in stop_detail
+    delay = check_for_update.check_trip_for_update(gtfsDict,stop_time.trip.trip_id,stop_id)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\check_for_update.py", line 26, in check_trip_for_update
+    if trip_id in realtime_updates:
+TypeError: argument of type 'int' is not iterable
+ERROR:django.request:Internal Server Error: /stop/8220DB000052/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 142, in stop_detail
+    delay = check_for_update.check_trip_for_update(gtfsDict,stop_time.trip.trip_id,stop_id)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\check_for_update.py", line 26, in check_trip_for_update
+    if trip_id in realtime_updates:
+TypeError: argument of type 'int' is not iterable
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\get_feed.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\get_feed.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+WARNING:root:API get request error @ time: 2022-07-20 10:48:56. Error = 'module' object is not callable
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+WARNING:root:API get request error @ time: 2022-07-20 10:49:42. Error = 'module' object is not callable
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-20 10:51:00 successful. Timestamp of API response object = 1658310653
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-20 10:52:01 successful. Timestamp of API response object = 1658310718
+INFO:root:API get request @2022-07-20 10:52:02 successful. Timestamp of API response object = 1658310718
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-20 10:54:02 successful. Timestamp of API response object = 1658310831
+INFO:root:TEST: 3.4860832691192627
+INFO:root:TEST: 3.091641664505005
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\gtfsr_feed_pipeline.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+ERROR:django.request:Internal Server Error: /stop/8220DB000885/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 142, in stop_detail
+    delay = check_for_update.check_trip_for_update(gtfsDict,stop_time.trip.trip_id,stop_id)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\check_for_update.py", line 26, in check_trip_for_update
+    if trip_id in realtime_updates:
+TypeError: argument of type 'int' is not iterable
+INFO:root:API get request @2022-07-20 10:56:01 successful. Timestamp of API response object = 1658310960
+INFO:root:TEST: 3.189237594604492
+INFO:root:TEST: 3.1872823238372803
+INFO:root:TEST: 3.0312044620513916
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\gtfsr_feed_pipeline.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-20 10:59:01 successful. Timestamp of API response object = 1658311130
+WARNING:root:API get request error @ time: 2022-07-20 10:59:01. Error = release unlocked lock
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\get_feed.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-20 11:02:03 successful. Timestamp of API response object = 1658311323
+WARNING:root:API get request error @ time: 2022-07-20 11:02:03. Error = release unlocked lock
+INFO:root:API get request @2022-07-20 11:02:04 successful. Timestamp of API response object = 1658311323
+WARNING:root:API get request error @ time: 2022-07-20 11:02:04. Error = release unlocked lock
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\gtfsr_feed_pipeline.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-20 11:04:01 successful. Timestamp of API response object = 1658311436
+INFO:root:TEST: 5.707390546798706
+INFO:root:TEST: 5.142380952835083
+INFO:root:TEST: 5.153029441833496
+INFO:root:TEST: 3.887529134750366
+INFO:root:TEST: 3.496835708618164
+INFO:root:TEST: 3.5745365619659424
+INFO:root:TEST: 3.0910274982452393
+INFO:root:TEST: 3.2061922550201416
+INFO:root:TEST: 3.1620266437530518
+INFO:root:TEST: 4.913206577301025
+INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\get_feed.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-20 11:08:05 successful. Timestamp of API response object = 1658311674
+INFO:root:TEST: 5.028652667999268
+INFO:root:TEST: 3.334113359451294
+INFO:root:TEST: 4.888540267944336
+INFO:root:TEST: 3.1184442043304443
+INFO:root:API get request @2022-07-20 11:09:02 successful. Timestamp of API response object = 1658311738
+INFO:root:API get request @2022-07-20 11:10:02 successful. Timestamp of API response object = 1658311791
+INFO:root:API get request @2022-07-20 11:11:02 successful. Timestamp of API response object = 1658311861
+INFO:root:API get request @2022-07-20 11:12:05 successful. Timestamp of API response object = 1658311911
+INFO:root:API get request @2022-07-20 11:13:05 successful. Timestamp of API response object = 1658311967
+INFO:root:API get request @2022-07-20 11:14:02 successful. Timestamp of API response object = 1658312031
+INFO:root:API get request @2022-07-20 11:15:01 successful. Timestamp of API response object = 1658312092
+INFO:root:API get request @2022-07-20 11:16:01 successful. Timestamp of API response object = 1658312155
+INFO:root:API get request @2022-07-20 11:17:01 successful. Timestamp of API response object = 1658312206
+INFO:root:API get request @2022-07-20 11:18:02 successful. Timestamp of API response object = 1658312277
+INFO:root:API get request @2022-07-20 11:19:01 successful. Timestamp of API response object = 1658312334
+INFO:root:API get request @2022-07-20 11:20:01 successful. Timestamp of API response object = 1658312396
+INFO:root:API get request @2022-07-20 11:21:05 successful. Timestamp of API response object = 1658312448
+INFO:root:API get request @2022-07-20 11:22:01 successful. Timestamp of API response object = 1658312517
+INFO:root:API get request @2022-07-20 11:23:04 successful. Timestamp of API response object = 1658312565
+INFO:root:API get request @2022-07-20 11:24:09 successful. Timestamp of API response object = 1658312629
+INFO:root:API get request @2022-07-20 11:25:01 successful. Timestamp of API response object = 1658312694
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-20 14:10:02 successful. Timestamp of API response object = 1658322591
+INFO:root:API get request @2022-07-20 14:11:02 successful. Timestamp of API response object = 1658322655
+INFO:root:API get request @2022-07-20 14:12:02 successful. Timestamp of API response object = 1658322720
+INFO:root:API get request @2022-07-20 14:13:02 successful. Timestamp of API response object = 1658322776
+INFO:root:API get request @2022-07-20 14:14:02 successful. Timestamp of API response object = 1658322840
+INFO:root:API get request @2022-07-20 14:15:03 successful. Timestamp of API response object = 1658322894
+INFO:root:API get request @2022-07-20 14:16:07 successful. Timestamp of API response object = 1658322958
+INFO:root:API get request @2022-07-20 14:17:02 successful. Timestamp of API response object = 1658323013
+INFO:root:API get request @2022-07-20 14:18:02 successful. Timestamp of API response object = 1658323077
+INFO:root:TEST: 5.3027379512786865
+INFO:root:TEST: 9.055960416793823
+INFO:root:API get request @2022-07-20 14:19:02 successful. Timestamp of API response object = 1658323131
+INFO:root:API get request @2022-07-20 14:20:02 successful. Timestamp of API response object = 1658323195
+INFO:root:API get request @2022-07-20 14:21:02 successful. Timestamp of API response object = 1658323260
+INFO:root:API get request @2022-07-20 14:22:02 successful. Timestamp of API response object = 1658323315
+INFO:root:API get request @2022-07-20 14:23:02 successful. Timestamp of API response object = 1658323379
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-20 14:39:05 successful. Timestamp of API response object = 1658324332
+INFO:root:API get request @2022-07-20 14:39:05 successful. Timestamp of API response object = 1658324332
+INFO:root:TEST: 4.230770587921143
+WARNING:root:API get request error @ time: 2022-07-20 14:40:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-20 14:40:00. Error = HTTP Error 429: Too Many Requests
+ERROR:django.request:Internal Server Error: /prediction/8250DB003033/8250DB000767/1658325010030/17/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 187, in get_prediction
+    chosen_route_direction = Route.objects.filter(Q(stop_id=departure_stop_id) | Q(stop_id=arrival_stop_id), route_short_name=short_name).first().direction_id
+AttributeError: 'NoneType' object has no attribute 'direction_id'
+INFO:root:API get request @2022-07-20 14:41:05 successful. Timestamp of API response object = 1658324460
+INFO:root:API get request @2022-07-20 14:41:05 successful. Timestamp of API response object = 1658324460
+WARNING:root:API get request error @ time: 2022-07-20 14:42:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-20 14:42:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-20 14:43:11 successful. Timestamp of API response object = 1658324579
+INFO:root:API get request @2022-07-20 14:43:12 successful. Timestamp of API response object = 1658324579
+WARNING:root:API get request error @ time: 2022-07-20 15:21:40. Error = <urlopen error [Errno 11001] getaddrinfo failed>
+WARNING:root:API get request error @ time: 2022-07-20 15:21:40. Error = <urlopen error [Errno 11001] getaddrinfo failed>
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+WARNING:root:API get request error @ time: 2022-07-20 15:25:30. Error = IncompleteRead(1966080 bytes read, 1580766 more expected)
+WARNING:root:API get request error @ time: 2022-07-20 15:25:30. Error = IncompleteRead(1712128 bytes read, 1834718 more expected)
+ERROR:django.request:Internal Server Error: /stop/8220DB000191/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\mysql\base.py", line 244, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (2005, "Unknown server host 'dub-bus-db.cyopwh1abtzq.us-east-1.rds.amazonaws.com' (11001)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 73, in stop_detail
+    stop_details = Stops.objects.get(stop_id=stop_id)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 243, in ensure_connection
+    with self.wrap_database_errors:
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\mysql\base.py", line 244, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+django.db.utils.OperationalError: (2005, "Unknown server host 'dub-bus-db.cyopwh1abtzq.us-east-1.rds.amazonaws.com' (11001)")
+ERROR:django.request:Internal Server Error: /stop/8220DB000006/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\mysql\base.py", line 244, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (2005, "Unknown server host 'dub-bus-db.cyopwh1abtzq.us-east-1.rds.amazonaws.com' (11001)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 73, in stop_detail
+    stop_details = Stops.objects.get(stop_id=stop_id)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\query.py", line 492, in get
+    num = len(clone)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\models\sql\compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 284, in cursor
+    return self._cursor()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 243, in ensure_connection
+    with self.wrap_database_errors:
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 244, in ensure_connection
+    self.connect()
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\base\base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\db\backends\mysql\base.py", line 244, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\MySQLdb\__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+django.db.utils.OperationalError: (2005, "Unknown server host 'dub-bus-db.cyopwh1abtzq.us-east-1.rds.amazonaws.com' (11001)")

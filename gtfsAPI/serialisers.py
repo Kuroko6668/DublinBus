@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Stops,Route,StopTimes
+from .models import Stops,Route,StopTimes,StopTime
 
 class StopsSerializer(serializers.ModelSerializer):
     class Meta:
@@ -17,4 +17,9 @@ class StopTimesSerializer(serializers.ModelSerializer):
         model = StopTimes
         fields = ('trip_id' ,'arrival_time', 'departure_time', 'stop_id', 'stop_sequence','stop_headsign','pickup_type','drop_off_type','shape_dist_traveled')
 
+
+# class StopTimeSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = StopTimes
+#         fields = ('departure_time' ,'stop', 'stop_sequence', 'stop_headsign', 'pickup_type','drop_off_type','shape_dist_traveled','trip')
 
