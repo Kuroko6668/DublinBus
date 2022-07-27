@@ -106,8 +106,8 @@ class Trip(models.Model):
         db_table = 'trips'
 
 class StopTime(models.Model):
-    arrival_time = models.TimeField(primary_key=True)
-    departure_time = models.TimeField()
+    arrival_time = models.CharField(primary_key=True, max_length=255)
+    departure_time = models.CharField(max_length=255)
     stop = models.ForeignKey(Stops, on_delete=models.CASCADE, db_constraint=False)
     stop_sequence = models.IntegerField()
     stop_headsign = models.CharField(max_length=255)
@@ -119,3 +119,41 @@ class StopTime(models.Model):
     class Meta:
         managed = False
         db_table = 'stop_times'
+
+class CurrentWeather(models.Model):
+    time = models.CharField(primary_key=True,max_length=255, blank=True, null=False)
+    sunrise_time = models.CharField(max_length=255, blank=True, null=False)
+    sunset_time = models.CharField(max_length=255, blank=True, null=False)
+    weather_id = models.CharField(max_length=255, blank=True, null=False)
+    weather_description = models.CharField(max_length=255, blank=True, null=False)
+    temperture = models.CharField(max_length=255, blank=True, null=False)
+    humidity = models.CharField(max_length=255, blank=True, null=False)
+    uvi = models.CharField(max_length=255, blank=True, null=False)
+    clouds = models.CharField(max_length=255, blank=True, null=False)
+    wind_speed = models.CharField(max_length=255, blank=True, null=False)
+    visibility = models.CharField(max_length=255, blank=True, null=False)
+    pressure = models.CharField(max_length=255, blank=True, null=False)
+    
+
+    class Meta:
+        managed = False
+        db_table = 'cur_weather'
+
+class DailyWeather(models.Model):
+    time = models.CharField(primary_key=True,max_length=255, blank=True, null=False)
+    sunrise_time = models.CharField(max_length=255, blank=True, null=False)
+    sunset_time = models.CharField(max_length=255, blank=True, null=False)
+    weather_id = models.CharField(max_length=255, blank=True, null=False)
+    weather_description = models.CharField(max_length=255, blank=True, null=False)
+    temperture_max = models.CharField(max_length=255, blank=True, null=False)
+    temperture_min = models.CharField(max_length=255, blank=True, null=False)
+    humidity = models.CharField(max_length=255, blank=True, null=False)
+    uvi = models.CharField(max_length=255, blank=True, null=False)
+    clouds = models.CharField(max_length=255, blank=True, null=False)
+    wind_speed = models.CharField(max_length=255, blank=True, null=False)
+    pressure = models.CharField(max_length=255, blank=True, null=False)
+    
+
+    class Meta:
+        managed = False
+        db_table = 'daily_weather'
