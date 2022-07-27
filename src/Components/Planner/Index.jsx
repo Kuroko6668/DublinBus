@@ -148,25 +148,36 @@ function Planner({back}){
         console.log(visiableroute);
         /* eslint-disable */
         try{ 
-          const directionsService = new google.maps.DirectionsService()
-          let results = await directionsService.route({
-            origin:originRef.current.value,
-            destination:destinationRef.current.value,
-            travelMode:google.maps.TravelMode.TRANSIT,
-            provideRouteAlternatives: true,
-            region:'ie',
-            transitOptions: {
-              departureTime: time,
-              modes: ['BUS'],
-              routingPreference: 'FEWER_TRANSFERS'
-            },
-          })
-          /* eslint-enable */
+         
+        console.log(visiableroute);
+        /* eslint-disable */
+        const directionsService = new google.maps.DirectionsService()
+        setDirectionResponse(null)
+        setstartPoint(null)
+        setstartPoint(null)
+        let results = await directionsService.route({
+          origin:originRef.current.value,
+          destination:destinationRef.current.value,
+          travelMode:google.maps.TravelMode.TRANSIT,
+          provideRouteAlternatives: true,
+          region:'ie',
+          transitOptions: {
+            departureTime: time,
+            modes: ['BUS'],
+            routingPreference: 'FEWER_TRANSFERS'
+          },
+        })
+        var RecommadationRoute = getbestroute(results)
+        if(RecommadationRoute){
           setError(false);
-            setDirectionResponse(results)
-            setDistance(results.routes[0].legs[0].distance.text)
-            setDuration(results.routes[0].legs[0].duration.text)
-          }
+          setDirectionResponse(RecommadationRoute)
+          directionsDisplay.setDirections({routes:[]})
+          console.log(RecommadationRoute,'RecommadationRoute');
+          showPanel(RecommadationRoute)
+          setstartPoint({lat:RecommadationRoute[0].start_point.lat(), lng:RecommadationRoute[0].start_point.lng()})
+          console.log(RecommadationRoute[RecommadationRoute.length-1].end_point.lat(), RecommadationRoute[RecommadationRoute.length-1].end_point.lng());
+          setendPoint({lat:RecommadationRoute[RecommadationRoute.length-1].end_point.lat(), lng:RecommadationRoute[RecommadationRoute.length-1].end_point.lng()})
+        }}
        catch{
           setError(true);
         }
