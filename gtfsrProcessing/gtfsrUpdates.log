@@ -1331,3 +1331,48 @@ Traceback (most recent call last):
   File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\MySQLdb\connections.py", line 185, in __init__
     super().__init__(*args, **kwargs2)
 django.db.utils.OperationalError: (2005, "Unknown server host 'dub-bus-db.cyopwh1abtzq.us-east-1.rds.amazonaws.com' (11001)")
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+ERROR:django.request:Internal Server Error: /stop/8220DB000903/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 143, in stop_detail
+    delay = check_for_update.check_trip_for_update(gtfsDict,stop_time.trip.trip_id,stop_id)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\check_for_update.py", line 26, in check_trip_for_update
+    if trip_id in realtime_updates:
+TypeError: argument of type 'int' is not iterable
+INFO:root:API get request @2022-07-26 16:13:03 successful. Timestamp of API response object = 1658848378
+INFO:root:API get request @2022-07-26 16:13:03 successful. Timestamp of API response object = 1658848378
+INFO:root:TEST: 3.2294363975524902
+INFO:root:API get request @2022-07-26 16:15:26 successful. Timestamp of API response object = 1658848502
+INFO:root:TEST: 4.53070855140686
+INFO:root:TEST: 3.412222146987915
+INFO:root:API get request @2022-07-26 16:16:05 successful. Timestamp of API response object = 1658848554
+INFO:root:TEST: 3.5184950828552246
+INFO:root:API get request @2022-07-26 16:16:42 successful. Timestamp of API response object = 1658848593
+WARNING:root:API get request error @ time: 2022-07-26 16:17:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-26 16:17:44 successful. Timestamp of API response object = 1658848658
+INFO:root:TEST: 3.636225700378418
+INFO:root:API get request @2022-07-26 16:18:06 successful. Timestamp of API response object = 1658848683
+INFO:root:TEST: 6.810987234115601
+INFO:root:API get request @2022-07-26 16:19:03 successful. Timestamp of API response object = 1658848735
+INFO:root:API get request @2022-07-26 16:43:26 successful. Timestamp of API response object = 1658850196
+INFO:root:TEST: 5.302234411239624
+INFO:root:API get request @2022-07-26 16:44:03 successful. Timestamp of API response object = 1658850240
+WARNING:root:API get request error @ time: 2022-07-26 16:44:15. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-26 16:44:32 successful. Timestamp of API response object = 1658850262
+ERROR:django.request:Internal Server Error: /stop/8220DB001715/
+Traceback (most recent call last):
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\35383\anaconda3\envs\DubBusVE\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsAPI\views.py", line 143, in stop_detail
+    delay = check_for_update.check_trip_for_update(gtfsDict,stop_time.trip.trip_id,stop_id)
+  File "C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\check_for_update.py", line 26, in check_trip_for_update
+    if trip_id in realtime_updates:
+TypeError: argument of type 'int' is not iterable
+INFO:root:TEST: 5.582526683807373
+WARNING:root:API get request error @ time: 2022-07-26 16:45:00. Error = HTTP Error 429: Too Many Requests
