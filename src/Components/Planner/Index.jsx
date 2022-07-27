@@ -18,6 +18,7 @@ import startpoint from '../../assets/pin.png'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import moment from "moment";
+import ErrorMessage from '../ErrorMessage';
 import DisplayRoutes from './subcomponent/DisplayRoutes';
 import ja from 'date-fns/esm/locale/ja';
 import { set } from 'store/dist/store.modern.min';
@@ -26,12 +27,16 @@ function Planner({back}){
     const map_Ref = useGoogleMap();
     const { position } = useGeolocation();
     const [directionResponse, setDirectionResponse] = useState((null))
+    const [distance,setDistance] = useState('')
+    const [duration,setDuration] = useState('')
     const [display,setDisplay] = useState(false)
     const [visiableroute,setVisiableRoute] = useState([])
     const [startPoint, setstartPoint] = useState(null)
     const [endPoint, setendPoint] = useState(null)
     const originRef = useRef('')
     const destinationRef = useRef('')
+    const directions = useRef()
+    const [error,setError]=useState(false);
     const [time, setValue] = useState(new Date());
     const {data:stops} = useStops()
     const [panel, setPanel] = useState(null)
@@ -248,8 +253,7 @@ function Planner({back}){
     }
     
   return <div id="planner">
-        <Autocomplete
-        >
+        <Autocomplete>
           <Input 
                 size="middle"
                 style={{width:"10rem"}}
@@ -257,8 +261,7 @@ function Planner({back}){
                 inputRef = {originRef}
           />
         </Autocomplete>
-        <Autocomplete
-        >
+        <Autocomplete>
           <Input 
                 size="middle"
                 style={{width:"10rem"}}
