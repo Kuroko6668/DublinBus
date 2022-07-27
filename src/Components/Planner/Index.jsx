@@ -142,36 +142,30 @@ function Planner({back}){
 
         console.log(visiableroute);
         /* eslint-disable */
-        const directionsService = new google.maps.DirectionsService()
-        setDirectionResponse(null)
-        setstartPoint(null)
-        setstartPoint(null)
-        let results = await directionsService.route({
-          origin:originRef.current.value,
-          destination:destinationRef.current.value,
-          travelMode:google.maps.TravelMode.TRANSIT,
-          provideRouteAlternatives: true,
-          region:'ie',
-          transitOptions: {
-            departureTime: time,
-            modes: ['BUS'],
-            routingPreference: 'FEWER_TRANSFERS'
-          },
-        })
-        var RecommadationRoute = getbestroute(results)
-        if(RecommadationRoute){
-          setDirectionResponse(RecommadationRoute)
-          directionsDisplay.setDirections({routes:[]})
-          console.log(RecommadationRoute,'RecommadationRoute');
-          showPanel(RecommadationRoute)
-          setstartPoint({lat:RecommadationRoute[0].start_point.lat(), lng:RecommadationRoute[0].start_point.lng()})
-          console.log(RecommadationRoute[RecommadationRoute.length-1].end_point.lat(), RecommadationRoute[RecommadationRoute.length-1].end_point.lng());
-          setendPoint({lat:RecommadationRoute[RecommadationRoute.length-1].end_point.lat(), lng:RecommadationRoute[RecommadationRoute.length-1].end_point.lng()})
-        }else{
-          console.log('no bus route');
-          alert('no bus route')
+        try{ 
+          const directionsService = new google.maps.DirectionsService()
+          let results = await directionsService.route({
+            origin:originRef.current.value,
+            destination:destinationRef.current.value,
+            travelMode:google.maps.TravelMode.TRANSIT,
+            provideRouteAlternatives: true,
+            region:'ie',
+            transitOptions: {
+              departureTime: time,
+              modes: ['BUS'],
+              routingPreference: 'FEWER_TRANSFERS'
+            },
+          })
+          /* eslint-enable */
+          setError(false);
+            setDirectionResponse(results)
+            setDistance(results.routes[0].legs[0].distance.text)
+            setDuration(results.routes[0].legs[0].duration.text)
+          }
+       catch{
+          setError(true);
         }
-        /* eslint-enable */
+      
 
     }
     // get trip id by user input
@@ -250,6 +244,7 @@ function Planner({back}){
         setVisiableRoute([])
         originRef.current.value = '' 
         destinationRef.current.value = ''
+        back(false)
     }
     
   return <div id="planner">
@@ -272,7 +267,7 @@ function Planner({back}){
           />
         </Autocomplete>
 
-     
+   {error&& <ErrorMessage message={"Invalid input. Please enter a valid stop"}></ErrorMessage>}
 
           <Button 
             style={{textTransform: 'none'}}
@@ -316,7 +311,7 @@ function Planner({back}){
           style={{textTransform: 'none'}}
           type="submin"
           variant='contained'
-          onClick={()=>back(false)}
+          onClick={()=>clearRoute()}
           size='small'
         >
          Back

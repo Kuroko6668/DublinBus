@@ -8,6 +8,7 @@ import time
 from dotenv import load_dotenv
 load_dotenv()
 import os
+from .apps import pipeline
 # import gtfsr_feed_pipeline
 
 logging.basicConfig(filename = "gtfsrProcessing/gtfsrUpdates.log", level=logging.DEBUG)
@@ -18,12 +19,10 @@ response_timestamp = "Fail"
 # while True:
 
 
-def get_GTFSR(pipeline):
-    pipeline = pipeline
+def get_GTFSR():
     while True:
 
         try:
-            time.sleep(60 - time.time() % 60)
             url = "https://api.nationaltransport.ie/gtfsr/v1?format=json"
 
             hdr ={
@@ -45,7 +44,9 @@ def get_GTFSR(pipeline):
             response_timestamp = response['Header']['Timestamp']
 
             logging.info("API get request @" + str(time.strftime('%Y-%m-%d %H:%M:%S')) + " successful. Timestamp of API response object = " + str(response_timestamp) )
-            gtfsr_producer(response,pipeline)
+            gtfsr_producer(response)
+            time.sleep(60 - time.time() % 60)
+
             
 
 
@@ -62,7 +63,7 @@ def get_GTFSR(pipeline):
 
 
 
-def gtfsr_producer(response,pipeline):
+def gtfsr_producer(response):
 
 
 
