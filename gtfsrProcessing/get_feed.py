@@ -55,7 +55,6 @@ def get_GTFSR():
 
         except Exception as e:
             logging.warning("API get request error @ time: " + str(time.strftime('%Y-%m-%d %H:%M:%S')) + ". Error = " + str(e) )
-            time.sleep(30 - time.time() % 60)
     
     
         

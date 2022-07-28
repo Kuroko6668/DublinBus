@@ -1,12 +1,24 @@
 import { InfoWindow, Marker, useGoogleMap } from "@react-google-maps/api";
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import {Typography, Button, Modal, Box} from '@mui/material';
 import ArrivalsTable from "./arrivalsTable";
 import { reqStopById } from "../../../ajax";
 import './style.css'
-
+import Favorite from '@mui/icons-material/Favorite';
+import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
+import useAxios from "../../../utils/useAxios";
+import IconButton from '@mui/material/IconButton';
+import AuthContext from '../../../context/AuthContext';
 // Cutomizable small component that creates a marker and centers the view at that position
-const MyMarker = ({ id, position, options, ...restProps }) => {
+const MyMarker = ({ 
+  id, 
+  position, 
+  options, 
+  isFavourite, 
+  addFavourite, 
+  removeFavourite, 
+  ...restProps }) => 
+{
   // State to control the infowindow
   const [infoWindow, setInfoWindow] = useState(false);
   const [nextArrivals, setnextArrivals] = useState([])
@@ -18,9 +30,11 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
     response = await reqStopById(id)
     setnextArrivals(response.data.arrivals)
     setOpen(true)
-    console.log(nextArrivals);
   };
   const handleClose = () => setOpen(false);
+  const { user } = useContext(AuthContext);
+
+
   return (
     <Marker
       key={id}
@@ -37,9 +51,11 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
         <div className="infowindow">
           {restProps.title}
           <Button onClick={()=>{handleOpen()}}>More</Button>
+
         </div>
       </InfoWindow>}
       <Modal
+      className='stop-info-modal'
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -49,6 +65,24 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
           <Typography id="modal-modal-title" variant="h6" component="h2">
           {restProps.title}
           </Typography>
+          
+          {user && (
+            <div>
+             {!isFavourite && ( 
+                <IconButton size='small' aria-label="add-favourite" className='favourite-btn'
+                  onClick={addFavourite}>
+                  <Favorite /> Add to Favourites
+                  </IconButton>
+              )}
+              {isFavourite && ( 
+                <IconButton size='small' aria-label="add-favourite" className='favourite-btn'
+                  onClick={removeFavourite}>
+                <FavoriteBorder /> Remove from Favourites
+                  </IconButton>
+              )}
+            </div>
+
+            )}
           <div id="modal-modal-description" sx={{ mt: 2 }}>
             <ArrivalsTable arrivals={nextArrivals}/>
           </div>

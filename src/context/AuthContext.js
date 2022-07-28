@@ -59,6 +59,7 @@ export const AuthProvider = ({ children }) => {
     });
     if (response.status === 201) {
       navigate("/SignIn");
+      //console.log(user)
     } else {
       alert("Something went wrong!");
     }
