@@ -50,25 +50,6 @@ const NearMeSearchBar = ()=>{
         sx={{ width: "12rem" }}
         renderInput={(params) => <TextField {...params} label="Stop Name" inputRef = {stopRef}/>}
         />
-        <Button 
-          sx={{ mt:1 }}
-          style={{textTransform: 'none'}}
-          type="submin"
-          variant='contained'
-          onClick={()=>{
-            for (var i=0 ; i < stops.length;i++){
-                if(stops[i].stop_name === stopRef.current.value){
-                    setVisibleStops([stops[i]])
-                    mapRef.panTo({lat:stops[i].stop_lat,lng:stops[i].stop_long})
-                }
-            }
-            
-          }}
-          size='small'
-        >
-          Show on the map
-        </Button>
-        {visibleStops&&<DisplayStops stops={visibleStops}/>}
   </div>
 }
 export default NearMeSearchBar

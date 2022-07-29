@@ -16,13 +16,12 @@ function App() {
 
       <StopsProvider>
         <GeolocationProvider>
+          <div className="myflex">
           <Map>
             <MarkerUserPosition/>
             <SideBar/>
-            {/* <Planner/> */}
-            {/* <NearMe/> */}
-            {/* <SearchRoute/> */}
           </Map>
+          </div>
           
         </GeolocationProvider>  
       </StopsProvider>
