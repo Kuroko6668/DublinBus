@@ -1,8 +1,9 @@
 import { InfoWindow, Marker, useGoogleMap } from "@react-google-maps/api";
 import { useState } from "react";
-import {Typography, Button, Modal, Box} from '@mui/material';
+import {Typography, Button, Modal, Box, autocompleteClasses} from '@mui/material';
 import ArrivalsTable from "./arrivalsTable";
 import { reqStopById } from "../../../ajax";
+import { makeStyles, Dialog } from '@material-ui/core';
 import './style.css'
 
 // Cutomizable small component that creates a marker and centers the view at that position
@@ -10,10 +11,28 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
   // State to control the infowindow
   const [infoWindow, setInfoWindow] = useState(false);
   const [nextArrivals, setnextArrivals] = useState([])
+  // const [modalStyle] = useState(getModalStyle);
   // Hook to access the map reference
   const mapRef = useGoogleMap();
   const [open, setOpen] = useState(false);
+  // function getModalStyle() {
+  //   const top = 50;
+  //   const left = 50;
+  //   return {
+  //     top: `${top}%`,
+  //     left: `${left}%`,
+  //     transform: `translate(-${top}%, -${left}%)`
+  //   };
+  // }
   var response = []
+  // const useStyles = makeStyles(theme => ({
+  //   paper: {
+  //     position: "absolute",
+  //     width: 300,
+  //     padding: 20
+  //   }
+  // }))
+  // const classes = useStyles();
   const handleOpen = async() => {
     response = await reqStopById(id)
     setnextArrivals(response.data.arrivals)
@@ -39,7 +58,9 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
           <Button onClick={()=>{handleOpen()}}>More</Button>
         </div>
       </InfoWindow>}
+
       <Modal
+        style={{display:'flex',alignItems:'center',justifyContent:'center'}}
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -82,10 +103,12 @@ export default MyMarker;
 
 
 const style = {
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
+  top: '50',
+  left: '50',
+  position: "absolute",
+  // transform: 'translate(-50%, -50%)',
   width: 400,
+  margin: 'auto',
   bgcolor: 'background.paper',
   boxShadow: 24,
   p: 4,

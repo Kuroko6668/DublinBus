@@ -6017,3 +6017,16 @@ INFO:django.utils.autoreload:/Users/wangshengbin/work/team12/DublinBusRepo/gtfsA
 INFO:django.utils.autoreload:Watching for file changes with StatReloader
 WARNING:root:API get request error @ time: 2022-07-29 00:05:10. Error = HTTP Error 429: Too Many Requests
 WARNING:root:API get request error @ time: 2022-07-29 00:05:30. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-29 09:14:40 successful. Timestamp of API response object = 1659086071
+INFO:root:API get request @2022-07-29 09:14:43 successful. Timestamp of API response object = 1659086071
+WARNING:root:API get request error @ time: 2022-07-29 09:15:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-29 09:15:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-29 09:15:30. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-29 09:15:30. Error = HTTP Error 429: Too Many Requests
+INFO:root:TEST: 4.1500232219696045
+INFO:root:TEST: 3.9808602333068848
+INFO:root:TEST: 4.324283838272095
+INFO:root:TEST: 3.7128498554229736
+INFO:root:TEST: 4.091235160827637
+INFO:root:TEST: 3.6482691764831543
