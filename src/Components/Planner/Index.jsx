@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import { useState, useRef} from 'react';
-import {Button, Input} from '@mui/material';
+import {Button, Input, Card} from '@mui/material';
 import { useStops } from '../../Providers/StopsContext';
 import {useGeolocation} from '../../Providers/GeolocationContext'
 import { reqPrediction } from '../../ajax';
@@ -23,6 +23,7 @@ import DisplayRoutes from './subcomponent/DisplayRoutes';
 import ja from 'date-fns/esm/locale/ja';
 import { set } from 'store/dist/store.modern.min';
 import { reqRouteById } from '../../ajax';
+import Waiting from '../waiting';
 function Planner({back}){
     const map_Ref = useGoogleMap();
     const { position } = useGeolocation();
@@ -40,6 +41,7 @@ function Planner({back}){
     const [time, setValue] = useState(new Date());
     const {data:stops} = useStops()
     const [panel, setPanel] = useState(null)
+    const [pending, setPending] = useState(false)
 
     /* eslint-disable */
     const directionsDisplay = new google.maps.DirectionsRenderer()
@@ -137,9 +139,8 @@ function Planner({back}){
       var hour = moment(newValue).format('HH:mm:ss');
       setValue(newValue);
     };
-    async function calculateRoute (){
 
-      
+    async function calculateRoute (){
         if(originRef.current.value === '' || destinationRef.current.value === ''){
           return 
         }
@@ -171,7 +172,6 @@ function Planner({back}){
         if(RecommadationRoute){
           setError(false);
           setDirectionResponse(RecommadationRoute)
-          directionsDisplay.setDirections({routes:[]})
           console.log(RecommadationRoute,'RecommadationRoute');
           showPanel(RecommadationRoute)
           setstartPoint({lat:RecommadationRoute[0].start_point.lat(), lng:RecommadationRoute[0].start_point.lng()})
@@ -186,8 +186,6 @@ function Planner({back}){
     }
     // get trip id by user input
     const showPanel = async(RecommadationRoute)=>{
-        // get the first recommadation route
-        // console.log(RecommadationRoute);
         var temp_panel = []
         for(var i = 0; i < RecommadationRoute.length; i++){     
           var temp = RecommadationRoute[i]
@@ -228,8 +226,10 @@ function Planner({back}){
             var max_lng = Math.max(bus_trip.arrival_stop_lng,bus_trip.departure_stop_lng)
             var min_lng = Math.min(bus_trip.arrival_stop_lng,bus_trip.departure_stop_lng)
             console.log(bus_trip.arrival_stop_id,bus_trip.departure_stop_id,bus_trip.departure_time.valueOf(),bus_trip.short_name);
+            setPending(true)
             var response = await reqPrediction(bus_trip.arrival_stop_id,bus_trip.departure_stop_id,bus_trip.departure_time.valueOf(),bus_trip.short_name)
             let {status,data} = response
+            setPending(false)
             console.log(data[0],'response');
             if(data[0].trip_time === 0){
               bus_trip.prediction_journey_time = Math.ceil(bus_trip.duration/60)
@@ -352,6 +352,10 @@ function Planner({back}){
                   label="B"
                 />
           }
+          {pending&&
+
+            <Card variant="margin_bottom"><Waiting size={50} thickness={3} /></Card>
+          }
   </div>
 }
 
@@ -372,7 +376,7 @@ const routesName = [
   '83','83a','84','84a','84x','9','H1','H2','H3','C1','C2','C3',
   'C4','C5','C6','P29','L53','L54','L58','L59','X25','X26','X27','X28',
   'X30','X31','X32','N4','1','11','116','120','122','123','13','130',
-  '14','140','142','145','15','150','151','155','15a',
+  '14','140','142','15','150','151','155','15a',
   '15b','15d','16','16d',
   '26','27','27a','27b','27x','32x','33','33d','33e','33x','37','38','38a','38b','38d','39','39a',
   '39x','4','40','40b','40d','40e','41','41b','41c','41d','41x','42','43','44','44b','46a','46e','47','49','51d','52','53','54a','56a','6','61','65','65b','68','68a','69','69x','7','70','77a','77x',

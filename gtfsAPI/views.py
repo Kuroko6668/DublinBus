@@ -393,17 +393,31 @@ def time_obj_to_seconds(obj):
     return minutes
 
 def call_model_predict(short_name,trip_last_stop,trip_first_stop,stop,stop_id,dt_obj):
+        weather_obj = DailyWeather.objects.filter(time__gte=dt_obj.time()).first()
+        national_holiday_2022 = ['01/01/2022', '14/02/2022', '17/03/2022', '27/03/2022', 
+        '15/04/2022', '18/04/2022', '02/05/2022', '06/06/2022', '19/06/2022', '01/08/2022',
+        '31/10/2022', '31/10/2022','25/12/2022','26/12/2022']
+        format_date = dt_obj.strftime("%d/%m/%Y")
+
+        nathols = 0
+        if(str(format_date) in national_holiday_2022):
+            nathols = 1
+        print(format_date)
+        
+
+
         lineid = short_name,
         arrival_time_T = time_obj_to_seconds(trip_last_stop.arrival_time)
         departure_time_T = time_obj_to_seconds(trip_first_stop.arrival_time)
         planned_arr_L = time_obj_to_seconds(stop.arrival_time)
         stop_id = stop_id
         day = dt_obj.weekday()
-        temp = 5.96
-        humidity = 75
-        wind_speed = 9.26
+        # temp = 5.96
+        temp = (float(weather_obj.temperture_min) + float(weather_obj.temperture_max)) / 2
+        humidity = float(weather_obj.humidity)
+        wind_speed = float(weather_obj.wind_speed)
         hour = dt_obj.hour
-        nathols = 0
+        
         
         input_df = pd.DataFrame(columns = [
             'lineid','arrival_time_T','departure_time_T','planned_arr_L','stop_id','day','temp','humidity','wind_speed','hour','nathols' 

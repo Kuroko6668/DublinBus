@@ -5797,3 +5797,223 @@ INFO:root:API get request @2022-07-26 15:46:04 successful. Timestamp of API resp
 INFO:root:API get request @2022-07-26 15:46:05 successful. Timestamp of API response object = 1658850349
 WARNING:root:API get request error @ time: 2022-07-26 15:47:00. Error = HTTP Error 429: Too Many Requests
 WARNING:root:API get request error @ time: 2022-07-26 15:47:00. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-27 13:18:40 successful. Timestamp of API response object = 1658927917
+INFO:root:API get request @2022-07-27 13:18:40 successful. Timestamp of API response object = 1658927905
+WARNING:root:API get request error @ time: 2022-07-27 13:19:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-27 13:19:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-27 13:19:30. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-27 13:19:30. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-27 13:20:40 successful. Timestamp of API response object = 1658928025
+INFO:root:API get request @2022-07-27 13:20:43 successful. Timestamp of API response object = 1658928040
+WARNING:root:API get request error @ time: 2022-07-27 13:21:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-27 13:21:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-27 13:21:30. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-27 13:21:30. Error = HTTP Error 429: Too Many Requests
+INFO:root:TEST: 6.301314115524292
+ERROR:django.request:Internal Server Error: /prediction/8220DB004680/8250DB000768/1658936250000/155/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/base/base.py", line 244, in ensure_connection
+    self.connect()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/base/base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 244, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on 'dub-bus-db.cyopwh1abtzq.us-east-1.rds.amazonaws.com:3306' (60)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/team12/DublinBusRepo/gtfsAPI/views.py", line 194, in get_prediction
+    departure_stop_sequence_list = list(Route.objects.filter(stop_id=departure_stop_id, route_short_name=short_name).values_list("stop_sequence", "direction_id"))
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/query.py", line 302, in __len__
+    self._fetch_all()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/query.py", line 168, in __iter__
+    return compiler.results_iter(
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1312, in results_iter
+    results = self.execute_sql(
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/base/base.py", line 284, in cursor
+    return self._cursor()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/base/base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/base/base.py", line 243, in ensure_connection
+    with self.wrap_database_errors:
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/base/base.py", line 244, in ensure_connection
+    self.connect()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/base/base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 244, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+django.db.utils.OperationalError: (2003, "Can't connect to MySQL server on 'dub-bus-db.cyopwh1abtzq.us-east-1.rds.amazonaws.com:3306' (60)")
+ERROR:django.request:Internal Server Error: /cur_weather/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/base/base.py", line 244, in ensure_connection
+    self.connect()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/base/base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 244, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2003, "Can't connect to MySQL server on 'dub-bus-db.cyopwh1abtzq.us-east-1.rds.amazonaws.com:3306' (60)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/team12/DublinBusRepo/gtfsAPI/views.py", line 308, in get_cur_weather
+    res = list(CurrentWeather.objects.all().values('time' ,'sunrise_time', 'sunset_time', 'weather_id', 'weather_description',
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/query.py", line 302, in __len__
+    self._fetch_all()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/query.py", line 130, in __iter__
+    for row in compiler.results_iter(
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1312, in results_iter
+    results = self.execute_sql(
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1359, in execute_sql
+    cursor = self.connection.cursor()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/base/base.py", line 284, in cursor
+    return self._cursor()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/base/base.py", line 260, in _cursor
+    self.ensure_connection()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/base/base.py", line 243, in ensure_connection
+    with self.wrap_database_errors:
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/base/base.py", line 244, in ensure_connection
+    self.connect()
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/base/base.py", line 225, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 244, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/__init__.py", line 123, in Connect
+    return Connection(*args, **kwargs)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/MySQLdb/connections.py", line 185, in __init__
+    super().__init__(*args, **kwargs2)
+django.db.utils.OperationalError: (2003, "Can't connect to MySQL server on 'dub-bus-db.cyopwh1abtzq.us-east-1.rds.amazonaws.com:3306' (60)")
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-28 23:53:19 successful. Timestamp of API response object = 1659052385
+INFO:root:API get request @2022-07-28 23:53:23 successful. Timestamp of API response object = 1659052396
+WARNING:root:API get request error @ time: 2022-07-28 23:54:01. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-28 23:54:01. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-28 23:54:14. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+WARNING:root:API get request error @ time: 2022-07-28 23:54:15. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-28 23:54:30 successful. Timestamp of API response object = 1659052466
+INFO:root:API get request @2022-07-28 23:54:30 successful. Timestamp of API response object = 1659052466
+ERROR:django.request:Internal Server Error: /prediction/8220DB001443/8250DB000768/1659054704000/39A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/team12/DublinBusRepo/gtfsAPI/views.py", line 286, in get_prediction
+    departure_stop_time = call_model_predict(short_name,trip_last_stop,trip_first_stop,departure_stop,departure_stop_id,dt_obj)
+  File "/Users/wangshengbin/work/team12/DublinBusRepo/gtfsAPI/views.py", line 400, in call_model_predict
+    format_date = dt_obj.strftime(dt_obj, "%m/%d/%Y")
+TypeError: strftime() takes at most 1 argument (2 given)
+WARNING:root:API get request error @ time: 2022-07-28 23:55:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-28 23:55:00. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-28 23:55:30. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-28 23:55:30. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:/Users/wangshengbin/work/team12/DublinBusRepo/gtfsAPI/views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-28 23:55:33 successful. Timestamp of API response object = 1659052528
+ERROR:django.request:Internal Server Error: /prediction/8220DB001443/8250DB000768/1659054704000/39A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/team12/DublinBusRepo/gtfsAPI/views.py", line 286, in get_prediction
+    departure_stop_time = call_model_predict(short_name,trip_last_stop,trip_first_stop,departure_stop,departure_stop_id,dt_obj)
+  File "/Users/wangshengbin/work/team12/DublinBusRepo/gtfsAPI/views.py", line 400, in call_model_predict
+    format_date = datetime.date.strftime(dt_obj, "%m/%d/%Y")
+AttributeError: 'method_descriptor' object has no attribute 'strftime'
+INFO:root:API get request @2022-07-28 23:56:01 successful. Timestamp of API response object = 1659052559
+INFO:root:API get request @2022-07-28 23:57:00 successful. Timestamp of API response object = 1659052619
+INFO:django.utils.autoreload:/Users/wangshengbin/work/team12/DublinBusRepo/gtfsAPI/views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-28 23:57:47 successful. Timestamp of API response object = 1659052660
+WARNING:root:API get request error @ time: 2022-07-28 23:58:00. Error = HTTP Error 429: Too Many Requests
+ERROR:django.request:Internal Server Error: /prediction/8220DB001443/8250DB000768/1659054704000/39A/
+Traceback (most recent call last):
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/wangshengbin/opt/miniconda3/envs/dubbusVE/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/wangshengbin/work/team12/DublinBusRepo/gtfsAPI/views.py", line 286, in get_prediction
+    departure_stop_time = call_model_predict(short_name,trip_last_stop,trip_first_stop,departure_stop,departure_stop_id,dt_obj)
+  File "/Users/wangshengbin/work/team12/DublinBusRepo/gtfsAPI/views.py", line 415, in call_model_predict
+    temp = (weather_obj.temperture_min + weather_obj.temperture_max) / 2
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+INFO:root:API get request @2022-07-28 23:58:30 successful. Timestamp of API response object = 1659052700
+INFO:django.utils.autoreload:/Users/wangshengbin/work/team12/DublinBusRepo/gtfsAPI/views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-28 23:58:49 successful. Timestamp of API response object = 1659052720
+WARNING:root:API get request error @ time: 2022-07-28 23:59:00. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:/Users/wangshengbin/work/team12/DublinBusRepo/gtfsAPI/views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+WARNING:root:API get request error @ time: 2022-07-28 23:59:30. Error = HTTP Error 429: Too Many Requests
+INFO:django.utils.autoreload:/Users/wangshengbin/work/team12/DublinBusRepo/gtfsAPI/views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-29 00:03:04 successful. Timestamp of API response object = 1659052982
+INFO:django.utils.autoreload:/Users/wangshengbin/work/team12/DublinBusRepo/gtfsAPI/views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+INFO:root:API get request @2022-07-29 00:03:59 successful. Timestamp of API response object = 1659053033
+WARNING:root:API get request error @ time: 2022-07-29 00:04:00. Error = HTTP Error 429: Too Many Requests
+INFO:root:API get request @2022-07-29 00:04:30 successful. Timestamp of API response object = 1659053063
+INFO:root:API get request @2022-07-29 00:05:00 successful. Timestamp of API response object = 1659053093
+INFO:django.utils.autoreload:/Users/wangshengbin/work/team12/DublinBusRepo/gtfsAPI/views.py changed, reloading.
+INFO:django.utils.autoreload:Watching for file changes with StatReloader
+WARNING:root:API get request error @ time: 2022-07-29 00:05:10. Error = HTTP Error 429: Too Many Requests
+WARNING:root:API get request error @ time: 2022-07-29 00:05:30. Error = HTTP Error 429: Too Many Requests
