@@ -19,7 +19,7 @@ function Weather(props){
     <>
     <span><i className={icon}></i></span>
     <span class="msg">
-        {props.message}
+        The current weather in Dublin is {props.temperature}°C and the wind speed is {props.wind} Km/hr.
     </span>
     </>
     )

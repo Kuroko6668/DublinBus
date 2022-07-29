@@ -41,7 +41,7 @@ const SideBar = () => {
       <div id="sideBar" >
           {showPlanner||showSearchRoute||showNearMe?showPlanner?<Planner back={setValue}></Planner>:showSearchRoute?<SearchRoute back={setSearchRouteValue}>
           </SearchRoute>:<NearMe back={setNearMeValue}></NearMe>:sideButtons}
-     {/* <Weather message={"This is a nice weather"}></Weather> */}
+   
       </div>
    );
 };
