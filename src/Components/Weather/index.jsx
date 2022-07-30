@@ -16,12 +16,12 @@ function Weather(props){
      icon=props.icon;
     }
     return(
-    <>
-    <span><i className={icon}></i></span>
-    <span class="msg">
+    <div class="weatherContainer">
+    <div><i className={icon}></i></div>
+    <div class="msg">
         The current weather in Dublin is {props.temperature}°C and the wind speed is {props.wind} Km/hr.
-    </span>
-    </>
+    </div>
+    </div>
     )
 }
 

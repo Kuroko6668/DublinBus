@@ -2,3 +2,6 @@
   color: green;
   padding: 3px;
 }
+.weatherContainer {
+  display: flex;
+}
