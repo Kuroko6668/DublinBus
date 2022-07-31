@@ -2,7 +2,7 @@ import axios from 'axios'
 import qs from 'querystring'
 // import NProgress from 'nprogress'
 const instance = axios.create({
-  timeout: 999999999999,//配置超时时间
+  timeout: 1000 * 60 * 9999,//配置超时时间
 });
 instance.defaults.baseURL = 'http://127.0.0.1:8000'
 
@@ -23,7 +23,7 @@ instance.interceptors.response.use(
   error => {
     // NProgress.done()
     alert(error)
-    return new Promise(()=>{})
+    return Promise.reject(error)
   }
 )
 

@@ -9,7 +9,6 @@ import MyMarker from './MyMarker';
 // This div are wrapped by an accordion
 const DisplayStops = ({stops}) => {
 
-
     return (<>
         {stops.map((stop)=>(
         <MyMarker

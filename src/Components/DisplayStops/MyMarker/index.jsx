@@ -1,8 +1,9 @@
 import { InfoWindow, Marker, useGoogleMap } from "@react-google-maps/api";
 import { useState } from "react";
-import {Typography, Button, Modal, Box, autocompleteClasses} from '@mui/material';
+import {Typography, Button, Modal, Box, Card} from '@mui/material';
 import ArrivalsTable from "./arrivalsTable";
 import { reqStopById } from "../../../ajax";
+import Waiting from "../../waiting";
 import { makeStyles, Dialog } from '@material-ui/core';
 import './style.css'
 
@@ -15,6 +16,7 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
   // Hook to access the map reference
   const mapRef = useGoogleMap();
   const [open, setOpen] = useState(false);
+  const [pending, setPending] = useState(false)
   // function getModalStyle() {
   //   const top = 50;
   //   const left = 50;
@@ -34,10 +36,12 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
   // }))
   // const classes = useStyles();
   const handleOpen = async() => {
+    setPending(true);
     response = await reqStopById(id)
     setnextArrivals(response.data.arrivals)
     setOpen(true)
     console.log(nextArrivals);
+    setPending(false);
   };
   const handleClose = () => setOpen(false);
   return (
@@ -55,9 +59,12 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
       >
         <div className="infowindow">
           {restProps.title}
-          <Button onClick={()=>{handleOpen()}}>More</Button>
+          <Button onClick={()=>handleOpen()}>More</Button>
         </div>
       </InfoWindow>}
+      {pending&&
+        <Card variant="margin_bottom"><Waiting size={50} thickness={3} /></Card>
+        }   
 
       <Modal
         style={{display:'flex',alignItems:'center',justifyContent:'center'}}
@@ -75,8 +82,9 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
           </div>
         </Box>
       </Modal>
-
     </Marker>
+
+    
   );
 
   // Zoom the view if the user clicks on the marker and display an infowindow
