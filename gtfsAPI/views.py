@@ -172,7 +172,6 @@ def stop_detail(request, stop_id):
     return JsonResponse(result)
 
 def get_prediction(request,arrival_stop_id,departure_stop_id,timestamp,short_name):
-
     dt_obj = datetime.fromtimestamp(int(timestamp)/1000,timezone(timedelta(hours=1)))
 
     parsed_datetime = dt_obj.strftime('%Y-%m-%d %H:%M:%S')

@@ -37,7 +37,10 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
   // const classes = useStyles();
   const handleOpen = async() => {
     setPending(true);
-    response = await reqStopById(id)
+    response = await reqStopById(id).catch(()=>{
+      //输入函数体
+      setPending(false);
+    })
     setnextArrivals(response.data.arrivals)
     setOpen(true)
     console.log(nextArrivals);

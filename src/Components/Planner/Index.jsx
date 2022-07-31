@@ -241,7 +241,10 @@ function Planner({back}){
             var max_lng = Math.max(bus_trip.arrival_stop_lng,bus_trip.departure_stop_lng)
             var min_lng = Math.min(bus_trip.arrival_stop_lng,bus_trip.departure_stop_lng)
             console.log(bus_trip.arrival_stop_id,bus_trip.departure_stop_id,bus_trip.departure_time.valueOf(),bus_trip.short_name)
-            var response = await reqPrediction(bus_trip.arrival_stop_id,bus_trip.departure_stop_id,bus_trip.departure_time.valueOf(),bus_trip.short_name)
+            var response = await reqPrediction(bus_trip.arrival_stop_id,bus_trip.departure_stop_id,bus_trip.departure_time.valueOf(),bus_trip.short_name).catch(()=>{
+              //输入函数体
+              setPending(false)
+            })
             console.log(response);
             let {data} = response
             console.log(data[0],'response');
