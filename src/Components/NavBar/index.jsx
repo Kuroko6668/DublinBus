@@ -121,11 +121,11 @@ const NavBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
+              {/* {pages.map((page) => (
                 <MenuItem key={page.label} component={Link} to={page.link}>
                   <Typography textAlign="center">{page.label}</Typography>
                 </MenuItem>
-              ))}
+              ))} */}
             </Menu>
           </Box>
           <DirectionsBusIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -148,7 +148,7 @@ const NavBar = () => {
             DublinBus
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {/* {pages.map((page) => (
               <Button
                 key={page.label}
                 component={Link}
@@ -159,7 +159,7 @@ const NavBar = () => {
               </Button>
           
             )   
-            )}
+            )} */}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
