@@ -17,6 +17,7 @@ const MyMarker = ({
   isFavourite,
   addFavourite,
   removeFavourite,
+  isFavouriteListFull,
   ...restProps
 }) => {
   // State to control the infowindow
@@ -74,7 +75,7 @@ const MyMarker = ({
 
           {user && (
             <div>
-              {!isFavourite && (
+              {!isFavourite && !isFavouriteListFull &&  (
                 <IconButton
                   size="small"
                   aria-label="add-favourite"
@@ -93,6 +94,9 @@ const MyMarker = ({
                 >
                   <Favorite /> Remove from Favourites
                 </IconButton>
+              )}
+              {!isFavourite && isFavouriteListFull &&(
+                <p>You already have 3 favourites, remove one to add this stop to the list</p>
               )}
             </div>
           )}
