@@ -357,3 +357,4 @@ Traceback (most recent call last):
 AttributeError: module 'gtfsrProcessing.gtfsr_feed_pipeline' has no attribute 'pipeline'
 INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\get_feed.py changed, reloading.
 INFO:django.utils.autoreload:C:\Users\35383\Documents\BusRepo\DublinBusRepo\gtfsrProcessing\apps.py changed, reloading.
+INFO:django.utils.autoreload:/Users/aswathyrajeev/Documents/GitHub/DublinBusRepo/gtfsrProcessing/get_feed.py changed, reloading.

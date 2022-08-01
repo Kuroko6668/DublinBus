@@ -6,7 +6,7 @@ import './style.css'
 import Planner from "../Planner/Index";
 import SearchRoute from "../SearchRoute";
 import NearMe from "../NearMe";
-
+//ßimport Weather from '../Weather';
 // This is the main component for the NearMe section
 const SideBar = () => {
    const [showPlanner,setShowPlanner]=useState(false);
@@ -41,7 +41,7 @@ const SideBar = () => {
       <div id="sideBar" >
           {showPlanner||showSearchRoute||showNearMe?showPlanner?<Planner back={setValue}></Planner>:showSearchRoute?<SearchRoute back={setSearchRouteValue}>
           </SearchRoute>:<NearMe back={setNearMeValue}></NearMe>:sideButtons}
-     
+   
       </div>
    );
 };

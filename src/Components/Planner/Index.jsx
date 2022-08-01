@@ -23,7 +23,8 @@ import DisplayRoutes from './subcomponent/DisplayRoutes';
 import ja from 'date-fns/esm/locale/ja';
 import { set } from 'store/dist/store.modern.min';
 import { reqRouteById } from '../../ajax';
-import Waiting from '../waiting';
+import { reqCurWeather } from '../../ajax';
+import Weather from '../Weather';
 function Planner({back}){
     const map_Ref = useGoogleMap();
     const { position } = useGeolocation();
@@ -32,6 +33,8 @@ function Planner({back}){
     const [duration,setDuration] = useState('')
     const [display,setDisplay] = useState(false)
     const [visiableroute,setVisiableRoute] = useState([])
+    const [showWeather,setShowWeather]=useState(false);
+    const [weatherData,setWeatherData]=useState('');
     const [startPoint, setstartPoint] = useState(null)
     const [endPoint, setendPoint] = useState(null)
     const originRef = useRef('')
@@ -78,7 +81,15 @@ function Planner({back}){
       }
       return false
     }
-    // return bus route we have in our database
+    const weatherDisplay=async()=>{
+      var response=await reqCurWeather();
+      if(response){
+        setWeatherData(response.data[0]);
+        setShowWeather(true);
+      }
+
+
+    }
     const getbestroute = (res)=>{
  
       //输入函数体
@@ -156,6 +167,7 @@ function Planner({back}){
         //   return 
         // }
         setPanel(null)
+        setShowWeather(false);
         console.log(visiableroute);
         /* eslint-disable */
         try{ 
@@ -180,6 +192,7 @@ function Planner({back}){
         var RecommadationRoute = getbestroute(results)
         // if get best route then predict and drew panel
         if(RecommadationRoute){
+          weatherDisplay();
           setError(false);
           setDirectionResponse(RecommadationRoute)
           console.log(RecommadationRoute,'RecommadationRoute');
@@ -300,7 +313,7 @@ function Planner({back}){
           />
         </Autocomplete>
 
-   {error&& <ErrorMessage message={"Invalid input. Please enter a valid stop"}></ErrorMessage>}
+   {error&& <ErrorMessage message={"Error in fetching the data. Please try again later"}></ErrorMessage>}
 
           <Button 
             style={{textTransform: 'none'}}
@@ -349,7 +362,7 @@ function Planner({back}){
         >
          Back
         </Button>
-
+  {showWeather&& <Weather temperature={weatherData.temperture} wind={weatherData.wind_speed}></Weather> }
          </LocalizationProvider>
          {time_error && <ErrorMessage message={'time must be in next 7 days'}/>}
          {
