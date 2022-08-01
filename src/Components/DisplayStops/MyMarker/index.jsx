@@ -1,8 +1,10 @@
 import { InfoWindow, Marker, useGoogleMap } from "@react-google-maps/api";
 import { useState } from "react";
-import {Typography, Button, Modal, Box} from '@mui/material';
+import {Typography, Button, Modal, Box, Card} from '@mui/material';
 import ArrivalsTable from "./arrivalsTable";
 import { reqStopById } from "../../../ajax";
+import Waiting from "../../waiting";
+import { makeStyles, Dialog } from '@material-ui/core';
 import './style.css'
 
 // Cutomizable small component that creates a marker and centers the view at that position
@@ -10,15 +12,39 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
   // State to control the infowindow
   const [infoWindow, setInfoWindow] = useState(false);
   const [nextArrivals, setnextArrivals] = useState([])
+  // const [modalStyle] = useState(getModalStyle);
   // Hook to access the map reference
   const mapRef = useGoogleMap();
   const [open, setOpen] = useState(false);
+  const [pending, setPending] = useState(false)
+  // function getModalStyle() {
+  //   const top = 50;
+  //   const left = 50;
+  //   return {
+  //     top: `${top}%`,
+  //     left: `${left}%`,
+  //     transform: `translate(-${top}%, -${left}%)`
+  //   };
+  // }
   var response = []
+  // const useStyles = makeStyles(theme => ({
+  //   paper: {
+  //     position: "absolute",
+  //     width: 300,
+  //     padding: 20
+  //   }
+  // }))
+  // const classes = useStyles();
   const handleOpen = async() => {
-    response = await reqStopById(id)
+    setPending(true);
+    response = await reqStopById(id).catch(()=>{
+      //输入函数体
+      setPending(false);
+    })
     setnextArrivals(response.data.arrivals)
     setOpen(true)
     console.log(nextArrivals);
+    setPending(false);
   };
   const handleClose = () => setOpen(false);
   return (
@@ -36,10 +62,15 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
       >
         <div className="infowindow">
           {restProps.title}
-          <Button onClick={()=>{handleOpen()}}>More</Button>
+          <Button onClick={()=>handleOpen()}>More</Button>
         </div>
       </InfoWindow>}
+      {pending&&
+        <Card variant="margin_bottom"><Waiting size={50} thickness={3} /></Card>
+        }   
+
       <Modal
+        style={{display:'flex',alignItems:'center',justifyContent:'center'}}
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -54,8 +85,9 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
           </div>
         </Box>
       </Modal>
-
     </Marker>
+
+    
   );
 
   // Zoom the view if the user clicks on the marker and display an infowindow
@@ -82,10 +114,12 @@ export default MyMarker;
 
 
 const style = {
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
+  top: '50',
+  left: '50',
+  position: "absolute",
+  // transform: 'translate(-50%, -50%)',
   width: 400,
+  margin: 'auto',
   bgcolor: 'background.paper',
   boxShadow: 24,
   p: 4,
