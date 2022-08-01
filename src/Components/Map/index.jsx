@@ -17,8 +17,10 @@ const containerStyle = {
   width: '100%',
   height: '800px',
   position:'relative !important',
-  display: 'flex',
-  flexDirection: 'row',
+    display: 'flex',
+  flexDirection: 'column',
+  // display: 'flex',
+  // flexDirection: 'row',
 
   // TO DO - find a way to add this to make mobile responsive
   // @media (max-width: 800px) {

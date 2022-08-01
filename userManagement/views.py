@@ -111,7 +111,7 @@ def user_data_detail(request,pk):
 
 
     if request.method == 'GET':
-        profile_data = user_data.objects.filter(id=pk)
+        profile_data = user_data.objects.filter(id_id=pk)
 
         serialiser = user_dataSerializer(profile_data, context = {'request': request}, many = True)
         

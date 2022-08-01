@@ -13,3 +13,35 @@
 .resultsSlider {
   margin-top: 20px;
 }
+
+TableCell {
+  cursor: pointer;
+}
+
+
+.infowindow {
+  width: 180px;
+  color: #333;
+}
+.infowindow > p {
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.stop-info-modal {
+ margin-left: 440px;
+ margin-top:300px;
+ background-color: lightblue;
+ width: 500px;
+ height: 400px;
+}
+
+.favourite-btn {
+ font-size: 14px;
+}
+
+.close-fav-modal-btn{
+  margin-left: 450px !important;
+  margin-top: -40px !important;
+}

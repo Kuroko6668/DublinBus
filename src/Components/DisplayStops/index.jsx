@@ -59,6 +59,7 @@ const DisplayStops = ({stops}) => {
             icon={iconStop}
             title={stop.stop_name}
             addFavourite={() => {
+                console.log('ADD TO FAV')
                 let newState = userData[0];
                 if(!Object.keys(userData[0]).find(key => userData[0][key] === stop.stop_id)) {
                     console.log('doesnt exist in favourites')

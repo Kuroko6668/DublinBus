@@ -16,12 +16,12 @@ function App() {
 
       <StopsProvider>
         <GeolocationProvider>
-          <div className="mapContainer">
+          {/* <div className="mapContainer"> */}
             <Map>
               <MarkerUserPosition />
               <SideBar />
             </Map>
-          </div>
+          {/* </div> */}
         </GeolocationProvider>
       </StopsProvider>
 
