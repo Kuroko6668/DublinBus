@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import { useState, useRef} from 'react';
-import {Button, Input} from '@mui/material';
+import {Button, Input, Card} from '@mui/material';
 import { useStops } from '../../Providers/StopsContext';
 import {useGeolocation} from '../../Providers/GeolocationContext'
 import { reqPrediction } from '../../ajax';
@@ -39,16 +39,17 @@ function Planner({back}){
     const [endPoint, setendPoint] = useState(null)
     const originRef = useRef('')
     const destinationRef = useRef('')
-    const directions = useRef()
     const [error,setError]=useState(false);
+    const [time_error,setTimeError]=useState(false);
     const [time, setValue] = useState(new Date());
     const {data:stops} = useStops()
     const [panel, setPanel] = useState(null)
+    const [pending, setPending] = useState(false)
 
     /* eslint-disable */
     const directionsDisplay = new google.maps.DirectionsRenderer()
     /* eslint-enable */
-    // console.log(stops);
+
     // get stop id by stop name
     const stopNameToId = (name,lat,lng)=>{
       var num = name.split(', ')
@@ -83,7 +84,6 @@ function Planner({back}){
     const weatherDisplay=async()=>{
       var response=await reqCurWeather();
       if(response){
-        debugger;
         setWeatherData(response.data[0]);
         setShowWeather(true);
       }
@@ -91,33 +91,35 @@ function Planner({back}){
 
     }
     const getbestroute = (res)=>{
-      console.log(res,13232445);
+ 
       //输入函数体
       for (let i = 0; i < res.routes.length; i++) {
         var temp = res.routes[i].legs[0].steps;
-        console.log(temp,123);
+
         var flag = true
         for(var j = 0; j < temp.length; j ++){
           if(temp[j].travel_mode === 'TRANSIT'){
             if(!temp[j].transit.line.short_name){
-              console.log(123);
+              console.log('no line short name');
               flag = false
               break
             }
             console.log(routesName.indexOf(temp[j].transit.line.short_name.toLowerCase()));
             if(routesName.indexOf(temp[j].transit.line.short_name.toLowerCase()) === -1){
-              console.log(123);
+              console.log('such line not exist in our database');
               flag = false
               break
             }
           }
         }
         if(flag){
+          console.log('find best route',res.routes[i].legs[0].steps);
           return res.routes[i].legs[0].steps
         }
       }
       return
     }
+    // fine stops along this route to show on map
     const getRoute = async (route_name,direction_id,max_lat,max_lng,min_lat,min_lng)=>{
 
       let {data:route_stops} = await reqRouteById(route_name)
@@ -149,20 +151,26 @@ function Planner({back}){
     const handleTimeChange = (newValue) => {
       var date = moment(newValue).format('L');
       var hour = moment(newValue).format('HH:mm:ss');
-      setValue(newValue);
+      if((newValue - new Date() > 7*24*3600*1000) || (newValue < new Date())){
+        setTimeError(true)
+      }else{
+        setTimeError(false)
+        setValue(newValue);
+      }
     };
+    // caculate the route based on user input
     async function calculateRoute (){
-
-      
         if(originRef.current.value === '' || destinationRef.current.value === ''){
           return 
         }
+        // if(error|| time_error){
+        //   return 
+        // }
         setPanel(null)
         setShowWeather(false);
         console.log(visiableroute);
         /* eslint-disable */
         try{ 
-         
         console.log(visiableroute);
         /* eslint-disable */
         const directionsService = new google.maps.DirectionsService()
@@ -182,27 +190,30 @@ function Planner({back}){
           },
         })
         var RecommadationRoute = getbestroute(results)
+        // if get best route then predict and drew panel
         if(RecommadationRoute){
           weatherDisplay();
           setError(false);
           setDirectionResponse(RecommadationRoute)
-          directionsDisplay.setDirections({routes:[]})
           console.log(RecommadationRoute,'RecommadationRoute');
-          showPanel(RecommadationRoute)
+          setPending(true)
+          await showPanel(RecommadationRoute)
+          setPending(false)
           setstartPoint({lat:RecommadationRoute[0].start_point.lat(), lng:RecommadationRoute[0].start_point.lng()})
           console.log(RecommadationRoute[RecommadationRoute.length-1].end_point.lat(), RecommadationRoute[RecommadationRoute.length-1].end_point.lng());
           setendPoint({lat:RecommadationRoute[RecommadationRoute.length-1].end_point.lat(), lng:RecommadationRoute[RecommadationRoute.length-1].end_point.lng()})
+        }else{
+          alert('sorry we do not find bus route at this time')
         }}
        catch{
           setError(true);
+          setPending(false)
         }
       
 
     }
-    // get trip id by user input
+    // show the result provided by google api and our machine learning prediction
     const showPanel = async(RecommadationRoute)=>{
-        // get the first recommadation route
-        // console.log(RecommadationRoute);
         var temp_panel = []
         for(var i = 0; i < RecommadationRoute.length; i++){     
           var temp = RecommadationRoute[i]
@@ -242,9 +253,13 @@ function Planner({back}){
             var min_lat = Math.min(bus_trip.arrival_stop_lat,bus_trip.departure_stop_lat)
             var max_lng = Math.max(bus_trip.arrival_stop_lng,bus_trip.departure_stop_lng)
             var min_lng = Math.min(bus_trip.arrival_stop_lng,bus_trip.departure_stop_lng)
-            console.log(bus_trip.arrival_stop_id,bus_trip.departure_stop_id,bus_trip.departure_time.valueOf(),bus_trip.short_name);
-            var response = await reqPrediction(bus_trip.arrival_stop_id,bus_trip.departure_stop_id,bus_trip.departure_time.valueOf(),bus_trip.short_name)
-            let {status,data} = response
+            console.log(bus_trip.arrival_stop_id,bus_trip.departure_stop_id,bus_trip.departure_time.valueOf(),bus_trip.short_name)
+            var response = await reqPrediction(bus_trip.arrival_stop_id,bus_trip.departure_stop_id,bus_trip.departure_time.valueOf(),bus_trip.short_name).catch(()=>{
+              //输入函数体
+              setPending(false)
+            })
+            console.log(response);
+            let {data} = response
             console.log(data[0],'response');
             if(data[0].trip_time === 0){
               bus_trip.prediction_journey_time = Math.ceil(bus_trip.duration/60)
@@ -264,10 +279,13 @@ function Planner({back}){
         }
         setPanel(temp_panel)
         console.log(panel,'panel');
+        return 
     }
     // clear user input
     function clearRoute(){
         setDirectionResponse(null)
+        setTimeError(false)
+        setTimeError(false)
         setPanel(null)
         setstartPoint(null)
         setendPoint(null)
@@ -275,7 +293,6 @@ function Planner({back}){
         setVisiableRoute([])
         originRef.current.value = '' 
         destinationRef.current.value = ''
-        back(false)
     }
     
   return <div id="planner">
@@ -340,13 +357,14 @@ function Planner({back}){
           style={{textTransform: 'none'}}
           type="submin"
           variant='contained'
-          onClick={()=>clearRoute()}
+          onClick={()=>{clearRoute();back()}}
           size='small'
         >
          Back
         </Button>
   {showWeather&& <Weather temperature={weatherData.temperture} wind={weatherData.wind_speed}></Weather> }
          </LocalizationProvider>
+         {time_error && <ErrorMessage message={'time must be in next 7 days'}/>}
          {
           panel&&
           <DisplayRoutes panel={panel} route={visiableroute}/>
@@ -366,6 +384,10 @@ function Planner({back}){
                   // icon={endpoint}
                   label="B"
                 />
+          }
+          {pending&&
+
+            <Card variant="margin_bottom"><Waiting size={50} thickness={3} /></Card>
           }
   </div>
 }
@@ -387,7 +409,7 @@ const routesName = [
   '83','83a','84','84a','84x','9','H1','H2','H3','C1','C2','C3',
   'C4','C5','C6','P29','L53','L54','L58','L59','X25','X26','X27','X28',
   'X30','X31','X32','N4','1','11','116','120','122','123','13','130',
-  '14','140','142','145','15','150','151','155','15a',
+  '14','140','142','15','150','151','155','15a',
   '15b','15d','16','16d',
   '26','27','27a','27b','27x','32x','33','33d','33e','33x','37','38','38a','38b','38d','39','39a',
   '39x','4','40','40b','40d','40e','41','41b','41c','41d','41x','42','43','44','44b','46a','46e','47','49','51d','52','53','54a','56a','6','61','65','65b','68','68a','69','69x','7','70','77a','77x',
