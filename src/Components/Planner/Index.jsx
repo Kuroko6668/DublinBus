@@ -25,6 +25,7 @@ import { set } from 'store/dist/store.modern.min';
 import { reqRouteById } from '../../ajax';
 import { reqCurWeather } from '../../ajax';
 import Weather from '../Weather';
+import Waiting from '../waiting';
 function Planner({back}){
     const map_Ref = useGoogleMap();
     const { position } = useGeolocation();
