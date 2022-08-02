@@ -54,12 +54,16 @@ function NearMe({ back }) {
   // let response;
   const [userData, setUserData] = useState([
     {
-      id: '0', // user.user_id,
+      id: "0", // user.user_id,
       favourite_stop_1: "0",
       favourite_stop_2: "0",
       favourite_stop_3: "0",
     },
   ]);
+
+  let [stop1Name, setStop1Name] = useState("");
+  let [stop2Name, setStop2Name] = useState("");
+  let [stop3Name, setStop3Name] = useState("");
 
   async function fetchData() {
     try {
@@ -69,19 +73,36 @@ function NearMe({ back }) {
       console.log(userResponse.data);
 
       if (userData && userData[0]) {
-        console.log(
-          Object.keys(userData[0]).find((key) => userData[0][key] === "0")
-        );
+        // check if favourite list full
         if (
           !Object.keys(userResponse.data[0]).find(
             (key) => userResponse.data[0][key] === "0"
           )
         ) {
-          console.log("NEAR ME set is full to true");
           setIsFavouriteListFull(true);
         } else {
-          console.log("NEAR ME set is full to FALSE");
           setIsFavouriteListFull(false);
+        }
+
+        // get stop names
+        console.log(userResponse.data);
+        if (userResponse.data[0].favourite_stop_1 !== "0") {
+          let stopData = await reqStopById(
+            userResponse.data[0].favourite_stop_1
+          );
+          setStop1Name(stopData.data.stop_name);
+        }
+        if (userResponse.data[0].favourite_stop_2 !== "0") {
+          let stopData = await reqStopById(
+            userResponse.data[0].favourite_stop_2
+          );
+          setStop2Name(stopData.data.stop_name);
+        }
+        if (userResponse.data[0].favourite_stop_3 !== "0") {
+          let stopData = await reqStopById(
+            userResponse.data[0].favourite_stop_3
+          );
+          setStop3Name(stopData.data.stop_name);
         }
       }
     } catch (error) {
@@ -106,9 +127,13 @@ function NearMe({ back }) {
   const [displayFavWindow, setDisplayFavWindow] = useState(false);
   const [open, setOpen] = useState(false);
   const [nextArrivals, setnextArrivals] = useState([]);
+  const [favStopOpenId, setFavStopOpenId] = useState("0");
 
   let response = [];
   const handleOpen = async (stopId) => {
+    console.log("handle open stop id");
+    console.log(stopId);
+    setFavStopOpenId(stopId);
     response = await reqStopById(stopId);
     setnextArrivals(response.data.arrivals);
     setOpen(true);
@@ -126,67 +151,24 @@ function NearMe({ back }) {
     p: 4,
   };
 
-  const removeFavourite = (stop_id) => {
-    console.log(stop_id);
-    // console.log("Clicked remove favourite");
-    // let newState = userData[0];
-    // if(Object.keys(userData[0]).find(key => userData[0][key] === stop.stop_id)) {
-    //     console.log('exists in favourites')
-    //     const numberInFavourites = Object.keys(userData[0]).find(key => userData[0][key] === stop.stop_id)
-    //     if(numberInFavourites) {
-    //         newState[numberInFavourites] = '0'
-    //     }
-    // }
-    // else {console.log('not in fav')}
-    // setUserData({...userData, 0: newState})
-    // api.put("/userdata/" + user.user_id, newState).then(() => {
-    //     fetchData()
-    // })
-    console.log("Near me remove " + stop_id);
-    // console.log(stop_id);
-    console.log("Clicked remove favourite");
+  const removeFavourite = () => {
+    let stop_id = favStopOpenId;
     let newState = userData[0];
     if (Object.keys(userData[0]).find((key) => userData[0][key] === stop_id)) {
-      console.log("exists in favourites");
       const numberInFavourites = Object.keys(userData[0]).find(
         (key) => userData[0][key] === stop_id
       );
       if (numberInFavourites) {
         newState[numberInFavourites] = "0";
       }
-    } else {
-      console.log("not in fav");
     }
     setUserData({ ...userData, 0: newState });
     api.put("/userdata/" + user.user_id, newState).then(() => {
-      fetchData();
+      fetchData().then(() => {
+        handleClose();
+      });
     });
   };
-
-  // removeFavourite={(stop_id) => {
-  //   console.log('Near me remove ' + stop_id);
-  //   console.log("Clicked remove favourite");
-  // let newState = userData[0];
-  // if (
-  //   Object.keys(userData[0]).find(
-  //     (key) => userData[0][key] === stop_id
-  //   )
-  // ) {
-  //   console.log("exists in favourites");
-  //   const numberInFavourites = Object.keys(userData[0]).find(
-  //     (key) => userData[0][key] === stop_id
-  //   );
-  //   if (numberInFavourites) {
-  //     newState[numberInFavourites] = "0";
-  //   }
-  // } else {
-  //   console.log("not in fav");
-  // }
-  // setUserData({ ...userData, 0: newState });
-  // api.put("/userdata/" + user.user_id, newState).then(() => {
-  //   fetchData();
-  // });
-  // }}
 
   return (
     <>
@@ -217,8 +199,10 @@ function NearMe({ back }) {
                       onFocus={() => {
                         console.log("Hovered stop 1");
                       }}
-                    >
-                      {userData[0].favourite_stop_1}
+                    >{
+                      userData[0].favourite_stop_1
+                    }
+                      {/* {stop1Name} */}
                     </TableCell>
                   </TableRow>
                 )}
@@ -233,8 +217,8 @@ function NearMe({ back }) {
                       onClick={() => {
                         handleOpen(userData[0].favourite_stop_2);
                       }}
-                    >
-                      {userData[0].favourite_stop_2}
+                    >{userData[0].favourite_stop_2}
+                      {/* {stop2Name} */}
                     </TableCell>
                   </TableRow>
                 )}
@@ -251,7 +235,7 @@ function NearMe({ back }) {
                         handleOpen(userData[0].favourite_stop_3);
                       }}
                     >
-                      {userData[0].favourite_stop_3}
+                      {/* {stop3Name} */}
                     </TableCell>
                   </TableRow>
                 )}
@@ -371,7 +355,7 @@ function NearMe({ back }) {
         <Box sx={style} aria-describedby="modal-modal-description">
           <Typography id="modal-modal-title" variant="h6" component="h2">
             {/* {restProps.title} */}
-            {"Favourite stop title"}
+            {stop1Name}
           </Typography>
 
           <IconButton className="close-fav-modal-btn" onClick={handleClose}>

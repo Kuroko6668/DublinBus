@@ -14,7 +14,7 @@ const DisplayStops = ({ stops, addFavourite, removeFavourite, isFavouriteListFul
 
   let response;
   const [userData, setUserData] = useState({
-    id: '0', //  user.user_id,
+    id:  user.user_id,
     favourite_stop_1: "0",
     favourite_stop_2: "0",
     favourite_stop_3: "0",
