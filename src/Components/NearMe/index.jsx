@@ -18,7 +18,6 @@ import { Typography, Modal } from "@mui/material";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import CloseIcon from "@mui/icons-material/Close";
 import useAxios from "../../utils/useAxios";
-import { createProxyMiddleware } from "http-proxy-middleware";
 
 // This is the main component for the NearMe section
 function NearMe({ back }) {
@@ -55,7 +54,7 @@ function NearMe({ back }) {
   // let response;
   const [userData, setUserData] = useState([
     {
-      id: user.user_id,
+      id: '0', // user.user_id,
       favourite_stop_1: "0",
       favourite_stop_2: "0",
       favourite_stop_3: "0",
