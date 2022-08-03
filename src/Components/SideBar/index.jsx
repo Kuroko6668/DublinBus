@@ -38,36 +38,13 @@ const SideBar = () => {
     </div></>)
   
    return (
+     <>
       <div id="sideBar" >
           {showPlanner||showSearchRoute||showNearMe?showPlanner?<Planner back={setValue}></Planner>:showSearchRoute?<SearchRoute back={setSearchRouteValue}>
           </SearchRoute>:<NearMe back={setNearMeValue}></NearMe>:sideButtons}
    
       </div>
-      <div className="sideButtons" onClick={() => setNearMeValue(true)}>
-        <Button variant="contained">Near Me</Button>
-      </div>
-      <div className="sideButtons">
-        <Button variant="contained" onClick={() => setSearchRouteValue(true)}>
-          Search Route
-        </Button>
-      </div>
     </>
-  );
-
-  return (
-    <div id="sideBar">
-      {showPlanner || showSearchRoute || showNearMe ? (
-        showPlanner ? (
-          <Planner back={setValue}></Planner>
-        ) : showSearchRoute ? (
-          <SearchRoute back={setSearchRouteValue}></SearchRoute>
-        ) : (
-          <NearMe back={setNearMeValue}></NearMe>
-        )
-      ) : (
-        sideButtons
-      )}
-    </div>
   );
 };
 
