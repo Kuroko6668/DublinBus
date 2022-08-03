@@ -1,9 +1,11 @@
 import { useEffect, useState, useContext } from "react";
 import iconStop from "../../assets/bus-stop.png";
 import MyMarker from "./MyMarker";
+import myAxios from '../../ajax/myAxios';
 
 import useAxios from "../../utils/useAxios";
 import AuthContext from "../../context/AuthContext";
+import axios from "axios";
 
 // This component returns a div and displays a marker for each stop in the array
 // This div are wrapped by an accordion
@@ -14,15 +16,14 @@ const DisplayStops = ({ stops, addFavourite, removeFavourite, isFavouriteListFul
 
   let response;
   const [userData, setUserData] = useState({
-    id:  user.user_id,
+    id:  '0',
     favourite_stop_1: "0",
     favourite_stop_2: "0",
     favourite_stop_3: "0",
   });
 
-//   const [isFavouriteListFull, setIsFavouriteListFull] = useState(false);
   async function fetchData() {
-    try {
+    try {  
       const response = await api.get("/userdata/" + user.user_id);
       setUserData(response.data);
     } catch (error) {
@@ -31,8 +32,9 @@ const DisplayStops = ({ stops, addFavourite, removeFavourite, isFavouriteListFul
   }
 
   useEffect(() => {
-    fetchData();
-    console.log(" Display stops useEffect");
+    if(user) {
+      fetchData();
+    }
   }, []);
 
   return (
@@ -60,31 +62,6 @@ const DisplayStops = ({ stops, addFavourite, removeFavourite, isFavouriteListFul
             removeFavourite(stop.stop_id);
             fetchData();
           }}
-          //   removeFavourite={() => {removeFavourite(stop.stop_id)}
-
-          //   removeFavourite={() => {
-          //     console.log("Clicked remove favourite");
-          //     let newState = userData[0];
-          //     if (
-          //       Object.keys(userData[0]).find(
-          //         (key) => userData[0][key] === stop.stop_id
-          //       )
-          //     ) {
-          //       console.log("exists in favourites");
-          //       const numberInFavourites = Object.keys(userData[0]).find(
-          //         (key) => userData[0][key] === stop.stop_id
-          //       );
-          //       if (numberInFavourites) {
-          //         newState[numberInFavourites] = "0";
-          //       }
-          //     } else {
-          //       console.log("not in fav");
-          //     }
-          //     setUserData({ ...userData, 0: newState });
-          //     api.put("/userdata/" + user.user_id, newState).then(() => {
-          //       fetchData();
-          //     });
-          //   }}
         />
       ))}
     </>

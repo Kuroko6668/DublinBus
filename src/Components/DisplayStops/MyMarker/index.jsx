@@ -36,6 +36,8 @@ const MyMarker = ({
   const { user } = useContext(AuthContext);
 
   return (
+    
+    
     <Marker
       key={id}
       position={position}

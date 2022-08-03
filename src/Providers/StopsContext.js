@@ -37,6 +37,7 @@ export function StopsProvider({ children }) {
             // console.log(value,2);
         }else{
             setStops(storageStops)
+            console.log("StorageStops" + storageStops)
             // console.log(storageStops,3);
             // console.log(value,3);
         }

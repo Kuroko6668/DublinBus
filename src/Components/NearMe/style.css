@@ -18,7 +18,6 @@ TableCell {
   cursor: pointer;
 }
 
-
 .infowindow {
   width: 180px;
   color: #333;
@@ -32,16 +31,25 @@ TableCell {
 .stop-info-modal {
  margin-left: 440px;
  margin-top:300px;
- background-color: whitesmoke;
- width: 500px;
- height: 400px;
 }
 
 .favourite-btn {
  font-size: 14px;
 }
 
+
+
+.favourite-stops {
+ font-size: 14px;
+ max-width: 300px !important;
+ border: 2px solid red;
+}
+
 .close-fav-modal-btn{
   margin-left: 450px !important;
   margin-top: -40px !important;
+}
+
+.MuiModal-root {
+  background-color: white !important;
 }

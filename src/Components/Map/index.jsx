@@ -19,6 +19,9 @@ const containerStyle = {
   position:'relative !important',
     display: 'flex',
   flexDirection: 'column',
+  // alignItems: 'center',
+
+  
   // display: 'flex',
   // flexDirection: 'row',
 

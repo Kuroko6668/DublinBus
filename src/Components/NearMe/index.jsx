@@ -18,6 +18,8 @@ import { Typography, Modal } from "@mui/material";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import CloseIcon from "@mui/icons-material/Close";
 import useAxios from "../../utils/useAxios";
+import myAxios from '../../ajax/myAxios';
+import { makeStyles } from '@material-ui/core/styles';
 
 // This is the main component for the NearMe section
 function NearMe({ back }) {
@@ -67,12 +69,9 @@ function NearMe({ back }) {
 
   async function fetchData() {
     try {
-      const userResponse = await api.get("/userdata/" + user.user_id); //.then(setUserData(response.data))
+      const userResponse = await api.get("/userdata/" + user.user_id);
       setUserData(userResponse.data);
-      console.log("NEAR ME fetch data");
-      console.log(userResponse.data);
-
-      if (userData && userData[0]) {
+      if (userResponse.data) {
         // check if favourite list full
         if (
           !Object.keys(userResponse.data[0]).find(
@@ -84,25 +83,42 @@ function NearMe({ back }) {
           setIsFavouriteListFull(false);
         }
 
-        // get stop names
-        console.log(userResponse.data);
-        if (userResponse.data[0].favourite_stop_1 !== "0") {
-          let stopData = await reqStopById(
-            userResponse.data[0].favourite_stop_1
-          );
-          setStop1Name(stopData.data.stop_name);
+        // get user data - favourites and stop names
+        const response = await api.get("/userdata/" + user.user_id);
+        setUserData(response.data);
+        const stop_names = await myAxios.get("/stopname/"+userResponse.data[0].favourite_stop_1+"/"+userResponse.data[0].favourite_stop_2+"/"+userResponse.data[0].favourite_stop_3)
+        if(userResponse.data[0].favourite_stop_1 !== '0') {
+          let stopNameIndex = 0;
+          for(let i=0; i<3; i++) {
+            if(stop_names.data[i].stop_id === userResponse.data[0].favourite_stop_1 ) {
+              stopNameIndex = i;
+              break;
+            }
+          }
+          const stopName = stop_names.data[stopNameIndex].stop_name;
+          setStop1Name(stopName)
         }
-        if (userResponse.data[0].favourite_stop_2 !== "0") {
-          let stopData = await reqStopById(
-            userResponse.data[0].favourite_stop_2
-          );
-          setStop2Name(stopData.data.stop_name);
+        if(userResponse.data[0].favourite_stop_2 !== '0') {
+          let stopNameIndex = 0;
+          for(let i=0; i<3; i++) {
+            if(stop_names.data[i].stop_id === userResponse.data[0].favourite_stop_2 ) {
+              stopNameIndex = i;
+              break;
+            }
+          }
+          const stopName = stop_names.data[stopNameIndex].stop_name;
+          setStop2Name(stopName)
         }
-        if (userResponse.data[0].favourite_stop_3 !== "0") {
-          let stopData = await reqStopById(
-            userResponse.data[0].favourite_stop_3
-          );
-          setStop3Name(stopData.data.stop_name);
+        if(userResponse.data[0].favourite_stop_3 !== '0') {
+          let stopNameIndex = 0;
+          for(let i=0; i<3; i++) {
+            if(stop_names.data[i].stop_id === userResponse.data[0].favourite_stop_3 ) {
+              stopNameIndex = i;
+              break;
+            }
+          }
+          const stopName = stop_names.data[stopNameIndex].stop_name;
+          setStop3Name(stopName)
         }
       }
     } catch (error) {
@@ -112,10 +128,9 @@ function NearMe({ back }) {
 
   useEffect(
     () => {
-      fetchData();
-      console.log("Near me useEffect");
-
-      // }, []);
+      if(user) {
+        fetchData();
+      }
     },
     [
       // userData[0].favourite_stop_1,
@@ -131,8 +146,6 @@ function NearMe({ back }) {
 
   let response = [];
   const handleOpen = async (stopId) => {
-    console.log("handle open stop id");
-    console.log(stopId);
     setFavStopOpenId(stopId);
     response = await reqStopById(stopId);
     setnextArrivals(response.data.arrivals);
@@ -146,9 +159,10 @@ function NearMe({ back }) {
     transform: "translate(-50%, -50%)",
     width: 300,
     height: 400,
-    bgcolor: "background.paper",
+    bgcolor: "white",
     boxShadow: 24,
     p: 4,
+    
   };
 
   const removeFavourite = () => {
@@ -170,80 +184,104 @@ function NearMe({ back }) {
     });
   };
 
+  const modalStyle = {
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 300,
+    height: 400,
+    bgcolor: "white",
+    boxShadow: 24,
+    p: 4,
+};
+const classes = makeStyles(theme => ({
+  modal: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+  },
+  paper: {
+      position: 'absolute',
+      width: 450,
+      backgroundColor: "white", //theme.palette.background.paper,
+      boxShadow: theme.shadows[5],
+      padding: theme.spacing(2, 4, 3),
+  },
+}));
+
   return (
     <>
-      <div id="favourite-stops">
-        {userData && userData[0] && (
-          <TableContainer>
-            <Table sx={{ minWidth: 250 }} aria-label="simple table">
-              <TableHead>
-                <TableRow>
-                  <TableCell>
-                    {" "}
-                    <Favorite /> My Favourite Stops
-                  </TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {userData[0].favourite_stop_1 != "0" && (
-                  <TableRow
-                    key={1}
-                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                  >
-                    <TableCell
-                      component="th"
-                      scope="row"
-                      onClick={() => {
-                        handleOpen(userData[0].favourite_stop_1);
-                      }}
-                      onFocus={() => {
-                        console.log("Hovered stop 1");
-                      }}
-                    >{
-                      userData[0].favourite_stop_1
-                    }
-                      {/* {stop1Name} */}
-                    </TableCell>
-                  </TableRow>
-                )}
-                {userData[0].favourite_stop_2 != "0" && (
-                  <TableRow
-                    key={2}
-                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                  >
-                    <TableCell
-                      component="th"
-                      scope="row"
-                      onClick={() => {
-                        handleOpen(userData[0].favourite_stop_2);
-                      }}
-                    >{userData[0].favourite_stop_2}
-                      {/* {stop2Name} */}
-                    </TableCell>
-                  </TableRow>
-                )}
+      {user && (
+              <div id="favourite-stops" style={{maxWidth:250, border: '2px solid red', alignContent: "center", marginLeft: "auto"}}>
+              {userData && userData[0] && (
+                <TableContainer>
+                  <Table sx={{ minWidth: 250 }} aria-label="simple table">
+                    <TableHead>
+                      <TableRow>
+                        <TableCell>
+                          {" "}
+                          <Favorite /> My Favourite Stops
+                        </TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                {stop1Name !== '' && (
+                        <TableRow
+                          key={1}
+                          sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                        >
+                          <TableCell
+                            component="th"
+                            scope="row"
+                            onClick={() => {
+                              handleOpen(userData[0].favourite_stop_1);
+                            }}
+                          >
+                            {stop1Name}
+                          </TableCell>
+                        </TableRow>
+                      )}
+                      {stop2Name !== '' && (
+                        <TableRow
+                          key={2}
+                          sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                        >
+                          <TableCell
+                            component="th"
+                            scope="row"
+                            onClick={() => {
+                              handleOpen(userData[0].favourite_stop_2);
+                            }}
+                          >
+      
+                            {stop2Name}
+                          </TableCell>
+                        </TableRow>
+                      )}
+      
+                      {stop3Name !== '' && (
+                        <TableRow
+                          key={3}
+                          sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                        >
+                          <TableCell
+                            component="th"
+                            scope="row"
+                            onClick={() => {
+                              handleOpen(userData[0].favourite_stop_3);
+                            }}
+                          >
+                            {stop3Name}
+                          </TableCell>
+                        </TableRow>
+                      )}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+              )}
+            </div>
+      )}
 
-                {userData[0].favourite_stop_3 != "0" && (
-                  <TableRow
-                    key={3}
-                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                  >
-                    <TableCell
-                      component="th"
-                      scope="row"
-                      onClick={() => {
-                        handleOpen(userData[0].favourite_stop_3);
-                      }}
-                    >
-                      {/* {stop3Name} */}
-                    </TableCell>
-                  </TableRow>
-                )}
-              </TableBody>
-            </Table>
-          </TableContainer>
-        )}
-      </div>
       <div id="near_me">
         {/* Display nearme stops */}
         <div class="distanceSlider">
@@ -344,7 +382,7 @@ function NearMe({ back }) {
           Back
         </Button>
       </div>
-
+      <div class="fav-stop-modal" tabindex="-1">
       <Modal
         className="stop-info-modal"
         open={open}
@@ -352,9 +390,11 @@ function NearMe({ back }) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style} aria-describedby="modal-modal-description">
+
+
+{/* <div style={modalStyle} className={classes.paper}> */}
+        <Box sx={modalStyle} aria-describedby="modal-modal-description">
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            {/* {restProps.title} */}
             {stop1Name}
           </Typography>
 
@@ -376,8 +416,11 @@ function NearMe({ back }) {
           <div id="modal-modal-description" sx={{ mt: 2 }}>
             <ArrivalsTable arrivals={nextArrivals} />
           </div>
-        </Box>
+        </Box> 
+                {/* </div> */}
       </Modal>
+      </div>
+
     </>
   );
 }
