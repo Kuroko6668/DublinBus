@@ -263,7 +263,8 @@ function Planner({back}){
             let {data} = response
             console.log(data[0],'response');
             if(data[0].trip_time === 0){
-              bus_trip.prediction_journey_time = Math.ceil(bus_trip.duration/60)
+              // bus_trip.prediction_journey_time = -1
+              bus_trip.prediction_journey_time = - Math.ceil(bus_trip.duration/60)
             }else{
               bus_trip.prediction_journey_time = data[0].trip_time
             }
@@ -286,7 +287,8 @@ function Planner({back}){
     function clearRoute(){
         setDirectionResponse(null)
         setTimeError(false)
-        setTimeError(false)
+        setError(false)
+        setShowWeather(false);
         setPanel(null)
         setstartPoint(null)
         setendPoint(null)

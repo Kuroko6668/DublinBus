@@ -3,7 +3,7 @@ import {Button, createFilterOptions, Input, Typography, Card, CardActions, CardC
 import { useStops } from '../../../../Providers/StopsContext';
 import DisplayStops from '../../../DisplayStops';
 import { useGoogleMap } from '@react-google-maps/api';
-
+import ErrorMessage from '../../../ErrorMessage';
 // use to set label limit of autocomplete
 const defaultFilterOptions = createFilterOptions();
 const OPTIONS_LIMIT = 10;
@@ -15,6 +15,7 @@ const filterOptions = (options, state) => {
 const NearMeSearchBar = ()=>{
   const [value, setValue] = React.useState();
   const [inputValue, setInputValue] = React.useState('');
+  const [error,setError]=useState(false);
   var {data:stops} = useStops()
   const stopRef = useRef()
   const [visibleStops, setVisibleStops] = useState(null);
@@ -56,10 +57,16 @@ const NearMeSearchBar = ()=>{
           type="submin"
           variant='contained'
           onClick={()=>{
+            if(!stopRef.current.value){
+              setError(true)
+              return
+            }
             for (var i=0 ; i < stops.length;i++){
                 if(stops[i].stop_name === stopRef.current.value){
+                    setError(false)
                     setVisibleStops([stops[i]])
                     mapRef.panTo({lat:stops[i].stop_lat,lng:stops[i].stop_long})
+                    return
                 }
             }
             
@@ -68,7 +75,9 @@ const NearMeSearchBar = ()=>{
         >
           Show on the map
         </Button>
+        {error&&<ErrorMessage message={'choose right stop name'}></ErrorMessage>}
         {visibleStops&&<DisplayStops stops={visibleStops}/>}
+        
   </div>
 }
 export default NearMeSearchBar
