@@ -18,14 +18,20 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Logout from '../../manageUser/Logout';
+import AuthContext from "../../context/AuthContext";
+import { useContext} from "react";
 
 
 
 
-const settings = [{label:'Profile',link:'/HomePage'}, {label:'SignUp',link:'/SignUp'}, {label:'SignIn',link:'/SignIn'}, {labe:"ProtectedPage",link:'/ProtectedPage'}];
 
 
-const pages = [{label:'User Statistics',link:'/userStatsPage'},{label:'Reports',link:''}];
+// const settings = [{label:'Profile',link:'/HomePage'}, {label:'SignUp',link:'/SignUp'}, {label:'SignIn',link:'/SignIn'}, {labe:"ProtectedPage",link:'/ProtectedPage'}];
+// let settings = []
+
+const settings = [{label:'Sign Up',link:'/SignUp'}, {label:'Sign In',link:'/SignIn'}];
+
+// const pages = [{label:'User Statistics',link:'/userStatsPage'},{label:'Reports',link:''}];
 
 
 
@@ -38,6 +44,10 @@ const pages = [{label:'User Statistics',link:'/userStatsPage'},{label:'Reports',
 
 const NavBar = () => {
 
+  const { user } = useContext(AuthContext);
+
+  
+
  
 
 
@@ -45,7 +55,6 @@ const NavBar = () => {
 
 
   //Mike
-  // const { user } = useContext(AuthContext);
 
   // const { user, logoutUser } = useContext(AuthContext);
 
@@ -156,9 +165,9 @@ const NavBar = () => {
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page.label}
-              </Button>
+              </Button> */}
           
-            )   
+            {/* )   
             )} */}
           </Box>
 
@@ -169,28 +178,36 @@ const NavBar = () => {
               </IconButton>
             </Tooltip>
             <Menu
+              className='user-profile-menu'
               sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
+              // anchorOrigin={{
+              //   vertical: 'top',
+              //   horizontal: 'right',
+              // }}
               keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
+              // transformOrigin={{
+              //   vertical: 'top',
+              //   horizontal: 'right',
+              // }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
+              display="flex"
+              flex-direction='column'
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting.label} component={Link} to={setting.link
+              {!user && (
+                settings.map((setting) => (
+                <MenuItem  key={setting.label} component={Link} to={setting.link
                 }>
-                  <Typography textAlign="center">{setting.label}</Typography>
+                  <Typography  textAlign="center" >{setting.label}</Typography>
                 </MenuItem>
-              ))}
-              <Logout/>
+              )))}
+              {user && (
+                <Logout/>
+
+              )}
+              
             </Menu>
           </Box>
         </Toolbar>

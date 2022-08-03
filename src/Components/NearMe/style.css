@@ -13,3 +13,43 @@
 .resultsSlider {
   margin-top: 20px;
 }
+
+TableCell {
+  cursor: pointer;
+}
+
+.infowindow {
+  width: 180px;
+  color: #333;
+}
+.infowindow > p {
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.stop-info-modal {
+ margin-left: 440px;
+ margin-top:300px;
+}
+
+.favourite-btn {
+ font-size: 14px;
+}
+
+
+
+.favourite-stops {
+ font-size: 14px;
+ max-width: 300px !important;
+ border: 2px solid red;
+}
+
+.close-fav-modal-btn{
+  margin-left: 450px !important;
+  margin-top: -40px !important;
+}
+
+.MuiModal-root {
+  background-color: white !important;
+}

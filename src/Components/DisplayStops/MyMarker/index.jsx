@@ -1,53 +1,43 @@
 import { InfoWindow, Marker, useGoogleMap } from "@react-google-maps/api";
-import { useState } from "react";
-import {Typography, Button, Modal, Box, Card} from '@mui/material';
+import { useState, useContext, useEffect } from "react";
+import { Typography, Button, Modal, Box } from "@mui/material";
 import ArrivalsTable from "./arrivalsTable";
 import { reqStopById } from "../../../ajax";
-import Waiting from "../../waiting";
-import { makeStyles, Dialog } from '@material-ui/core';
-import './style.css'
-
+import "./style.css";
+import Favorite from "@mui/icons-material/Favorite";
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import useAxios from "../../../utils/useAxios";
+import IconButton from "@mui/material/IconButton";
+import AuthContext from "../../../context/AuthContext";
 // Cutomizable small component that creates a marker and centers the view at that position
-const MyMarker = ({ id, position, options, ...restProps }) => {
+const MyMarker = ({
+  id,
+  position,
+  options,
+  isFavourite,
+  addFavourite,
+  removeFavourite,
+  isFavouriteListFull,
+  ...restProps
+}) => {
   // State to control the infowindow
   const [infoWindow, setInfoWindow] = useState(false);
-  const [nextArrivals, setnextArrivals] = useState([])
-  // const [modalStyle] = useState(getModalStyle);
+  const [nextArrivals, setnextArrivals] = useState([]);
   // Hook to access the map reference
   const mapRef = useGoogleMap();
   const [open, setOpen] = useState(false);
-  const [pending, setPending] = useState(false)
-  // function getModalStyle() {
-  //   const top = 50;
-  //   const left = 50;
-  //   return {
-  //     top: `${top}%`,
-  //     left: `${left}%`,
-  //     transform: `translate(-${top}%, -${left}%)`
-  //   };
-  // }
-  var response = []
-  // const useStyles = makeStyles(theme => ({
-  //   paper: {
-  //     position: "absolute",
-  //     width: 300,
-  //     padding: 20
-  //   }
-  // }))
-  // const classes = useStyles();
-  const handleOpen = async() => {
-    setPending(true);
-    response = await reqStopById(id).catch(()=>{
-      //输入函数体
-      setPending(false);
-    })
-    setnextArrivals(response.data.arrivals)
-    setOpen(true)
-    console.log(nextArrivals);
-    setPending(false);
+  var response = [];
+  const handleOpen = async () => {
+    response = await reqStopById(id);
+    setnextArrivals(response.data.arrivals);
+    setOpen(true);
   };
   const handleClose = () => setOpen(false);
+  const { user } = useContext(AuthContext);
+
   return (
+    
+    
     <Marker
       key={id}
       position={position}
@@ -56,21 +46,25 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
       {...restProps}
     >
       {/* Display an infowindow if the state is active and the marker has a title*/}
-      {infoWindow && <InfoWindow
-        position={position}
-        onCloseClick={() => setInfoWindow(false)}
-      >
-        <div className="infowindow">
-          {restProps.title}
-          <Button onClick={()=>handleOpen()}>More</Button>
-        </div>
-      </InfoWindow>}
-      {pending&&
-        <Card variant="margin_bottom"><Waiting size={50} thickness={3} /></Card>
-        }   
-
+      {infoWindow && (
+          <InfoWindow
+            position={position}
+            onCloseClick={() => setInfoWindow(false)}
+          >
+            <div className="infowindow">
+              {restProps.title}
+              <Button
+                onClick={() => {
+                  handleOpen();
+                }}
+              >
+                More
+              </Button>
+            </div>
+          </InfoWindow>
+        )}
       <Modal
-        style={{display:'flex',alignItems:'center',justifyContent:'center'}}
+        className="stop-info-modal"
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -78,16 +72,42 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-          {restProps.title}
+            {restProps.title}
           </Typography>
+
+          {user && (
+            <div>
+              {!isFavourite && !isFavouriteListFull &&  (
+                <IconButton
+                  size="small"
+                  aria-label="add-favourite"
+                  className="favourite-btn"
+                  onClick={addFavourite}
+                >
+                  <FavoriteBorder /> Add to Favourites
+                </IconButton>
+              )}
+              {isFavourite && (
+                <IconButton
+                  size="small"
+                  aria-label="add-favourite"
+                  className="favourite-btn"
+                  onClick={removeFavourite}
+                >
+                  <Favorite /> Remove from Favourites
+                </IconButton>
+              )}
+              {!isFavourite && isFavouriteListFull &&(
+                <p>You already have 3 favourites, remove one to add this stop to the list</p>
+              )}
+            </div>
+          )}
           <div id="modal-modal-description" sx={{ mt: 2 }}>
-            <ArrivalsTable arrivals={nextArrivals}/>
+            <ArrivalsTable arrivals={nextArrivals} />
           </div>
         </Box>
       </Modal>
     </Marker>
-
-    
   );
 
   // Zoom the view if the user clicks on the marker and display an infowindow
@@ -111,16 +131,12 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
 
 export default MyMarker;
 
-
-
 const style = {
-  top: '50',
-  left: '50',
-  position: "absolute",
-  // transform: 'translate(-50%, -50%)',
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
   width: 400,
-  margin: 'auto',
-  bgcolor: 'background.paper',
+  bgcolor: "background.paper",
   boxShadow: 24,
   p: 4,
 };

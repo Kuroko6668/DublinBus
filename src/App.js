@@ -1,29 +1,28 @@
-import './App.css';
+import "./App.css";
 
-import NavBar from './Components/NavBar';
-import Planner from './Components/Planner/Index';
-import Map from './Components/Map'
-import {StopsProvider} from './Providers/StopsContext'
-import {GeolocationProvider} from './Providers/GeolocationContext'
-import MarkerUserPosition from './Components/MarkerUserPosition';
-import NearMe from './Components/NearMe';
-import SearchRoute from './Components/SearchRoute';
-import SideBar from './Components/SideBar';
+import NavBar from "./Components/NavBar";
+import Planner from "./Components/Planner/Index";
+import Map from "./Components/Map";
+import { StopsProvider } from "./Providers/StopsContext";
+import { GeolocationProvider } from "./Providers/GeolocationContext";
+import MarkerUserPosition from "./Components/MarkerUserPosition";
+import NearMe from "./Components/NearMe";
+import SearchRoute from "./Components/SearchRoute";
+import SideBar from "./Components/SideBar";
 function App() {
   return (
     <div className="App">
-      <NavBar/>
+      <NavBar />
 
       <StopsProvider>
         <GeolocationProvider>
-          <div className="myflex">
-          <Map>
-            <MarkerUserPosition/>
-            <SideBar/>
-          </Map>
-          </div>
-          
-        </GeolocationProvider>  
+          {/* <div className="mapContainer"> */}
+            <Map>
+              <MarkerUserPosition />
+              <SideBar />
+            </Map>
+          {/* </div> */}
+        </GeolocationProvider>
       </StopsProvider>
 
       {/* <header className="App-header">

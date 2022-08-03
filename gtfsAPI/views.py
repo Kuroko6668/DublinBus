@@ -1,3 +1,4 @@
+import re
 from django.shortcuts import render
 from rest_framework import viewsets
 from datetime import datetime, timedelta, timezone
@@ -19,6 +20,11 @@ import sklearn
 import category_encoders
 import logging
 from gtfsrProcessing.apps import pipeline
+from rest_framework.decorators import api_view
+from rest_framework import serializers
+
+
+
 logging.basicConfig(filename = "gtfsrProcessing/gtfsrSearchRuntimes.log", level=logging.DEBUG)
 # Create your views here.
 
@@ -44,7 +50,22 @@ class StopsView(viewsets.ModelViewSet):
     
 
 
+@api_view(['GET'])
+def stop_name(request,stop_1,stop_2,stop_3):
+    stop_id_list = [stop_1,stop_2,stop_3]
+    result = {}
+    
+    stop_names = Stops.objects.filter(
+        stop_id__in=stop_id_list
+    )
+    serialiser = StopsSerializer(stop_names, context = {'request': request}, many = True)
 
+    return JsonResponse(serialiser.data,safe = False)
+
+            
+
+   
+       
 
 
 

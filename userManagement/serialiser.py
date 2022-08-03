@@ -52,4 +52,4 @@ class RegisterSerializer(serializers.ModelSerializer):
 class user_dataSerializer(serializers.ModelSerializer):
     class Meta:
         model = user_data
-        fields = ('user_id' ,'favourite_stop_1', 'favourite_stop_2', 'favourite_stop_3')
+        fields = ('id' ,'favourite_stop_1', 'favourite_stop_2', 'favourite_stop_3')

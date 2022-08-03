@@ -17,8 +17,20 @@ const containerStyle = {
   width: '100%',
   height: '800px',
   position:'relative !important',
-  display: 'flex',
-  flexDirection: 'column'
+    display: 'flex',
+  flexDirection: 'column',
+  // alignItems: 'center',
+
+  
+  // display: 'flex',
+  // flexDirection: 'row',
+
+  // TO DO - find a way to add this to make mobile responsive
+  // @media (max-width: 800px) {
+  //   .flex-container {
+  //     flex-direction: column;
+  //   }
+  // }
 };
 // Map Styles for the container
 const customStyled = [

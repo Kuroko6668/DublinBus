@@ -23,10 +23,10 @@ export function StopsProvider({ children }) {
         if(!value || !value.data){
             let startTime = performance.now()
             let getStops = async () => {
-                const temp = await reqAllStops().then(() => {
+                const temp = await reqAllStops()
                 var endTime = performance.now()
                 console.log('Time taken: ' + (endTime-startTime))
-                })
+                
 
                 setStops(temp)
             };
@@ -37,6 +37,7 @@ export function StopsProvider({ children }) {
             // console.log(value,2);
         }else{
             setStops(storageStops)
+            console.log("StorageStops" + storageStops)
             // console.log(storageStops,3);
             // console.log(value,3);
         }
