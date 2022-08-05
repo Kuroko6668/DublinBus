@@ -162,6 +162,7 @@ function Planner({back}){
     // caculate the route based on user input
     async function calculateRoute (){
         if(originRef.current.value === '' || destinationRef.current.value === ''){
+          setError(true)
           return 
         }
         // if(error|| time_error){
