@@ -1,0 +1,7 @@
+#route {
+  display: flex;
+  overflow: scroll;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
