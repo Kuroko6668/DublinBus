@@ -1,8 +1,5 @@
+/node_modules
 **/node_modules/
 !/.gitignore
-**/__pycache__/
-/clean_weather_csv.log
-/
-
-/node_modules
+**/_pycache_/
 *.log
