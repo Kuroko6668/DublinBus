@@ -62,7 +62,10 @@ export default function DisplayRoutes(props) {
                {"The journey will take "+Math.ceil(step.duration/60)+" mins"}
             </Typography>
             <Typography>
-               {step.prediction_journey_time>0?"Our prediction journey time is "+Math.ceil(step.prediction_journey_time)+" mins":null}
+               {step.prediction_journey_time>0?"Our prediction journey time is "+Math.ceil(step.prediction_journey_time)+" mins":"Our prediction journey time is "+Math.ceil(-step.prediction_journey_time)+" mins"}
+            </Typography>
+            <Typography>
+               {step.prediction_journey_time>0?"our prediction":"google prediction"}
             </Typography>
           </AccordionDetails>
         </Accordion>  
