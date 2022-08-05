@@ -1,4 +1,4 @@
 **/node_modules/
 !/.gitignore
 **/_pycache_/
-*.env
+**/.env/
