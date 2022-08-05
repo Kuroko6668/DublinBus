@@ -1,0 +1,3 @@
+**/node_modules/
+!/.gitignore
+**/_pycache_/
