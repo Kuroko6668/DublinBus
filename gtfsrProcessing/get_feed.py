@@ -80,25 +80,4 @@ def gtfsr_producer(response):
 
     pipeline.set_message(restructured_dict)
 
-    # try:
-
-    # with open('gtfsrProcessing/gtfsrDict_test.json','w') as updateDict:
-
-    #     json.dump(restructured_dict,updateDict, indent=4)
-
-    #logging.info("Json file updated correctly. " + str(response_timestamp) + "  response written to json correctly" )
-
-    # except Exception as e:
-    #     logging.warning("Error updating existing json." + str(response_timestamp) + " response error: " + str(e))
-
-
-# try:
-#     with open('gtfsrProcessing/gtfsrFeed.json', 'w') as json_file:
-#         #delete contents of existing json and dump updated object to file
-#         json_file.seek(0)
-#         json_file.truncate()
-#         json.dump(response, json_file)
-#         json_file.close()
-#         logging.info("Json file updated correctly. " + str(response_timestamp) + "  response written to json correctly" )
-# except Exception as  e:
-#         logging.warning("Error updating existing json." + str(response_timestamp) + " response error: " + str(e))
+    

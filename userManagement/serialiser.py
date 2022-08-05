@@ -8,19 +8,15 @@ from .models import user_data
 
 # from userManagement.models import user_data
 
-
+#code taken from:
 #https://sushil-kamble.medium.com/django-rest-framework-react-authentication-workflow-2022-part-1-a21f22b3f358
+#modified where necessary
 
 #create acess and refresh token
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):
         token = super().get_token(user)
-        # Add custom claims
-        token['username'] = user.username
-        token['email'] = user.email
-        # token['id'] = user.id
-        
         return token
 
 class RegisterSerializer(serializers.ModelSerializer):

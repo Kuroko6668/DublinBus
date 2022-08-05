@@ -1,3 +1,6 @@
+"""this code is adapted from https://github.com/sbma44/py-gtfs-mysql, GTFS MySQL IMPORT SCRIPT, Author: Tom Lee (thomas.j.lee@gmail.com)"""
+ 
+
 CREATE DATABASE IF NOT EXISTS `dublin_bus`;
 
 USE dublin_bus;
