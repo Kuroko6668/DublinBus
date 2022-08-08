@@ -7,38 +7,20 @@ import Waiting from "../../waiting";
 import { makeStyles, Dialog } from '@material-ui/core';
 import './style.css'
 
-// Cutomizable small component that creates a marker and centers the view at that position
+
 const MyMarker = ({ id, position, options, ...restProps }) => {
-  // State to control the infowindow
   const [infoWindow, setInfoWindow] = useState(false);
   const [nextArrivals, setnextArrivals] = useState([])
-  // const [modalStyle] = useState(getModalStyle);
-  // Hook to access the map reference
+
   const mapRef = useGoogleMap();
   const [open, setOpen] = useState(false);
   const [pending, setPending] = useState(false)
-  // function getModalStyle() {
-  //   const top = 50;
-  //   const left = 50;
-  //   return {
-  //     top: `${top}%`,
-  //     left: `${left}%`,
-  //     transform: `translate(-${top}%, -${left}%)`
-  //   };
-  // }
+
   var response = []
-  // const useStyles = makeStyles(theme => ({
-  //   paper: {
-  //     position: "absolute",
-  //     width: 300,
-  //     padding: 20
-  //   }
-  // }))
-  // const classes = useStyles();
+
   const handleOpen = async() => {
     setPending(true);
     response = await reqStopById(id).catch(()=>{
-      //输入函数体
       setPending(false);
     })
     setnextArrivals(response.data.arrivals)
@@ -90,21 +72,19 @@ const MyMarker = ({ id, position, options, ...restProps }) => {
     
   );
 
-  // Zoom the view if the user clicks on the marker and display an infowindow
   function handleClick() {
-    // Display the infowindow
+
     setInfoWindow(true);
   }
 
-  // This function is called when the marker is clicked twice in a short period of time
+ 
   function handleDoubleClick() {
-    // Zoom the view
+
     const zoom = mapRef.getZoom();
     if (zoom <= 16) {
       mapRef.setZoom(zoom + 1);
     }
 
-    // Pans the view to the marker
     mapRef.panTo(position);
   }
 };
@@ -117,7 +97,6 @@ const style = {
   top: '50',
   left: '50',
   position: "absolute",
-  // transform: 'translate(-50%, -50%)',
   width: 400,
   margin: 'auto',
   bgcolor: 'background.paper',

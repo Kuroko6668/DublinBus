@@ -11,7 +11,6 @@ function NearMe({back}) {
    // Grab the user position from the provider 
    const { position } = useGeolocation();
    const [distance, setDistance] = useState(3);
-   const [page, setPage] = useState(1);
    const [resultsDisplayed, setResultsDisplayed] = useState(20);
    const mapRef = useGoogleMap()
    mapRef.setZoom(14);
