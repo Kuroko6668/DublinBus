@@ -132,11 +132,11 @@ DATABASES = {
 
     'default' : {
         'ENGINE' : "django.db.backends.mysql",
-        'NAME' : os.environ["NAME"],
-        'USER': os.environ["ADMIN"],
-        'PASSWORD' : os.environ["PASSWORD"],
-        'HOST' : os.environ["URL"],
-        'PORT' : os.environ["PORT"]
+        'NAME' : os.environ["DB_NAME"],
+        'USER': os.environ["DB_ADMIN"],
+        'PASSWORD' : os.environ["DB_PASSWORD"],
+        'HOST' : os.environ["DB_URL"],
+        'PORT' : os.environ["DB_PORT"]
        
 
 

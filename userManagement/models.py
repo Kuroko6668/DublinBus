@@ -10,18 +10,12 @@ from django.dispatch import receiver
 
 
 class user_data(models.Model):
-
+    #id is one to one field with built in Djnago User model
     id = models.OneToOneField(User, primary_key = True,on_delete=models.CASCADE)
     favourite_stop_1 = models.CharField(max_length = 150, null = True)
     favourite_stop_2 = models.CharField(max_length = 150, null = True)
     favourite_stop_3 = models.CharField(max_length = 150, null = True)
-    favourite_stop_1_name = models.CharField(max_length = 150, null = True)
-    favourite_stop_2_name = models.CharField(max_length = 150, null = True)
-    favourite_stop_3_name= models.CharField(max_length = 150, null = True)
-
-
-
-
+  
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):

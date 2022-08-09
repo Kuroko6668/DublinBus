@@ -5,37 +5,18 @@ import myAxios from '../../ajax/myAxios';
 
 import useAxios from "../../utils/useAxios";
 import AuthContext from "../../context/AuthContext";
+import UserDataContext from "../../context/UserDataContext";
 import axios from "axios";
 
 // This component returns a div and displays a marker for each stop in the array
 // This div are wrapped by an accordion
-const DisplayStops = ({ stops, addFavourite, removeFavourite, isFavouriteListFull }) => {
+const DisplayStops = ({ stops,
+isFavouriteListFull }) => {
   const { user } = useContext(AuthContext);
   const [res, setRes] = useState("");
   const api = useAxios();
 
-  let response;
-  const [userData, setUserData] = useState({
-    id:  '0',
-    favourite_stop_1: "0",
-    favourite_stop_2: "0",
-    favourite_stop_3: "0",
-  });
-
-  async function fetchData() {
-    try {  
-      const response = await api.get("/userdata/" + user.user_id);
-      setUserData(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  useEffect(() => {
-    if(user) {
-      fetchData();
-    }
-  }, []);
+  const { userData, addFavourite, removeFavourite } = useContext(UserDataContext);
 
   return (
     <>
@@ -54,13 +35,13 @@ const DisplayStops = ({ stops, addFavourite, removeFavourite, isFavouriteListFul
           isFavouriteListFull={isFavouriteListFull}
           icon={iconStop}
           title={stop.stop_name}
-          addFavourite={() => {
-            fetchData();
-            addFavourite(stop.stop_id);
+          addFavouriteClick={() => {
+            addFavourite(stop.stop_id)
+            console.log('Add fav click')
           }}
-          removeFavourite={() => {
-            removeFavourite(stop.stop_id);
-            fetchData();
+          removeFavouriteClick={() => {
+            removeFavourite(stop.stop_id)
+            console.log('Remove fav click')
           }}
         />
       ))}

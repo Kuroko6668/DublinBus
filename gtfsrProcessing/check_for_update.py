@@ -10,16 +10,6 @@ import os.path
 import time
 from tracemalloc import stop
 
-
-
-
-
-
-
-        
-
-
-
 def check_trip_for_update(realtime_updates,trip_id,stop_id):
     start = time.time()
     
@@ -41,14 +31,7 @@ def check_trip_for_update(realtime_updates,trip_id,stop_id):
                 return(stop_time_update_obj[stop_id]['Arrival']['Delay'])
     return 0
 
-# if os.path.exists("gtfsrProcessing/gtfsrDict_test.json"):
-
-#         with open('gtfsrProcessing/gtfsrDict_test.json', 'r') as openFeed:
-  
-    
-#          gtfsrDict = json.load(openFeed)
-
-# check_trip_for_update(gtfsrDict, '17935.11355.2-238-ga2-1.205.I','8240DB001545' )     
+   
    
 
 

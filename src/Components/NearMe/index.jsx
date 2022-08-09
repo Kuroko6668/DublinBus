@@ -20,13 +20,13 @@ import CloseIcon from "@mui/icons-material/Close";
 import useAxios from "../../utils/useAxios";
 import myAxios from '../../ajax/myAxios';
 import { makeStyles } from '@material-ui/core/styles';
+import UserDataContext from "../../context/UserDataContext";
 
 // This is the main component for the NearMe section
 function NearMe({ back }) {
   // Grab the user position from the provider
   const { position } = useGeolocation();
   const [distance, setDistance] = useState(3);
-  const [page, setPage] = useState(1);
   const [resultsDisplayed, setResultsDisplayed] = useState(20);
   const mapRef = useGoogleMap();
   mapRef.setZoom(14);
@@ -41,86 +41,80 @@ function NearMe({ back }) {
     setResultsDisplayed(newValue);
   };
   const api = useAxios();
-
-  // const userData = {
-  //   0: {
-  //     id: "12312",
-  //     favourite_stop_1: "8220DB001013",
-  //     favourite_stop_2: "8220DB000895",
-  //     favourite_stop_3: "8220DB000845",
-  //   },
-  // };
   const { user } = useContext(AuthContext);
+  const {userData, setUserData, addFavourite, removeFavourite, stopNames} = useContext(UserDataContext);
   const [isFavouriteListFull, setIsFavouriteListFull] = useState(false);
-
-  // let response;
-  const [userData, setUserData] = useState([
-    {
-      id: "0", // user.user_id,
-      favourite_stop_1: "0",
-      favourite_stop_2: "0",
-      favourite_stop_3: "0",
-    },
-  ]);
-
-  let [stop1Name, setStop1Name] = useState("");
-  let [stop2Name, setStop2Name] = useState("");
-  let [stop3Name, setStop3Name] = useState("");
-
+  // let [stop1Name, setStop1Name] = useState("");
+  // let [stop2Name, setStop2Name] = useState("");
+  // let [stop3Name, setStop3Name] = useState("");
+  let stop1Name
+  let stop2Name;
+  let stop3Name;
   async function fetchData() {
     try {
-      const userResponse = await api.get("/userdata/" + user.user_id);
-      setUserData(userResponse.data);
-      if (userResponse.data) {
+      const userResponse = userData; //await api.get("/userdata/" + user.user_id);
+      if (userData) {
+        
         // check if favourite list full
         if (
-          !Object.keys(userResponse.data[0]).find(
-            (key) => userResponse.data[0][key] === "0"
+          !Object.keys(userData[0]).find(
+            (key) => userData[0][key] === "0"
           )
         ) {
           setIsFavouriteListFull(true);
         } else {
           setIsFavouriteListFull(false);
         }
+        console.log('NEAR me stop names')
+        console.log(stopNames)
 
-        // get user data - favourites and stop names
-        const response = await api.get("/userdata/" + user.user_id);
-        setUserData(response.data);
-        const stop_names = await myAxios.get("/stopname/"+userResponse.data[0].favourite_stop_1+"/"+userResponse.data[0].favourite_stop_2+"/"+userResponse.data[0].favourite_stop_3)
-        if(userResponse.data[0].favourite_stop_1 !== '0') {
-          let stopNameIndex = 0;
-          for(let i=0; i<3; i++) {
-            if(stop_names.data[i].stop_id === userResponse.data[0].favourite_stop_1 ) {
-              stopNameIndex = i;
-              break;
-            }
-          }
-          const stopName = stop_names.data[stopNameIndex].stop_name;
-          setStop1Name(stopName)
+
+
+
+        if(stopNames) {
+
+          stop1Name = stopNames.favourite_stop_1_name;
+          stop2Name = stopNames.favourite_stop_2_name;
+          stop3Name = stopNames.favourite_stop_3_name;
         }
-        if(userResponse.data[0].favourite_stop_2 !== '0') {
-          let stopNameIndex = 0;
-          for(let i=0; i<3; i++) {
-            if(stop_names.data[i].stop_id === userResponse.data[0].favourite_stop_2 ) {
-              stopNameIndex = i;
-              break;
-            }
-          }
-          const stopName = stop_names.data[stopNameIndex].stop_name;
-          setStop2Name(stopName)
-        }
-        if(userResponse.data[0].favourite_stop_3 !== '0') {
-          let stopNameIndex = 0;
-          for(let i=0; i<3; i++) {
-            if(stop_names.data[i].stop_id === userResponse.data[0].favourite_stop_3 ) {
-              stopNameIndex = i;
-              break;
-            }
-          }
-          const stopName = stop_names.data[stopNameIndex].stop_name;
-          setStop3Name(stopName)
-        }
+        
+        console.log("Adding Name to Table" + stop1Name)
+        // const stop_names = await myAxios.get("/stopname/"+userData[0].favourite_stop_1+"/"+userData[0].favourite_stop_2+"/"+userData[0].favourite_stop_3)
+        // if(userData[0].favourite_stop_1 !== '0') {
+        //   let stopNameIndex = 0;
+        //   for(let i=0; i<3; i++) {
+        //     if(stop_names.data[i].stop_id === userData[0].favourite_stop_1 ) {
+        //       stopNameIndex = i;
+        //       break;
+        //     }
+        //   }
+        //   const stopName = stop_names.data[stopNameIndex].stop_name;
+        //   setStop1Name(stopName)
+        // }
+        // if(userData[0].favourite_stop_2 !== '0') {
+        //   let stopNameIndex = 0;
+        //   for(let i=0; i<3; i++) {
+        //     if(stop_names.data[i].stop_id === userData[0].favourite_stop_2 ) {
+        //       stopNameIndex = i;
+        //       break;
+        //     }
+        //   }
+        //   const stopName = stop_names.data[stopNameIndex].stop_name;
+        //   setStop2Name(stopName)
+        // }
+        // if(userData[0].favourite_stop_3 !== '0') {
+        //   let stopNameIndex = 0;
+        //   for(let i=0; i<3; i++) {
+        //     if(stop_names.data[i].stop_id === userData[0].favourite_stop_3 ) {
+        //       stopNameIndex = i;
+        //       break;
+        //     }
+        //   }
+        //   const stopName = stop_names.data[stopNameIndex].stop_name;
+        //   setStop3Name(stopName)
+        // }
       }
+      
     } catch (error) {
       console.error(error);
     }
@@ -128,15 +122,12 @@ function NearMe({ back }) {
 
   useEffect(
     () => {
-      if(user) {
-        fetchData();
-      }
+      console.log('NEAR ME USE ')
+      console.log(stopNames)
+      fetchData()
+
     },
-    [
-      // userData[0].favourite_stop_1,
-      // userData[0].favourite_stop_2,
-      // userData[0].favourite_stop_3,
-    ]
+    [userData,stopNames]
   );
 
   const [displayFavWindow, setDisplayFavWindow] = useState(false);
@@ -163,25 +154,6 @@ function NearMe({ back }) {
     boxShadow: 24,
     p: 4,
     
-  };
-
-  const removeFavourite = () => {
-    let stop_id = favStopOpenId;
-    let newState = userData[0];
-    if (Object.keys(userData[0]).find((key) => userData[0][key] === stop_id)) {
-      const numberInFavourites = Object.keys(userData[0]).find(
-        (key) => userData[0][key] === stop_id
-      );
-      if (numberInFavourites) {
-        newState[numberInFavourites] = "0";
-      }
-    }
-    setUserData({ ...userData, 0: newState });
-    api.put("/userdata/" + user.user_id, newState).then(() => {
-      fetchData().then(() => {
-        handleClose();
-      });
-    });
   };
 
   const modalStyle = {
@@ -211,6 +183,7 @@ const classes = makeStyles(theme => ({
 
   return (
     <>
+
       {user && (
               <div id="favourite-stops" style={{maxWidth:250, border: '2px solid red', alignContent: "center", marginLeft: "auto"}}>
               {userData && userData[0] && (
@@ -225,7 +198,7 @@ const classes = makeStyles(theme => ({
                       </TableRow>
                     </TableHead>
                     <TableBody>
-                {stop1Name !== '' && (
+                {stopNames.favourite_stop_1_name !== '' && (
                         <TableRow
                           key={1}
                           sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
@@ -237,11 +210,11 @@ const classes = makeStyles(theme => ({
                               handleOpen(userData[0].favourite_stop_1);
                             }}
                           >
-                            {stop1Name}
+                            {stopNames.favourite_stop_1_name ?? ''}
                           </TableCell>
                         </TableRow>
                       )}
-                      {stop2Name !== '' && (
+                      {stopNames.favourite_stop_2_name !== '' && (
                         <TableRow
                           key={2}
                           sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
@@ -254,12 +227,12 @@ const classes = makeStyles(theme => ({
                             }}
                           >
       
-                            {stop2Name}
+      {stopNames.favourite_stop_2_name}
                           </TableCell>
                         </TableRow>
                       )}
       
-                      {stop3Name !== '' && (
+                      {stopNames.favourite_stop_3_name !== '' && (
                         <TableRow
                           key={3}
                           sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
@@ -271,7 +244,7 @@ const classes = makeStyles(theme => ({
                               handleOpen(userData[0].favourite_stop_3);
                             }}
                           >
-                            {stop3Name}
+                            {stopNames.favourite_stop_3_name}
                           </TableCell>
                         </TableRow>
                       )}
@@ -315,60 +288,6 @@ const classes = makeStyles(theme => ({
             distance={distance}
             resultsDisplayed={resultsDisplayed}
             valueLabelDisplay="auto"
-            addFavourite={(stop_id) => {
-              console.log("near me ");
-              console.log(stop_id);
-              //     console.log("ADD TO FAV");
-
-              let newState = userData[0];
-              if (
-                !Object.keys(userData[0]).find(
-                  (key) => userData[0][key] === stop_id
-                )
-              ) {
-                console.log("doesnt exist in favourites");
-
-                const availableFavourite = Object.keys(userData[0]).find(
-                  (key) => userData[0][key] === "0"
-                );
-                if (availableFavourite) {
-                  newState[availableFavourite] = stop_id;
-                } else {
-                  console.log("have 3 favourites");
-                }
-              } else {
-                console.log("already in fav");
-              }
-              setUserData({ ...userData, 0: newState });
-              api.put("/userdata/" + user.user_id, newState).then(() => {
-                fetchData();
-              });
-              //
-            }}
-            removeFavourite={(stop_id) => {
-              console.log("Near me remove " + stop_id);
-              console.log("Clicked remove favourite");
-              let newState = userData[0];
-              if (
-                Object.keys(userData[0]).find(
-                  (key) => userData[0][key] === stop_id
-                )
-              ) {
-                console.log("exists in favourites");
-                const numberInFavourites = Object.keys(userData[0]).find(
-                  (key) => userData[0][key] === stop_id
-                );
-                if (numberInFavourites) {
-                  newState[numberInFavourites] = "0";
-                }
-              } else {
-                console.log("not in fav");
-              }
-              setUserData({ ...userData, 0: newState });
-              api.put("/userdata/" + user.user_id, newState).then(() => {
-                fetchData();
-              });
-            }}
             isFavouriteListFull={isFavouriteListFull}
           />
         )}
@@ -407,7 +326,10 @@ const classes = makeStyles(theme => ({
                 size="small"
                 aria-label="add-favourite"
                 className="favourite-btn"
-                onClick={removeFavourite}
+                onClick={() => {
+                  removeFavourite(favStopOpenId)
+                  handleClose()
+                }}
               >
                 <FavoriteBorder /> Remove from Favourites
               </IconButton>

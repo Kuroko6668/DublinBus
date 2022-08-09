@@ -1,6 +1,10 @@
 import React,{Component} from 'react'
 import { useState, useRef} from 'react';
-import {Button, Input, Card} from '@mui/material';
+import {Button, Input, Card, Accordion} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
 import { useStops } from '../../Providers/StopsContext';
 import {useGeolocation} from '../../Providers/GeolocationContext'
 import { reqPrediction } from '../../ajax';
@@ -20,14 +24,11 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import moment from "moment";
 import ErrorMessage from '../ErrorMessage';
 import DisplayRoutes from './subcomponent/DisplayRoutes';
-import ja from 'date-fns/esm/locale/ja';
-import { set } from 'store/dist/store.modern.min';
 import { reqRouteById } from '../../ajax';
 import { reqCurWeather } from '../../ajax';
 import Weather from '../Weather';
 import Waiting from '../waiting';
 function Planner({back}){
-    const map_Ref = useGoogleMap();
     const { position } = useGeolocation();
     const [directionResponse, setDirectionResponse] = useState((null))
     const [distance,setDistance] = useState('')
@@ -162,6 +163,7 @@ function Planner({back}){
     // caculate the route based on user input
     async function calculateRoute (){
         if(originRef.current.value === '' || destinationRef.current.value === ''){
+          setError(true)
           return 
         }
         // if(error|| time_error){
@@ -237,13 +239,14 @@ function Planner({back}){
               arrival_stop_lng:temp.transit.arrival_stop.location.lng(),
               arrival_stop_id:stopNameToId(temp.transit.arrival_stop.name,temp.transit.arrival_stop.location.lat(),temp.transit.arrival_stop.location.lng()),
               arrival_time:temp.transit.arrival_time.value,
-              arrival_time_text:temp.transit.arrival_time.text,
+              arrival_time_text:moment(temp.transit.arrival_time.value).format("HH:mm"),
               departure_stop:temp.transit.departure_stop.name,
               departure_stop_id:stopNameToId(temp.transit.departure_stop.name,temp.transit.departure_stop.location.lat(),temp.transit.departure_stop.location.lng()),
               departure_stop_lat:temp.transit.departure_stop.location.lat(),
               departure_stop_lng:temp.transit.departure_stop.location.lng(),
               departure_time:temp.transit.departure_time.value,
-              departure_text:temp.transit.departure_time.text,
+              departure_text:moment(temp.transit.departure_time.value).format("HH:mm"),
+              // departure_text:temp.transit.departure_time.text,
               short_name:temp.transit.line.short_name,
               long_name:temp.transit.line.name,
               direction_id:0,
@@ -263,9 +266,11 @@ function Planner({back}){
             let {data} = response
             console.log(data[0],'response');
             if(data[0].trip_time === 0){
-              bus_trip.prediction_journey_time = Math.ceil(bus_trip.duration/60)
+              // bus_trip.prediction_journey_time = -1
+              bus_trip.prediction_journey_time = - Math.ceil(bus_trip.duration/60)
             }else{
               bus_trip.prediction_journey_time = data[0].trip_time
+              bus_trip.arrival_time_text = moment(bus_trip.departure_time).add(data[0].trip_time, 'minutes').format("HH:mm")
             }
 
             if(data[0].direction_id >= 0){
@@ -286,7 +291,8 @@ function Planner({back}){
     function clearRoute(){
         setDirectionResponse(null)
         setTimeError(false)
-        setTimeError(false)
+        setError(false)
+        setShowWeather(false);
         setPanel(null)
         setstartPoint(null)
         setendPoint(null)
@@ -366,10 +372,21 @@ function Planner({back}){
   {showWeather&& <Weather temperature={weatherData.temperture} wind={weatherData.wind_speed}></Weather> }
          </LocalizationProvider>
          {time_error && <ErrorMessage message={'time must be in next 7 days'}/>}
-         {
-          panel&&
+         {panel&&<><Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>Bus Route</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+        {
           <DisplayRoutes panel={panel} route={visiableroute}/>
          }
+        </AccordionDetails>
+      </Accordion></>}
+      
           {startPoint&&
                 <Marker
                   key={Math.random().toString()}

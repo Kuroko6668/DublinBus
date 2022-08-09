@@ -20,7 +20,7 @@ function Copyright(props) {
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        Dublin Bus App
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -37,12 +37,7 @@ const { loginUser } = useContext(AuthContext);
     const username = e.target.username.value;
     const password = e.target.password.value;
     username.length > 0 && loginUser(username, password)
-    // const data = new FormData(event.currentTarget);
-    // console.log({
-    //   email: data.get('email'),
-    //   password: data.get('password'),
-      
-    // });
+   
   };
 
   return (
@@ -84,10 +79,7 @@ const { loginUser } = useContext(AuthContext);
               id="password"
               autoComplete="current-password"
             />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
+           
             <Button
               type="submit"
               fullWidth
@@ -97,13 +89,8 @@ const { loginUser } = useContext(AuthContext);
               Sign In
             </Button>
             <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
-              </Grid>
+            
               <Grid item>
-                {/* change to react routing */}
                 <Link href="/SignUp" variant="body2">
                   {"Don't have an account? Sign Up"}
                   

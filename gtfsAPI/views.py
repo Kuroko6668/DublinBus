@@ -64,11 +64,6 @@ def stop_name(request,stop_1,stop_2,stop_3):
 
             
 
-   
-       
-
-
-
 def stops_by_route_name(request, route_name):
     """Returns the stops in a route in order of stop sequence."""
 
@@ -117,21 +112,17 @@ def stop_detail(request, stop_id):
         
         trip__service_id=service_id,
         stop_id=stop_id,
-        # trip__service_id=str(service_id),
         # Get all arrival times in the next hour
         arrival_time__gte=current_time.time(),
         arrival_time__lte=(current_time + timedelta(hours=1)).time(),
     ).select_related("trip")
     
 
-    # print(stop_time_next_hour.query)
     
    
 
     # gtfsDict = gtfsr_feed_pipeline.Pipeline.get_message()
 
-
-    
     # for stop_time in stop_time_next_hour.iterator():
 
     #     if stop_time.trip.service_id  == str(service_id):
@@ -155,8 +146,8 @@ def stop_detail(request, stop_id):
 
     # realtime_updates = realtime_updates['Entity']
 
-    
-    gtfsDict = gtfs_consumer()
+    #get dictonary from pipeline
+    gtfsDict = pipeline.get_message()
 
 
     for stop_time in stop_time_next_hour.iterator():
@@ -333,20 +324,6 @@ def get_cur_weather(request):
 
 
 
-
-
-
-
-
-
-
-
-
-def gtfs_consumer():
-
-    return pipeline.get_message()
-
-
 def request_realtime_nta_data():
 
     headers = {
@@ -413,7 +390,8 @@ def time_obj_to_seconds(obj):
     return minutes
 
 def call_model_predict(short_name,trip_last_stop,trip_first_stop,stop,stop_id,dt_obj):
-        weather_obj = DailyWeather.objects.filter(time__gte=dt_obj.time()).first()
+        weather_obj = DailyWeather.objects.filter(time__lte=dt_obj).order_by('-time')[0]
+        print(weather_obj.time)
         national_holiday_2022 = ['01/01/2022', '14/02/2022', '17/03/2022', '27/03/2022', 
         '15/04/2022', '18/04/2022', '02/05/2022', '06/06/2022', '19/06/2022', '01/08/2022',
         '31/10/2022', '31/10/2022','25/12/2022','26/12/2022']

@@ -1,15 +1,9 @@
 from django.apps import AppConfig
 
-
-
-
-
-
-
-
 class GtfsrprocessingConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'gtfsrProcessing'
+    #executed when django server is run
     def ready(self):
         
         #import and instanciate a pipeline

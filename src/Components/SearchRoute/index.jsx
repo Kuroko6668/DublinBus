@@ -1,10 +1,14 @@
 import React,{Component, useRef, useState} from 'react'
-import {Button, Input, Typography, Card, CardActions, CardContent, Box, Autocomplete, TextField, backdropClasses} from '@mui/material';
+import {Button, Input, Typography, Card, CardActions, CardContent, Box, Accordion, Autocomplete, TextField, backdropClasses} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
 import { reqRouteById } from '../../ajax';
 import DisplayStops from '../DisplayStops/index'
 import { useStops } from '../../Providers/StopsContext';
 import './style.css'
 import StopsTable from './StopsTable';
+import ErrorMessage from '../ErrorMessage'
 
 
 
@@ -19,13 +23,18 @@ function SearchRoute({back}){
     const {data:stops}  = useStops();
     const [direction, setDirection] = useState(0)
     const [directionDetail, setDirectionDetail] = useState('')
-
+    const [error,setError]=useState(false);
   
     const getRoute = async ()=>{
-        setVisiableRoute([])
         if(routeRef.current.value === ''){
+            setError(true)
+            setVisiableRoute(null)
+            setDirectionDetail(null)
+            setRoutes(null)
             return 
         }
+        setError(false)
+        setVisiableRoute([])
         let {data:route_stops} = await reqRouteById(routeRef.current.value)
         route_stops.map((obj)=>{
             for(var i = 0; i < stops.length; i++){
@@ -45,13 +54,15 @@ function SearchRoute({back}){
 
         const res = []
         var detail = ''
-        var index = 1
+        let index = 1
         for(var i = 0; i < route_stops.length; i++){
             if(route_stops[i].direction_id === direction){
                 detail = route_stops[i].trip_headsign
+                console.log(index);
                 // route_stops[i].stopObj.stop_sequence = route_stops[i].stop_sequence
                 route_stops[i].stopObj.stop_sequence = index++
                 res.push(route_stops[i].stopObj)
+      
             }
         }
         console.log(res);
@@ -62,7 +73,11 @@ function SearchRoute({back}){
     }
 
     const handleChangeDirection = ()=>{
-
+        if(routes === null){
+          setError(true)
+          return 
+        }
+        setError(false)
         setVisiableRoute([])
         const res = []
         var detail = ''
@@ -105,6 +120,7 @@ function SearchRoute({back}){
         sx={{ width: "12rem" }}
         renderInput={(params) => <TextField {...params} label="Route Name" inputRef = {routeRef}/>}
         />
+         {error&& <ErrorMessage message={"Error in route name"}></ErrorMessage>}
         <Button 
           sx={{ mt:1 }}
           style={{textTransform: 'none'}}
@@ -131,7 +147,21 @@ function SearchRoute({back}){
                 {directionDetail}
             </Typography>
         }
-        {visiableroute&&<StopsTable stops={visiableroute}/>}
+           {visiableroute&&<><Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>Stops Table</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+        {
+          <StopsTable stops={visiableroute}/>
+         }
+        </AccordionDetails>
+      </Accordion></>}
+        {/* {visiableroute&&<StopsTable stops={visiableroute}/>} */}
         <Button 
           sx={{ mt:1 }}
           style={{textTransform: 'none'}}
