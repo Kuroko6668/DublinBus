@@ -1,3 +1,7 @@
+#Some code adapted from:
+#https://sushil-kamble.medium.com/django-rest-framework-react-authentication-workflow-2022-part-1-a21f22b3f358
+#modified where necessary
+
 from multiprocessing import context
 import profile
 from urllib import response

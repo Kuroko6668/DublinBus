@@ -1,3 +1,6 @@
+//Some code taken and adapted from
+//https://blog.devgenius.io/django-rest-framework-react-authentication-workflow-2022-part-2-d299b7fef875
+
 import { createContext, useState, useEffect } from "react";
 import jwt_decode from "jwt-decode";
 import { useNavigate } from "react-router-dom";
@@ -46,7 +49,7 @@ export const AuthProvider = ({ children }) => {
 
 
     } else {
-      alert("Something went wrong!");
+      alert("Incorrect password! Please try again");
     }
   };
   
@@ -65,7 +68,7 @@ export const AuthProvider = ({ children }) => {
     if (response.status === 201) {
       navigate("/SignIn");
     } else {
-      alert("Something went wrong!");
+      alert("Oops! Please ensure your password is 8 characters long and is aplha-numeric. Try Again!");
     }
   };
 

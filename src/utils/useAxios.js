@@ -1,3 +1,6 @@
+//code taken and adapted from
+//https://blog.devgenius.io/django-rest-framework-react-authentication-workflow-2022-part-2-d299b7fef875
+
 import axios from "axios";
 import jwt_decode from "jwt-decode";
 import dayjs from "dayjs";

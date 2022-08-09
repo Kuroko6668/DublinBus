@@ -57,8 +57,11 @@ export default function SignUp() {
           <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
             <LockOutlinedIcon />
           </Avatar>
-          <Typography component="h1" variant="h5">
+          <Typography component="h1" variant="h4">
             Sign up
+          </Typography>
+          <Typography textAlign= "center" component="h2" variant="h5">
+            Password must be 8 characters and alpha-numeric
           </Typography>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container  spacing={2}>
