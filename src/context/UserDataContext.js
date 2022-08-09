@@ -32,8 +32,10 @@ export const UserDataProvider = ({ children }) => {
     favourite_stop_3_name: "",
   })
 
-  const [stop1Name, setStop1Name] = useState('');
+  // const [stop1Name, setStop1Name] = useState('');
+  
   const api = useAxios();
+  
   const getUserData = async() => {
     console.log('context ')
     console.log(userData)
@@ -82,7 +84,7 @@ export const UserDataProvider = ({ children }) => {
       //   favourite_stop_2_name: 'TEST',
       //   favourite_stop_3_name: 'TEST 3',
       // })
-      setStop1Name('test');
+      // setStop1Name('test');
       // setStop1Name((stop1Name, props) => {return 'TESTTTT'}) 
    
     }
@@ -199,10 +201,7 @@ export const UserDataProvider = ({ children }) => {
     }
     setUserData({ ...userData, 0: newState });
     api.put("/userdata/" + user.user_id, newState).then(() => getStopNames(userData));
-    
-
-    // setStopNames({...stopNames, availableFavourite: })
-    //
+  
   }
   const contextData = {
     userData,
@@ -216,7 +215,6 @@ export const UserDataProvider = ({ children }) => {
   useEffect(() => {
 
           getUserData()
-          console.log(stop1Name)
           
           
   }, []);
