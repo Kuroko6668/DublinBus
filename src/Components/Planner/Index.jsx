@@ -1,6 +1,10 @@
 import React,{Component} from 'react'
 import { useState, useRef} from 'react';
-import {Button, Input, Card} from '@mui/material';
+import {Button, Input, Card, Accordion} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
 import { useStops } from '../../Providers/StopsContext';
 import {useGeolocation} from '../../Providers/GeolocationContext'
 import { reqPrediction } from '../../ajax';
@@ -366,10 +370,21 @@ function Planner({back}){
   {showWeather&& <Weather temperature={weatherData.temperture} wind={weatherData.wind_speed}></Weather> }
          </LocalizationProvider>
          {time_error && <ErrorMessage message={'time must be in next 7 days'}/>}
-         {
-          panel&&
+         {panel&&<><Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>Bus Route</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+        {
           <DisplayRoutes panel={panel} route={visiableroute}/>
          }
+        </AccordionDetails>
+      </Accordion></>}
+      
           {startPoint&&
                 <Marker
                   key={Math.random().toString()}
