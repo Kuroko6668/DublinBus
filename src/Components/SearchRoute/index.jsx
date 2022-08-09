@@ -1,5 +1,8 @@
 import React,{Component, useRef, useState} from 'react'
-import {Button, Input, Typography, Card, CardActions, CardContent, Box, Autocomplete, TextField, backdropClasses} from '@mui/material';
+import {Button, Input, Typography, Card, CardActions, CardContent, Box, Accordion, Autocomplete, TextField, backdropClasses} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
 import { reqRouteById } from '../../ajax';
 import DisplayStops from '../DisplayStops/index'
 import { useStops } from '../../Providers/StopsContext';
@@ -131,7 +134,21 @@ function SearchRoute({back}){
                 {directionDetail}
             </Typography>
         }
-        {visiableroute&&<StopsTable stops={visiableroute}/>}
+           {visiableroute&&<><Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>Stops Table</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+        {
+          <StopsTable stops={visiableroute}/>
+         }
+        </AccordionDetails>
+      </Accordion></>}
+        {/* {visiableroute&&<StopsTable stops={visiableroute}/>} */}
         <Button 
           sx={{ mt:1 }}
           style={{textTransform: 'none'}}
