@@ -1,6 +1,6 @@
 import { InfoWindow, Marker, useGoogleMap } from "@react-google-maps/api";
 import { useState, useContext, useEffect } from "react";
-import { Typography, Button, Modal, Box } from "@mui/material";
+import { Typography, Button, Modal, Box ,Card} from "@mui/material";
 import ArrivalsTable from "./arrivalsTable";
 import { reqStopById } from "../../../ajax";
 import Waiting from "../../waiting";
@@ -74,8 +74,12 @@ const MyMarker = ({
             </div>
           </InfoWindow>
         )}
+        {pending&&
+        <Card variant="margin_bottom"><Waiting size={50} thickness={3} /></Card>
+        }
+
       <Modal
-        className="stop-info-modal"
+        style={{display:'flex',alignItems:'center',justifyContent:'center'}}
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -109,7 +113,7 @@ const MyMarker = ({
                     removeFavouriteClick()
                   }}
                 >
-                  <Favorite /> Remove from Favourites
+                  <Favorite /> Remove from Favourite
                 </IconButton>
               )} 
               {!isFavourite && isFavouriteListFull &&(
@@ -149,6 +153,7 @@ const style = {
   left: '50',
   position: "absolute",
   width: 400,
+  margin: 'auto',
   bgcolor: "background.paper",
   boxShadow: 24,
   p: 4,
