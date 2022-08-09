@@ -24,14 +24,11 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import moment from "moment";
 import ErrorMessage from '../ErrorMessage';
 import DisplayRoutes from './subcomponent/DisplayRoutes';
-import ja from 'date-fns/esm/locale/ja';
-import { set } from 'store/dist/store.modern.min';
 import { reqRouteById } from '../../ajax';
 import { reqCurWeather } from '../../ajax';
 import Weather from '../Weather';
 import Waiting from '../waiting';
 function Planner({back}){
-    const map_Ref = useGoogleMap();
     const { position } = useGeolocation();
     const [directionResponse, setDirectionResponse] = useState((null))
     const [distance,setDistance] = useState('')
