@@ -21,18 +21,18 @@ const SideBar = () => {
   var setNearMeValue = (val) => {
     setShowNearMe(val);
    }
-   const sideButtons=(<><div class="sideButtons">
+   const sideButtons=(<><div class="sideButtons" data-testid="plannerButton">
    <Button variant="contained" onClick={()=>setValue(true)}>
     Planner
    </Button>
    </div>
-   <div class="sideButtons" onClick={()=>setNearMeValue(true)}>
+   <div class="sideButtons" onClick={()=>setNearMeValue(true)} id="nearMe">
    <Button variant="contained">
     Near Me
    </Button>
    </div>
   <div class="sideButtons">
-   <Button variant="contained" onClick={()=>setSearchRouteValue(true)}>
+   <Button variant="contained" onClick={()=>setSearchRouteValue(true)} id="searchRoute">
     Search Route
     </Button>
     </div></>)
