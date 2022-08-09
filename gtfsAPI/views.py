@@ -390,7 +390,8 @@ def time_obj_to_seconds(obj):
     return minutes
 
 def call_model_predict(short_name,trip_last_stop,trip_first_stop,stop,stop_id,dt_obj):
-        weather_obj = DailyWeather.objects.filter(time__gte=dt_obj.time()).first()
+        weather_obj = DailyWeather.objects.filter(time__lte=dt_obj).order_by('-time')[0]
+        print(weather_obj.time)
         national_holiday_2022 = ['01/01/2022', '14/02/2022', '17/03/2022', '27/03/2022', 
         '15/04/2022', '18/04/2022', '02/05/2022', '06/06/2022', '19/06/2022', '01/08/2022',
         '31/10/2022', '31/10/2022','25/12/2022','26/12/2022']

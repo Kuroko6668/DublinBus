@@ -166,6 +166,7 @@ function Planner({back}){
     // caculate the route based on user input
     async function calculateRoute (){
         if(originRef.current.value === '' || destinationRef.current.value === ''){
+          setError(true)
           return 
         }
         // if(error|| time_error){
@@ -241,13 +242,14 @@ function Planner({back}){
               arrival_stop_lng:temp.transit.arrival_stop.location.lng(),
               arrival_stop_id:stopNameToId(temp.transit.arrival_stop.name,temp.transit.arrival_stop.location.lat(),temp.transit.arrival_stop.location.lng()),
               arrival_time:temp.transit.arrival_time.value,
-              arrival_time_text:temp.transit.arrival_time.text,
+              arrival_time_text:moment(temp.transit.arrival_time.value).format("HH:mm"),
               departure_stop:temp.transit.departure_stop.name,
               departure_stop_id:stopNameToId(temp.transit.departure_stop.name,temp.transit.departure_stop.location.lat(),temp.transit.departure_stop.location.lng()),
               departure_stop_lat:temp.transit.departure_stop.location.lat(),
               departure_stop_lng:temp.transit.departure_stop.location.lng(),
               departure_time:temp.transit.departure_time.value,
-              departure_text:temp.transit.departure_time.text,
+              departure_text:moment(temp.transit.departure_time.value).format("HH:mm"),
+              // departure_text:temp.transit.departure_time.text,
               short_name:temp.transit.line.short_name,
               long_name:temp.transit.line.name,
               direction_id:0,
@@ -267,9 +269,11 @@ function Planner({back}){
             let {data} = response
             console.log(data[0],'response');
             if(data[0].trip_time === 0){
-              bus_trip.prediction_journey_time = Math.ceil(bus_trip.duration/60)
+              // bus_trip.prediction_journey_time = -1
+              bus_trip.prediction_journey_time = - Math.ceil(bus_trip.duration/60)
             }else{
               bus_trip.prediction_journey_time = data[0].trip_time
+              bus_trip.arrival_time_text = moment(bus_trip.departure_time).add(data[0].trip_time, 'minutes').format("HH:mm")
             }
 
             if(data[0].direction_id >= 0){
@@ -290,7 +294,8 @@ function Planner({back}){
     function clearRoute(){
         setDirectionResponse(null)
         setTimeError(false)
-        setTimeError(false)
+        setError(false)
+        setShowWeather(false);
         setPanel(null)
         setstartPoint(null)
         setendPoint(null)

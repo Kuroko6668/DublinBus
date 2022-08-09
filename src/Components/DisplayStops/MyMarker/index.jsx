@@ -3,6 +3,7 @@ import { useState, useContext, useEffect } from "react";
 import { Typography, Button, Modal, Box } from "@mui/material";
 import ArrivalsTable from "./arrivalsTable";
 import { reqStopById } from "../../../ajax";
+import Waiting from "../../waiting";
 import "./style.css";
 import Favorite from "@mui/icons-material/Favorite";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
@@ -27,11 +28,19 @@ const MyMarker = ({
   // Hook to access the map reference
   const mapRef = useGoogleMap();
   const [open, setOpen] = useState(false);
-  var response = [];
-  const handleOpen = async () => {
-    response = await reqStopById(id);
-    setnextArrivals(response.data.arrivals);
-    setOpen(true);
+  const [pending, setPending] = useState(false)
+
+  var response = []
+
+  const handleOpen = async() => {
+    setPending(true);
+    response = await reqStopById(id).catch(()=>{
+      setPending(false);
+    })
+    setnextArrivals(response.data.arrivals)
+    setOpen(true)
+    console.log(nextArrivals);
+    setPending(false);
   };
   const handleClose = () => setOpen(false);
   const { user } = useContext(AuthContext);
@@ -116,21 +125,19 @@ const MyMarker = ({
     </Marker>
   );
 
-  // Zoom the view if the user clicks on the marker and display an infowindow
   function handleClick() {
-    // Display the infowindow
+
     setInfoWindow(true);
   }
 
-  // This function is called when the marker is clicked twice in a short period of time
+ 
   function handleDoubleClick() {
-    // Zoom the view
+
     const zoom = mapRef.getZoom();
     if (zoom <= 16) {
       mapRef.setZoom(zoom + 1);
     }
 
-    // Pans the view to the marker
     mapRef.panTo(position);
   }
 };
@@ -138,9 +145,9 @@ const MyMarker = ({
 export default MyMarker;
 
 const style = {
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
+  top: '50',
+  left: '50',
+  position: "absolute",
   width: 400,
   bgcolor: "background.paper",
   boxShadow: 24,
