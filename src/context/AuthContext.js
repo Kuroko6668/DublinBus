@@ -1,12 +1,15 @@
 import { createContext, useState, useEffect } from "react";
 import jwt_decode from "jwt-decode";
 import { useNavigate } from "react-router-dom";
+import useAxios from "../utils/useAxios";
 
 const AuthContext = createContext();
 
 export default AuthContext;
 
 export const AuthProvider = ({ children }) => {
+
+
   const [authTokens, setAuthTokens] = useState(() =>
     localStorage.getItem("authTokens")
       ? JSON.parse(localStorage.getItem("authTokens"))
@@ -40,6 +43,8 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("authTokens", JSON.stringify(data));
       // navigate.push("/");
       navigate("/")
+
+
     } else {
       alert("Something went wrong!");
     }
@@ -59,7 +64,6 @@ export const AuthProvider = ({ children }) => {
     });
     if (response.status === 201) {
       navigate("/SignIn");
-      //console.log(user)
     } else {
       alert("Something went wrong!");
     }
@@ -79,7 +83,7 @@ export const AuthProvider = ({ children }) => {
     setAuthTokens,
     registerUser,
     loginUser,
-    logoutUser
+    logoutUser, 
   };
 
   useEffect(() => {

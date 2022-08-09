@@ -8,6 +8,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Planner from './Components/Planner/Index';
+import { UserDataProvider } from './context/UserDataContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
     <BrowserRouter> 
     {/* wrap app in AuthProvider */}
     <AuthProvider>
+      <UserDataProvider>
 
     <Routes>
 
@@ -27,6 +29,7 @@ root.render(
       </Route>
 
     </Routes>
+    </UserDataProvider>
 
     </AuthProvider>
 

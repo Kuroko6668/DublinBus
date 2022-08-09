@@ -16,6 +16,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "@xstate/react": "^3.0.1",
     "axios": "^0.27.2",
     "date-fns": "^2.28.0",
     "dayjs": "^1.11.3",
@@ -33,7 +34,8 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "store": "^2.0.12",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "xstate": "^4.33.0"
   },
   "scripts": {
     "start": "set PORT=3000 && react-scripts start",
