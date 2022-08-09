@@ -78,7 +78,6 @@ function Map(props) {
   const userLocationObj = useGeolocation()
   const {position} = userLocationObj;
 
-  // console.log(stopsList,userLocationObj);
   const onLoadMap = React.useCallback(function callback(map) {
     map.set('styles',customStyled)
     setMap(map)

@@ -56,21 +56,3 @@ startT = time.time()
 clean_txt_file(tripsRawTxt,tripsNewFile)
 runtimeT = time.time() - startT
 logging.warning("runtime of trips file: " + runtimeT)
-
-
-
-
-        
-        
-        
-     
-
-
-   
-        
-
-    
-
-    
-    
-    

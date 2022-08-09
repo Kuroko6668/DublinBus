@@ -9,14 +9,15 @@ import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import useAxios from "../../../utils/useAxios";
 import IconButton from "@mui/material/IconButton";
 import AuthContext from "../../../context/AuthContext";
+import UserDataContext from "../../../context/UserDataContext";
 // Cutomizable small component that creates a marker and centers the view at that position
 const MyMarker = ({
   id,
   position,
   options,
+  addFavouriteClick,
+  removeFavouriteClick,
   isFavourite,
-  addFavourite,
-  removeFavourite,
   isFavouriteListFull,
   ...restProps
 }) => {
@@ -34,6 +35,7 @@ const MyMarker = ({
   };
   const handleClose = () => setOpen(false);
   const { user } = useContext(AuthContext);
+  const { userData, removeFavourite } = useContext(UserDataContext);
 
   return (
     
@@ -82,7 +84,9 @@ const MyMarker = ({
                   size="small"
                   aria-label="add-favourite"
                   className="favourite-btn"
-                  onClick={addFavourite}
+                  onClick={()=> {
+                    addFavouriteClick()
+                  }}
                 >
                   <FavoriteBorder /> Add to Favourites
                 </IconButton>
@@ -92,11 +96,13 @@ const MyMarker = ({
                   size="small"
                   aria-label="add-favourite"
                   className="favourite-btn"
-                  onClick={removeFavourite}
+                  onClick={()=> {
+                    removeFavouriteClick()
+                  }}
                 >
                   <Favorite /> Remove from Favourites
                 </IconButton>
-              )}
+              )} 
               {!isFavourite && isFavouriteListFull &&(
                 <p>You already have 3 favourites, remove one to add this stop to the list</p>
               )}

@@ -64,11 +64,6 @@ def stop_name(request,stop_1,stop_2,stop_3):
 
             
 
-   
-       
-
-
-
 def stops_by_route_name(request, route_name):
     """Returns the stops in a route in order of stop sequence."""
 
@@ -117,21 +112,17 @@ def stop_detail(request, stop_id):
         
         trip__service_id=service_id,
         stop_id=stop_id,
-        # trip__service_id=str(service_id),
         # Get all arrival times in the next hour
         arrival_time__gte=current_time.time(),
         arrival_time__lte=(current_time + timedelta(hours=1)).time(),
     ).select_related("trip")
     
 
-    # print(stop_time_next_hour.query)
     
    
 
     # gtfsDict = gtfsr_feed_pipeline.Pipeline.get_message()
 
-
-    
     # for stop_time in stop_time_next_hour.iterator():
 
     #     if stop_time.trip.service_id  == str(service_id):
@@ -155,8 +146,8 @@ def stop_detail(request, stop_id):
 
     # realtime_updates = realtime_updates['Entity']
 
-    
-    gtfsDict = gtfs_consumer()
+    #get dictonary from pipeline
+    gtfsDict = pipeline.get_message()
 
 
     for stop_time in stop_time_next_hour.iterator():
@@ -331,20 +322,6 @@ def get_cur_weather(request):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-def gtfs_consumer():
-
-    return pipeline.get_message()
 
 
 def request_realtime_nta_data():

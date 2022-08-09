@@ -1,12 +1,18 @@
+//Some code taken and adapted from
+//https://blog.devgenius.io/django-rest-framework-react-authentication-workflow-2022-part-2-d299b7fef875
+
 import { createContext, useState, useEffect } from "react";
 import jwt_decode from "jwt-decode";
 import { useNavigate } from "react-router-dom";
+import useAxios from "../utils/useAxios";
 
 const AuthContext = createContext();
 
 export default AuthContext;
 
 export const AuthProvider = ({ children }) => {
+
+
   const [authTokens, setAuthTokens] = useState(() =>
     localStorage.getItem("authTokens")
       ? JSON.parse(localStorage.getItem("authTokens"))
@@ -40,8 +46,10 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("authTokens", JSON.stringify(data));
       // navigate.push("/");
       navigate("/")
+
+
     } else {
-      alert("Something went wrong!");
+      alert("Incorrect password! Please try again");
     }
   };
   
@@ -59,9 +67,8 @@ export const AuthProvider = ({ children }) => {
     });
     if (response.status === 201) {
       navigate("/SignIn");
-      //console.log(user)
     } else {
-      alert("Something went wrong!");
+      alert("Oops! Please ensure your password is 8 characters long and is aplha-numeric. Try Again!");
     }
   };
 
@@ -79,7 +86,7 @@ export const AuthProvider = ({ children }) => {
     setAuthTokens,
     registerUser,
     loginUser,
-    logoutUser
+    logoutUser, 
   };
 
   useEffect(() => {

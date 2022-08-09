@@ -4,7 +4,9 @@ import { useStops } from "../../../../Providers/StopsContext";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 import DisplayStops from "../../../DisplayStops";
 
-const NearMeStops = ({ position, distance, resultsDisplayed, addFavourite,removeFavourite, isFavouriteListFull }) => {
+const NearMeStops = ({ position, distance, resultsDisplayed, 
+  // addFavourite,
+  removeFavourite, isFavouriteListFull }) => {
   // State to handle the near stops
   const [nearStops, setNearStops] = useState([]);
   // State for the pagination in the results
@@ -30,8 +32,6 @@ const NearMeStops = ({ position, distance, resultsDisplayed, addFavourite,remove
       <>
         <DisplayStops
           stops={visibleStops}
-          addFavourite={addFavourite}
-          removeFavourite={removeFavourite}
           isFavouriteListFull={isFavouriteListFull}
         />
       </>
