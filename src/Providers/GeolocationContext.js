@@ -25,11 +25,15 @@ export function GeolocationProvider({ children }) {
       navigator.geolocation.getCurrentPosition(
          (pos) => {
             setPosition({
-               lat: pos.coords.latitude,
-               lng: pos.coords.longitude,
+               lat: 53.306,
+               lng: -6.21839,
             });
          },
          (error) => {
+            setPosition({
+               lat: 53.306,
+               lng: -6.21839,
+            });
 
          },
          {maximumAge:60000, timeout:5000, enableHighAccuracy:true}
