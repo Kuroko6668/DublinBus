@@ -4,7 +4,7 @@ import qs from 'querystring'
 const instance = axios.create({
   timeout: 1000 * 60 * 9999,//配置超时时间
 });
-instance.defaults.baseURL = 'http://127.0.0.1:8000'
+instance.defaults.baseURL = 'http://34.242.44.49:8080'
 
 instance.interceptors.request.use((config)=>{
   // NProgress.start()
