@@ -14,13 +14,16 @@ import TableRow from "@mui/material/TableRow";
 import { reqStopById } from "../../ajax";
 import AuthContext from "../../context/AuthContext";
 import ArrivalsTable from "../DisplayStops/MyMarker/arrivalsTable/index";
-import { Typography, Modal } from "@mui/material";
+// import { Typography, Modal } from "@mui/material";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import CloseIcon from "@mui/icons-material/Close";
 import useAxios from "../../utils/useAxios";
 import myAxios from '../../ajax/myAxios';
 import { makeStyles } from '@material-ui/core/styles';
 import UserDataContext from "../../context/UserDataContext";
+import { Typography, Modal ,Card} from "@mui/material";
+import Waiting from "../waiting";
+
 
 // This is the main component for the NearMe section
 function NearMe({ back }) {
@@ -44,6 +47,8 @@ function NearMe({ back }) {
   const { user } = useContext(AuthContext);
   const {userData, setUserData, addFavourite, removeFavourite, stopNames} = useContext(UserDataContext);
   const [isFavouriteListFull, setIsFavouriteListFull] = useState(false);
+  const [pending, setPending] = useState(false)
+
   // let [stop1Name, setStop1Name] = useState("");
   // let [stop2Name, setStop2Name] = useState("");
   // let [stop3Name, setStop3Name] = useState("");
@@ -137,24 +142,40 @@ function NearMe({ back }) {
 
   let response = [];
   const handleOpen = async (stopId) => {
+    setPending(true)
     setFavStopOpenId(stopId);
-    response = await reqStopById(stopId);
+    response = await reqStopById(stopId).catch(()=>{
+      setPending(false);
+    })
     setnextArrivals(response.data.arrivals);
     setOpen(true);
+    setPending(false)
   };
   const handleClose = () => setOpen(false);
 
+  // const style = {
+  //   top: "50%",
+  //   left: "50%",
+  //   transform: "translate(-50%, -50%)",
+  //   width: 300,
+  //   height: 400,
+  //   bgcolor: "white",
+  //   boxShadow: 24,
+  //   p: 4,
+    
+  // };
+
   const style = {
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: 300,
-    height: 400,
-    bgcolor: "white",
+    top: '50',
+    left: '50',
+    position: "absolute",
+    width: 400,
+    margin: 'auto',
+    bgcolor: "background.paper",
     boxShadow: 24,
     p: 4,
-    
   };
+
 
   const modalStyle = {
     top: "50%",
@@ -162,7 +183,7 @@ function NearMe({ back }) {
     transform: "translate(-50%, -50%)",
     width: 300,
     height: 400,
-    bgcolor: "white",
+    bgcolor: "background.paper",
     boxShadow: 24,
     p: 4,
 };
@@ -185,7 +206,7 @@ const classes = makeStyles(theme => ({
     <>
 
       {user && (
-              <div id="favourite-stops" style={{maxWidth:250, border: '2px solid red', alignContent: "center", marginLeft: "auto"}}>
+              <div id="favourite-stops" style={{maxWidth:250, justifyContent:'center', border: '2px solid blue', alignContent: "center"}}>
               {userData && userData[0] && (
                 <TableContainer>
                   <Table sx={{ minWidth: 250 }} aria-label="simple table">
@@ -195,6 +216,7 @@ const classes = makeStyles(theme => ({
                           {" "}
                           <Favorite /> My Favourite Stops
                         </TableCell>
+                        
                       </TableRow>
                     </TableHead>
                     <TableBody>
@@ -206,11 +228,12 @@ const classes = makeStyles(theme => ({
                           <TableCell
                             component="th"
                             scope="row"
-                            onClick={() => {
-                              handleOpen(userData[0].favourite_stop_1);
-                            }}
-                          >
-                            {stopNames.favourite_stop_1_name ?? ''}
+                            // onClick={() => {
+                            //   handleOpen(userData[0].favourite_stop_1);
+                            // }}
+                          ><a style={{cursor: 'pointer'}}  onClick={() => {
+                            handleOpen(userData[0].favourite_stop_1);
+                          }}> {stopNames.favourite_stop_1_name ?? ''}</a>
                           </TableCell>
                         </TableRow>
                       )}
@@ -225,9 +248,10 @@ const classes = makeStyles(theme => ({
                             onClick={() => {
                               handleOpen(userData[0].favourite_stop_2);
                             }}
-                          >
+                          ><a style={{cursor: 'pointer'}}  onClick={() => {
+                            handleOpen(userData[0].favourite_stop_2);
+                          }}> {stopNames.favourite_stop_2_name ?? ''}</a>
       
-      {stopNames.favourite_stop_2_name}
                           </TableCell>
                         </TableRow>
                       )}
@@ -243,8 +267,9 @@ const classes = makeStyles(theme => ({
                             onClick={() => {
                               handleOpen(userData[0].favourite_stop_3);
                             }}
-                          >
-                            {stopNames.favourite_stop_3_name}
+                          ><a style={{cursor: 'pointer'}}  onClick={() => {
+                            handleOpen(userData[0].favourite_stop_3);
+                          }}> {stopNames.favourite_stop_3_name ?? ''}</a>
                           </TableCell>
                         </TableRow>
                       )}
@@ -302,8 +327,13 @@ const classes = makeStyles(theme => ({
         </Button>
       </div>
       <div class="fav-stop-modal" tabindex="-1">
+      {pending&&
+        <Card variant="margin_bottom"><Waiting size={50} thickness={3} /></Card>
+        }
       <Modal
-        className="stop-info-modal"
+        style={{display:'flex',alignItems:'center',justifyContent:'center'}}
+
+        // className="stop-info-modal"
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -312,7 +342,7 @@ const classes = makeStyles(theme => ({
 
 
 {/* <div style={modalStyle} className={classes.paper}> */}
-        <Box sx={modalStyle} aria-describedby="modal-modal-description">
+        <Box sx={style} aria-describedby="modal-modal-description">
           <Typography id="modal-modal-title" variant="h6" component="h2">
             {stop1Name}
           </Typography>

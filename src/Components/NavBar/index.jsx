@@ -80,7 +80,7 @@ const NavBar = () => {
   return (
     <AppBar position="static" >
       <Container maxWidth="200px">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters >
           <DirectionsBusIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
 
           <Typography
@@ -112,30 +112,26 @@ const NavBar = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Menu
+            {/* <Menu
               id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
+              // anchorEl={anchorElNav}
+              // anchorOrigin={{
+              //   vertical: 'bottom',
+              //   horizontal: 'left',
+              // }}
+              // keepMounted
+              // transformOrigin={{
+              //   vertical: 'top',
+              //   horizontal: 'left',
+              // }}
+              // open={Boolean(anchorElNav)}
+              // onClose={handleCloseNavMenu}
+              // sx={{
+              //   display: { xs: 'block', md: 'none' },
+              // }}
             >
-              {/* {pages.map((page) => (
-                <MenuItem key={page.label} component={Link} to={page.link}>
-                  <Typography textAlign="center">{page.label}</Typography>
-                </MenuItem>
-              ))} */}
-            </Menu>
+              
+            </Menu> */}
           </Box>
           <DirectionsBusIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
@@ -156,20 +152,14 @@ const NavBar = () => {
           >
             DublinBus
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {/* {pages.map((page) => (
-              <Button
-                key={page.label}
-                component={Link}
-                to={page.link}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page.label}
-              </Button> */}
           
-            {/* )   
-            )} */}
-          </Box>
+          
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+           
+          
+                
+             
+          </Box> 
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
@@ -178,19 +168,19 @@ const NavBar = () => {
               </IconButton>
             </Tooltip>
             <Menu
-              className='user-profile-menu'
+              
               sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
-              // anchorOrigin={{
-              //   vertical: 'top',
-              //   horizontal: 'right',
-              // }}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
               keepMounted
-              // transformOrigin={{
-              //   vertical: 'top',
-              //   horizontal: 'right',
-              // }}
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
               display="flex"
@@ -198,9 +188,10 @@ const NavBar = () => {
             >
               {!user && (
                 settings.map((setting) => (
-                <MenuItem  key={setting.label} component={Link} to={setting.link
+                <MenuItem   key={setting.label} component={Link} to={setting.link
                 }>
-                  <Typography  textAlign="center" >{setting.label}</Typography>
+                  {/* <Typography  >{setting.label}</Typography> */}
+                  {setting.label}
                 </MenuItem>
               )))}
               {user && (

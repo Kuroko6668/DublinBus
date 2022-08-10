@@ -217,7 +217,7 @@ export const UserDataProvider = ({ children }) => {
           getUserData()
           
           
-  }, []);
+  }, [user]);
 
   return (
     <UserDataContext.Provider value={contextData}>
