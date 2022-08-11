@@ -51,7 +51,7 @@ const customStyled = [
         { visibility: "on" }
     ]}
 ]
-const GOOGLE_KEY = "AIzaSyDx7hqNSGl-APJh5HalGhaCqHrfpF84jKc";
+const GOOGLE_KEY = "YOUR_KEY";
 // Map Options for the container
 const defaultOptions = {
   zoomControl: false,
