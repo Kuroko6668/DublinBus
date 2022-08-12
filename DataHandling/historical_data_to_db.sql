@@ -14,7 +14,7 @@ CREATE TABLE if not exists dublin_bus.rt_2018_leavetimes_sample (
 
 	);
     
-LOAD DATA LOCAL INFILE "C:/Users/35383/Documents/busTestRepo/BusDataAnalytics/leavetimes2018.csv"
+LOAD DATA LOCAL INFILE "leavetimes2018.csv"
 INTO TABLE dublin_bus.rt_2018_leavetimes_sample
 FIELDS TERMINATED BY ","
 ENCLOSED BY "'"
@@ -39,7 +39,8 @@ CREATE TABLE if not exists dublin_bus.rt_trips_2018 (
 	);
     
     
-LOAD DATA LOCAL INFILE "C:/Users/35383/Documents/busTestRepo/BusDataAnalytics/trips2018.csv" INTO TABLE dublin_bus.rt_trips_2018
+LOAD DATA LOCAL INFILE "trips2018.csv" 
+INTO TABLE dublin_bus.rt_trips_2018
 FIELDS TERMINATED BY ","
 ENCLOSED BY "'"
 LINES TERMINATED BY '\n';
