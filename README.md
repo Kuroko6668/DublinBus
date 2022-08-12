@@ -4,6 +4,16 @@ This project is a DublinBus application, which helps the user to plan their jour
 
 Check out the live application here: http://ipa-013.ucd.ie/
 
+## Code Excecution
+
+To locally run this project locally please clone the repo:
+
+    git clone https://github.com/Dublin-Bus-Project/DublinBusRepo.git
+
+
+
+Further instruction regarding the code excecution is explained in detail within README files. Please refer to the README files in the DataHandling, backend and src directories respectively. 
+
 ## Application Features
 
 ### Planner Feature
@@ -37,6 +47,4 @@ https://user-images.githubusercontent.com/92585212/184387086-782c968a-2de4-48fc-
 
 We have used Visual Studio Code for the development of our web application. The data analytics in the application was done in Jupyter Notebook.
 
-## Code Excecution
 
-Further explanation regarding the code excecution is explained in detail for fronend and backend part in the respective folders.
