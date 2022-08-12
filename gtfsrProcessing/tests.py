@@ -6,11 +6,6 @@ from . import check_for_update
 
 
 class gtfsrTest(TestCase):
-    
-    
-
-    
-    
 
     #use a static gtfsr modified dictionary
     with open("gtfsrProcessing/gtfsrDict_test.json","r") as f:
@@ -32,7 +27,8 @@ class gtfsrTest(TestCase):
         no_delay = 0
         self.assertEqual(check_for_update.check_trip_for_update(self.gtfsr_static,"3398.1.10-51-e20-1.114.I","8380B357781"),no_delay)
 
-    "3992408.1.10-51-e20-1.115.O"
+
+    #test for a negative delay
     def test_check_for_negative_delay(self):
         
         neg_delay = -60
