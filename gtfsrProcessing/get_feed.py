@@ -30,7 +30,9 @@ def get_GTFSR():
             hdr = {
                 # Request headers
                 'Cache-Control': 'no-cache',
-                'x-api-key': os.environ['GTFSRKEY'],
+                # 'x-api-key': os.environ['GTFSRKEY'],
+                'x-api-key': '4e437130ea34409991aa1fd704f9319a',
+
             }
 
             req = urllib.request.Request(url, headers=hdr)
@@ -53,6 +55,7 @@ def get_GTFSR():
         except Exception as e:
             logging.warning("API get request error @ time: " +
                             str(time.strftime('%Y-%m-%d %H:%M:%S')) + ". Error = " + str(e))
+            time.sleep(20)
 
 
 def gtfsr_producer(response):
