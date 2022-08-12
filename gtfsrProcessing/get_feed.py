@@ -30,7 +30,8 @@ def get_GTFSR():
             hdr = {
                 # Request headers
                 'Cache-Control': 'no-cache',
-                'x-api-key': os.environ['GTFSRKEY'],
+                # 'x-api-key': os.environ['GTFSRKEY'],
+                'x-api-key': '4e437130ea34409991aa1fd704f9319a',
 
             }
 

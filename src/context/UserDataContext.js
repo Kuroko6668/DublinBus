@@ -32,7 +32,6 @@ export const UserDataProvider = ({ children }) => {
     favourite_stop_3_name: "",
   })
 
-  // const [stop1Name, setStop1Name] = useState('');
   
   const api = useAxios();
   
@@ -78,14 +77,7 @@ export const UserDataProvider = ({ children }) => {
       }
       stop1 = stop_names.data[stopNameIndex].stop_name;
       console.log(stop1)
-      // setStopNames({...stopNames, favourite_stop_1_name: stopName})
-      // setStopNames({
-      //   favourite_stop_1_name: stopName,
-      //   favourite_stop_2_name: 'TEST',
-      //   favourite_stop_3_name: 'TEST 3',
-      // })
-      // setStop1Name('test');
-      // setStop1Name((stop1Name, props) => {return 'TESTTTT'}) 
+      
    
     }
     if(userData[0].favourite_stop_2 !== '0') {
@@ -97,12 +89,7 @@ export const UserDataProvider = ({ children }) => {
         }
       }
       stop2 = stop_names.data[stopNameIndex].stop_name;
-      // setStopNames({
-      //   favourite_stop_1_name: stopName,
-      //   favourite_stop_2_name: 'TEST',
-      //   favourite_stop_3_name: 'TEST 3',
-      // })
-      // setStopNames({...stopNames, favourite_stop_2_name: 'ALICE '})
+     
 
     }
     if(userData[0].favourite_stop_3 !== '0') {
@@ -114,23 +101,9 @@ export const UserDataProvider = ({ children }) => {
         }
       }
       stop3= stop_names.data[stopNameIndex].stop_name;
-      // setStopNames({favourite_stop_1_name: 'TEST'});
-      // setStopNames({...stopNames, favourite_stop_3_name: stopName})
-   
+      
     }
 
-
-    // setStopNames({
-    //   favourite_stop_1_name: stop1, 
-    //   favourite_stop_2_name: stop2, 
-    //   favourite_stop_3_name: stop3
-    // }, function () {
-    //   console.log("TESTTTSTTS")
-    // })
-
-  //   this.setState({value: event.target.value}, function () {
-  //     console.log(this.state.value);
-  // });
   addStopNames(stop1,stop2,stop3)
   }
 
@@ -174,9 +147,7 @@ export const UserDataProvider = ({ children }) => {
     }
 
   const addFavourite=(stop_id) => {
-    console.log("Add fav in context ");
     console.log(stop_id);
-    //     console.log("ADD TO FAV");
 
     let newState = userData[0];
     console.log(newState);
