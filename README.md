@@ -2,7 +2,6 @@
 
 This project is a DublinBus application, which helps the user to plan their journey around Dublin. We have implemented a couple of cool features as well along with the journey planning.
 
-Check out the live application here: http://ipa-013.ucd.ie/
 
 ## Code Excecution
 
